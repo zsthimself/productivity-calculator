@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Productivity Calculator
 
-## Getting Started
+一个基于 **Next.js 14** 的 pSEO 生产力计算器工具站。
 
-First, run the development server:
+## 特性
+
+- 🎯 **pSEO 架构**：通过 `industries.json` 驱动，自动生成 20+ 行业专属计算器页面
+- ⚡ **静态生成 (SSG)**：构建时生成所有页面，极速加载
+- 🎨 **精美暗黑 UI**：基于 Tailwind CSS 的现代设计
+- 📱 **响应式**：适配桌面和移动端
+- 🔍 **SEO 优化**：每个页面自动生成独特的 title 和 description
+
+## 快速开始
 
 ```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 构建生产版本
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 项目结构
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── page.tsx            # 首页
+│   └── calculator/[slug]/  # pSEO 动态路由
+├── components/             # 可复用组件
+│   ├── Calculator.tsx      # 核心计算器
+│   └── IndustryList.tsx    # 行业列表内链
+├── data/
+│   └── industries.json     # pSEO 数据源（20 个行业）
+└── types/
+    └── industry.ts         # TypeScript 类型
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 添加新行业
 
-## Learn More
+只需在 `src/data/industries.json` 中添加一条新记录：
 
-To learn more about Next.js, take a look at the following resources:
+```json
+{
+  "slug": "your-industry",
+  "name": "Your Industry",
+  "title": "Your Industry Productivity Calculator",
+  "description": "Calculate efficiency for your industry...",
+  "inputs": [
+    { "label": "Output Metric", "unit": "units", "key": "output", "placeholder": "e.g., 100" },
+    { "label": "Input Metric", "unit": "hours", "key": "input", "placeholder": "e.g., 8" }
+  ],
+  "resultLabel": "Your Productivity",
+  "resultUnit": "units/hour",
+  "icon": "🎯"
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+重新构建后，`/calculator/your-industry` 页面将自动生成。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 开发规范
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+本项目遵循 `PROJECT_RULES.md` 中定义的**分形文档结构**：
+- 每个目录包含 `_META.md` 描述目录职责和文件清单
+- 每个代码文件包含标准头注释 (`@INPUT`, `@OUTPUT`, `@POS`)
