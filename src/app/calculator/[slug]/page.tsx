@@ -14,6 +14,7 @@ import industries from "@/data/industries.json";
 import { IndustryData } from "@/types/industry";
 
 const industryData = industries as IndustryData[];
+const BASE_URL = "https://productivitycalculator.work";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -35,16 +36,52 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
+    const pageUrl = `${BASE_URL}/calculator/${slug}`;
+
     return {
-        title: `${industry.title} | Free Online Tool`,
+        title: industry.title,
         description: industry.description,
         keywords: [
             industry.title.toLowerCase(),
             `${industry.name.toLowerCase()} productivity`,
+            `${industry.name.toLowerCase()} efficiency`,
             "productivity calculator",
             "efficiency calculator",
             industry.name.toLowerCase(),
         ],
+        alternates: {
+            canonical: pageUrl,
+        },
+        openGraph: {
+            title: `${industry.title} | Free Online Tool`,
+            description: industry.description,
+            url: pageUrl,
+            type: "website",
+            siteName: "Productivity Calculator",
+        },
+        twitter: {
+            card: "summary",
+            title: industry.title,
+            description: industry.description,
+        },
+    };
+}
+
+// 生成行业特定的WebApplication Schema
+function generateIndustrySchema(industry: IndustryData) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: industry.title,
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web Browser",
+        url: `${BASE_URL}/calculator/${industry.slug}`,
+        offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "USD",
+        },
+        description: industry.description,
     };
 }
 
@@ -58,6 +95,12 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
+            {/* Schema.org structured data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(generateIndustrySchema(industry)) }}
+            />
+
             {/* Scan line effect */}
             <div className="pointer-events-none fixed inset-0 z-50 opacity-[0.02]">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white to-transparent h-[200px] animate-[scan-line_8s_linear_infinite]"></div>

@@ -14,6 +14,8 @@ import { IndustryData } from "@/types/industry";
 const industryData = industries as IndustryData[];
 const generalIndustry = industryData.find((i) => i.slug === "general")!;
 
+const BASE_URL = "https://productivitycalculator.work";
+
 export const metadata: Metadata = {
   title: "Productivity Calculator | Free Online Tool for Any Industry",
   description:
@@ -25,11 +27,50 @@ export const metadata: Metadata = {
     "work productivity",
     "labor productivity",
   ],
+  alternates: {
+    canonical: BASE_URL,
+  },
+  openGraph: {
+    title: "Productivity Calculator | Free Online Tool for Any Industry",
+    description:
+      "Calculate your productivity instantly. Measure output vs input efficiency for construction, sales, writing, and 20+ industries.",
+    url: BASE_URL,
+    type: "website",
+  },
+};
+
+// SoftwareApplication Schema for home page
+const appSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Productivity Calculator",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web Browser",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  description:
+    "Free online productivity calculator for measuring output vs input efficiency across 20+ industries including construction, sales, writing, and more.",
+  featureList: [
+    "Calculate productivity rate",
+    "Calculate required output",
+    "Calculate required input",
+    "Industry benchmarks comparison",
+    "Calculation history tracking",
+  ],
 };
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
+      {/* Schema.org structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }}
+      />
+
       {/* Scan line effect */}
       <div className="pointer-events-none fixed inset-0 z-50 opacity-[0.02]">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white to-transparent h-[200px] animate-[scan-line_8s_linear_infinite]"></div>
