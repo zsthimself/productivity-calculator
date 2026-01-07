@@ -1,0 +1,202 @@
+{
+    "site": {
+        "title": "生産性計算機",
+        "description": "無料のオンライン計算機で生産性を即座に計算できます。建設、営業、ライティングなど20以上の業界のアウトプット対インプット効率を測定します。",
+        "tagline": "測定 • 最適化 • 卓越",
+        "heroTitle": "生産性",
+        "heroTitleSuffix": "計算機",
+        "heroDescription": "アウトプットとインプットを比較して効率を測定します。",
+        "heroHighlight": "あらゆる業界、あらゆる役職に対応。",
+        "footer": "© 2026 生産性計算機。効率のために構築されました。"
+    },
+    "nav": {
+        "backToHome": "← ホームに戻る",
+        "exploreIndustries": "業界別計算機を探索",
+        "viewAll": "すべての業界を見る"
+    },
+    "calculator": {
+        "mode": "計算モード",
+        "modeProductivity": "生産性",
+        "modeOutput": "アウトプット",
+        "modeInput": "インプット",
+        "calculate": "計算",
+        "computing": "計算中...",
+        "reset": "リセット",
+        "your": "あなたの",
+        "required": "必要な",
+        "target": "目標",
+        "advancedOptions": "詳細オプション（休憩時間と時給）",
+        "breakTime": "休憩時間",
+        "breakTimeHint": "（差し引く分数）",
+        "hourlyRate": "時給",
+        "hourlyRateUnit": "（¥/時間）",
+        "hourlyRateHint": "時給を入力して収益と単位コストを計算",
+        "hourlyEarnings": "時間あたり収益",
+        "costPerUnit": "単位コスト",
+        "perHour": "時間あたり",
+        "perItem": "単位あたり",
+        "formulaProductivity": "アウトプット ÷ インプット = 生産性",
+        "formulaOutput": "生産性 × インプット = アウトプット",
+        "formulaInput": "アウトプット ÷ 生産性 = インプット",
+        "descProductivity": "生産性を計算する",
+        "descOutput": "目標に必要なアウトプットを計算",
+        "descInput": "目標に必要なインプットを計算"
+    },
+    "benchmark": {
+        "excellent": "優秀！",
+        "aboveAverage": "平均以上",
+        "average": "平均",
+        "belowAverage": "平均以下",
+        "typicalRange": "一般的な範囲："
+    },
+    "history": {
+        "title": "計算履歴",
+        "noRecords": "まだ計算がありません",
+        "clear": "すべてクリア",
+        "setBenchmark": "ベンチマークに設定",
+        "benchmark": "ベンチマーク",
+        "stats": "統計",
+        "best": "最高",
+        "worst": "最低",
+        "avg": "平均",
+        "trend": "トレンド"
+    },
+    "content": {
+        "whatIsProductivity": "生産性とは？",
+        "productivityDefinition": "生産性とは、アウトプットとインプットの比率です。リソース（時間、労働力、お金）がどれだけ効率的に商品、サービス、または結果に変換されるかを測定します。",
+        "formula": "生産性 = 総アウトプット ÷ 総インプット",
+        "howToUse": "この計算機の使い方",
+        "step1": "あなたの",
+        "step1Highlight": "総アウトプット",
+        "step1Detail": "を入力（生産単位、獲得収益、完了タスク）",
+        "step2": "あなたの",
+        "step2Highlight": "総インプット",
+        "step2Detail": "を入力（労働時間、雇用人数、使用リソース）",
+        "step3": "",
+        "step3Highlight": "計算",
+        "step3Detail": "をクリックして生産性を確認",
+        "whyMeasure": "なぜ生産性を測定するのか？",
+        "reason1Title": "非効率を特定：",
+        "reason1": "時間やリソースが無駄になっている場所を見つける",
+        "reason2Title": "目標を設定：",
+        "reason2": "時間とともに改善するためのベンチマークを確立",
+        "reason3Title": "パフォーマンスを比較：",
+        "reason3": "チーム、プロジェクト、個人を追跡",
+        "reason4Title": "意思決定：",
+        "reason4": "データを使用してリソースを効果的に配分",
+        "howToCalculate": "計算方法",
+        "productivityIn": "生産性",
+        "formulaIntro": "",
+        "formulaIntroSuffix": "の生産性を計算する式はシンプルです：",
+        "resultExplanation": "これにより、",
+        "resultExplanationSuffix": "で測定される生産性が得られ、リソースがどれだけ効率的にアウトプットに変換されているかを理解するのに役立ちます。",
+        "whyTrack": "なぜ追跡するのか",
+        "trackReason1": "あなたの",
+        "trackReason1Suffix": "ワークフローのボトルネックと非効率を特定",
+        "trackReason2": "チームに現実的な目標とベンチマークを設定",
+        "trackReason3": "継続的改善のためのデータ駆動型意思決定",
+        "trackReason4": "チーム間または期間間のパフォーマンスを比較"
+    },
+    "industries": {
+        "general": {
+            "name": "一般",
+            "title": "生産性計算機",
+            "description": "アウトプットとインプットを比較して生産性を計算します。この汎用計算機はあらゆる分野の効率測定に役立ちます。"
+        },
+        "construction": {
+            "name": "建設業",
+            "title": "建設生産性計算機",
+            "description": "労働日あたりのアウトプットを計算して建設現場の効率を測定します。建設平方メートル、積んだレンガ、または任意の建設指標を追跡します。"
+        },
+        "writing": {
+            "name": "フリーランスライティング",
+            "title": "ライティング生産性計算機",
+            "description": "執筆速度を追跡し、収益ポテンシャルを見積もります。フリーランスライター、ブロガー、コンテンツクリエイターに最適です。"
+        },
+        "sales": {
+            "name": "営業",
+            "title": "営業生産性計算機",
+            "description": "営業担当者あたりまたは労働時間あたりの売上または成約件数を測定して営業チームの効率を評価します。"
+        },
+        "customer-support": {
+            "name": "カスタマーサポート",
+            "title": "カスタマーサポート生産性計算機",
+            "description": "エージェントあたりまたはシフト時間あたりの解決チケット数を追跡してサポートチームの効率を測定します。"
+        },
+        "software-development": {
+            "name": "ソフトウェア開発",
+            "title": "開発者生産性計算機",
+            "description": "スプリントあたりまたは開発者あたりの完了ストーリーポイント、コミット、または納品機能を測定して開発者アウトプットを追跡します。"
+        },
+        "manufacturing": {
+            "name": "製造業",
+            "title": "製造生産性計算機",
+            "description": "労働時間あたりまたは機械時間あたりの生産単位を測定して工場アウトプット効率を計算します。"
+        },
+        "call-center": {
+            "name": "コールセンター",
+            "title": "コールセンター生産性計算機",
+            "description": "シフトあたりまたはエージェントあたりの処理コール数を追跡してコールセンターエージェントのパフォーマンスを評価します。"
+        },
+        "agriculture": {
+            "name": "農業",
+            "title": "農業生産性計算機",
+            "description": "ヘクタールあたりまたは労働日あたりの作物収量を計算して農業収量効率を測定します。"
+        },
+        "healthcare": {
+            "name": "医療",
+            "title": "医療生産性計算機",
+            "description": "シフトあたりの診察患者数または完了した処置数を測定して医療スタッフの効率を追跡します。"
+        },
+        "retail": {
+            "name": "小売",
+            "title": "小売生産性計算機",
+            "description": "従業員あたりまたは平方フィートあたりの売上を計算して小売店のパフォーマンスを測定します。"
+        },
+        "logistics": {
+            "name": "物流",
+            "title": "物流生産性計算機",
+            "description": "時間あたりの処理パッケージ数または配送数を追跡して倉庫と配送の効率を評価します。"
+        },
+        "education": {
+            "name": "教育",
+            "title": "教育生産性計算機",
+            "description": "時間あたりの指導学生数、授業数、または採点課題数を追跡して教育アウトプットを測定します。"
+        },
+        "marketing": {
+            "name": "マーケティング",
+            "title": "マーケティング生産性計算機",
+            "description": "開始したキャンペーン、生成したリード、または作成したコンテンツを測定してマーケティングチームのアウトプットを追跡します。"
+        },
+        "restaurant": {
+            "name": "レストラン",
+            "title": "レストラン生産性計算機",
+            "description": "提供した客数、完了した注文数、またはスタッフあたりの売上を追跡してレストランの効率を測定します。"
+        },
+        "data-entry": {
+            "name": "データ入力",
+            "title": "データ入力生産性計算機",
+            "description": "時間あたりの処理レコード数またはキーストローク数を測定してデータ入力効率を追跡します。"
+        },
+        "graphic-design": {
+            "name": "グラフィックデザイン",
+            "title": "デザイナー生産性計算機",
+            "description": "完了した成果物、処理したリビジョン、または請求可能時間を追跡してデザインチームのアウトプットを測定します。"
+        },
+        "video-production": {
+            "name": "動画制作",
+            "title": "動画制作生産性計算機",
+            "description": "日あたりの制作動画数または編集映像分数を測定して動画コンテンツ制作効率を追跡します。"
+        },
+        "cleaning-services": {
+            "name": "清掃サービス",
+            "title": "清掃生産性計算機",
+            "description": "時間あたりの清掃部屋数またはカバー平方メートルを追跡して清掃チームの効率を測定します。"
+        },
+        "real-estate": {
+            "name": "不動産",
+            "title": "不動産エージェント生産性計算機",
+            "description": "案内した物件数、成約件数、または獲得コミッションを測定して不動産エージェントのパフォーマンスを追跡します。"
+        }
+    }
+}

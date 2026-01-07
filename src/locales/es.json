@@ -1,0 +1,202 @@
+{
+    "site": {
+        "title": "Calculadora de Productividad",
+        "description": "Calcula tu productividad al instante con nuestra calculadora online gratuita. Mide la eficiencia de producción vs inversión para construcción, ventas, escritura y más de 20 industrias.",
+        "tagline": "Mide • Optimiza • Sobresale",
+        "heroTitle": "Calculadora de",
+        "heroTitleSuffix": "Productividad",
+        "heroDescription": "Mide tu eficiencia comparando producción con inversión.",
+        "heroHighlight": "Funciona para cualquier industria, cualquier rol.",
+        "footer": "© 2026 Calculadora de Productividad. Construida para la eficiencia."
+    },
+    "nav": {
+        "backToHome": "← Volver al Inicio",
+        "exploreIndustries": "Explorar Calculadoras por Industria",
+        "viewAll": "Ver Todas las Industrias"
+    },
+    "calculator": {
+        "mode": "Modo de Cálculo",
+        "modeProductivity": "Productividad",
+        "modeOutput": "Producción",
+        "modeInput": "Inversión",
+        "calculate": "CALCULAR",
+        "computing": "CALCULANDO...",
+        "reset": "REINICIAR",
+        "your": "Tu",
+        "required": "Requerido",
+        "target": "Objetivo",
+        "advancedOptions": "Opciones Avanzadas (Tiempo de Descanso y Tarifa por Hora)",
+        "breakTime": "Tiempo de Descanso",
+        "breakTimeHint": "(minutos a restar)",
+        "hourlyRate": "Tarifa por Hora",
+        "hourlyRateUnit": "($ por hora)",
+        "hourlyRateHint": "Ingresa tu tarifa por hora para calcular ganancias y costo por unidad",
+        "hourlyEarnings": "Ganancias por Hora",
+        "costPerUnit": "Costo por Unidad",
+        "perHour": "por hora",
+        "perItem": "por ítem",
+        "formulaProductivity": "Producción ÷ Inversión = Productividad",
+        "formulaOutput": "Productividad × Inversión = Producción",
+        "formulaInput": "Producción ÷ Productividad = Inversión",
+        "descProductivity": "Calcula tu tasa de productividad",
+        "descOutput": "Calcula la producción requerida para tu objetivo",
+        "descInput": "Calcula la inversión requerida para tu objetivo"
+    },
+    "benchmark": {
+        "excellent": "¡Excelente!",
+        "aboveAverage": "Por Encima del Promedio",
+        "average": "Promedio",
+        "belowAverage": "Por Debajo del Promedio",
+        "typicalRange": "Rango típico:"
+    },
+    "history": {
+        "title": "Historial de Cálculos",
+        "noRecords": "Sin cálculos aún",
+        "clear": "Borrar Todo",
+        "setBenchmark": "Establecer como Referencia",
+        "benchmark": "Referencia",
+        "stats": "Estadísticas",
+        "best": "Mejor",
+        "worst": "Peor",
+        "avg": "Promedio",
+        "trend": "Tendencia"
+    },
+    "content": {
+        "whatIsProductivity": "¿Qué es la Productividad?",
+        "productivityDefinition": "La productividad es la relación entre producción e inversión. Mide qué tan eficientemente los recursos (tiempo, trabajo, dinero) se convierten en bienes, servicios o resultados.",
+        "formula": "Productividad = Producción Total ÷ Inversión Total",
+        "howToUse": "Cómo Usar Esta Calculadora",
+        "step1": "Ingresa tu",
+        "step1Highlight": "Producción Total",
+        "step1Detail": "(unidades producidas, ingresos obtenidos, tareas completadas)",
+        "step2": "Ingresa tu",
+        "step2Highlight": "Inversión Total",
+        "step2Detail": "(horas trabajadas, personas empleadas, recursos utilizados)",
+        "step3": "Haz clic en",
+        "step3Highlight": "CALCULAR",
+        "step3Detail": "para ver tu tasa de productividad",
+        "whyMeasure": "¿Por Qué Medir la Productividad?",
+        "reason1Title": "Identificar ineficiencias:",
+        "reason1": "Encuentra dónde se está desperdiciando tiempo o recursos",
+        "reason2Title": "Establecer metas:",
+        "reason2": "Establece referencias para mejorar con el tiempo",
+        "reason3Title": "Comparar rendimiento:",
+        "reason3": "Rastrea equipos, proyectos o individuos",
+        "reason4Title": "Tomar decisiones:",
+        "reason4": "Usa datos para asignar recursos efectivamente",
+        "howToCalculate": "Cómo Calcular",
+        "productivityIn": "Productividad de",
+        "formulaIntro": "La fórmula para calcular la productividad en",
+        "formulaIntroSuffix": "es sencilla:",
+        "resultExplanation": "Esto te da una tasa de productividad medida en",
+        "resultExplanationSuffix": ", que te ayuda a entender qué tan eficientemente los recursos se están convirtiendo en producción.",
+        "whyTrack": "¿Por Qué Rastrear la Productividad de",
+        "trackReason1": "Identifica cuellos de botella e ineficiencias en tu flujo de trabajo de",
+        "trackReason1Suffix": "",
+        "trackReason2": "Establece metas y referencias realistas para tu equipo",
+        "trackReason3": "Toma decisiones basadas en datos para mejora continua",
+        "trackReason4": "Compara el rendimiento entre equipos o períodos de tiempo"
+    },
+    "industries": {
+        "general": {
+            "name": "General",
+            "title": "Calculadora de Productividad",
+            "description": "Calcula tu productividad comparando producción con inversión. Esta calculadora universal te ayuda a medir la eficiencia en cualquier campo."
+        },
+        "construction": {
+            "name": "Construcción",
+            "title": "Calculadora de Productividad en Construcción",
+            "description": "Mide la eficiencia del sitio de construcción calculando la producción por día de trabajo. Rastrea metros cuadrados construidos, ladrillos colocados o cualquier métrica de construcción."
+        },
+        "writing": {
+            "name": "Escritura Freelance",
+            "title": "Calculadora de Productividad de Escritura",
+            "description": "Rastrea tu velocidad de escritura y estima tu potencial de ganancias. Perfecto para escritores freelance, bloggers y creadores de contenido."
+        },
+        "sales": {
+            "name": "Ventas",
+            "title": "Calculadora de Productividad en Ventas",
+            "description": "Evalúa la eficiencia del equipo de ventas midiendo ingresos o tratos cerrados por representante de ventas o por hora trabajada."
+        },
+        "customer-support": {
+            "name": "Soporte al Cliente",
+            "title": "Calculadora de Productividad en Soporte al Cliente",
+            "description": "Mide la eficiencia del equipo de soporte rastreando tickets resueltos por agente o por hora de turno."
+        },
+        "software-development": {
+            "name": "Desarrollo de Software",
+            "title": "Calculadora de Productividad del Desarrollador",
+            "description": "Rastrea la producción del desarrollador midiendo story points completados, commits realizados o funcionalidades entregadas por sprint o por desarrollador."
+        },
+        "manufacturing": {
+            "name": "Manufactura",
+            "title": "Calculadora de Productividad en Manufactura",
+            "description": "Calcula la eficiencia de producción de la fábrica midiendo unidades producidas por hora de trabajo o por hora de máquina."
+        },
+        "call-center": {
+            "name": "Centro de Llamadas",
+            "title": "Calculadora de Productividad del Centro de Llamadas",
+            "description": "Evalúa el rendimiento del agente del centro de llamadas rastreando llamadas manejadas por turno o por agente."
+        },
+        "agriculture": {
+            "name": "Agricultura",
+            "title": "Calculadora de Productividad Agrícola",
+            "description": "Mide la eficiencia del rendimiento agrícola calculando la producción de cultivos por hectárea o por día de trabajo."
+        },
+        "healthcare": {
+            "name": "Salud",
+            "title": "Calculadora de Productividad en Salud",
+            "description": "Rastrea la eficiencia del personal médico midiendo pacientes atendidos o procedimientos completados por turno."
+        },
+        "retail": {
+            "name": "Retail",
+            "title": "Calculadora de Productividad en Retail",
+            "description": "Mide el rendimiento de la tienda minorista calculando ventas por empleado o por pie cuadrado."
+        },
+        "logistics": {
+            "name": "Logística",
+            "title": "Calculadora de Productividad en Logística",
+            "description": "Evalúa la eficiencia del almacén y entrega rastreando paquetes procesados o entregas realizadas por hora."
+        },
+        "education": {
+            "name": "Educación",
+            "title": "Calculadora de Productividad Docente",
+            "description": "Mide la producción educativa rastreando estudiantes enseñados, lecciones impartidas o tareas calificadas por hora."
+        },
+        "marketing": {
+            "name": "Marketing",
+            "title": "Calculadora de Productividad en Marketing",
+            "description": "Rastrea la producción del equipo de marketing midiendo campañas lanzadas, leads generados o piezas de contenido creadas."
+        },
+        "restaurant": {
+            "name": "Restaurante",
+            "title": "Calculadora de Productividad en Restaurante",
+            "description": "Mide la eficiencia del restaurante rastreando comensales atendidos, pedidos completados o ingresos por miembro del personal."
+        },
+        "data-entry": {
+            "name": "Entrada de Datos",
+            "title": "Calculadora de Productividad en Entrada de Datos",
+            "description": "Rastrea la eficiencia de entrada de datos midiendo registros procesados o pulsaciones de teclas por hora."
+        },
+        "graphic-design": {
+            "name": "Diseño Gráfico",
+            "title": "Calculadora de Productividad del Diseñador",
+            "description": "Mide la producción del equipo de diseño rastreando entregables completados, revisiones manejadas u horas facturables."
+        },
+        "video-production": {
+            "name": "Producción de Video",
+            "title": "Calculadora de Productividad en Producción de Video",
+            "description": "Rastrea la eficiencia de creación de contenido de video midiendo videos producidos o minutos de metraje editados por día."
+        },
+        "cleaning-services": {
+            "name": "Servicios de Limpieza",
+            "title": "Calculadora de Productividad en Limpieza",
+            "description": "Mide la eficiencia del equipo de limpieza rastreando habitaciones limpiadas o metros cuadrados cubiertos por hora."
+        },
+        "real-estate": {
+            "name": "Bienes Raíces",
+            "title": "Calculadora de Productividad del Agente Inmobiliario",
+            "description": "Rastrea el rendimiento del agente inmobiliario midiendo propiedades mostradas, tratos cerrados o comisiones ganadas."
+        }
+    }
+}

@@ -8,6 +8,7 @@
 import { Metadata } from "next";
 import Calculator from "@/components/Calculator";
 import IndustryList from "@/components/IndustryList";
+import Header from "@/components/Header";
 import industries from "@/data/industries.json";
 import { IndustryData } from "@/types/industry";
 
@@ -29,6 +30,14 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: BASE_URL,
+    languages: {
+      'x-default': BASE_URL,
+      'en': BASE_URL,
+      'zh-CN': `${BASE_URL}/zh`,
+      'es': `${BASE_URL}/es`,
+      'de': `${BASE_URL}/de`,
+      'ja': `${BASE_URL}/ja`,
+    },
   },
   openGraph: {
     title: "Productivity Calculator | Free Online Tool for Any Industry",
@@ -65,6 +74,9 @@ const appSchema = {
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
+      {/* Header */}
+      <Header />
+
       {/* Schema.org structured data */}
       <script
         type="application/ld+json"
@@ -76,7 +88,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white to-transparent h-[200px] animate-[scan-line_8s_linear_infinite]"></div>
       </div>
 
-      <div className="relative z-10 py-16 md:py-24 px-4">
+      <div className="relative z-10 pt-20 pb-16 md:pt-28 md:pb-24 px-4">
         <div className="max-w-5xl mx-auto">
           {/* Hero Header */}
           <div className="text-center mb-10 md:mb-12">

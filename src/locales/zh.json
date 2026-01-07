@@ -1,0 +1,202 @@
+{
+    "site": {
+        "title": "生产力计算器",
+        "description": "使用我们的免费在线计算器即时计算您的生产力。测量建筑、销售、写作等20多个行业的产出与投入效率。",
+        "tagline": "测量 • 优化 • 卓越",
+        "heroTitle": "生产力",
+        "heroTitleSuffix": "计算器",
+        "heroDescription": "通过比较产出与投入来衡量您的效率。",
+        "heroHighlight": "适用于任何行业、任何角色。",
+        "footer": "© 2026 生产力计算器。为效率而生。"
+    },
+    "nav": {
+        "backToHome": "← 返回首页",
+        "exploreIndustries": "探索行业计算器",
+        "viewAll": "查看所有行业"
+    },
+    "calculator": {
+        "mode": "计算模式",
+        "modeProductivity": "生产力",
+        "modeOutput": "产出",
+        "modeInput": "投入",
+        "calculate": "计算",
+        "computing": "计算中...",
+        "reset": "重置",
+        "your": "您的",
+        "required": "所需",
+        "target": "目标",
+        "advancedOptions": "高级选项（休息时间和时薪）",
+        "breakTime": "休息时间",
+        "breakTimeHint": "（需扣除的分钟数）",
+        "hourlyRate": "时薪",
+        "hourlyRateUnit": "（每小时¥）",
+        "hourlyRateHint": "输入您的时薪以计算收益和单位成本",
+        "hourlyEarnings": "每小时收益",
+        "costPerUnit": "单位成本",
+        "perHour": "每小时",
+        "perItem": "每项",
+        "formulaProductivity": "产出 ÷ 投入 = 生产力",
+        "formulaOutput": "生产力 × 投入 = 产出",
+        "formulaInput": "产出 ÷ 生产力 = 投入",
+        "descProductivity": "计算您的生产力",
+        "descOutput": "计算达成目标所需的产出",
+        "descInput": "计算达成目标所需的投入"
+    },
+    "benchmark": {
+        "excellent": "优秀！",
+        "aboveAverage": "高于平均",
+        "average": "平均水平",
+        "belowAverage": "低于平均",
+        "typicalRange": "典型范围："
+    },
+    "history": {
+        "title": "计算历史",
+        "noRecords": "暂无计算记录",
+        "clear": "清除全部",
+        "setBenchmark": "设为基准",
+        "benchmark": "基准",
+        "stats": "统计",
+        "best": "最佳",
+        "worst": "最差",
+        "avg": "平均",
+        "trend": "趋势"
+    },
+    "content": {
+        "whatIsProductivity": "什么是生产力？",
+        "productivityDefinition": "生产力是产出与投入的比率。它衡量资源（时间、劳动力、资金）转化为商品、服务或成果的效率。",
+        "formula": "生产力 = 总产出 ÷ 总投入",
+        "howToUse": "如何使用此计算器",
+        "step1": "输入您的",
+        "step1Highlight": "总产出",
+        "step1Detail": "（生产的单位数、获得的收入、完成的任务）",
+        "step2": "输入您的",
+        "step2Highlight": "总投入",
+        "step2Detail": "（工作时间、员工人数、使用的资源）",
+        "step3": "点击",
+        "step3Highlight": "计算",
+        "step3Detail": "查看您的生产力",
+        "whyMeasure": "为什么要测量生产力？",
+        "reason1Title": "识别低效环节：",
+        "reason1": "找出时间或资源浪费的地方",
+        "reason2Title": "设定目标：",
+        "reason2": "建立基准以持续改进",
+        "reason3Title": "比较绩效：",
+        "reason3": "跟踪团队、项目或个人表现",
+        "reason4Title": "做出决策：",
+        "reason4": "利用数据有效分配资源",
+        "howToCalculate": "如何计算",
+        "productivityIn": "生产力",
+        "formulaIntro": "计算",
+        "formulaIntroSuffix": "生产力的公式很简单：",
+        "resultExplanation": "这将给您一个以",
+        "resultExplanationSuffix": "为单位的生产力，帮助您了解资源转化为产出的效率。",
+        "whyTrack": "为什么要跟踪",
+        "trackReason1": "识别您",
+        "trackReason1Suffix": "工作流程中的瓶颈和低效环节",
+        "trackReason2": "为您的团队设定切实可行的目标和基准",
+        "trackReason3": "做出数据驱动的决策以持续改进",
+        "trackReason4": "比较不同团队或时间段的绩效"
+    },
+    "industries": {
+        "general": {
+            "name": "通用",
+            "title": "生产力计算器",
+            "description": "通过比较产出与投入来计算您的生产力。这个通用计算器可帮助您测量任何领域的效率。"
+        },
+        "construction": {
+            "name": "建筑业",
+            "title": "建筑生产力计算器",
+            "description": "通过计算每人天的产出来测量建筑工地效率。跟踪已建造的平方米数、砌的砖块或任何建筑指标。"
+        },
+        "writing": {
+            "name": "自由写作",
+            "title": "写作生产力计算器",
+            "description": "跟踪您的写作速度并估算收益潜力。非常适合自由撰稿人、博主和内容创作者。"
+        },
+        "sales": {
+            "name": "销售",
+            "title": "销售生产力计算器",
+            "description": "通过测量每个销售代表或每工作小时的收入或成交量来评估销售团队效率。"
+        },
+        "customer-support": {
+            "name": "客户支持",
+            "title": "客户支持生产力计算器",
+            "description": "通过跟踪每个客服或每班次解决的工单数来测量支持团队效率。"
+        },
+        "software-development": {
+            "name": "软件开发",
+            "title": "开发者生产力计算器",
+            "description": "通过测量每个冲刺或每个开发者完成的故事点、提交次数或交付的功能来跟踪开发者产出。"
+        },
+        "manufacturing": {
+            "name": "制造业",
+            "title": "制造业生产力计算器",
+            "description": "通过测量每劳动小时或每机器小时生产的单位数来计算工厂产出效率。"
+        },
+        "call-center": {
+            "name": "呼叫中心",
+            "title": "呼叫中心生产力计算器",
+            "description": "通过跟踪每班次或每个坐席处理的通话数来评估呼叫中心坐席绩效。"
+        },
+        "agriculture": {
+            "name": "农业",
+            "title": "农业生产力计算器",
+            "description": "通过计算每公顷或每人天的作物产量来测量农业产出效率。"
+        },
+        "healthcare": {
+            "name": "医疗保健",
+            "title": "医疗保健生产力计算器",
+            "description": "通过测量每班次接诊的患者数或完成的手术数来跟踪医务人员效率。"
+        },
+        "retail": {
+            "name": "零售业",
+            "title": "零售生产力计算器",
+            "description": "通过计算每个员工或每平方英尺的销售额来测量零售店绩效。"
+        },
+        "logistics": {
+            "name": "物流",
+            "title": "物流生产力计算器",
+            "description": "通过跟踪每小时处理的包裹数或配送量来评估仓库和配送效率。"
+        },
+        "education": {
+            "name": "教育",
+            "title": "教学生产力计算器",
+            "description": "通过跟踪每小时教授的学生数、授课数或批改的作业数来测量教育产出。"
+        },
+        "marketing": {
+            "name": "营销",
+            "title": "营销生产力计算器",
+            "description": "通过测量发起的营销活动数、获取的线索数或创作的内容数来跟踪营销团队产出。"
+        },
+        "restaurant": {
+            "name": "餐饮业",
+            "title": "餐厅生产力计算器",
+            "description": "通过跟踪服务的客人数、完成的订单数或每个员工的收入来测量餐厅效率。"
+        },
+        "data-entry": {
+            "name": "数据录入",
+            "title": "数据录入生产力计算器",
+            "description": "通过测量每小时处理的记录数或键入数来跟踪数据录入效率。"
+        },
+        "graphic-design": {
+            "name": "平面设计",
+            "title": "设计师生产力计算器",
+            "description": "通过跟踪完成的交付物数量、处理的修改次数或计费小时数来测量设计团队产出。"
+        },
+        "video-production": {
+            "name": "视频制作",
+            "title": "视频制作生产力计算器",
+            "description": "通过测量每天制作的视频数或剪辑的素材分钟数来跟踪视频内容创作效率。"
+        },
+        "cleaning-services": {
+            "name": "清洁服务",
+            "title": "清洁生产力计算器",
+            "description": "通过跟踪每小时清洁的房间数或覆盖的面积来测量清洁团队效率。"
+        },
+        "real-estate": {
+            "name": "房地产",
+            "title": "房产经纪人生产力计算器",
+            "description": "通过测量带看的房产数、成交数或获得的佣金来跟踪房产经纪人绩效。"
+        }
+    }
+}

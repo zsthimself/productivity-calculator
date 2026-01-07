@@ -12,7 +12,7 @@
  */
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { IndustryData, CalculationMode } from "@/types/industry";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -21,9 +21,12 @@ import { Label } from "@/components/ui/label";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useCalculationHistory } from "@/hooks/useCalculationHistory";
 import HistoryPanel from "@/components/HistoryPanel";
+import { Locale, DEFAULT_LOCALE } from "@/lib/i18n";
+import { getTranslations } from "@/lib/translations";
 
 interface CalculatorProps {
     industry: IndustryData;
+    locale?: Locale;
 }
 
 // 计算模式配置
@@ -49,7 +52,8 @@ const MODE_CONFIG: Record<CalculationMode, {
     }
 };
 
-export default function Calculator({ industry }: CalculatorProps) {
+export default function Calculator({ industry, locale = DEFAULT_LOCALE }: CalculatorProps) {
+    const t = getTranslations(locale);
     // 计算模式
     const [mode, setMode] = useState<CalculationMode>("productivity");
 
@@ -232,7 +236,7 @@ export default function Calculator({ industry }: CalculatorProps) {
                     {/* Mode Selector */}
                     <div className="animate-fade-in">
                         <Label className="font-display text-sm tracking-wider uppercase mb-3 block">
-                            Calculation Mode
+                            {t.calculator.mode}
                         </Label>
                         <ToggleGroup
                             type="single"
@@ -244,19 +248,19 @@ export default function Calculator({ industry }: CalculatorProps) {
                                 value="productivity"
                                 className="text-xs px-2 py-2 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
                             >
-                                Productivity
+                                {t.calculator.modeProductivity}
                             </ToggleGroupItem>
                             <ToggleGroupItem
                                 value="output"
                                 className="text-xs px-2 py-2 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
                             >
-                                Output
+                                {t.calculator.modeOutput}
                             </ToggleGroupItem>
                             <ToggleGroupItem
                                 value="input"
                                 className="text-xs px-2 py-2 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
                             >
-                                Input
+                                {t.calculator.modeInput}
                             </ToggleGroupItem>
                         </ToggleGroup>
                         <p className="text-xs text-muted-foreground mt-2 text-center">
@@ -342,7 +346,7 @@ export default function Calculator({ industry }: CalculatorProps) {
                                 className="text-xs text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
                             >
                                 <span>{showAdvanced ? "▼" : "▶"}</span>
-                                Advanced Options (Break Time & Hourly Rate)
+                                {t.calculator.advancedOptions}
                             </button>
 
                             {showAdvanced && (
@@ -350,9 +354,9 @@ export default function Calculator({ industry }: CalculatorProps) {
                                     {/* Break Time */}
                                     <div>
                                         <Label htmlFor="break-time" className="font-display text-xs tracking-wider uppercase">
-                                            Break Time
+                                            {t.calculator.breakTime}
                                             <span className="text-muted-foreground ml-2 font-normal normal-case">
-                                                (minutes to subtract)
+                                                {t.calculator.breakTimeHint}
                                             </span>
                                         </Label>
                                         <Input
@@ -369,9 +373,9 @@ export default function Calculator({ industry }: CalculatorProps) {
                                     {mode === "productivity" && (
                                         <div>
                                             <Label htmlFor="hourly-rate" className="font-display text-xs tracking-wider uppercase">
-                                                Hourly Rate
+                                                {t.calculator.hourlyRate}
                                                 <span className="text-green-400 ml-2 font-normal normal-case">
-                                                    ($ per hour)
+                                                    {t.calculator.hourlyRateUnit}
                                                 </span>
                                             </Label>
                                             <Input
@@ -383,7 +387,7 @@ export default function Calculator({ industry }: CalculatorProps) {
                                                 className="h-10 text-sm bg-input/50 mt-2"
                                             />
                                             <p className="text-xs text-muted-foreground mt-1">
-                                                Enter your hourly rate to calculate earnings & cost per unit
+                                                {t.calculator.hourlyRateHint}
                                             </p>
                                         </div>
                                     )}
@@ -400,7 +404,7 @@ export default function Calculator({ industry }: CalculatorProps) {
                             className="flex-1 h-12 font-display text-sm tracking-wider"
                             size="lg"
                         >
-                            {isCalculating ? "COMPUTING..." : "CALCULATE"}
+                            {isCalculating ? t.calculator.computing : t.calculator.calculate}
                         </Button>
                         <Button
                             onClick={reset}
@@ -408,7 +412,7 @@ export default function Calculator({ industry }: CalculatorProps) {
                             className="h-12 font-display text-sm tracking-wider"
                             size="lg"
                         >
-                            RESET
+                            {t.calculator.reset}
                         </Button>
                     </div>
 
@@ -476,6 +480,7 @@ export default function Calculator({ industry }: CalculatorProps) {
                 onSetBenchmark={setBenchmark}
                 benchmark={benchmark}
                 stats={stats}
+                locale={locale}
             />
         </div>
     );

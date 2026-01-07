@@ -1,0 +1,202 @@
+{
+    "site": {
+        "title": "Produktivitätsrechner",
+        "description": "Berechnen Sie Ihre Produktivität sofort mit unserem kostenlosen Online-Rechner. Messen Sie die Output-Input-Effizienz für Bau, Vertrieb, Schreiben und über 20 Branchen.",
+        "tagline": "Messen • Optimieren • Übertreffen",
+        "heroTitle": "Produktivitäts",
+        "heroTitleSuffix": "rechner",
+        "heroDescription": "Messen Sie Ihre Effizienz durch den Vergleich von Output zu Input.",
+        "heroHighlight": "Funktioniert für jede Branche, jede Rolle.",
+        "footer": "© 2026 Produktivitätsrechner. Für Effizienz gebaut."
+    },
+    "nav": {
+        "backToHome": "← Zurück zur Startseite",
+        "exploreIndustries": "Branchenrechner erkunden",
+        "viewAll": "Alle Branchen anzeigen"
+    },
+    "calculator": {
+        "mode": "Berechnungsmodus",
+        "modeProductivity": "Produktivität",
+        "modeOutput": "Output",
+        "modeInput": "Input",
+        "calculate": "BERECHNEN",
+        "computing": "BERECHNUNG...",
+        "reset": "ZURÜCKSETZEN",
+        "your": "Ihre",
+        "required": "Erforderlich",
+        "target": "Ziel",
+        "advancedOptions": "Erweiterte Optionen (Pausenzeit & Stundensatz)",
+        "breakTime": "Pausenzeit",
+        "breakTimeHint": "(abzuziehende Minuten)",
+        "hourlyRate": "Stundensatz",
+        "hourlyRateUnit": "(€ pro Stunde)",
+        "hourlyRateHint": "Geben Sie Ihren Stundensatz ein, um Verdienst und Kosten pro Einheit zu berechnen",
+        "hourlyEarnings": "Stündliche Einnahmen",
+        "costPerUnit": "Kosten pro Einheit",
+        "perHour": "pro Stunde",
+        "perItem": "pro Einheit",
+        "formulaProductivity": "Output ÷ Input = Produktivität",
+        "formulaOutput": "Produktivität × Input = Output",
+        "formulaInput": "Output ÷ Produktivität = Input",
+        "descProductivity": "Berechnen Sie Ihre Produktivitätsrate",
+        "descOutput": "Berechnen Sie den erforderlichen Output für Ihr Ziel",
+        "descInput": "Berechnen Sie den erforderlichen Input für Ihr Ziel"
+    },
+    "benchmark": {
+        "excellent": "Ausgezeichnet!",
+        "aboveAverage": "Überdurchschnittlich",
+        "average": "Durchschnittlich",
+        "belowAverage": "Unterdurchschnittlich",
+        "typicalRange": "Typischer Bereich:"
+    },
+    "history": {
+        "title": "Berechnungsverlauf",
+        "noRecords": "Noch keine Berechnungen",
+        "clear": "Alle löschen",
+        "setBenchmark": "Als Benchmark setzen",
+        "benchmark": "Benchmark",
+        "stats": "Statistiken",
+        "best": "Beste",
+        "worst": "Schlechteste",
+        "avg": "Durchschnitt",
+        "trend": "Trend"
+    },
+    "content": {
+        "whatIsProductivity": "Was ist Produktivität?",
+        "productivityDefinition": "Produktivität ist das Verhältnis von Output zu Input. Sie misst, wie effizient Ressourcen (Zeit, Arbeit, Geld) in Waren, Dienstleistungen oder Ergebnisse umgewandelt werden.",
+        "formula": "Produktivität = Gesamtoutput ÷ Gesamtinput",
+        "howToUse": "Wie Sie diesen Rechner benutzen",
+        "step1": "Geben Sie Ihren",
+        "step1Highlight": "Gesamtoutput",
+        "step1Detail": "ein (produzierte Einheiten, erzielte Einnahmen, abgeschlossene Aufgaben)",
+        "step2": "Geben Sie Ihren",
+        "step2Highlight": "Gesamtinput",
+        "step2Detail": "ein (Arbeitsstunden, beschäftigte Personen, verwendete Ressourcen)",
+        "step3": "Klicken Sie auf",
+        "step3Highlight": "BERECHNEN",
+        "step3Detail": "um Ihre Produktivitätsrate zu sehen",
+        "whyMeasure": "Warum Produktivität messen?",
+        "reason1Title": "Ineffizienzen identifizieren:",
+        "reason1": "Finden Sie heraus, wo Zeit oder Ressourcen verschwendet werden",
+        "reason2Title": "Ziele setzen:",
+        "reason2": "Erstellen Sie Benchmarks zur kontinuierlichen Verbesserung",
+        "reason3Title": "Leistung vergleichen:",
+        "reason3": "Verfolgen Sie Teams, Projekte oder Einzelpersonen",
+        "reason4Title": "Entscheidungen treffen:",
+        "reason4": "Nutzen Sie Daten zur effektiven Ressourcenallokation",
+        "howToCalculate": "So berechnen Sie",
+        "productivityIn": "Produktivität",
+        "formulaIntro": "Die Formel zur Berechnung der Produktivität in",
+        "formulaIntroSuffix": "ist einfach:",
+        "resultExplanation": "Dies gibt Ihnen eine Produktivitätsrate gemessen in",
+        "resultExplanationSuffix": ", die Ihnen hilft zu verstehen, wie effizient Ressourcen in Output umgewandelt werden.",
+        "whyTrack": "Warum",
+        "trackReason1": "Identifizieren Sie Engpässe und Ineffizienzen in Ihrem",
+        "trackReason1Suffix": "-Workflow",
+        "trackReason2": "Setzen Sie realistische Ziele und Benchmarks für Ihr Team",
+        "trackReason3": "Treffen Sie datengesteuerte Entscheidungen zur kontinuierlichen Verbesserung",
+        "trackReason4": "Vergleichen Sie die Leistung zwischen Teams oder Zeiträumen"
+    },
+    "industries": {
+        "general": {
+            "name": "Allgemein",
+            "title": "Produktivitätsrechner",
+            "description": "Berechnen Sie Ihre Produktivität durch den Vergleich von Output zu Input. Dieser universelle Rechner hilft Ihnen, die Effizienz in jedem Bereich zu messen."
+        },
+        "construction": {
+            "name": "Bauwesen",
+            "title": "Bauproduktivitätsrechner",
+            "description": "Messen Sie die Effizienz der Baustelle durch Berechnung des Outputs pro Arbeitstag. Verfolgen Sie gebaute Quadratmeter, verlegte Ziegel oder jede Baukennzahl."
+        },
+        "writing": {
+            "name": "Freiberufliches Schreiben",
+            "title": "Schreibproduktivitätsrechner",
+            "description": "Verfolgen Sie Ihre Schreibgeschwindigkeit und schätzen Sie Ihr Verdienstpotenzial. Perfekt für freiberufliche Autoren, Blogger und Content-Ersteller."
+        },
+        "sales": {
+            "name": "Vertrieb",
+            "title": "Vertriebsproduktivitätsrechner",
+            "description": "Bewerten Sie die Effizienz des Vertriebsteams durch Messung von Umsatz oder abgeschlossenen Deals pro Vertriebsmitarbeiter oder pro Arbeitsstunde."
+        },
+        "customer-support": {
+            "name": "Kundensupport",
+            "title": "Kundensupport-Produktivitätsrechner",
+            "description": "Messen Sie die Effizienz des Support-Teams durch Verfolgung gelöster Tickets pro Agent oder pro Schichtstunde."
+        },
+        "software-development": {
+            "name": "Softwareentwicklung",
+            "title": "Entwickler-Produktivitätsrechner",
+            "description": "Verfolgen Sie den Output von Entwicklern durch Messung abgeschlossener Story Points, Commits oder gelieferter Features pro Sprint oder pro Entwickler."
+        },
+        "manufacturing": {
+            "name": "Fertigung",
+            "title": "Fertigungsproduktivitätsrechner",
+            "description": "Berechnen Sie die Fabrikoutput-Effizienz durch Messung produzierter Einheiten pro Arbeitsstunde oder pro Maschinenstunde."
+        },
+        "call-center": {
+            "name": "Callcenter",
+            "title": "Callcenter-Produktivitätsrechner",
+            "description": "Bewerten Sie die Leistung von Callcenter-Agenten durch Verfolgung bearbeiteter Anrufe pro Schicht oder pro Agent."
+        },
+        "agriculture": {
+            "name": "Landwirtschaft",
+            "title": "Landwirtschaftsproduktivitätsrechner",
+            "description": "Messen Sie die Ertragseffizienz durch Berechnung des Ernteertrags pro Hektar oder pro Arbeitstag."
+        },
+        "healthcare": {
+            "name": "Gesundheitswesen",
+            "title": "Gesundheitswesen-Produktivitätsrechner",
+            "description": "Verfolgen Sie die Effizienz des medizinischen Personals durch Messung behandelter Patienten oder durchgeführter Eingriffe pro Schicht."
+        },
+        "retail": {
+            "name": "Einzelhandel",
+            "title": "Einzelhandelsproduktivitätsrechner",
+            "description": "Messen Sie die Leistung des Einzelhandelsgeschäfts durch Berechnung des Umsatzes pro Mitarbeiter oder pro Quadratmeter."
+        },
+        "logistics": {
+            "name": "Logistik",
+            "title": "Logistikproduktivitätsrechner",
+            "description": "Bewerten Sie die Lager- und Liefereffizienz durch Verfolgung bearbeiteter Pakete oder durchgeführter Lieferungen pro Stunde."
+        },
+        "education": {
+            "name": "Bildung",
+            "title": "Lehrproduktivitätsrechner",
+            "description": "Messen Sie den Bildungsoutput durch Verfolgung unterrichteter Schüler, gehaltener Unterrichtsstunden oder korrigierter Aufgaben pro Stunde."
+        },
+        "marketing": {
+            "name": "Marketing",
+            "title": "Marketingproduktivitätsrechner",
+            "description": "Verfolgen Sie den Output des Marketingteams durch Messung gestarteter Kampagnen, generierter Leads oder erstellter Inhalte."
+        },
+        "restaurant": {
+            "name": "Restaurant",
+            "title": "Restaurantproduktivitätsrechner",
+            "description": "Messen Sie die Restauranteffizienz durch Verfolgung bedieniter Gäste, erfüllter Bestellungen oder Umsatz pro Mitarbeiter."
+        },
+        "data-entry": {
+            "name": "Dateneingabe",
+            "title": "Dateneingabe-Produktivitätsrechner",
+            "description": "Verfolgen Sie die Dateneingabe-Effizienz durch Messung bearbeiteter Datensätze oder Tastenanschläge pro Stunde."
+        },
+        "graphic-design": {
+            "name": "Grafikdesign",
+            "title": "Designer-Produktivitätsrechner",
+            "description": "Messen Sie den Output des Designteams durch Verfolgung fertiggestellter Deliverables, bearbeiteter Revisionen oder abrechenbarer Stunden."
+        },
+        "video-production": {
+            "name": "Videoproduktion",
+            "title": "Videoproduktions-Produktivitätsrechner",
+            "description": "Verfolgen Sie die Effizienz der Videoinhaltserstellung durch Messung produzierter Videos oder bearbeiteter Aufnahmeminuten pro Tag."
+        },
+        "cleaning-services": {
+            "name": "Reinigungsdienste",
+            "title": "Reinigungsproduktivitätsrechner",
+            "description": "Messen Sie die Effizienz des Reinigungsteams durch Verfolgung gereinigter Räume oder abgedeckter Quadratmeter pro Stunde."
+        },
+        "real-estate": {
+            "name": "Immobilien",
+            "title": "Immobilienmakler-Produktivitätsrechner",
+            "description": "Verfolgen Sie die Leistung von Immobilienmaklern durch Messung gezeigter Immobilien, abgeschlossener Deals oder verdienter Provisionen."
+        }
+    }
+}

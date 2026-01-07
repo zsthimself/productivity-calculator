@@ -1,0 +1,202 @@
+{
+    "site": {
+        "title": "Productivity Calculator",
+        "description": "Calculate your productivity instantly with our free online calculator. Measure output vs input efficiency for construction, sales, writing, and 20+ industries.",
+        "tagline": "Measure • Optimize • Excel",
+        "heroTitle": "Productivity",
+        "heroTitleSuffix": "Calculator",
+        "heroDescription": "Measure your efficiency by comparing output to input.",
+        "heroHighlight": "Works for any industry, any role.",
+        "footer": "© 2026 Productivity Calculator. Built for efficiency."
+    },
+    "nav": {
+        "backToHome": "← Back to Home",
+        "exploreIndustries": "Explore Industry Calculators",
+        "viewAll": "View All Industries"
+    },
+    "calculator": {
+        "mode": "Calculation Mode",
+        "modeProductivity": "Productivity",
+        "modeOutput": "Output",
+        "modeInput": "Input",
+        "calculate": "CALCULATE",
+        "computing": "COMPUTING...",
+        "reset": "RESET",
+        "your": "Your",
+        "required": "Required",
+        "target": "Target",
+        "advancedOptions": "Advanced Options (Break Time & Hourly Rate)",
+        "breakTime": "Break Time",
+        "breakTimeHint": "(minutes to subtract)",
+        "hourlyRate": "Hourly Rate",
+        "hourlyRateUnit": "($ per hour)",
+        "hourlyRateHint": "Enter your hourly rate to calculate earnings & cost per unit",
+        "hourlyEarnings": "Hourly Earnings",
+        "costPerUnit": "Cost per Unit",
+        "perHour": "per hour",
+        "perItem": "per item",
+        "formulaProductivity": "Output ÷ Input = Productivity",
+        "formulaOutput": "Productivity × Input = Output",
+        "formulaInput": "Output ÷ Productivity = Input",
+        "descProductivity": "Find your productivity rate",
+        "descOutput": "Find required output for target",
+        "descInput": "Find required input for target"
+    },
+    "benchmark": {
+        "excellent": "Excellent!",
+        "aboveAverage": "Above Average",
+        "average": "Average",
+        "belowAverage": "Below Average",
+        "typicalRange": "Typical range:"
+    },
+    "history": {
+        "title": "Calculation History",
+        "noRecords": "No calculations yet",
+        "clear": "Clear All",
+        "setBenchmark": "Set as Benchmark",
+        "benchmark": "Benchmark",
+        "stats": "Statistics",
+        "best": "Best",
+        "worst": "Worst",
+        "avg": "Average",
+        "trend": "Trend"
+    },
+    "content": {
+        "whatIsProductivity": "What is Productivity?",
+        "productivityDefinition": "Productivity is the ratio of output to input. It measures how efficiently resources (time, labor, money) are converted into goods, services, or results.",
+        "formula": "Productivity = Total Output ÷ Total Input",
+        "howToUse": "How to Use This Calculator",
+        "step1": "Enter your",
+        "step1Highlight": "Total Output",
+        "step1Detail": "(units produced, revenue earned, tasks completed)",
+        "step2": "Enter your",
+        "step2Highlight": "Total Input",
+        "step2Detail": "(hours worked, people employed, resources used)",
+        "step3": "Click",
+        "step3Highlight": "CALCULATE",
+        "step3Detail": "to see your productivity rate",
+        "whyMeasure": "Why Measure Productivity?",
+        "reason1Title": "Identify inefficiencies:",
+        "reason1": "Find where time or resources are being wasted",
+        "reason2Title": "Set goals:",
+        "reason2": "Establish benchmarks to improve over time",
+        "reason3Title": "Compare performance:",
+        "reason3": "Track teams, projects, or individuals",
+        "reason4Title": "Make decisions:",
+        "reason4": "Use data to allocate resources effectively",
+        "howToCalculate": "How to Calculate",
+        "productivityIn": "Productivity",
+        "formulaIntro": "The formula for calculating productivity in",
+        "formulaIntroSuffix": "is straightforward:",
+        "resultExplanation": "This gives you a productivity rate measured in",
+        "resultExplanationSuffix": ", which helps you understand how efficiently resources are being converted into output.",
+        "whyTrack": "Why Track",
+        "trackReason1": "Identify bottlenecks and inefficiencies in your",
+        "trackReason1Suffix": "workflow",
+        "trackReason2": "Set realistic goals and benchmarks for your team",
+        "trackReason3": "Make data-driven decisions for continuous improvement",
+        "trackReason4": "Compare performance across teams or time periods"
+    },
+    "industries": {
+        "general": {
+            "name": "General",
+            "title": "Productivity Calculator",
+            "description": "Calculate your productivity by comparing output to input. This universal calculator helps you measure efficiency across any field."
+        },
+        "construction": {
+            "name": "Construction",
+            "title": "Construction Productivity Calculator",
+            "description": "Measure construction site efficiency by calculating output per labor day. Track square meters built, bricks laid, or any construction metric."
+        },
+        "writing": {
+            "name": "Freelance Writing",
+            "title": "Writing Productivity Calculator",
+            "description": "Track your writing speed and estimate earnings potential. Perfect for freelance writers, bloggers, and content creators."
+        },
+        "sales": {
+            "name": "Sales",
+            "title": "Sales Productivity Calculator",
+            "description": "Evaluate sales team efficiency by measuring revenue or deals closed per sales representative or per hour worked."
+        },
+        "customer-support": {
+            "name": "Customer Support",
+            "title": "Customer Support Productivity Calculator",
+            "description": "Measure support team efficiency by tracking tickets resolved per agent or per shift hour."
+        },
+        "software-development": {
+            "name": "Software Development",
+            "title": "Developer Productivity Calculator",
+            "description": "Track developer output by measuring story points completed, commits made, or features delivered per sprint or per developer."
+        },
+        "manufacturing": {
+            "name": "Manufacturing",
+            "title": "Manufacturing Productivity Calculator",
+            "description": "Calculate factory output efficiency by measuring units produced per labor hour or per machine hour."
+        },
+        "call-center": {
+            "name": "Call Center",
+            "title": "Call Center Productivity Calculator",
+            "description": "Evaluate call center agent performance by tracking calls handled per shift or per agent."
+        },
+        "agriculture": {
+            "name": "Agriculture",
+            "title": "Farm Productivity Calculator",
+            "description": "Measure agricultural yield efficiency by calculating crop output per hectare or per labor day."
+        },
+        "healthcare": {
+            "name": "Healthcare",
+            "title": "Healthcare Productivity Calculator",
+            "description": "Track medical staff efficiency by measuring patients seen or procedures completed per shift."
+        },
+        "retail": {
+            "name": "Retail",
+            "title": "Retail Productivity Calculator",
+            "description": "Measure retail store performance by calculating sales per employee or per square foot."
+        },
+        "logistics": {
+            "name": "Logistics",
+            "title": "Logistics Productivity Calculator",
+            "description": "Evaluate warehouse and delivery efficiency by tracking packages processed or deliveries made per hour."
+        },
+        "education": {
+            "name": "Education",
+            "title": "Teaching Productivity Calculator",
+            "description": "Measure educational output by tracking students taught, lessons delivered, or assignments graded per hour."
+        },
+        "marketing": {
+            "name": "Marketing",
+            "title": "Marketing Productivity Calculator",
+            "description": "Track marketing team output by measuring campaigns launched, leads generated, or content pieces created."
+        },
+        "restaurant": {
+            "name": "Restaurant",
+            "title": "Restaurant Productivity Calculator",
+            "description": "Measure restaurant efficiency by tracking covers served, orders fulfilled, or revenue per staff member."
+        },
+        "data-entry": {
+            "name": "Data Entry",
+            "title": "Data Entry Productivity Calculator",
+            "description": "Track data entry efficiency by measuring records processed or keystrokes per hour."
+        },
+        "graphic-design": {
+            "name": "Graphic Design",
+            "title": "Designer Productivity Calculator",
+            "description": "Measure design team output by tracking deliverables completed, revisions handled, or billable hours."
+        },
+        "video-production": {
+            "name": "Video Production",
+            "title": "Video Production Productivity Calculator",
+            "description": "Track video content creation efficiency by measuring videos produced or minutes of footage edited per day."
+        },
+        "cleaning-services": {
+            "name": "Cleaning Services",
+            "title": "Cleaning Productivity Calculator",
+            "description": "Measure cleaning team efficiency by tracking rooms cleaned or square footage covered per hour."
+        },
+        "real-estate": {
+            "name": "Real Estate",
+            "title": "Real Estate Agent Productivity Calculator",
+            "description": "Track real estate agent performance by measuring properties shown, deals closed, or commission earned."
+        }
+    }
+}
