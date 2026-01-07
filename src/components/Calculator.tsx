@@ -61,14 +61,17 @@ export default function Calculator({ industry }: CalculatorProps) {
     // 高级选项
     const [showAdvanced, setShowAdvanced] = useState(false);
     const [breakTime, setBreakTime] = useState<string>("");
+    const [hourlyRate, setHourlyRate] = useState<string>("");
 
     // 结果
     const [result, setResult] = useState<number | null>(null);
     const [isCalculating, setIsCalculating] = useState(false);
 
     // 历史记录
-    const { addRecord, getIndustryHistory, clearHistory } = useCalculationHistory();
+    const { addRecord, getIndustryHistory, clearHistory, setBenchmark, getBenchmark, getStats } = useCalculationHistory();
     const industryHistory = getIndustryHistory(industry.slug);
+    const benchmark = getBenchmark(industry.slug);
+    const stats = getStats(industry.slug);
 
     const outputField = industry.inputs.find((i) => i.key === "output");
     const inputField = industry.inputs.find((i) => i.key === "input");
@@ -124,6 +127,10 @@ export default function Calculator({ industry }: CalculatorProps) {
 
             // 保存到历史记录
             if (calculatedResult !== null) {
+                const rate = parseFloat(hourlyRate) || undefined;
+                const earnings = rate && mode === "productivity" ? calculatedResult * rate : undefined;
+                const costPerUnit = rate && mode === "productivity" && calculatedResult > 0 ? rate / calculatedResult : undefined;
+
                 addRecord({
                     industrySlug: industry.slug,
                     mode,
@@ -133,6 +140,9 @@ export default function Calculator({ industry }: CalculatorProps) {
                         productivity: parseFloat(productivityValue) || 0,
                     },
                     result: calculatedResult,
+                    hourlyRate: rate,
+                    earnings,
+                    costPerUnit,
                 });
             }
         }, 300);
@@ -143,8 +153,20 @@ export default function Calculator({ industry }: CalculatorProps) {
         setInputValue("");
         setProductivityValue("");
         setBreakTime("");
+        setHourlyRate("");
         setResult(null);
     };
+
+    // 计算收益信息
+    const earningsInfo = useMemo(() => {
+        const rate = parseFloat(hourlyRate);
+        if (!rate || result === null || mode !== "productivity") return null;
+
+        const earnings = result * rate; // 每小时收益 = 生产力 × 时薪
+        const costPerUnit = rate / result; // 单位成本 = 时薪 ÷ 生产力
+
+        return { earnings, costPerUnit };
+    }, [hourlyRate, result, mode]);
 
     // 获取结果标签
     const getResultLabel = (): string => {
@@ -320,28 +342,51 @@ export default function Calculator({ industry }: CalculatorProps) {
                                 className="text-xs text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
                             >
                                 <span>{showAdvanced ? "▼" : "▶"}</span>
-                                Advanced Options (Break Time)
+                                Advanced Options (Break Time & Hourly Rate)
                             </button>
 
                             {showAdvanced && (
-                                <div className="mt-3 p-3 rounded-lg bg-muted/30 border border-border/50 animate-fade-in">
-                                    <Label htmlFor="break-time" className="font-display text-xs tracking-wider uppercase">
-                                        Break Time
-                                        <span className="text-muted-foreground ml-2 font-normal normal-case">
-                                            (minutes to subtract)
-                                        </span>
-                                    </Label>
-                                    <Input
-                                        id="break-time"
-                                        type="number"
-                                        value={breakTime}
-                                        onChange={(e) => setBreakTime(e.target.value)}
-                                        placeholder="e.g., 30"
-                                        className="h-10 text-sm bg-input/50 mt-2"
-                                    />
-                                    <p className="text-xs text-muted-foreground mt-1">
-                                        This time will be subtracted from your input hours
-                                    </p>
+                                <div className="mt-3 p-3 rounded-lg bg-muted/30 border border-border/50 animate-fade-in space-y-4">
+                                    {/* Break Time */}
+                                    <div>
+                                        <Label htmlFor="break-time" className="font-display text-xs tracking-wider uppercase">
+                                            Break Time
+                                            <span className="text-muted-foreground ml-2 font-normal normal-case">
+                                                (minutes to subtract)
+                                            </span>
+                                        </Label>
+                                        <Input
+                                            id="break-time"
+                                            type="number"
+                                            value={breakTime}
+                                            onChange={(e) => setBreakTime(e.target.value)}
+                                            placeholder="e.g., 30"
+                                            className="h-10 text-sm bg-input/50 mt-2"
+                                        />
+                                    </div>
+
+                                    {/* Hourly Rate */}
+                                    {mode === "productivity" && (
+                                        <div>
+                                            <Label htmlFor="hourly-rate" className="font-display text-xs tracking-wider uppercase">
+                                                Hourly Rate
+                                                <span className="text-green-400 ml-2 font-normal normal-case">
+                                                    ($ per hour)
+                                                </span>
+                                            </Label>
+                                            <Input
+                                                id="hourly-rate"
+                                                type="number"
+                                                value={hourlyRate}
+                                                onChange={(e) => setHourlyRate(e.target.value)}
+                                                placeholder="e.g., 25"
+                                                className="h-10 text-sm bg-input/50 mt-2"
+                                            />
+                                            <p className="text-xs text-muted-foreground mt-1">
+                                                Enter your hourly rate to calculate earnings & cost per unit
+                                            </p>
+                                        </div>
+                                    )}
                                 </div>
                             )}
                         </div>
@@ -381,6 +426,30 @@ export default function Calculator({ industry }: CalculatorProps) {
                                     {getResultUnit()}
                                 </p>
 
+                                {/* Earnings Info */}
+                                {earningsInfo && (
+                                    <div className="mt-4 pt-4 border-t border-green-500/20 grid grid-cols-2 gap-4">
+                                        <div>
+                                            <p className="text-xs text-green-400 font-display tracking-wider uppercase">
+                                                Hourly Earnings
+                                            </p>
+                                            <p className="text-xl font-bold text-green-400 mt-1">
+                                                ${earningsInfo.earnings.toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                                            </p>
+                                            <p className="text-xs text-muted-foreground">per hour</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-xs text-orange-400 font-display tracking-wider uppercase">
+                                                Cost per Unit
+                                            </p>
+                                            <p className="text-xl font-bold text-orange-400 mt-1">
+                                                ${earningsInfo.costPerUnit.toLocaleString(undefined, { maximumFractionDigits: 4 })}
+                                            </p>
+                                            <p className="text-xs text-muted-foreground">per item</p>
+                                        </div>
+                                    </div>
+                                )}
+
                                 {/* Benchmark Comparison */}
                                 {benchmarkInfo && industry.benchmark && (
                                     <div className={`mt-4 pt-4 border-t border-primary/20 ${benchmarkInfo.color}`}>
@@ -404,6 +473,9 @@ export default function Calculator({ industry }: CalculatorProps) {
                 industryName={industry.name}
                 resultUnit={industry.resultUnit}
                 onClear={clearHistory}
+                onSetBenchmark={setBenchmark}
+                benchmark={benchmark}
+                stats={stats}
             />
         </div>
     );

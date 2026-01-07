@@ -7,19 +7,19 @@
     "inputs": [
       {
         "label": "Total Output",
-        "unit": "units",
+        "unit": "items/tasks",
         "key": "output",
-        "placeholder": "e.g., 100"
+        "placeholder": "e.g., 100 items, 50 tasks"
       },
       {
         "label": "Total Input",
         "unit": "hours",
         "key": "input",
-        "placeholder": "e.g., 8"
+        "placeholder": "e.g., 8 hours worked"
       }
     ],
     "resultLabel": "Productivity",
-    "resultUnit": "units/hour",
+    "resultUnit": "items per hour",
     "icon": "📊",
     "benchmark": {
       "average": 10,

@@ -24,6 +24,12 @@ export interface CalculationRecord {
   values: Record<string, number>;
   result: number;
   timestamp: number;
+  // 金钱维度 (可选)
+  hourlyRate?: number;      // 时薪/单价
+  earnings?: number;        // 计算出的收益
+  costPerUnit?: number;     // 单位成本
+  // 基准功能 (可选)
+  isBenchmark?: boolean;    // 是否为基准记录
 }
 
 export interface IndustryInput {
