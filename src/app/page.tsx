@@ -18,7 +18,7 @@ const generalIndustry = industryData.find((i) => i.slug === "general")!;
 const BASE_URL = "https://productivitycalculator.work";
 
 export const metadata: Metadata = {
-  title: "Productivity Calculator | Free Online Tool for Any Industry",
+  title: "Productivity Calculator 2026: Free Tool for 20+ Industries",
   description:
     "Calculate your productivity instantly with our free online calculator. Measure output vs input efficiency for construction, sales, writing, and 20+ industries.",
   keywords: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Productivity Calculator | Free Online Tool for Any Industry",
+    title: "Productivity Calculator 2026: Free Tool for 20+ Industries",
     description:
       "Calculate your productivity instantly. Measure output vs input efficiency for construction, sales, writing, and 20+ industries.",
     url: BASE_URL,
@@ -171,6 +171,162 @@ export default function HomePage() {
                 </ul>
               </div>
             </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="mt-12 max-w-3xl mx-auto">
+            <div className="card-neon rounded-2xl p-8 md:p-12">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-gradient mb-8 text-center">
+                Frequently Asked Questions
+              </h2>
+
+              <div className="space-y-4">
+                {/* FAQ 1 */}
+                <details className="group neon-border rounded-xl p-4 cursor-pointer">
+                  <summary className="font-display text-lg font-semibold text-white list-none flex justify-between items-center">
+                    What is the formula for calculating productivity?
+                    <span className="text-[var(--neon-cyan)] transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="mt-4 text-[var(--text-secondary)] font-body leading-relaxed">
+                    The basic productivity formula is <strong className="text-[var(--neon-cyan)]">Productivity = Total Output ÷ Total Input</strong>. 
+                    Output can be measured as units produced, revenue earned, tasks completed, or any other measurable result. 
+                    Input typically includes hours worked, number of employees, or resources invested.
+                  </p>
+                </details>
+
+                {/* FAQ 2 */}
+                <details className="group neon-border rounded-xl p-4 cursor-pointer">
+                  <summary className="font-display text-lg font-semibold text-white list-none flex justify-between items-center">
+                    How do I improve my productivity rate?
+                    <span className="text-[var(--neon-pink)] transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <div className="mt-4 text-[var(--text-secondary)] font-body leading-relaxed">
+                    <p className="mb-3">To improve productivity:</p>
+                    <ol className="list-decimal list-inside space-y-2 ml-2">
+                      <li>Identify bottlenecks by measuring current performance</li>
+                      <li>Eliminate time-wasting activities</li>
+                      <li>Automate repetitive tasks</li>
+                      <li>Set clear goals and deadlines</li>
+                      <li>Take regular breaks to maintain focus</li>
+                      <li>Use tools like this calculator to track progress over time</li>
+                    </ol>
+                  </div>
+                </details>
+
+                {/* FAQ 3 */}
+                <details className="group neon-border rounded-xl p-4 cursor-pointer">
+                  <summary className="font-display text-lg font-semibold text-white list-none flex justify-between items-center">
+                    What is a good productivity rate?
+                    <span className="text-[var(--neon-purple)] transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="mt-4 text-[var(--text-secondary)] font-body leading-relaxed">
+                    A "good" productivity rate varies by industry. For example, in writing, 500-800 words per hour is average while 
+                    1200+ is excellent. In manufacturing, it depends on the product complexity. Use our industry-specific calculators 
+                    to compare your rate against benchmarks for your field.
+                  </p>
+                </details>
+
+                {/* FAQ 4 */}
+                <details className="group neon-border rounded-xl p-4 cursor-pointer">
+                  <summary className="font-display text-lg font-semibold text-white list-none flex justify-between items-center">
+                    Can I use this calculator for team productivity?
+                    <span className="text-[var(--neon-blue)] transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="mt-4 text-[var(--text-secondary)] font-body leading-relaxed">
+                    Yes! For team productivity, enter the total output of the team and the total input (such as combined hours worked 
+                    or number of team members). This gives you the average productivity per person or per hour, which is useful for 
+                    comparing team performance over time.
+                  </p>
+                </details>
+
+                {/* FAQ 5 */}
+                <details className="group neon-border rounded-xl p-4 cursor-pointer">
+                  <summary className="font-display text-lg font-semibold text-white list-none flex justify-between items-center">
+                    Is productivity the same as efficiency?
+                    <span className="text-[var(--neon-cyan)] transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="mt-4 text-[var(--text-secondary)] font-body leading-relaxed">
+                    While related, they are different. <strong className="text-white">Productivity</strong> measures the quantity of output 
+                    relative to input. <strong className="text-white">Efficiency</strong> measures how well resources are used to achieve 
+                    a goal, often considering quality and waste. High productivity with low efficiency means producing a lot but wasting resources.
+                  </p>
+                </details>
+
+                {/* FAQ 6 */}
+                <details className="group neon-border rounded-xl p-4 cursor-pointer">
+                  <summary className="font-display text-lg font-semibold text-white list-none flex justify-between items-center">
+                    How often should I measure productivity?
+                    <span className="text-[var(--neon-pink)] transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="mt-4 text-[var(--text-secondary)] font-body leading-relaxed">
+                    It depends on your goals. For personal productivity, weekly tracking helps identify patterns. For teams, monthly 
+                    reviews work well. For manufacturing or sales, daily or shift-based tracking may be necessary. The key is consistency—choose 
+                    a frequency you can maintain.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            {/* FAQ Schema */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: [
+                    {
+                      "@type": "Question",
+                      name: "What is the formula for calculating productivity?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "The basic productivity formula is Productivity = Total Output ÷ Total Input. Output can be measured as units produced, revenue earned, tasks completed, or any other measurable result. Input typically includes hours worked, number of employees, or resources invested.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "How do I improve my productivity rate?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "To improve productivity: (1) Identify bottlenecks by measuring current performance, (2) Eliminate time-wasting activities, (3) Automate repetitive tasks, (4) Set clear goals and deadlines, (5) Take regular breaks to maintain focus, and (6) Use tools like this calculator to track progress over time.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "What is a good productivity rate?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "A good productivity rate varies by industry. For example, in writing, 500-800 words per hour is average while 1200+ is excellent. In manufacturing, it depends on the product complexity. Use industry-specific calculators to compare your rate against benchmarks.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Can I use this calculator for team productivity?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Yes! For team productivity, enter the total output of the team and the total input (such as combined hours worked or number of team members). This gives you the average productivity per person or per hour.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Is productivity the same as efficiency?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "While related, they are different. Productivity measures the quantity of output relative to input. Efficiency measures how well resources are used to achieve a goal, often considering quality and waste.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "How often should I measure productivity?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "It depends on your goals. For personal productivity, weekly tracking helps identify patterns. For teams, monthly reviews work well. For manufacturing or sales, daily or shift-based tracking may be necessary.",
+                      },
+                    },
+                  ],
+                }),
+              }}
+            />
           </section>
 
           {/* Internal Links to Industry Calculators */}

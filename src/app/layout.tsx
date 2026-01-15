@@ -19,7 +19,7 @@ const BASE_URL = "https://productivitycalculator.work";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Productivity Calculator | Free Online Tool for Any Industry",
+    default: "Productivity Calculator 2026: Free Tool for 20+ Industries",
     template: "%s | Productivity Calculator",
   },
   description:
@@ -49,15 +49,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: BASE_URL,
     siteName: "Productivity Calculator",
-    title: "Productivity Calculator | Free Online Tool for Any Industry",
+    title: "Productivity Calculator 2026: Free Tool for 20+ Industries",
     description:
       "Calculate your productivity instantly. Measure output vs input efficiency for construction, sales, writing, and 20+ industries.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Productivity Calculator - Free Online Tool for 20+ Industries",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Productivity Calculator | Free Online Tool",
+    title: "Productivity Calculator 2026: Free Tool for 20+ Industries",
     description:
       "Calculate your productivity instantly. Measure output vs input efficiency for any industry.",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: BASE_URL,

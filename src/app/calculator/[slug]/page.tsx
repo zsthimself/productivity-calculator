@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const pageUrl = `${BASE_URL}/calculator/${slug}`;
 
     return {
-        title: industry.title,
+        title: `${industry.title} 2026 | Free Online Tool`,
         description: industry.description,
         keywords: [
             industry.title.toLowerCase(),
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             },
         },
         openGraph: {
-            title: `${industry.title} | Free Online Tool`,
+            title: `${industry.title} 2026 | Free Calculator`,
             description: industry.description,
             url: pageUrl,
             type: "website",

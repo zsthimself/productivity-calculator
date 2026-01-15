@@ -493,5 +493,201 @@
     "resultLabel": "Showings Rate",
     "resultUnit": "properties/day",
     "icon": "🏠"
+  },
+  {
+    "slug": "therapy",
+    "name": "Therapy",
+    "title": "Therapist Productivity Calculator",
+    "description": "Track therapy practice efficiency by measuring client sessions completed, billable hours, or treatment outcomes. Perfect for therapists, counselors, and mental health professionals.",
+    "inputs": [
+      {
+        "label": "Client Sessions",
+        "unit": "sessions",
+        "key": "output",
+        "placeholder": "e.g., 25"
+      },
+      {
+        "label": "Work Hours",
+        "unit": "hours",
+        "key": "input",
+        "placeholder": "e.g., 40"
+      }
+    ],
+    "resultLabel": "Session Rate",
+    "resultUnit": "sessions/hour",
+    "icon": "🧠",
+    "benchmark": {
+      "average": 0.6,
+      "good": 0.8,
+      "excellent": 1
+    }
+  },
+  {
+    "slug": "employee",
+    "name": "Employee",
+    "title": "Employee Productivity Calculator",
+    "description": "Measure employee performance and output efficiency. Calculate tasks completed, revenue generated, or projects delivered per employee.",
+    "inputs": [
+      {
+        "label": "Tasks Completed",
+        "unit": "tasks",
+        "key": "output",
+        "placeholder": "e.g., 50"
+      },
+      {
+        "label": "Employees",
+        "unit": "people",
+        "key": "input",
+        "placeholder": "e.g., 5"
+      }
+    ],
+    "resultLabel": "Employee Output",
+    "resultUnit": "tasks/employee",
+    "icon": "👔",
+    "benchmark": {
+      "average": 8,
+      "good": 12,
+      "excellent": 18
+    }
+  },
+  {
+    "slug": "physical-therapy",
+    "name": "Physical Therapy",
+    "title": "Physical Therapy Productivity Calculator",
+    "description": "Track physical therapy practice efficiency by measuring patient treatments, therapy sessions, or billable units per day. Perfect for PT clinics, rehabilitation centers, and physical therapists.",
+    "inputs": [
+      {
+        "label": "Patients Treated",
+        "unit": "patients",
+        "key": "output",
+        "placeholder": "e.g., 12"
+      },
+      {
+        "label": "Clinic Hours",
+        "unit": "hours",
+        "key": "input",
+        "placeholder": "e.g., 8"
+      }
+    ],
+    "resultLabel": "Treatment Rate",
+    "resultUnit": "patients/hour",
+    "icon": "🏥",
+    "benchmark": {
+      "average": 1.2,
+      "good": 1.5,
+      "excellent": 2
+    }
+  },
+  {
+    "slug": "labor",
+    "name": "Labor",
+    "title": "Labor Productivity Calculator",
+    "description": "Calculate labor productivity by measuring output value per labor hour. Essential for workforce planning, cost analysis, and performance benchmarking.",
+    "inputs": [
+      {
+        "label": "Output Value",
+        "unit": "$",
+        "key": "output",
+        "placeholder": "e.g., 10000"
+      },
+      {
+        "label": "Labor Hours",
+        "unit": "hours",
+        "key": "input",
+        "placeholder": "e.g., 100"
+      }
+    ],
+    "resultLabel": "Labor Productivity",
+    "resultUnit": "$/labor hour",
+    "icon": "👷",
+    "benchmark": {
+      "average": 50,
+      "good": 75,
+      "excellent": 100
+    }
+  },
+  {
+    "slug": "machine",
+    "name": "Machine",
+    "title": "Machine Productivity Calculator",
+    "description": "Measure machine and equipment efficiency by calculating units produced per machine hour. Track OEE and optimize manufacturing operations.",
+    "inputs": [
+      {
+        "label": "Units Produced",
+        "unit": "units",
+        "key": "output",
+        "placeholder": "e.g., 500"
+      },
+      {
+        "label": "Machine Hours",
+        "unit": "hours",
+        "key": "input",
+        "placeholder": "e.g., 8"
+      }
+    ],
+    "resultLabel": "Machine Output",
+    "resultUnit": "units/machine hour",
+    "icon": "⚙️",
+    "benchmark": {
+      "average": 50,
+      "good": 75,
+      "excellent": 100
+    }
+  },
+  {
+    "slug": "welding",
+    "name": "Welding",
+    "title": "Welding Productivity Calculator",
+    "description": "Track welding productivity by measuring inches welded, joints completed, or deposition rate per hour. Essential for fabrication shops and construction.",
+    "inputs": [
+      {
+        "label": "Inches Welded",
+        "unit": "inches",
+        "key": "output",
+        "placeholder": "e.g., 200"
+      },
+      {
+        "label": "Work Hours",
+        "unit": "hours",
+        "key": "input",
+        "placeholder": "e.g., 8"
+      }
+    ],
+    "resultLabel": "Welding Rate",
+    "resultUnit": "inches/hour",
+    "icon": "🔥",
+    "benchmark": {
+      "average": 20,
+      "good": 30,
+      "excellent": 45
+    }
+  },
+  {
+    "slug": "technician",
+    "name": "Technician",
+    "title": "Technician Productivity Calculator",
+    "description": "Measure technician efficiency by tracking service calls completed, repairs made, or billable hours per day. Perfect for field service and maintenance teams.",
+    "inputs": [
+      {
+        "label": "Jobs Completed",
+        "unit": "jobs",
+        "key": "output",
+        "placeholder": "e.g., 6"
+      },
+      {
+        "label": "Work Hours",
+        "unit": "hours",
+        "key": "input",
+        "placeholder": "e.g., 8"
+      }
+    ],
+    "resultLabel": "Service Rate",
+    "resultUnit": "jobs/hour",
+    "icon": "🔧",
+    "benchmark": {
+      "average": 0.6,
+      "good": 0.8,
+      "excellent": 1
+    }
   }
 ]
