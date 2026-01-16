@@ -4,7 +4,9 @@
  * 
  * 使用方法:
  * 1. 将服务账号JSON密钥文件放置为 credentials.json
- * 2. 运行: node scripts/submit-to-indexing.js
+ * 2. 运行: npm run submit-urls        (只提交新URL)
+ *         npm run submit-urls:force   (强制提交所有URL)
+ *         npm run submit-urls:new     (只提交最近添加的行业页面)
  */
 
 const { google } = require('googleapis');
@@ -14,7 +16,7 @@ const path = require('path');
 // 配置
 const CREDENTIALS_PATH = path.join(__dirname, '..', 'credentials.json');
 const SITEMAP_PATH = path.join(__dirname, '..', 'public', 'sitemap.xml');
-const BATCH_SIZE = 100; // Google API每天限制200次，分批处理
+const SUBMITTED_URLS_PATH = path.join(__dirname, 'submitted-urls.json');
 const DELAY_MS = 1000; // 每次请求间隔
 
 // 从sitemap.xml中提取所有URL
@@ -29,6 +31,31 @@ function extractUrlsFromSitemap(sitemapPath) {
   }
   
   return urls;
+}
+
+// 加载已提交的URL记录
+function loadSubmittedUrls() {
+  if (fs.existsSync(SUBMITTED_URLS_PATH)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(SUBMITTED_URLS_PATH, 'utf-8'));
+      return new Set(data.urls || []);
+    } catch (e) {
+      console.log('⚠️ 无法读取已提交URL记录，将创建新记录');
+      return new Set();
+    }
+  }
+  return new Set();
+}
+
+// 保存已提交的URL记录
+function saveSubmittedUrls(urls) {
+  const data = {
+    lastUpdated: new Date().toISOString(),
+    count: urls.size,
+    urls: Array.from(urls)
+  };
+  fs.writeFileSync(SUBMITTED_URLS_PATH, JSON.stringify(data, null, 2), 'utf-8');
+  console.log(`\n💾 已保存 ${urls.size} 个URL到提交记录`);
 }
 
 // 延迟函数
@@ -53,6 +80,11 @@ async function submitUrl(indexing, url, type = 'URL_UPDATED') {
 
 // 主函数
 async function main() {
+  // 解析命令行参数
+  const args = process.argv.slice(2);
+  const forceAll = args.includes('--force');
+  const onlyNewIndustries = args.includes('--new');
+
   // 检查凭据文件
   if (!fs.existsSync(CREDENTIALS_PATH)) {
     console.error('❌ 错误: 未找到 credentials.json 文件');
@@ -73,26 +105,49 @@ async function main() {
   });
 
   // 提取URL
-  const urls = extractUrlsFromSitemap(SITEMAP_PATH);
-  console.log(`📋 从sitemap中提取了 ${urls.length} 个URL\n`);
+  const allUrls = extractUrlsFromSitemap(SITEMAP_PATH);
+  console.log(`📋 从sitemap中提取了 ${allUrls.length} 个URL`);
 
-  // 选择要提交的URL（可以通过命令行参数指定）
-  const urlsToSubmit = process.argv[2] === '--new' 
-    ? urls.filter(url => 
-        url.includes('/therapy') ||
-        url.includes('/employee') ||
-        url.includes('/physical-therapy') ||
-        url.includes('/labor') ||
-        url.includes('/machine') ||
-        url.includes('/welding') ||
-        url.includes('/technician')
-      )
-    : urls.slice(0, BATCH_SIZE);
+  // 加载已提交记录
+  const submittedUrls = loadSubmittedUrls();
+  console.log(`📂 已有 ${submittedUrls.size} 个URL提交记录`);
+
+  // 确定要提交的URL
+  let urlsToSubmit;
+  
+  if (onlyNewIndustries) {
+    // 只提交新增行业页面
+    urlsToSubmit = allUrls.filter(url => 
+      url.includes('/therapy') ||
+      url.includes('/employee') ||
+      url.includes('/physical-therapy') ||
+      url.includes('/labor') ||
+      url.includes('/machine') ||
+      url.includes('/welding') ||
+      url.includes('/technician')
+    );
+    console.log(`\n🆕 模式: 只提交新行业页面`);
+  } else if (forceAll) {
+    // 强制提交所有URL
+    urlsToSubmit = allUrls;
+    console.log(`\n🔄 模式: 强制重新提交所有URL`);
+  } else {
+    // 只提交新URL（不在记录中的）
+    urlsToSubmit = allUrls.filter(url => !submittedUrls.has(url));
+    console.log(`\n✨ 模式: 只提交新URL（跳过已提交的）`);
+  }
+
+  if (urlsToSubmit.length === 0) {
+    console.log('\n✅ 没有新URL需要提交，所有页面都已在提交记录中');
+    console.log('   如需强制重新提交，请使用: npm run submit-urls:force');
+    return;
+  }
 
   console.log(`🚀 准备提交 ${urlsToSubmit.length} 个URL...\n`);
 
   // 批量提交
   const results = { success: 0, failed: 0, errors: [] };
+  const newlySubmitted = new Set(submittedUrls); // 复制现有记录
 
   for (let i = 0; i < urlsToSubmit.length; i++) {
     const url = urlsToSubmit[i];
@@ -100,6 +155,7 @@ async function main() {
     
     if (result.success) {
       results.success++;
+      newlySubmitted.add(url); // 添加到记录
       console.log(`✅ [${i + 1}/${urlsToSubmit.length}] ${url}`);
     } else {
       results.failed++;
@@ -113,10 +169,16 @@ async function main() {
     }
   }
 
+  // 保存更新后的提交记录
+  if (results.success > 0) {
+    saveSubmittedUrls(newlySubmitted);
+  }
+
   // 输出统计
   console.log('\n📊 提交结果统计:');
   console.log(`   成功: ${results.success}`);
   console.log(`   失败: ${results.failed}`);
+  console.log(`   总记录: ${newlySubmitted.size}`);
   
   if (results.errors.length > 0) {
     console.log('\n❌ 失败详情:');

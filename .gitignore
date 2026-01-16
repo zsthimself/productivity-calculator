@@ -47,3 +47,6 @@ next-env.d.ts
 credentials.json
 *.json.backup
 service_account*.json
+
+# Indexing API local records
+scripts/submitted-urls.json

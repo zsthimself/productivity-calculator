@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "submit-urls": "node scripts/submit-to-indexing.js",
-    "submit-new-urls": "node scripts/submit-to-indexing.js --new"
+    "submit-urls:force": "node scripts/submit-to-indexing.js --force",
+    "submit-urls:new": "node scripts/submit-to-indexing.js --new"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.8",
