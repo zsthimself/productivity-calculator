@@ -42,3 +42,8 @@ next-env.d.ts
 
 # external skills folder (not part of this project)
 /anthropics-skills
+
+# Google Service Account credentials (NEVER commit to git!)
+credentials.json
+*.json.backup
+service_account*.json

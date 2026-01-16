@@ -346,4 +346,109 @@
   <url><loc>https://productivitycalculator.work/es/calculator/real-estate</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://productivitycalculator.work/de/calculator/real-estate</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://productivitycalculator.work/ja/calculator/real-estate</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Industry Pages: Therapy -->
+  <url>
+    <loc>https://productivitycalculator.work/calculator/therapy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/therapy"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/therapy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/therapy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/therapy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/therapy"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://productivitycalculator.work/zh/calculator/therapy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/es/calculator/therapy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/de/calculator/therapy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/ja/calculator/therapy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Industry Pages: Employee -->
+  <url>
+    <loc>https://productivitycalculator.work/calculator/employee</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/employee"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/employee"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/employee"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/employee"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/employee"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://productivitycalculator.work/zh/calculator/employee</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/es/calculator/employee</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/de/calculator/employee</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/ja/calculator/employee</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Industry Pages: Physical Therapy -->
+  <url>
+    <loc>https://productivitycalculator.work/calculator/physical-therapy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/physical-therapy"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/physical-therapy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/physical-therapy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/physical-therapy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/physical-therapy"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://productivitycalculator.work/zh/calculator/physical-therapy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/es/calculator/physical-therapy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/de/calculator/physical-therapy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/ja/calculator/physical-therapy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Industry Pages: Labor -->
+  <url>
+    <loc>https://productivitycalculator.work/calculator/labor</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/labor"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/labor"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/labor"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/labor"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/labor"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://productivitycalculator.work/zh/calculator/labor</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/es/calculator/labor</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/de/calculator/labor</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/ja/calculator/labor</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Industry Pages: Machine -->
+  <url>
+    <loc>https://productivitycalculator.work/calculator/machine</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/machine"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/machine"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/machine"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/machine"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/machine"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://productivitycalculator.work/zh/calculator/machine</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/es/calculator/machine</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/de/calculator/machine</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/ja/calculator/machine</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Industry Pages: Welding -->
+  <url>
+    <loc>https://productivitycalculator.work/calculator/welding</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/welding"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/welding"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/welding"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/welding"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/welding"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://productivitycalculator.work/zh/calculator/welding</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/es/calculator/welding</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/de/calculator/welding</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/ja/calculator/welding</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Industry Pages: Technician -->
+  <url>
+    <loc>https://productivitycalculator.work/calculator/technician</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/technician"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/technician"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/technician"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/technician"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/technician"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://productivitycalculator.work/zh/calculator/technician</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/es/calculator/technician</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/de/calculator/technician</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://productivitycalculator.work/ja/calculator/technician</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
