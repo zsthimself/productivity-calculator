@@ -12,6 +12,7 @@ import Calculator from "@/components/Calculator";
 import PhysicalTherapyCalculator from "@/components/PhysicalTherapyCalculator";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import industries from "@/data/industries.json";
 import { IndustryData } from "@/types/industry";
 
@@ -460,10 +461,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                     {/* Internal Links */}
                     <IndustryList />
 
-                    {/* Footer */}
-                    <footer className="mt-24 text-center text-[var(--text-muted)] text-sm font-body">
-                        <p>© 2026 Productivity Calculator. Built for efficiency.</p>
-                    </footer>
+                    {/* Global Footer */}
+                    <Footer />
                 </div>
             </div>
 

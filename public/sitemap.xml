@@ -451,4 +451,25 @@
   <url><loc>https://productivitycalculator.work/es/calculator/technician</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://productivitycalculator.work/de/calculator/technician</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://productivitycalculator.work/ja/calculator/technician</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Trust & Legal Pages -->
+  <url>
+    <loc>https://productivitycalculator.work/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://productivitycalculator.work/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://productivitycalculator.work/privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://productivitycalculator.work/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
