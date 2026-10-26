@@ -101,102 +101,353 @@
         "general": {
             "name": "General",
             "title": "Productivity Calculator",
-            "description": "Calculate your productivity by comparing output to input. This universal calculator helps you measure efficiency across any field."
+            "description": "Calculate your productivity by comparing output to input. This universal calculator helps you measure efficiency across any field.",
+            "resultLabel": "Productivity",
+            "resultUnit": "items per hour",
+            "outputLabel": "Total Output",
+            "outputUnit": "items/tasks",
+            "outputPlaceholder": "e.g., 100 items, 50 tasks",
+            "inputLabel": "Total Input",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 8 hours worked"
         },
         "construction": {
             "name": "Construction",
             "title": "Construction Productivity Calculator",
-            "description": "Measure construction site efficiency by calculating output per labor day. Track square meters built, bricks laid, or any construction metric."
+            "description": "Measure construction site efficiency by calculating output per labor day. Track square meters built, bricks laid, or any construction metric.",
+            "resultLabel": "Construction Productivity",
+            "resultUnit": "m²/man-day",
+            "outputLabel": "Area Completed",
+            "outputUnit": "m²",
+            "outputPlaceholder": "e.g., 500",
+            "inputLabel": "Man-Days Worked",
+            "inputUnit": "days",
+            "inputPlaceholder": "e.g., 10"
         },
         "writing": {
             "name": "Freelance Writing",
             "title": "Writing Productivity Calculator",
-            "description": "Track your writing speed and estimate earnings potential. Perfect for freelance writers, bloggers, and content creators."
+            "description": "Track your writing speed and estimate earnings potential. Perfect for freelance writers, bloggers, and content creators.",
+            "resultLabel": "Writing Speed",
+            "resultUnit": "words/hour",
+            "outputLabel": "Words Written",
+            "outputUnit": "words",
+            "outputPlaceholder": "e.g., 2000",
+            "inputLabel": "Hours Spent",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 4"
         },
         "sales": {
             "name": "Sales",
             "title": "Sales Productivity Calculator",
-            "description": "Evaluate sales team efficiency by measuring revenue or deals closed per sales representative or per hour worked."
+            "description": "Evaluate sales team efficiency by measuring revenue or deals closed per sales representative or per hour worked.",
+            "resultLabel": "Sales Productivity",
+            "resultUnit": "$/rep",
+            "outputLabel": "Revenue Generated",
+            "outputUnit": "$",
+            "outputPlaceholder": "e.g., 50000",
+            "inputLabel": "Sales Reps",
+            "inputUnit": "people",
+            "inputPlaceholder": "e.g., 5"
         },
         "customer-support": {
             "name": "Customer Support",
             "title": "Customer Support Productivity Calculator",
-            "description": "Measure support team efficiency by tracking tickets resolved per agent or per shift hour."
+            "description": "Measure support team efficiency by tracking tickets resolved per agent or per shift hour.",
+            "resultLabel": "Support Efficiency",
+            "resultUnit": "tickets/hour",
+            "outputLabel": "Tickets Resolved",
+            "outputUnit": "tickets",
+            "outputPlaceholder": "e.g., 45",
+            "inputLabel": "Shift Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 8"
         },
         "software-development": {
             "name": "Software Development",
             "title": "Developer Productivity Calculator",
-            "description": "Track developer output by measuring story points completed, commits made, or features delivered per sprint or per developer."
+            "description": "Track developer output by measuring story points completed, commits made, or features delivered per sprint or per developer.",
+            "resultLabel": "Dev Velocity",
+            "resultUnit": "points/day",
+            "outputLabel": "Story Points Completed",
+            "outputUnit": "points",
+            "outputPlaceholder": "e.g., 34",
+            "inputLabel": "Sprint Days",
+            "inputUnit": "days",
+            "inputPlaceholder": "e.g., 10"
         },
         "manufacturing": {
             "name": "Manufacturing",
             "title": "Manufacturing Productivity Calculator",
-            "description": "Calculate factory output efficiency by measuring units produced per labor hour or per machine hour."
+            "description": "Calculate factory output efficiency by measuring units produced per labor hour or per machine hour.",
+            "resultLabel": "Production Rate",
+            "resultUnit": "units/hour",
+            "outputLabel": "Units Produced",
+            "outputUnit": "units",
+            "outputPlaceholder": "e.g., 1000",
+            "inputLabel": "Machine Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 8"
         },
         "call-center": {
             "name": "Call Center",
             "title": "Call Center Productivity Calculator",
-            "description": "Evaluate call center agent performance by tracking calls handled per shift or per agent."
+            "description": "Evaluate call center agent performance by tracking calls handled per shift or per agent.",
+            "resultLabel": "Call Rate",
+            "resultUnit": "calls/hour",
+            "outputLabel": "Calls Handled",
+            "outputUnit": "calls",
+            "outputPlaceholder": "e.g., 60",
+            "inputLabel": "Shift Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 8"
         },
         "agriculture": {
             "name": "Agriculture",
             "title": "Farm Productivity Calculator",
-            "description": "Measure agricultural yield efficiency by calculating crop output per hectare or per labor day."
+            "description": "Measure agricultural yield efficiency by calculating crop output per hectare or per labor day.",
+            "resultLabel": "Farm Yield",
+            "resultUnit": "kg/hectare",
+            "outputLabel": "Crop Yield",
+            "outputUnit": "kg",
+            "outputPlaceholder": "e.g., 5000",
+            "inputLabel": "Hectares Farmed",
+            "inputUnit": "ha",
+            "inputPlaceholder": "e.g., 2"
         },
         "healthcare": {
             "name": "Healthcare",
             "title": "Healthcare Productivity Calculator",
-            "description": "Track medical staff efficiency by measuring patients seen or procedures completed per shift."
+            "description": "Track medical staff efficiency by measuring patients seen or procedures completed per shift.",
+            "resultLabel": "Care Rate",
+            "resultUnit": "patients/hour",
+            "outputLabel": "Patients Seen",
+            "outputUnit": "patients",
+            "outputPlaceholder": "e.g., 24",
+            "inputLabel": "Shift Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 12"
         },
         "retail": {
             "name": "Retail",
             "title": "Retail Productivity Calculator",
-            "description": "Measure retail store performance by calculating sales per employee or per square foot."
+            "description": "Measure retail store performance by calculating sales per employee or per square foot.",
+            "resultLabel": "Sales Efficiency",
+            "resultUnit": "$/employee",
+            "outputLabel": "Daily Sales",
+            "outputUnit": "$",
+            "outputPlaceholder": "e.g., 8000",
+            "inputLabel": "Staff on Duty",
+            "inputUnit": "people",
+            "inputPlaceholder": "e.g., 4"
         },
         "logistics": {
             "name": "Logistics",
             "title": "Logistics Productivity Calculator",
-            "description": "Evaluate warehouse and delivery efficiency by tracking packages processed or deliveries made per hour."
+            "description": "Evaluate warehouse and delivery efficiency by tracking packages processed or deliveries made per hour.",
+            "resultLabel": "Shipping Rate",
+            "resultUnit": "packages/hour",
+            "outputLabel": "Packages Shipped",
+            "outputUnit": "packages",
+            "outputPlaceholder": "e.g., 200",
+            "inputLabel": "Work Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 8"
         },
         "education": {
             "name": "Education",
             "title": "Teaching Productivity Calculator",
-            "description": "Measure educational output by tracking students taught, lessons delivered, or assignments graded per hour."
+            "description": "Measure educational output by tracking students taught, lessons delivered, or assignments graded per hour.",
+            "resultLabel": "Teaching Rate",
+            "resultUnit": "lessons/hour",
+            "outputLabel": "Lessons Delivered",
+            "outputUnit": "lessons",
+            "outputPlaceholder": "e.g., 5",
+            "inputLabel": "Teaching Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 6"
         },
         "marketing": {
             "name": "Marketing",
             "title": "Marketing Productivity Calculator",
-            "description": "Track marketing team output by measuring campaigns launched, leads generated, or content pieces created."
+            "description": "Track marketing team output by measuring campaigns launched, leads generated, or content pieces created.",
+            "resultLabel": "Lead Generation Rate",
+            "resultUnit": "leads/hour",
+            "outputLabel": "Leads Generated",
+            "outputUnit": "leads",
+            "outputPlaceholder": "e.g., 150",
+            "inputLabel": "Hours Invested",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 40"
         },
         "restaurant": {
             "name": "Restaurant",
             "title": "Restaurant Productivity Calculator",
-            "description": "Measure restaurant efficiency by tracking covers served, orders fulfilled, or revenue per staff member."
+            "description": "Measure restaurant efficiency by tracking covers served, orders fulfilled, or revenue per staff member.",
+            "resultLabel": "Service Rate",
+            "resultUnit": "covers/staff-hour",
+            "outputLabel": "Covers Served",
+            "outputUnit": "covers",
+            "outputPlaceholder": "e.g., 80",
+            "inputLabel": "Staff Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 24"
         },
         "data-entry": {
             "name": "Data Entry",
             "title": "Data Entry Productivity Calculator",
-            "description": "Track data entry efficiency by measuring records processed or keystrokes per hour."
+            "description": "Track data entry efficiency by measuring records processed or keystrokes per hour.",
+            "resultLabel": "Entry Speed",
+            "resultUnit": "records/hour",
+            "outputLabel": "Records Entered",
+            "outputUnit": "records",
+            "outputPlaceholder": "e.g., 300",
+            "inputLabel": "Hours Worked",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 8"
         },
         "graphic-design": {
             "name": "Graphic Design",
             "title": "Designer Productivity Calculator",
-            "description": "Measure design team output by tracking deliverables completed, revisions handled, or billable hours."
+            "description": "Measure design team output by tracking deliverables completed, revisions handled, or billable hours.",
+            "resultLabel": "Design Rate",
+            "resultUnit": "designs/hour",
+            "outputLabel": "Designs Completed",
+            "outputUnit": "designs",
+            "outputPlaceholder": "e.g., 12",
+            "inputLabel": "Hours Spent",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 40"
         },
         "video-production": {
             "name": "Video Production",
             "title": "Video Production Productivity Calculator",
-            "description": "Track video content creation efficiency by measuring videos produced or minutes of footage edited per day."
+            "description": "Track video content creation efficiency by measuring videos produced or minutes of footage edited per day.",
+            "resultLabel": "Production Rate",
+            "resultUnit": "videos/day",
+            "outputLabel": "Videos Produced",
+            "outputUnit": "videos",
+            "outputPlaceholder": "e.g., 3",
+            "inputLabel": "Production Days",
+            "inputUnit": "days",
+            "inputPlaceholder": "e.g., 5"
         },
         "cleaning-services": {
             "name": "Cleaning Services",
             "title": "Cleaning Productivity Calculator",
-            "description": "Measure cleaning team efficiency by tracking rooms cleaned or square footage covered per hour."
+            "description": "Measure cleaning team efficiency by tracking rooms cleaned or square footage covered per hour.",
+            "resultLabel": "Cleaning Rate",
+            "resultUnit": "rooms/hour",
+            "outputLabel": "Rooms Cleaned",
+            "outputUnit": "rooms",
+            "outputPlaceholder": "e.g., 15",
+            "inputLabel": "Work Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 6"
         },
         "real-estate": {
             "name": "Real Estate",
             "title": "Real Estate Agent Productivity Calculator",
-            "description": "Track real estate agent performance by measuring properties shown, deals closed, or commission earned."
+            "description": "Track real estate agent performance by measuring properties shown, deals closed, or commission earned.",
+            "resultLabel": "Showings Rate",
+            "resultUnit": "properties/day",
+            "outputLabel": "Properties Shown",
+            "outputUnit": "properties",
+            "outputPlaceholder": "e.g., 10",
+            "inputLabel": "Work Days",
+            "inputUnit": "days",
+            "inputPlaceholder": "e.g., 5"
+        },
+        "therapy": {
+            "name": "Therapy",
+            "title": "Therapist Productivity Calculator",
+            "description": "Track therapy practice efficiency by measuring client sessions completed, billable hours, or treatment outcomes. Perfect for therapists, counselors, and mental health professionals.",
+            "resultLabel": "Session Rate",
+            "resultUnit": "sessions/hour",
+            "outputLabel": "Client Sessions",
+            "outputUnit": "sessions",
+            "outputPlaceholder": "e.g., 25",
+            "inputLabel": "Work Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 40"
+        },
+        "employee": {
+            "name": "Employee",
+            "title": "Employee Productivity Calculator",
+            "description": "Measure employee performance and output efficiency. Calculate tasks completed, revenue generated, or projects delivered per employee.",
+            "resultLabel": "Employee Output",
+            "resultUnit": "tasks/employee",
+            "outputLabel": "Tasks Completed",
+            "outputUnit": "tasks",
+            "outputPlaceholder": "e.g., 50",
+            "inputLabel": "Employees",
+            "inputUnit": "people",
+            "inputPlaceholder": "e.g., 5"
+        },
+        "physical-therapy": {
+            "name": "Physical Therapy",
+            "title": "Physical Therapy Productivity Calculator",
+            "description": "Track physical therapy practice efficiency by measuring patient treatments, therapy sessions, or billable units per day. Perfect for PT clinics, rehabilitation centers, and physical therapists.",
+            "resultLabel": "Treatment Rate",
+            "resultUnit": "patients/hour",
+            "outputLabel": "Patients Treated",
+            "outputUnit": "patients",
+            "outputPlaceholder": "e.g., 12",
+            "inputLabel": "Clinic Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 8"
+        },
+        "labor": {
+            "name": "Labor",
+            "title": "Labor Productivity Calculator",
+            "description": "Calculate labor productivity by measuring output value per labor hour. Essential for workforce planning, cost analysis, and performance benchmarking.",
+            "resultLabel": "Labor Productivity",
+            "resultUnit": "$/labor hour",
+            "outputLabel": "Output Value",
+            "outputUnit": "$",
+            "outputPlaceholder": "e.g., 10000",
+            "inputLabel": "Labor Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 100"
+        },
+        "machine": {
+            "name": "Machine",
+            "title": "Machine Productivity Calculator",
+            "description": "Measure machine and equipment efficiency by calculating units produced per machine hour. Track OEE and optimize manufacturing operations.",
+            "resultLabel": "Machine Output",
+            "resultUnit": "units/machine hour",
+            "outputLabel": "Units Produced",
+            "outputUnit": "units",
+            "outputPlaceholder": "e.g., 500",
+            "inputLabel": "Machine Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 8"
+        },
+        "welding": {
+            "name": "Welding",
+            "title": "Welding Productivity Calculator",
+            "description": "Track welding productivity by measuring inches welded, joints completed, or deposition rate per hour. Essential for fabrication shops and construction.",
+            "resultLabel": "Welding Rate",
+            "resultUnit": "inches/hour",
+            "outputLabel": "Inches Welded",
+            "outputUnit": "inches",
+            "outputPlaceholder": "e.g., 200",
+            "inputLabel": "Work Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 8"
+        },
+        "technician": {
+            "name": "Technician",
+            "title": "Technician Productivity Calculator",
+            "description": "Measure technician efficiency by tracking service calls completed, repairs made, or billable hours per day. Perfect for field service and maintenance teams.",
+            "resultLabel": "Service Rate",
+            "resultUnit": "jobs/hour",
+            "outputLabel": "Jobs Completed",
+            "outputUnit": "jobs",
+            "outputPlaceholder": "e.g., 6",
+            "inputLabel": "Work Hours",
+            "inputUnit": "hours",
+            "inputPlaceholder": "e.g., 8"
         }
     }
 }

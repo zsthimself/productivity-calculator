@@ -22,7 +22,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useCalculationHistory } from "@/hooks/useCalculationHistory";
 import HistoryPanel from "@/components/HistoryPanel";
 import { Locale, DEFAULT_LOCALE } from "@/lib/i18n";
-import { getTranslations } from "@/lib/translations";
+import { getTranslations, getIndustryTranslation } from "@/lib/translations";
 
 interface CalculatorProps {
     industry: IndustryData;
@@ -54,6 +54,23 @@ const MODE_CONFIG: Record<CalculationMode, {
 
 export default function Calculator({ industry, locale = DEFAULT_LOCALE }: CalculatorProps) {
     const t = getTranslations(locale);
+    const industryT = getIndustryTranslation(locale, industry.slug);
+
+    // 本地化字段映射（优先使用多语言字典，无则回退到原始数据）
+    const resultLabel = industryT?.resultLabel || industry.resultLabel;
+    const resultUnit = industryT?.resultUnit || industry.resultUnit;
+
+    const outputField = industry.inputs.find((i) => i.key === "output");
+    const inputField = industry.inputs.find((i) => i.key === "input");
+
+    const outputLabel = industryT?.outputLabel || outputField?.label;
+    const outputUnit = industryT?.outputUnit || outputField?.unit;
+    const outputPlaceholder = industryT?.outputPlaceholder || outputField?.placeholder;
+
+    const inputLabel = industryT?.inputLabel || inputField?.label;
+    const inputUnit = industryT?.inputUnit || inputField?.unit;
+    const inputPlaceholder = industryT?.inputPlaceholder || inputField?.placeholder;
+
     // 计算模式
     const [mode, setMode] = useState<CalculationMode>("productivity");
 
@@ -77,8 +94,6 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
     const benchmark = getBenchmark(industry.slug);
     const stats = getStats(industry.slug);
 
-    const outputField = industry.inputs.find((i) => i.key === "output");
-    const inputField = industry.inputs.find((i) => i.key === "input");
 
     // 计算有效工作时间（扣除休息时间）
     const getEffectiveInput = (rawInput: number): number => {
@@ -176,11 +191,11 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
     const getResultLabel = (): string => {
         switch (mode) {
             case "productivity":
-                return industry.resultLabel;
+                return resultLabel;
             case "output":
-                return outputField?.label || "Required Output";
+                return outputLabel || "Required Output";
             case "input":
-                return inputField?.label || "Required Input";
+                return inputLabel || "Required Input";
         }
     };
 
@@ -188,11 +203,11 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
     const getResultUnit = (): string => {
         switch (mode) {
             case "productivity":
-                return industry.resultUnit;
+                return resultUnit;
             case "output":
-                return outputField?.unit || "units";
+                return outputUnit || "units";
             case "input":
-                return inputField?.unit || "hours";
+                return inputUnit || "hours";
         }
     };
 
@@ -268,7 +283,11 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
                             </ToggleGroupItem>
                         </ToggleGroup>
                         <p className="text-xs text-muted-foreground mt-2 text-center">
-                            {MODE_CONFIG[mode].formula}
+                            {mode === "productivity"
+                                ? t.calculator.formulaProductivity
+                                : mode === "output"
+                                    ? t.calculator.formulaOutput
+                                    : t.calculator.formulaInput}
                         </p>
                     </div>
 
@@ -276,9 +295,9 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
                     {(mode === "productivity" || mode === "input") && (
                         <div className="space-y-2 animate-fade-in stagger-1">
                             <Label htmlFor="output" className="font-display text-sm tracking-wider uppercase">
-                                {outputField?.label}
+                                {outputLabel}
                                 <span className="text-primary ml-2 font-normal normal-case">
-                                    ({outputField?.unit})
+                                    ({outputUnit})
                                 </span>
                             </Label>
                             <Input
@@ -286,7 +305,7 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
                                 type="number"
                                 value={outputValue}
                                 onChange={(e) => setOutputValue(e.target.value)}
-                                placeholder={outputField?.placeholder}
+                                placeholder={outputPlaceholder}
                                 className="h-12 text-lg bg-input/50"
                             />
                         </div>
@@ -296,9 +315,9 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
                     {(mode === "output" || mode === "input") && (
                         <div className="space-y-2 animate-fade-in stagger-1">
                             <Label htmlFor="productivity-target" className="font-display text-sm tracking-wider uppercase">
-                                Target {industry.resultLabel}
+                                {t.calculator.target} {resultLabel}
                                 <span className="text-yellow-400 ml-2 font-normal normal-case">
-                                    ({industry.resultUnit})
+                                    ({resultUnit})
                                 </span>
                             </Label>
                             <Input
@@ -325,9 +344,9 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
                     {(mode === "productivity" || mode === "output") && (
                         <div className="space-y-2 animate-fade-in stagger-2">
                             <Label htmlFor="input" className="font-display text-sm tracking-wider uppercase">
-                                {inputField?.label}
+                                {inputLabel}
                                 <span className="text-pink-400 ml-2 font-normal normal-case">
-                                    ({inputField?.unit})
+                                    ({inputUnit})
                                 </span>
                             </Label>
                             <Input
@@ -335,7 +354,7 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
                                 type="number"
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
-                                placeholder={inputField?.placeholder}
+                                placeholder={inputPlaceholder}
                                 className="h-12 text-lg bg-input/50"
                             />
                         </div>
@@ -425,7 +444,7 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
                         <Card className="mt-4 bg-primary/10 border-primary/30 animate-fade-in animate-pulse-glow overflow-hidden">
                             <CardContent className="pt-6 pb-6 text-center">
                                 <p className="text-xs text-primary mb-2 font-display tracking-widest uppercase">
-                                    {mode === "productivity" ? "Your" : "Required"} {getResultLabel()}
+                                    {mode === "productivity" ? t.calculator.your : t.calculator.required} {getResultLabel()}
                                 </p>
                                 <p className="text-4xl md:text-5xl font-bold text-foreground font-display neon-text-subtle">
                                     {result.toLocaleString(undefined, { maximumFractionDigits: 2 })}
@@ -439,21 +458,21 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
                                     <div className="mt-4 pt-4 border-t border-green-500/20 grid grid-cols-2 gap-4">
                                         <div>
                                             <p className="text-xs text-green-400 font-display tracking-wider uppercase">
-                                                Hourly Earnings
+                                                {t.calculator.hourlyEarnings}
                                             </p>
                                             <p className="text-xl font-bold text-green-400 mt-1">
                                                 ${earningsInfo.earnings.toLocaleString(undefined, { maximumFractionDigits: 2 })}
                                             </p>
-                                            <p className="text-xs text-muted-foreground">per hour</p>
+                                            <p className="text-xs text-muted-foreground">{t.calculator.perHour}</p>
                                         </div>
                                         <div>
                                             <p className="text-xs text-orange-400 font-display tracking-wider uppercase">
-                                                Cost per Unit
+                                                {t.calculator.costPerUnit}
                                             </p>
                                             <p className="text-xl font-bold text-orange-400 mt-1">
                                                 ${earningsInfo.costPerUnit.toLocaleString(undefined, { maximumFractionDigits: 4 })}
                                             </p>
-                                            <p className="text-xs text-muted-foreground">per item</p>
+                                            <p className="text-xs text-muted-foreground">{t.calculator.perItem}</p>
                                         </div>
                                     </div>
                                 )}
@@ -465,7 +484,7 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
                                             {benchmarkInfo.emoji} {benchmarkInfo.text}
                                         </p>
                                         <p className="text-xs text-muted-foreground mt-1">
-                                            Typical range: {industry.benchmark.average} - {industry.benchmark.excellent} {industry.resultUnit}
+                                            {t.benchmark.typicalRange} {industry.benchmark.average} - {industry.benchmark.excellent} {resultUnit}
                                         </p>
                                     </div>
                                 )}

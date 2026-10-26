@@ -30,13 +30,27 @@ export function getTranslations(locale: Locale): TranslationDict {
     return translations[locale] || translations[DEFAULT_LOCALE];
 }
 
+export interface IndustryTranslation {
+    name: string;
+    title: string;
+    description: string;
+    resultLabel?: string;
+    resultUnit?: string;
+    outputLabel?: string;
+    outputUnit?: string;
+    outputPlaceholder?: string;
+    inputLabel?: string;
+    inputUnit?: string;
+    inputPlaceholder?: string;
+}
+
 // 获取行业翻译
 export function getIndustryTranslation(
     locale: Locale,
     slug: string
-): { name: string; title: string; description: string } | undefined {
+): IndustryTranslation | undefined {
     const dict = getTranslations(locale);
-    const industries = dict.industries as Record<string, { name: string; title: string; description: string }>;
+    const industries = dict.industries as Record<string, IndustryTranslation>;
     return industries[slug];
 }
 

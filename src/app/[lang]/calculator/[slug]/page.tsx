@@ -198,14 +198,14 @@ export default async function LocalizedIndustryCalculatorPage({ params }: PagePr
 
                                 <div className="neon-border rounded-xl p-6 text-center my-8">
                                     <code className="font-display text-lg md:text-xl text-[var(--neon-cyan)]">
-                                        {industry.resultLabel} = {industry.inputs.find((i) => i.key === "output")?.label} ÷{" "}
-                                        {industry.inputs.find((i) => i.key === "input")?.label}
+                                        {industryT?.resultLabel || industry.resultLabel} = {industryT?.outputLabel || industry.inputs.find((i) => i.key === "output")?.label} ÷{" "}
+                                        {industryT?.inputLabel || industry.inputs.find((i) => i.key === "input")?.label}
                                     </code>
                                 </div>
 
                                 <p>
                                     {t.content.resultExplanation}{" "}
-                                    <span className="text-[var(--neon-pink)] font-semibold">{industry.resultUnit}</span>
+                                    <span className="text-[var(--neon-pink)] font-semibold">{industryT?.resultUnit || industry.resultUnit}</span>
                                     {t.content.resultExplanationSuffix}
                                 </p>
 
