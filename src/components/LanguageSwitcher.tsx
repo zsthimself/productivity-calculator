@@ -35,9 +35,14 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
         if (targetLocale === DEFAULT_LOCALE) {
             return basePath;
         }
+        // 仅首页与计算器子页具备多语言副本；合规条款页（/about, /privacy, /terms, /contact）无多语言路由
+        const isLocalizedRoute = basePath === "/" || basePath.startsWith("/calculator/");
+        if (!isLocalizedRoute) {
+            // 安全降级至目标语言首页，杜绝 404 死链
+            return `/${targetLocale}`;
+        }
         return `/${targetLocale}${basePath === "/" ? "" : basePath}`;
     };
-
     return (
         <div className="flex items-center gap-1">
             {LOCALES.map((locale) => {

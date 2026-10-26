@@ -9,6 +9,7 @@ import Link from "next/link";
 import Calculator from "@/components/Calculator";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import industries from "@/data/industries.json";
 import { IndustryData } from "@/types/industry";
 import { LOCALES, Locale, isValidLocale, DEFAULT_LOCALE, LOCALE_HTML_LANG, getLocalePath } from "@/lib/i18n";
@@ -240,9 +241,7 @@ export default async function LocalizedIndustryCalculatorPage({ params }: PagePr
                     <IndustryList locale={locale} />
 
                     {/* Footer */}
-                    <footer className="mt-24 text-center text-[var(--text-muted)] text-sm font-body">
-                        <p>{t.site.footer}</p>
-                    </footer>
+                    <Footer locale={locale} />
                 </div>
             </div>
 

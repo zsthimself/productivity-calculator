@@ -5,12 +5,14 @@
  */
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import Calculator from "@/components/Calculator";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import industries from "@/data/industries.json";
 import { IndustryData } from "@/types/industry";
-import { LOCALES, Locale, isValidLocale, DEFAULT_LOCALE, LOCALE_HTML_LANG } from "@/lib/i18n";
+import { LOCALES, Locale, isValidLocale, DEFAULT_LOCALE, LOCALE_HTML_LANG, getLocalePath } from "@/lib/i18n";
 import { getTranslations, getIndustryTranslation } from "@/lib/translations";
 
 const industryData = industries as IndustryData[];
@@ -147,6 +149,77 @@ export default async function LocalizedHomePage({ params }: PageProps) {
                     </div>
 
                     {/* Calculator */}
+                    {/* Specialized Trending Industry Fast Lanes */}
+                    <div className="mb-10 max-w-3xl mx-auto animate-fade-in stagger-2">
+                        <div className="card-neon rounded-2xl p-4 md:p-6 border border-[var(--neon-cyan)]/30 bg-[var(--bg-surface)]/60 backdrop-blur-md">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xl">🔥</span>
+                                    <span className="font-display text-sm font-semibold text-white tracking-wide">
+                                        {locale === "zh"
+                                            ? "高频热门垂直行业套件"
+                                            : locale === "es"
+                                                ? "Suites de Industrias Especializadas en Tendencia"
+                                                : locale === "de"
+                                                    ? "Trending Spezialisierte Branchen-Tools"
+                                                    : locale === "ja"
+                                                        ? "注目の専門業界向け計算スイート"
+                                                        : "Trending Specialized Industry Suites"}
+                                    </span>
+                                </div>
+                                <span className="text-[11px] font-mono text-[var(--neon-pink)] uppercase tracking-wider bg-[var(--neon-pink)]/10 px-2 py-0.5 rounded-full border border-[var(--neon-pink)]/30">
+                                    {locale === "zh" ? "专业定制" : locale === "es" ? "A Medida" : locale === "de" ? "Maßgeschneidert" : locale === "ja" ? "専用設計" : "Tailored Workflows"}
+                                </span>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <Link
+                                    href={`${getLocalePath(locale)}/calculator/physical-therapy`}
+                                    className="group block p-3 rounded-xl bg-background/50 hover:bg-background/80 border border-border/40 hover:border-[var(--neon-cyan)]/60 transition-all duration-200"
+                                >
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <span className="text-lg">🩺</span>
+                                        <span className="font-display text-xs font-semibold text-white group-hover:text-[var(--neon-cyan)] transition-colors">
+                                            {locale === "zh" ? "物理治疗 (PT/OT)" : locale === "es" ? "Fisioterapia (PT)" : locale === "de" ? "Physiotherapie (PT)" : locale === "ja" ? "理学療法 (PT)" : "Physical Therapy"}
+                                        </span>
+                                    </div>
+                                    <p className="text-[11px] text-[var(--text-muted)] leading-tight">
+                                        {locale === "zh" ? "85% 绩效指标与倒推下班" : locale === "es" ? "Objetivo 85% y Salida" : locale === "de" ? "85% Ziel & Arbeitsende" : locale === "ja" ? "85%目標と退勤プランナー" : "85% Target & Clock-Out Planner"}
+                                    </p>
+                                </Link>
+
+                                <Link
+                                    href={`${getLocalePath(locale)}/calculator/video-production`}
+                                    className="group block p-3 rounded-xl bg-background/50 hover:bg-background/80 border border-border/40 hover:border-[var(--neon-pink)]/60 transition-all duration-200"
+                                >
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <span className="text-lg">🎬</span>
+                                        <span className="font-display text-xs font-semibold text-white group-hover:text-[var(--neon-pink)] transition-colors">
+                                            {locale === "zh" ? "视频制作与剪辑" : locale === "es" ? "Producción de Video" : locale === "de" ? "Videoproduktion" : locale === "ja" ? "映像制作・編集" : "Video Production"}
+                                        </span>
+                                    </div>
+                                    <p className="text-[11px] text-[var(--text-muted)] leading-tight">
+                                        {locale === "zh" ? "素材产出与交付时速" : locale === "es" ? "Velocidad de Entrega" : locale === "de" ? "Material & Schnittrate" : locale === "ja" ? "素材尺と納品スピード" : "Footage Delivery Velocity"}
+                                    </p>
+                                </Link>
+
+                                <Link
+                                    href={`${getLocalePath(locale)}/calculator/sales`}
+                                    className="group block p-3 rounded-xl bg-background/50 hover:bg-background/80 border border-border/40 hover:border-[var(--neon-purple)]/60 transition-all duration-200"
+                                >
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <span className="text-lg">📈</span>
+                                        <span className="font-display text-xs font-semibold text-white group-hover:text-[var(--neon-purple)] transition-colors">
+                                            {locale === "zh" ? "销售团队与代表" : locale === "es" ? "Equipo de Ventas" : locale === "de" ? "Vertriebsteam" : locale === "ja" ? "営業・セールス" : "Sales Teams & Reps"}
+                                        </span>
+                                    </div>
+                                    <p className="text-[11px] text-[var(--text-muted)] leading-tight">
+                                        {locale === "zh" ? "配额达标与人效冲刺" : locale === "es" ? "Cuota e Ingresos" : locale === "de" ? "Umsatz & Quote" : locale === "ja" ? "ノルマ達成と案件速度" : "Revenue Reps & Quota"}
+                                    </p>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
                     <Calculator industry={generalIndustry} locale={locale} />
 
                     {/* SEO Content */}
@@ -223,9 +296,7 @@ export default async function LocalizedHomePage({ params }: PageProps) {
                     <IndustryList locale={locale} />
 
                     {/* Footer */}
-                    <footer className="mt-24 text-center text-[var(--text-muted)] text-sm font-body">
-                        <p>{t.site.footer}</p>
-                    </footer>
+                    <Footer locale={locale} />
                 </div>
             </div>
 

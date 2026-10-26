@@ -205,13 +205,13 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
         const { average, good, excellent } = industry.benchmark;
 
         if (result >= excellent) {
-            return { level: "excellent", emoji: "🏆", text: "Excellent!", color: "text-yellow-400" };
+            return { level: "excellent", emoji: "🏆", text: t.benchmark.excellent || "Excellent!", color: "text-yellow-400" };
         } else if (result >= good) {
-            return { level: "good", emoji: "✅", text: "Above Average", color: "text-green-400" };
+            return { level: "good", emoji: "✅", text: t.benchmark.aboveAverage || "Above Average", color: "text-green-400" };
         } else if (result >= average) {
-            return { level: "average", emoji: "📊", text: "Average", color: "text-blue-400" };
+            return { level: "average", emoji: "📊", text: t.benchmark.average || "Average", color: "text-blue-400" };
         } else {
-            return { level: "below", emoji: "📈", text: "Below Average", color: "text-orange-400" };
+            return { level: "below", emoji: "📈", text: t.benchmark.belowAverage || "Below Average", color: "text-orange-400" };
         }
     }, [mode, industry.benchmark, result]);
 
@@ -228,7 +228,11 @@ export default function Calculator({ industry, locale = DEFAULT_LOCALE }: Calcul
                         {industry.resultLabel}
                     </CardTitle>
                     <CardDescription className="text-muted-foreground">
-                        {MODE_CONFIG[mode].description}
+                        {mode === "productivity"
+                            ? (t.calculator.descProductivity || MODE_CONFIG[mode].description)
+                            : mode === "output"
+                                ? (t.calculator.descOutput || MODE_CONFIG[mode].description)
+                                : (t.calculator.descInput || MODE_CONFIG[mode].description)}
                     </CardDescription>
                 </CardHeader>
 

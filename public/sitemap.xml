@@ -5,7 +5,7 @@
   <url>
     <loc>https://productivitycalculator.work</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja"/>
@@ -18,7 +18,7 @@
   <url>
     <loc>https://productivitycalculator.work/zh</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja"/>
@@ -30,7 +30,7 @@
   <url>
     <loc>https://productivitycalculator.work/es</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja"/>
@@ -42,7 +42,7 @@
   <url>
     <loc>https://productivitycalculator.work/de</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja"/>
@@ -54,7 +54,7 @@
   <url>
     <loc>https://productivitycalculator.work/ja</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja"/>
@@ -66,7 +66,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/construction</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/construction"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/construction"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/construction"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/construction"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/construction"/>
@@ -81,7 +81,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/writing</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/writing"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/writing"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/writing"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/writing"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/writing"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/writing"/>
@@ -96,7 +96,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/sales</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/sales"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/sales"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/sales"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/sales"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/sales"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/sales"/>
@@ -112,7 +112,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/customer-support</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/customer-support"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/customer-support"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/customer-support"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/customer-support"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/customer-support"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/customer-support"/>
@@ -127,7 +127,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/software-development</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/software-development"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/software-development"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/software-development"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/software-development"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/software-development"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/software-development"/>
@@ -142,7 +142,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/manufacturing</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/manufacturing"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/manufacturing"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/manufacturing"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/manufacturing"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/manufacturing"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/manufacturing"/>
@@ -157,7 +157,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/call-center</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/call-center"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/call-center"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/call-center"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/call-center"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/call-center"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/call-center"/>
@@ -172,7 +172,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/agriculture</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/agriculture"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/agriculture"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/agriculture"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/agriculture"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/agriculture"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/agriculture"/>
@@ -187,7 +187,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/healthcare</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/healthcare"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/healthcare"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/healthcare"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/healthcare"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/healthcare"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/healthcare"/>
@@ -202,7 +202,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/retail</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/retail"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/retail"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/retail"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/retail"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/retail"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/retail"/>
@@ -217,7 +217,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/logistics</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/logistics"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/logistics"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/logistics"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/logistics"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/logistics"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/logistics"/>
@@ -232,7 +232,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/education</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/education"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/education"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/education"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/education"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/education"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/education"/>
@@ -247,7 +247,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/marketing</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/marketing"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/marketing"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/marketing"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/marketing"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/marketing"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/marketing"/>
@@ -262,7 +262,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/restaurant</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/restaurant"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/restaurant"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/restaurant"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/restaurant"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/restaurant"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/restaurant"/>
@@ -277,7 +277,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/data-entry</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/data-entry"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/data-entry"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/data-entry"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/data-entry"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/data-entry"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/data-entry"/>
@@ -292,7 +292,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/graphic-design</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/graphic-design"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/graphic-design"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/graphic-design"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/graphic-design"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/graphic-design"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/graphic-design"/>
@@ -307,7 +307,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/video-production</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/video-production"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/video-production"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/video-production"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/video-production"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/video-production"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/video-production"/>
@@ -323,7 +323,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/cleaning-services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/cleaning-services"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/cleaning-services"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/cleaning-services"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/cleaning-services"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/cleaning-services"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/cleaning-services"/>
@@ -338,7 +338,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/real-estate</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/real-estate"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/real-estate"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/real-estate"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/real-estate"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/real-estate"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/real-estate"/>
@@ -353,7 +353,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/therapy</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/therapy"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/therapy"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/therapy"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/therapy"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/therapy"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/therapy"/>
@@ -369,7 +369,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/employee</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/employee"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/employee"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/employee"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/employee"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/employee"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/employee"/>
@@ -384,7 +384,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/physical-therapy</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/physical-therapy"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/physical-therapy"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/physical-therapy"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/physical-therapy"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/physical-therapy"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/physical-therapy"/>
@@ -400,7 +400,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/labor</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/labor"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/labor"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/labor"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/labor"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/labor"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/labor"/>
@@ -415,7 +415,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/machine</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/machine"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/machine"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/machine"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/machine"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/machine"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/machine"/>
@@ -430,7 +430,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/welding</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/welding"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/welding"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/welding"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/welding"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/welding"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/welding"/>
@@ -445,7 +445,7 @@
   <url>
     <loc>https://productivitycalculator.work/calculator/technician</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://productivitycalculator.work/calculator/technician"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://productivitycalculator.work/zh/calculator/technician"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://productivitycalculator.work/zh/calculator/technician"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://productivitycalculator.work/es/calculator/technician"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://productivitycalculator.work/de/calculator/technician"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://productivitycalculator.work/ja/calculator/technician"/>

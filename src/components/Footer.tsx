@@ -45,7 +45,7 @@ export default function Footer({ locale = DEFAULT_LOCALE }: FooterProps) {
             <ul className="space-y-2 text-xs">
               <li>
                 <Link
-                  href="/calculator/physical-therapy"
+                  href={`${basePath}/calculator/physical-therapy`}
                   className="hover:text-[var(--neon-cyan)] transition-colors inline-flex items-center gap-1"
                 >
                   <span>Physical Therapy Suite</span>
@@ -53,22 +53,22 @@ export default function Footer({ locale = DEFAULT_LOCALE }: FooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href="/calculator/construction" className="hover:text-[var(--neon-cyan)] transition-colors">
+                <Link href={`${basePath}/calculator/construction`} className="hover:text-[var(--neon-cyan)] transition-colors">
                   Construction Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/calculator/sales" className="hover:text-[var(--neon-cyan)] transition-colors">
+                <Link href={`${basePath}/calculator/sales`} className="hover:text-[var(--neon-cyan)] transition-colors">
                   Sales Efficiency Tool
                 </Link>
               </li>
               <li>
-                <Link href="/calculator/software-development" className="hover:text-[var(--neon-cyan)] transition-colors">
+                <Link href={`${basePath}/calculator/software-development`} className="hover:text-[var(--neon-cyan)] transition-colors">
                   Software Engineering
                 </Link>
               </li>
               <li>
-                <Link href="/calculator/customer-support" className="hover:text-[var(--neon-cyan)] transition-colors">
+                <Link href={`${basePath}/calculator/customer-support`} className="hover:text-[var(--neon-cyan)] transition-colors">
                   Customer Support Quota
                 </Link>
               </li>
