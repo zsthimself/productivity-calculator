@@ -6,6 +6,7 @@
  * @SYNC: 一旦本文件逻辑发生变更，必须更新上述注释，并同步更新 app/_META.md。
  */
 import { Metadata } from "next";
+import Link from "next/link";
 import Calculator from "@/components/Calculator";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
@@ -115,6 +116,79 @@ export default function HomePage() {
               <div className="w-16 h-px bg-gradient-to-r from-transparent to-[var(--neon-cyan)]"></div>
               <div className="w-2 h-2 rounded-full bg-[var(--neon-cyan)] animate-pulse"></div>
               <div className="w-16 h-px bg-gradient-to-l from-transparent to-[var(--neon-cyan)]"></div>
+            </div>
+          </div>
+
+                    {/* Trending High-Intent Vertical Suites (Cannibalization Relief) */}
+          <div className="mb-10 p-5 md:p-6 rounded-2xl neon-border bg-[var(--bg-card)]/80 backdrop-blur-md">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
+              <div className="flex items-center gap-3">
+                <span className="p-2.5 rounded-xl bg-[var(--neon-cyan)]/10 text-[var(--neon-cyan)] text-xl">⚡</span>
+                <div>
+                  <h3 className="font-display text-sm md:text-base font-bold text-white tracking-wide">
+                    Looking for Specialized Clinical & Professional Suites?
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)] font-body mt-0.5">
+                    Direct access to specialized formulas, shift clock-out planners, and CMS benchmark suites:
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              <Link
+                href="/calculator/physical-therapy"
+                className="group p-3.5 rounded-xl border border-white/10 hover:border-[var(--neon-cyan)] bg-white/5 hover:bg-[var(--neon-cyan)]/10 transition-all flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">🩺</span>
+                  <div>
+                    <div className="text-xs font-bold text-white group-hover:text-[var(--neon-cyan)] transition-colors">
+                      Physical Therapy & Rehab
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)]">
+                      85% Quota & Clock-Out Planner
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-[var(--neon-cyan)] group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+
+              <Link
+                href="/calculator/video-production"
+                className="group p-3.5 rounded-xl border border-white/10 hover:border-[var(--neon-pink)] bg-white/5 hover:bg-[var(--neon-pink)]/10 transition-all flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">🎬</span>
+                  <div>
+                    <div className="text-xs font-bold text-white group-hover:text-[var(--neon-pink)] transition-colors">
+                      Video Production & Editing
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)]">
+                      Footage Delivery Velocity
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-[var(--neon-pink)] group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+
+              <Link
+                href="/calculator/sales"
+                className="group p-3.5 rounded-xl border border-white/10 hover:border-[var(--neon-purple)] bg-white/5 hover:bg-[var(--neon-purple)]/10 transition-all flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">💼</span>
+                  <div>
+                    <div className="text-xs font-bold text-white group-hover:text-[var(--neon-purple)] transition-colors">
+                      Sales Teams & Reps
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)]">
+                      Revenue per Rep & Quota Rate
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-[var(--neon-purple)] group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
             </div>
           </div>
 

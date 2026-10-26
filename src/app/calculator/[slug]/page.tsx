@@ -50,6 +50,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             description,
             keywords: [
                 "physical therapy productivity calculator",
+                "snf productivity calculator",
+                "physical therapy productivity calculator with lunch break",
                 "pt productivity calculator",
                 "therapy productivity calculator",
                 "therapist productivity calculator with lunch break",
@@ -214,6 +216,56 @@ function generateIndustrySchema(industry: IndustryData) {
                     acceptedAnswer: {
                         "@type": "Answer",
                         text: "Generally, documentation time is considered non-billable unless performed concurrently with direct patient care (point-of-service documentation) and justifiable as part of the clinical service. Point-of-service documentation is the primary method therapists use to maintain high productivity without working off-the-clock.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the standard productivity expectation in a Skilled Nursing Facility (SNF)?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "In Skilled Nursing Facilities (SNF), corporate physical therapy productivity targets typically range between 80% and 85% (and up to 88% in high-volume subacute rehab units). Meeting SNF productivity requires disciplined point-of-service documentation and accurate group/concurrent therapy tracking under PDPM guidelines without taking uncompensated work home.",
+                    },
+                },
+            ],
+        });
+    }
+
+    if (industry.slug === "video-production") {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "How is video production productivity measured?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Video production and editing productivity is measured by comparing completed video units (or finished runtime minutes) against production time: Video Productivity = Finished Video Output ÷ Total Production Days (or Editing Hours). For solo creators, a standard benchmark is 2 to 4 edited short-form videos per day, or 1 polished long-form YouTube video per 3 to 5 production days.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is an industry standard editing ratio for video editors?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "A standard industry rule of thumb for commercial video editing is a 4:1 to 8:1 ratio: roughly 4 to 8 hours of post-production editing for every 1 minute of finished high-production video. For social media and talking-head content, turnaround is typically faster (1 to 2 hours of editing per 10 minutes of rough footage).",
+                    },
+                },
+            ],
+        });
+    }
+
+    if (industry.slug === "sales") {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "What is the best productivity calculator for sales teams?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "The best sales productivity calculator measures revenue generated per full-time sales rep (Revenue per Rep) alongside activity velocity: Sales Productivity = Total Closed Revenue ÷ Total Sales Headcount (or Selling Hours). Leading B2B teams use this calculator to establish realistic rep quotas, evaluate pipeline velocity, and benchmark sales capacity across quarters.",
                     },
                 },
             ],
