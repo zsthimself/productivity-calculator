@@ -121,3 +121,25 @@
      - 提炼 5 大精益排班与缩短后处理工时（ACW）策略；
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 压缩至 59 字符（`Call Center Productivity Calculator | Agent Occupancy & CPH`），Description 优化至 148 字符黄金区间。
+
+
+### DEC-009: /calculator/logistics 仓储物流与履约时效全案升级与 On-Page SEO 外科手术
+- **背景**:
+  1. GSC 表现：`/calculator/logistics` 为全站已产生真实自然点击的核心突破页（31 次曝光，2 次自然点击，CTR 高达 6.5%，平均排名 10.4 位，直逼首页前排门槛！核心主词 `warehouse productivity calculation`、`logistics productivity calculator`）；
+  2. 哥飞 SERP 侦察：`logistics productivity calculator` 难度 KD 仅 **23.3 · 容易**，SERP 前 10 名竞品平均 On-Page 得分仅 56 分（4 页不及格），Rank 1 `useworktivity.com`（DR 28，月流 5.1K）On-Page 仅 65 C 级且为**纯跳转落地页（功能不在本页）**，Title 与 H1 均未完整覆盖该词，被评为盘面最薄弱占位；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 263 词触发 <300 词硬封顶，Description 未命中主词，缺专属配图与交互工具。
+- **决定**:
+  1. 研发专业仓储物流级 `LogisticsProductivityCalculator.tsx`（三模式）：
+     - 模式 1：仓储拣选与工时效率（Units Picked/Packed、Direct Labor Hours、Pick Velocity UPH、全美 120 UPH 基准达成率、每千件人工成本）；
+     - 模式 2：订单履约周期与吞吐率（Orders Received、SLA Dispatched、Dock-to-Stock Latency、Order Processing Cycle、Same-Day Dispatch %）；
+     - 模式 3：车队配送与单票运输成本（Completed Deliveries、Active Drivers、Route Hours、Cost per Stop / Parcel、Driver Hourly Velocity）；
+     - 支持一键导出 Markdown 仓储物流 KPI 诊断报告。
+  2. 撰写专业级权威 SEO 文本组件 `LogisticsProductivitySeoContent.tsx`（1,462 词全页）：
+     - 嵌入 800x400 零 CLS 矢量图 `logistics-productivity-formula.svg`；
+     - 详述三大核心算式：Units Per Hour (UPH)、Order Cycle Time (OCT)、Cost Per Order (CPO)；
+     - 涵盖电商 DTC、3PL 仓储、零售越库、冷链医药 4 大环境基准矩阵表；
+     - 提供真实 10,000 单配送中心年省 $210,000 人工成本算例；
+     - 提炼 5 大精益仓储优化策略；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 压缩至 57 字符（`Logistics Productivity Calculator | Warehouse & Pick Rate`），Description 优化至 154 字符黄金区间。
+  4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **96 / 100 A 级卓越**（净增 +41 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram 核心主词命中 Rank 1 登顶，占位密度 1.23%）。
