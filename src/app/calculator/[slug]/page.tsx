@@ -1,6 +1,6 @@
 /**
  * [INPUT]: industries.json (静态配置), URL slug 参数, 专用计算器组件群, generateIndustrySchema
- * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy、manufacturing、labor、employee、video-production 专属套件，therapy 执行 301 权重合并
+ * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy、manufacturing、labor、employee、video-production、call-center、logistics、cleaning-services 专属套件
  * [POS]: pSEO 模板与垂直突围页 - 承接 slug 对应 20+ 行业页面，对高潜力词做专属架构承接
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -22,6 +22,8 @@ import CallCenterProductivityCalculator from "@/components/CallCenterProductivit
 import CallCenterProductivitySeoContent from "@/components/CallCenterProductivitySeoContent";
 import { LogisticsProductivityCalculator } from "@/components/LogisticsProductivityCalculator";
 import LogisticsProductivitySeoContent from "@/components/LogisticsProductivitySeoContent";
+import { CleaningServicesProductivityCalculator } from "@/components/CleaningServicesProductivityCalculator";
+import CleaningServicesProductivitySeoContent from "@/components/CleaningServicesProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -42,6 +44,54 @@ export async function generateStaticParams() {
     }));
 }
 
+function buildMeta(
+    title: string,
+    description: string,
+    keywords: string[],
+    pageUrl: string,
+    slug: string
+): Metadata {
+    return {
+        title: {
+            absolute: title,
+        },
+        description,
+        keywords,
+        alternates: {
+            canonical: pageUrl,
+            languages: {
+                "x-default": pageUrl,
+                en: pageUrl,
+                "zh-CN": `${BASE_URL}/zh/calculator/${slug}`,
+                es: `${BASE_URL}/es/calculator/${slug}`,
+                de: `${BASE_URL}/de/calculator/${slug}`,
+                ja: `${BASE_URL}/ja/calculator/${slug}`,
+            },
+        },
+        openGraph: {
+            title,
+            description,
+            url: pageUrl,
+            type: "website",
+            siteName: "Productivity Calculator",
+            images: [
+                {
+                    url: `${BASE_URL}/og-image.png`,
+                    width: 1200,
+                    height: 630,
+                    alt: title,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: [`${BASE_URL}/og-image.png`],
+        },
+    };
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { slug } = await params;
     const industry = industryData.find((i) => i.slug === slug);
@@ -60,7 +110,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             title: {
                 absolute: "Physical Therapy Productivity Calculator | PT & OT",
             },
-            description: "Free physical therapy productivity calculator for PT, OT, and therapists. Calculate clinical productivity percentage, treatment minutes, lunch break, and target hours.",
+            description:
+                "Free physical therapy productivity calculator for PT, OT, and therapists. Calculate clinical productivity percentage, treatment minutes, lunch break, and target hours.",
             alternates: {
                 canonical: `${BASE_URL}/calculator/physical-therapy`,
             },
@@ -71,23 +122,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
-    const isPhysicalTherapy = slug === "physical-therapy";
-    const isManufacturing = slug === "manufacturing";
-    const isLabor = slug === "labor";
-    const isEmployee = slug === "employee";
-    const isVideoProduction = slug === "video-production";
-    const isCallCenter = slug === "call-center";
-    const isLogistics = slug === "logistics";
-
-    if (isPhysicalTherapy) {
-        const title = "Physical Therapy Productivity Calculator | PT & OT";
-        const description = "Free physical therapy productivity calculator for PT, OT, and therapists. Calculate clinical productivity percentage, treatment minutes, lunch break, and target hours.";
-        return {
-            title: {
-                absolute: title,
-            },
-            description,
-            keywords: [
+    if (slug === "physical-therapy") {
+        return buildMeta(
+            "Physical Therapy Productivity Calculator | PT & OT",
+            "Free physical therapy productivity calculator for PT, OT, and therapists. Calculate clinical productivity percentage, treatment minutes, lunch break, and target hours.",
+            [
                 "physical therapy productivity calculator",
                 "pt productivity calculator",
                 "occupational therapy productivity calculator",
@@ -96,50 +135,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
                 "productivity calculator for physical therapy",
                 "productivity calculator",
             ],
-            alternates: {
-                canonical: pageUrl,
-                languages: {
-                    'x-default': pageUrl,
-                    'en': pageUrl,
-                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
-                    'es': `${BASE_URL}/es/calculator/${slug}`,
-                    'de': `${BASE_URL}/de/calculator/${slug}`,
-                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
-                },
-            },
-            openGraph: {
-                title,
-                description,
-                url: pageUrl,
-                type: "website",
-                siteName: "Productivity Calculator",
-                images: [
-                    {
-                        url: `${BASE_URL}/og-image.png`,
-                        width: 1200,
-                        height: 630,
-                        alt: "Physical Therapy Productivity Calculator",
-                    },
-                ],
-            },
-            twitter: {
-                card: "summary_large_image",
-                title,
-                description,
-                images: [`${BASE_URL}/og-image.png`],
-            },
-        };
+            pageUrl,
+            slug
+        );
     }
 
-    if (isManufacturing) {
-        const title = "Manufacturing Productivity Calculator | OEE & Labor Rate";
-        const description = "Free manufacturing productivity calculator. Measure factory output, labor productivity per hour, machine cycle efficiency, and OEE benchmarks instantly.";
-        return {
-            title: {
-                absolute: title,
-            },
-            description,
-            keywords: [
+    if (slug === "manufacturing") {
+        return buildMeta(
+            "Manufacturing Productivity Calculator | OEE & Labor Rate",
+            "Free manufacturing productivity calculator. Measure factory output, labor productivity per hour, machine cycle efficiency, and OEE benchmarks instantly.",
+            [
                 "manufacturing productivity calculator",
                 "manufacturing calculator",
                 "factory calculator",
@@ -150,104 +155,35 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
                 "oee calculator",
                 "productivity calculator",
             ],
-            alternates: {
-                canonical: pageUrl,
-                languages: {
-                    'x-default': pageUrl,
-                    'en': pageUrl,
-                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
-                    'es': `${BASE_URL}/es/calculator/${slug}`,
-                    'de': `${BASE_URL}/de/calculator/${slug}`,
-                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
-                },
-            },
-            openGraph: {
-                title,
-                description,
-                url: pageUrl,
-                type: "website",
-                siteName: "Productivity Calculator",
-                images: [
-                    {
-                        url: `${BASE_URL}/og-image.png`,
-                        width: 1200,
-                        height: 630,
-                        alt: "Manufacturing Productivity Calculator",
-                    },
-                ],
-            },
-            twitter: {
-                card: "summary_large_image",
-                title,
-                description,
-                images: [`${BASE_URL}/og-image.png`],
-            },
-        };
+            pageUrl,
+            slug
+        );
     }
 
-    if (isLabor) {
-        const title = "Labor Productivity Calculator | Output & Workforce Rate";
-        const description = "Free labor productivity calculator. Measure output per labor hour, revenue-to-labor cost ratio, blended workforce rates, and employee capacity utilization.";
-        return {
-            title: {
-                absolute: title,
-            },
-            description,
-            keywords: [
+    if (slug === "labor") {
+        return buildMeta(
+            "Labor Productivity Calculator | Units & Output per Hour",
+            "Free labor productivity calculator. Measure workforce units per hour, revenue per labor dollar, and team capacity utilization with real-time benchmarks.",
+            [
                 "labor productivity calculator",
-                "calculate labor productivity",
-                "how to calculate labor productivity",
                 "labor productivity formula",
-                "labor efficiency calculator",
-                "employee productivity calculator",
-                "labor production rate",
+                "productivity calculator per hour",
+                "labor productivity formula with example",
+                "how to calculate labor productivity",
+                "calculate labor productivity",
                 "workforce productivity calculator",
                 "productivity calculator",
             ],
-            alternates: {
-                canonical: pageUrl,
-                languages: {
-                    'x-default': pageUrl,
-                    'en': pageUrl,
-                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
-                    'es': `${BASE_URL}/es/calculator/${slug}`,
-                    'de': `${BASE_URL}/de/calculator/${slug}`,
-                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
-                },
-            },
-            openGraph: {
-                title,
-                description,
-                url: pageUrl,
-                type: "website",
-                siteName: "Productivity Calculator",
-                images: [
-                    {
-                        url: `${BASE_URL}/og-image.png`,
-                        width: 1200,
-                        height: 630,
-                        alt: "Labor Productivity Calculator",
-                    },
-                ],
-            },
-            twitter: {
-                card: "summary_large_image",
-                title,
-                description,
-                images: [`${BASE_URL}/og-image.png`],
-            },
-        };
+            pageUrl,
+            slug
+        );
     }
 
-    if (isEmployee) {
-        const title = "Employee Productivity Calculator | Revenue per Employee";
-        const description = "Free employee productivity calculator. Measure revenue per employee, profit per FTE, and department workforce performance with industry benchmarks.";
-        return {
-            title: {
-                absolute: title,
-            },
-            description,
-            keywords: [
+    if (slug === "employee") {
+        return buildMeta(
+            "Employee Productivity Calculator | Revenue per FTE & Target ROI",
+            "Free employee productivity calculator. Measure revenue per employee, net profit per FTE, and employee compensation ROI with industry-level benchmarks.",
+            [
                 "employee productivity calculator",
                 "how to calculate productivity per employee",
                 "calculate productivity per employee",
@@ -258,50 +194,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
                 "productivity calculator",
                 "employee efficiency",
             ],
-            alternates: {
-                canonical: pageUrl,
-                languages: {
-                    'x-default': pageUrl,
-                    'en': pageUrl,
-                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
-                    'es': `${BASE_URL}/es/calculator/${slug}`,
-                    'de': `${BASE_URL}/de/calculator/${slug}`,
-                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
-                },
-            },
-            openGraph: {
-                title,
-                description,
-                url: pageUrl,
-                type: "website",
-                siteName: "Productivity Calculator",
-                images: [
-                    {
-                        url: `${BASE_URL}/og-image.png`,
-                        width: 1200,
-                        height: 630,
-                        alt: "Employee Productivity Calculator",
-                    },
-                ],
-            },
-            twitter: {
-                card: "summary_large_image",
-                title,
-                description,
-                images: [`${BASE_URL}/og-image.png`],
-            },
-        };
+            pageUrl,
+            slug
+        );
     }
 
-    if (isVideoProduction) {
-        const title = "Video Production Calculator | Cost & Turnaround Estimator";
-        const description = "Free video production calculator. Estimate video production costs per minute, editing turnaround time, and crew labor efficiency across all project tiers.";
-        return {
-            title: {
-                absolute: title,
-            },
-            description,
-            keywords: [
+    if (slug === "video-production") {
+        return buildMeta(
+            "Video Production Calculator | Cost & Turnaround Estimator",
+            "Free video production calculator. Estimate video production costs per minute, editing turnaround time, and crew labor efficiency across all project tiers.",
+            [
                 "video production calculator",
                 "video production cost estimator",
                 "video production costs estimator",
@@ -313,50 +215,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
                 "video production efficiency",
                 "productivity calculator",
             ],
-            alternates: {
-                canonical: pageUrl,
-                languages: {
-                    'x-default': pageUrl,
-                    'en': pageUrl,
-                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
-                    'es': `${BASE_URL}/es/calculator/${slug}`,
-                    'de': `${BASE_URL}/de/calculator/${slug}`,
-                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
-                },
-            },
-            openGraph: {
-                title,
-                description,
-                url: pageUrl,
-                type: "website",
-                siteName: "Productivity Calculator",
-                images: [
-                    {
-                        url: `${BASE_URL}/og-image.png`,
-                        width: 1200,
-                        height: 630,
-                        alt: "Video Production Calculator",
-                    },
-                ],
-            },
-            twitter: {
-                card: "summary_large_image",
-                title,
-                description,
-                images: [`${BASE_URL}/og-image.png`],
-            },
-        };
+            pageUrl,
+            slug
+        );
     }
 
-    if (isCallCenter) {
-        const title = "Call Center Productivity Calculator | Agent Occupancy & CPH";
-        const description = "Free call center productivity calculator. Measure agent occupancy, calls per hour (CPH), handling velocity (AHT), and shrinkage with WFM benchmarks.";
-        return {
-            title: {
-                absolute: title,
-            },
-            description,
-            keywords: [
+    if (slug === "call-center") {
+        return buildMeta(
+            "Call Center Productivity Calculator | Agent Occupancy & CPH",
+            "Free call center productivity calculator. Measure agent occupancy, calls per hour (CPH), handling velocity (AHT), and shrinkage with WFM benchmarks.",
+            [
                 "call center productivity calculator",
                 "call center productivity",
                 "agent productivity calculator",
@@ -368,50 +236,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
                 "average handle time calculator",
                 "productivity calculator",
             ],
-            alternates: {
-                canonical: pageUrl,
-                languages: {
-                    'x-default': pageUrl,
-                    'en': pageUrl,
-                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
-                    'es': `${BASE_URL}/es/calculator/${slug}`,
-                    'de': `${BASE_URL}/de/calculator/${slug}`,
-                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
-                },
-            },
-            openGraph: {
-                title,
-                description,
-                url: pageUrl,
-                type: "website",
-                siteName: "Productivity Calculator",
-                images: [
-                    {
-                        url: `${BASE_URL}/og-image.png`,
-                        width: 1200,
-                        height: 630,
-                        alt: "Call Center Productivity Calculator",
-                    },
-                ],
-            },
-            twitter: {
-                card: "summary_large_image",
-                title,
-                description,
-                images: [`${BASE_URL}/og-image.png`],
-            },
-        };
+            pageUrl,
+            slug
+        );
     }
 
-    if (isLogistics) {
-        const title = "Logistics Productivity Calculator | Warehouse & Pick Rate";
-        const description = "Free logistics productivity calculator to measure warehouse units per hour (UPH), picking velocity, order fulfillment cycle time, and labor cost per order.";
-        return {
-            title: {
-                absolute: title,
-            },
-            description,
-            keywords: [
+    if (slug === "logistics") {
+        return buildMeta(
+            "Logistics Productivity Calculator | Warehouse & Pick Rate",
+            "Free logistics productivity calculator to measure warehouse units per hour (UPH), picking velocity, order fulfillment cycle time, and labor cost per order.",
+            [
                 "logistics productivity calculator",
                 "warehouse productivity calculator",
                 "warehouse productivity calculation",
@@ -423,45 +257,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
                 "3pl productivity calculator",
                 "productivity calculator",
             ],
-            alternates: {
-                canonical: pageUrl,
-                languages: {
-                    'x-default': pageUrl,
-                    'en': pageUrl,
-                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
-                    'es': `${BASE_URL}/es/calculator/${slug}`,
-                    'de': `${BASE_URL}/de/calculator/${slug}`,
-                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
-                },
-            },
-            openGraph: {
-                title,
-                description,
-                url: pageUrl,
-                type: "website",
-                siteName: "Productivity Calculator",
-                images: [
-                    {
-                        url: `${BASE_URL}/og-image.png`,
-                        width: 1200,
-                        height: 630,
-                        alt: "Logistics Productivity Calculator",
-                    },
-                ],
-            },
-            twitter: {
-                card: "summary_large_image",
-                title,
-                description,
-                images: [`${BASE_URL}/og-image.png`],
-            },
-        };
+            pageUrl,
+            slug
+        );
     }
 
-    return {
-        title: `${industry.title} 2026 | Free Online Tool`,
-        description: industry.description,
-        keywords: [
+    if (slug === "cleaning-services") {
+        return buildMeta(
+            "Commercial Cleaning Time Calculator | ISSA Production Rates",
+            "Free commercial cleaning time calculator to estimate janitorial labor hours, square footage production rates, and contract bidding costs with ISSA standards.",
+            [
+                "commercial cleaning time calculator",
+                "cleaning time calculator",
+                "cleaning times calculator",
+                "how to calculate cleaning times",
+                "cleaning productivity calculator",
+                "commercial cleaning productivity calculator",
+                "janitorial bidding calculator",
+                "issa 612 cleaning times",
+                "cleaning square footage calculator",
+                "productivity calculator",
+            ],
+            pageUrl,
+            slug
+        );
+    }
+
+    return buildMeta(
+        `${industry.title} 2026 | Free Online Tool`,
+        industry.description,
+        [
             industry.title.toLowerCase(),
             `${industry.name.toLowerCase()} productivity`,
             `${industry.name.toLowerCase()} efficiency`,
@@ -469,39 +294,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             "efficiency calculator",
             industry.name.toLowerCase(),
         ],
-        alternates: {
-            canonical: pageUrl,
-            languages: {
-                'x-default': pageUrl,
-                'en': pageUrl,
-                'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
-                'es': `${BASE_URL}/es/calculator/${slug}`,
-                'de': `${BASE_URL}/de/calculator/${slug}`,
-                'ja': `${BASE_URL}/ja/calculator/${slug}`,
-            },
-        },
-        openGraph: {
-            title: `${industry.title} 2026 | Free Calculator`,
-            description: industry.description,
-            url: pageUrl,
-            type: "website",
-            siteName: "Productivity Calculator",
-            images: [
-                {
-                    url: `${BASE_URL}/og-image.png`,
-                    width: 1200,
-                    height: 630,
-                    alt: `${industry.title} 2026`,
-                },
-            ],
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: industry.title,
-            description: industry.description,
-            images: [`${BASE_URL}/og-image.png`],
-        },
-    };
+        pageUrl,
+        slug
+    );
 }
 
 export default async function IndustryCalculatorPage({ params }: PageProps) {
@@ -549,6 +344,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isVideoProduction = slug === "video-production";
     const isCallCenter = slug === "call-center";
     const isLogistics = slug === "logistics";
+    const isCleaningServices = slug === "cleaning-services";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -598,6 +394,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Contact Center Operations Suite"
                                     : isLogistics
                                     ? "Warehouse & Supply Chain Suite"
+                                    : isCleaningServices
+                                    ? "Commercial Janitorial & ISSA 612 Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -619,9 +417,13 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Call Center"
                                     : isLogistics
                                     ? "Logistics"
+                                    : isCleaningServices
+                                    ? "Commercial Cleaning Time"
                                     : industry.name}
                             </span>{" "}
-                            <span className="text-white">Productivity Calculator</span>
+                            <span className="text-white">
+                                {isCleaningServices ? "& Productivity Calculator" : "Productivity Calculator"}
+                            </span>
                         </h1>
 
                         {/* Subtitle */}
@@ -640,6 +442,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Contact center productivity calculator, agent occupancy analyzer, and shrinkage-adjusted staffing scheduler for customer support & BPO teams."
                                 : isLogistics
                                 ? "Warehouse logistics productivity calculator, units per hour (UPH) estimator, dock-to-stock tracker, and fleet unit shipping cost modeler for distribution centers & 3PLs."
+                                : isCleaningServices
+                                ? "Commercial cleaning time calculator, janitorial square footage production rate analyzer, and contract bidding cost estimator based on official ISSA 612 standards."
                                 : industry.description}
                         </p>
 
@@ -666,6 +470,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <CallCenterProductivityCalculator />
                     ) : isLogistics ? (
                         <LogisticsProductivityCalculator />
+                    ) : isCleaningServices ? (
+                        <CleaningServicesProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -685,6 +491,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <CallCenterProductivitySeoContent />
                     ) : isLogistics ? (
                         <LogisticsProductivitySeoContent />
+                    ) : isCleaningServices ? (
+                        <CleaningServicesProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">

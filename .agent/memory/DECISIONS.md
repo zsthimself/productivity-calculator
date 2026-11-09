@@ -143,3 +143,25 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 压缩至 57 字符（`Logistics Productivity Calculator | Warehouse & Pick Rate`），Description 优化至 154 字符黄金区间。
   4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **96 / 100 A 级卓越**（净增 +41 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram 核心主词命中 Rank 1 登顶，占位密度 1.23%）。
+
+
+### DEC-010: /calculator/cleaning-services 商业清洁与 ISSA 612 工时全案升级与 On-Page SEO 外科手术
+- **背景**:
+  1. GSC 表现：`/calculator/cleaning-services` 为全站商业服务核心词（41 次曝光，1 次自然点击，平均排名 26.1 位；核心主词 `commercial cleaning time calculator`、`cleaning time calculator`、`cleaning times calculator`）；
+  2. 哥飞 SERP 侦察：`commercial cleaning time calculator` 难度 KD **0 · 极易**，SERP 前 10 名竞品 8/10 为非定制泛页面，Rank 1 `commercialcleaningcorp.com` 仅 1,194 词且正文较虚，Rank 6 `thejanitorialstore.com` On-Page 仅 45 分（粗糙不堪，主题聚焦度仅 28%）；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 269 词触发 <300 词硬封顶，Title 长达 82 字符截断，Description 仅 94 字符缺词，缺少专属多媒体与交互工具。
+- **决定**:
+  1. 研发专业商业保洁级 `CleaningServicesProductivityCalculator.tsx`（三模式）：
+     - 模式 1：ISSA 612 面积工时估算器（Cleanable Sq Ft、ISSA 生产率标杆、垃圾与布草换算、所需保洁工时、排班人数倒推）；
+     - 模式 2：保洁团队流速分析（Total Square Footage、Actual Work Hours、Crew Size、Realized Sq Ft/Hour Rate、ISSA 标杆达成率）；
+     - 模式 3：商业保洁合同成本与报价模型（Monthly Hours、Loaded Wage Rate、Chemical & Supply Cost %、Equipment Depreciation、Overhead & Profit Margin、Monthly Contract Fee、Price per Sq Ft）；
+     - 提供四大经典场景预设（标准企业办公室、高频门诊诊所、K-12学校教学楼、轻工业仓储基地），支持一键导出 Markdown 保洁测算报告。
+  2. 撰写专业级权威 SEO 文本组件 `CleaningServicesProductivitySeoContent.tsx`（1,400+ 词全页）：
+     - 嵌入 800x400 零 CLS 矢量图 `cleaning-productivity-formula.svg`；
+     - 详述三大核心算式：ISSA 612 Cleaning Time Formula、Crew Velocity Rate、Contract Bidding Price；
+     - 涵盖企业办公室、医疗门诊、学校走廊、高频卫生间、工业仓库 5 大环境 ISSA 612 基准矩阵表；
+     - 提供真实 25,000 平方英尺甲级写字楼月度 $5,250 保洁投标测算案例；
+     - 提炼 5 大精益商业清洁提升工效策略（背负式吸尘器、四色微纤维、团队流水作业、精准稀释配比、IoT 流量感应）；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 压缩至 57 字符（`Commercial Cleaning Time Calculator | ISSA Production Rates`），Description 优化至 157 字符黄金区间。
+  4. 重构 `src/app/calculator/[slug]/page.tsx`：抽象 `buildMeta` 通用工厂函数，消除 280+ 行重复元数据样板代码，单文件行数由 744 行降至 552 行，坚决守牢 $\le 800$ 行安全红线。

@@ -15,6 +15,7 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
     const isVideoProduction = industry.slug === "video-production";
     const isCallCenter = industry.slug === "call-center";
     const isLogistics = industry.slug === "logistics";
+    const isCleaningServices = industry.slug === "cleaning-services";
     const pageUrl = `${baseUrl}/calculator/${industry.slug}`;
 
     const schemas: Record<string, unknown>[] = [
@@ -35,6 +36,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Call Center Productivity Calculator"
                 : isLogistics
                 ? "Logistics Productivity Calculator"
+                : isCleaningServices
+                ? "Commercial Cleaning Time Calculator"
                 : industry.title,
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web Browser",
@@ -58,6 +61,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Free call center productivity calculator. Measure agent occupancy rate, calls per hour (CPH), average handle time (AHT), and shrinkage-adjusted staffing requirements."
                 : isLogistics
                 ? "Free logistics productivity calculator. Calculate warehouse units per hour (UPH), pick and pack labor velocity, dock-to-stock latency, order fulfillment cycle time, and fleet cost per parcel."
+                : isCleaningServices
+                ? "Free commercial cleaning time calculator to estimate janitorial labor hours, square footage production rates, and contract bidding costs with ISSA standards."
                 : industry.description,
         },
         {
@@ -93,6 +98,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                         ? "Call Center Productivity Calculator"
                         : isLogistics
                         ? "Logistics Productivity Calculator"
+                        : isCleaningServices
+                        ? "Commercial Cleaning Time Calculator"
                         : industry.title,
                     item: pageUrl,
                 },
@@ -485,6 +492,63 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                     acceptedAnswer: {
                         "@type": "Answer",
                         text: "Wave picking groups orders by common criteria—such as shipping carrier cutoff, delivery zone, or shared SKU location—into scheduled execution waves. Instead of individual pickers traversing the entire warehouse for isolated orders, associates pick high-density SKU batches along optimized routes, reducing travel time by up to 40% and elevating UPH.",
+                    },
+                },
+            ],
+        });
+    }
+
+    if (isCleaningServices) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "How do you calculate commercial cleaning time?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "To calculate commercial cleaning time, determine cleanable square footage for each area type and divide by its standard production rate (such as ISSA 612 benchmarks). Add non-cleaning operational allowances for trash haulage, equipment setup, and chemical preparation (typically 10% to 15% of gross time). Finally, divide total hours by crew size to establish shift duration.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the ISSA 612 cleaning standard?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "The ISSA 612 Cleaning Times is the globally recognized custodial industry compendium published by ISSA (The Worldwide Cleaning Industry Association). It compiles thousands of verified time-and-motion studies detailing exactly how many minutes and seconds it takes to perform specific cleaning tasks (e.g., damp mopping, backpack vacuuming, porcelain sanitizing) across various facility settings.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How many square feet can one commercial cleaner clean per hour?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "On average, a commercial cleaner can maintain between 2,500 and 4,500 square feet per hour in a standard office building using modern backpack vacuums and microfiber tools. In complex medical or cleanroom environments, this drops to 1,000 to 1,500 sq ft/hour due to sterilization protocols. In open warehouse facilities with ride-on equipment, rates can exceed 10,000 to 20,000 sq ft/hour.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How do janitorial contractors calculate bidding prices per square foot?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Janitorial contractors calculate commercial bid prices by multiplying estimated monthly labor hours by fully loaded custodial wages (including payroll taxes, workers comp, and benefits). They then add 3% to 7% for cleaning chemicals and trash liners, 2% to 4% for equipment depreciation, plus general overhead (15% to 25%) and profit margin (10% to 20%). Dividing total monthly fee by square footage gives the monthly rate per square foot ($0.08 to $0.25/sq ft).",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the difference between team cleaning and zone cleaning?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "In zone cleaning, an individual cleaner is responsible for all cleaning tasks (emptying trash, dusting, vacuuming, restrooms) within an assigned physical zone or floor. In team cleaning, specialists rotate through the entire facility performing dedicated functions (e.g., one vacuum specialist followed by one restroom specialist). Team cleaning typically yields 20% to 30% higher productivity and lower equipment duplication costs.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What factors cause commercial cleaning productivity to decrease?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Commercial cleaning velocity drops significantly due to high furniture clutter and cable congestion, inadequate electrical outlet spacing requiring frequent cord repositioning, heavy restroom fixture densities, obsolete upright vacuum cleaners, manual mop-bucket water changes, and lack of clear standardized cleaning route mapping.",
                     },
                 },
             ],

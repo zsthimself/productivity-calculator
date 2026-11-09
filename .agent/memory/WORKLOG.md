@@ -179,3 +179,15 @@
     - 社交与结构化：10/10 满分
     - 技术与抓取：17/17 满分
     - 3-gram 关键词命中：`#1 logistics productivity calculator` 出现 6 次，词频密度 0.41%，占位密度 1.23%（健康区间，独占 Rank 1 登顶，0 堆砌告警）。
+
+
+## 2026-11-09: /calculator/cleaning-services 商业清洁全案升级与 On-Page SEO 外科手术
+
+- **执行概要**:
+  - 瞄准 GSC 排名第 8 核心词源 `/calculator/cleaning-services`（41 次曝光，1 次点击，平均排名 26.1，极易难度 KD 0），实施从 55 D 级到 95+ A 级的全案重构。
+- **实施细节**:
+  1. 研发专业商业保洁级交互组件 `src/components/CleaningServicesProductivityCalculator.tsx`（475行）：ISSA 612 面积工时估算器、团队流速分析、商业保洁合同成本与报价模型三模式，内置四大预设与一键 Markdown 导出；
+  2. 撰写专业级权威 SEO 文本组件 `src/components/CleaningServicesProductivitySeoContent.tsx`（295行）：嵌入 800x400 零 CLS 矢量图 `cleaning-productivity-formula.svg`，呈现 ISSA 612 五大场景基准表、25,000 平方英尺甲级写字楼月度 $5,250 保洁投标案例、5 大精益商业清洁策略与 6 大 PAA FAQ；
+  3. 解耦优化 `src/lib/industrySchemas.ts`（576行）：为 cleaning-services 注入 WebApplication、BreadcrumbList 与 6 组 FAQPage JSON-LD 结构化数据；
+  4. 重构优化 `src/app/calculator/[slug]/page.tsx`（552行）：抽象 `buildMeta` 通用工厂函数消除冗余样板代码，精炼 Title 57 字符、Description 157 字符，配置专属 Badge 与 H1，严格遵守 $\le 800$ 行安全红线；
+  5. 静态编译通过，147 页面 SSG 构建完成（1.04s），实测产物 HTML 词数达 1,400+ 词（突破 300 词惩罚断崖，进入 1200-1800 最佳权重带）。
