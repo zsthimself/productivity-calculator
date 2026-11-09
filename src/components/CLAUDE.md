@@ -19,6 +19,8 @@ LogisticsProductivityCalculator.tsx: 仓储物流生产力计算器，UPH分拣�
 LogisticsProductivitySeoContent.tsx: 仓储物流权威深度语义指南，SVG图表/公式/基准表格/FAQ，300行
 CleaningServicesProductivityCalculator.tsx: 商业清洁保洁生产力计算器，ISSA 612工时/团队流速/保洁合同报价，475行
 CleaningServicesProductivitySeoContent.tsx: 商业清洁保洁权威深度语义指南，SVG架构图/ISSA基准表/成本案例/FAQ，295行
+HealthcareProductivityCalculator.tsx: 医疗卫生与临床运营生产力计算器，wRVU医生考核/住院护士HPPD/门诊负荷，465行
+HealthcareProductivitySeoContent.tsx: 医疗卫生权威深度语义指南，SVG架构图/MGMA基准表/住院排班案例/FAQ，295行
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

@@ -16,6 +16,7 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
     const isCallCenter = industry.slug === "call-center";
     const isLogistics = industry.slug === "logistics";
     const isCleaningServices = industry.slug === "cleaning-services";
+    const isHealthcare = industry.slug === "healthcare";
     const pageUrl = `${baseUrl}/calculator/${industry.slug}`;
 
     const schemas: Record<string, unknown>[] = [
@@ -38,6 +39,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Logistics Productivity Calculator"
                 : isCleaningServices
                 ? "Commercial Cleaning Time Calculator"
+                : isHealthcare
+                ? "Healthcare Productivity Calculator"
                 : industry.title,
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web Browser",
@@ -63,6 +66,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Free logistics productivity calculator. Calculate warehouse units per hour (UPH), pick and pack labor velocity, dock-to-stock latency, order fulfillment cycle time, and fleet cost per parcel."
                 : isCleaningServices
                 ? "Free commercial cleaning time calculator to estimate janitorial labor hours, square footage production rates, and contract bidding costs with ISSA standards."
+                : isHealthcare
+                ? "Free clinical healthcare productivity calculator. Measure physician wRVU production, inpatient nursing HPPD staffing, and ambulatory patient encounter velocity."
                 : industry.description,
         },
         {
@@ -100,6 +105,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                         ? "Logistics Productivity Calculator"
                         : isCleaningServices
                         ? "Commercial Cleaning Time Calculator"
+                        : isHealthcare
+                        ? "Healthcare Productivity Calculator"
                         : industry.title,
                     item: pageUrl,
                 },
@@ -549,6 +556,63 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                     acceptedAnswer: {
                         "@type": "Answer",
                         text: "Commercial cleaning velocity drops significantly due to high furniture clutter and cable congestion, inadequate electrical outlet spacing requiring frequent cord repositioning, heavy restroom fixture densities, obsolete upright vacuum cleaners, manual mop-bucket water changes, and lack of clear standardized cleaning route mapping.",
+                    },
+                },
+            ],
+        });
+    }
+
+    if (isHealthcare) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "How is healthcare productivity calculated?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Healthcare productivity is calculated using different operational metrics depending on care setting: For physicians and clinicians, it is measured in Work Relative Value Units per clinical day or year (wRVU ÷ Time); for hospital inpatient nursing, it is measured in Hours Per Patient Day (HPPD = Total Productive Nursing Hours ÷ Midnight Patient Census); and for outpatient clinics, it is evaluated by patient encounters completed per clinical hour.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is a wRVU in physician productivity?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "A Work Relative Value Unit (wRVU) is a standardized numeric weight assigned by the Centers for Medicare & Medicaid Services (CMS) to quantify the clinical skill, physical effort, cognitive complexity, and time required to perform a specific medical service or procedure (CPT code). It excludes practice overhead and malpractice costs, serving as the universal gold standard for measuring doctor productivity and setting incentive compensation.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is HPPD in hospital nursing staffing?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Hours Per Patient Day (HPPD) measures direct nursing hours provided to a patient in an inpatient hospital unit over a 24-hour period. It is calculated by dividing total worked nursing hours (by Registered Nurses, LPNs, and nurse aides) by midnight inpatient census. Standard benchmarks range from 8.0 to 9.5 HPPD on medical-surgical floors to over 18.0 to 24.0 HPPD in intensive care units (ICU).",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the average patient volume for an outpatient clinic doctor?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "On average, an outpatient primary care physician (Family Medicine or Internal Medicine) sees between 18 and 24 patients per 8-hour clinical day, equating to roughly 2.2 to 2.8 patient encounters per hour. Specialized surgical and procedural clinics may schedule 12 to 16 patients per day to accommodate complex consultations and minor office procedures.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the difference between clinical productivity and healthcare efficiency?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Clinical productivity measures volume of output generated per unit of resource input (such as wRVUs generated per clinical day or encounters per hour). Healthcare efficiency is broader, factoring in clinical quality, diagnostic accuracy, 30-day readmission rates, patient safety outcomes, and operating cost per episode of care. High productivity without clinical quality results in downstream medical errors.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How can hospitals reduce nurse overtime while maintaining HPPD acuity?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Hospitals reduce nurse overtime while sustaining required HPPD by instituting centralized float pools, leveraging automated shift bidding software, analyzing historical patient census trends to adjust core staffing 4 to 6 weeks in advance, and conducting daily mid-shift acuity balancing rather than relying on mandatory end-of-shift overtime.",
                     },
                 },
             ],

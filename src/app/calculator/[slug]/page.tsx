@@ -24,6 +24,8 @@ import { LogisticsProductivityCalculator } from "@/components/LogisticsProductiv
 import LogisticsProductivitySeoContent from "@/components/LogisticsProductivitySeoContent";
 import { CleaningServicesProductivityCalculator } from "@/components/CleaningServicesProductivityCalculator";
 import CleaningServicesProductivitySeoContent from "@/components/CleaningServicesProductivitySeoContent";
+import { HealthcareProductivityCalculator } from "@/components/HealthcareProductivityCalculator";
+import HealthcareProductivitySeoContent from "@/components/HealthcareProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -283,6 +285,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         );
     }
 
+    if (slug === "healthcare") {
+        return buildMeta(
+            "Healthcare Productivity Calculator | wRVU & HPPD Benchmark",
+            "Free clinical healthcare productivity calculator. Measure physician wRVU production, inpatient nursing HPPD staffing, and ambulatory patient encounter velocity.",
+            [
+                "healthcare productivity calculator",
+                "healthcare productivity",
+                "physician productivity calculator",
+                "productivity in healthcare",
+                "wrvu calculator",
+                "nursing hppd calculator",
+                "hours per patient day calculator",
+                "clinical productivity calculator",
+                "hospital productivity calculator",
+                "productivity calculator",
+            ],
+            pageUrl,
+            slug
+        );
+    }
+
     return buildMeta(
         `${industry.title} 2026 | Free Online Tool`,
         industry.description,
@@ -345,6 +368,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isCallCenter = slug === "call-center";
     const isLogistics = slug === "logistics";
     const isCleaningServices = slug === "cleaning-services";
+    const isHealthcare = slug === "healthcare";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -396,6 +420,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Warehouse & Supply Chain Suite"
                                     : isCleaningServices
                                     ? "Commercial Janitorial & ISSA 612 Suite"
+                                    : isHealthcare
+                                    ? "Clinical Healthcare & Hospital Operations Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -419,6 +445,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Logistics"
                                     : isCleaningServices
                                     ? "Commercial Cleaning Time"
+                                    : isHealthcare
+                                    ? "Healthcare & Clinical"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">
@@ -444,6 +472,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Warehouse logistics productivity calculator, units per hour (UPH) estimator, dock-to-stock tracker, and fleet unit shipping cost modeler for distribution centers & 3PLs."
                                 : isCleaningServices
                                 ? "Commercial cleaning time calculator, janitorial square footage production rate analyzer, and contract bidding cost estimator based on official ISSA 612 standards."
+                                : isHealthcare
+                                ? "Clinical healthcare productivity calculator, physician wRVU production modeler, and hospital inpatient nursing HPPD staffing benchmark analyzer."
                                 : industry.description}
                         </p>
 
@@ -472,6 +502,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <LogisticsProductivityCalculator />
                     ) : isCleaningServices ? (
                         <CleaningServicesProductivityCalculator />
+                    ) : isHealthcare ? (
+                        <HealthcareProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -493,6 +525,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <LogisticsProductivitySeoContent />
                     ) : isCleaningServices ? (
                         <CleaningServicesProductivitySeoContent />
+                    ) : isHealthcare ? (
+                        <HealthcareProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">
