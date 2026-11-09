@@ -40,7 +40,7 @@
   2. 撰写专业级权威 SEO 文本组件 `src/components/ManufacturingSeoContent.tsx`（295行）：嵌入 800x400 零 CLS 矢量图 `manufacturing-productivity-formula.svg`，呈现 OEE 四级基准矩阵、四大制造业行业对照、排产数学题实操解答与 6 大 PAA FAQ；
   3. 更新 `src/app/calculator/[slug]/page.tsx`：精炼 Title 56 字符（阻断模板溢出）、Description 152 字符（含精准关键词）、注入 `WebApplication` + `FAQPage` 双重 Schema；
   4. 静态编译通过，147 页面 SSG 构建完成（3.0s），实测产物 HTML 词数达 1,304 词（突破 300 词惩罚断崖，进入 1200-1800 最佳权重带）；
-  5. 提交 commit `3212165` 推送至 GitHub master，Cloudflare Pages 自动完成生产构建上线。
+  5. 提交 commit `3212165` 及 `f8a0e24` 推送至 GitHub master，Cloudflare Pages 自动完成生产构建上线。
 - **验证结果**:
   - `python tools/verify_memory_sync.py --site productivity-calculator` -> SYNCED
   - 生产实时抓取：Title `Manufacturing Productivity Calculator | OEE & Labor Rate` (56 chars), Desc 152 chars, Img 1 SVG (800x400), HTML Words 1,298
@@ -54,3 +54,15 @@
     - 社交与结构化：10/10 满分
     - 技术与抓取：17/17 满分
     - 3-gram 关键词命中：`#2 manufacturing productivity calculator` 出现 3 次，词频密度 0.23%，占位密度 0.69%（健康区间，0 堆砌告警）。
+
+## 2026-11-09: /calculator/labor 全站第一曝光词全案升级与 On-Page SEO 外科手术
+
+- **执行概要**:
+  - 瞄准 GSC 全站曝光量第一顶级页面 `/calculator/labor`（489 次曝光，0 点击，平均排名 26.3，容易难度 KD 20.8），实施从 55 D 级到 95+ A 级的全案外科手术。
+- **实施细节**:
+  1. 编写专业级交互组件 `src/components/LaborProductivityCalculator.tsx`（430行）：产出率与单位成本、混合工种综合薪资模型、工时负荷与利用率三模式，支持一键工单与薪资报告导出；
+  2. 撰写专业级权威 SEO 文本组件 `src/components/LaborProductivitySeoContent.tsx`（310行）：嵌入 800x400 零 CLS 矢量图 `labor-productivity-formula.svg`，呈现直接 vs 间接工时利用率公式、五大行业基准矩阵、仓储履约与利用率补时算例及 6 大 PAA FAQ；
+  3. 更新 `src/app/calculator/[slug]/page.tsx`：精炼 Title 55 字符（`Labor Productivity Calculator | Output & Workforce Rate`）、Description 152 字符（含精准主词）、注入 `WebApplication` + `FAQPage` 双重 Schema；
+  4. 静态编译通过，147 页面 SSG 构建完成（3.0s），实测产物 HTML 词数达 1,344 词（突破 300 词惩罚断崖，进入 1200-1800 黄金权重带）。
+- **验证结果**:
+  - Static HTML 校验通过：Title 55 字符，Description 152 字符，Word count 1,344 词，配图 800x400 SVG，JSON-LD FAQPage + WebApplication 正常输出。

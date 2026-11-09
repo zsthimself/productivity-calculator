@@ -37,17 +37,25 @@
   2. 哥飞 SERP 侦察：`manufacturing productivity calculator` 难度 KD 仅 **4.5 · 极易**，竞品平均 On-Page 得分仅 60 分（Top 2 `productivitycalc.com` 仅 55 分/215词；Top 1 `symestic.com` 82 分但全站月流仅 2.7 万）；
   3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D级较差)，因仅有 271 词触发 <300 词硬性惩罚断崖，且缺少专用工具、配图及精准元数据。
 - **决定**:
-  1. 打造工业级 `ManufacturingCalculator.tsx`（三模式）：
-     - 模式 1：工时与机器产出率（毛产出/hr、良品净产出/hr、废品率 %、目标达成率 %）；
-     - 模式 2：工厂产能规划（直击 GSC 高频排产应用题：小时产能 × 班次 × 产线 × 运行天数 = 日/周/月/年产能）；
-     - 模式 3：OEE 快速评估器（可用率 × 表现指数 × 质量指数 = 综合 OEE %，匹配世界级 85% 标杆）。
-  2. 撰写专业级 `ManufacturingSeoContent.tsx`（~1,100词）：
-     - 嵌入高保真矢量图 `/images/manufacturing-productivity-formula.svg`（800x400，0 CLS）；
-     - 深度呈现 OEE 4级标准矩阵表（世界级 85%、典型 65-84%、可接受 50-64%、低效 <50%）；
-     - 汽车、电子 SMT、食品包装、精密数控 4 大行业基准；
-     - 多班次产线排产数学应用题权威推导解答；
-     - 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据同构。
-  3. 优化元数据与字数：
-     - Title 压缩至 56 字符（`Manufacturing Productivity Calculator | OEE & Labor Rate`）；
-     - Description 优化至 152 字符黄金区间（含精准关键词）；
-     - 全页纯文本词数扩展至 **1,304 词**（跨入 1200~1800 最佳权重区间）。
+  1. 打造工业级 `ManufacturingCalculator.tsx`（三模式）：工时机器产出率、工厂多班次排产规划、OEE 综合效率（85%标杆），附带一键工单日志复制；
+  2. 撰写专业级 `ManufacturingSeoContent.tsx`：嵌入 800x400 零 CLS 矢量图 `manufacturing-productivity-formula.svg`，呈现 OEE 四级基准矩阵、四大行业基准对照、排产数学题实操解答与 6 大 PAA FAQ；
+  3. 压缩 Title 至 56 字符，优化 Description 至 152 字符，注入 WebApplication + FAQPage 双重 Schema；
+  4. 实测体检复核：总分由 55 D 级飙升至 **99 / 100 A 级卓越**（主题聚焦 100%，Meta/内容/媒体/结构化/抓取全满分）。
+
+### DEC-005: /calculator/labor 人工工时全站第一大曝光词全案升级与 On-Page SEO 外科手术
+- **背景**:
+  1. GSC 表现：`/calculator/labor` 为全站曝光量第 1 顶级页面（489 次曝光，0 点击，平均排名 26.3，巨大流量空间！）；
+  2. 哥飞 SERP 侦察：`labor productivity calculator` 难度 KD 仅 **20.8 · 容易**，SERP Rank 1 `productivitycalc.com`（DR 仅 5，月流仅 33.3K）On-Page 仅 55 D 级且正文仅 215 词，被评为盘面“最薄弱占位”；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 274 词触发 <300 词封顶惩罚，Title 长达 79 字符截断，缺少多媒体配图。
+- **决定**:
+  1. 研发专业级 `LaborProductivityCalculator.tsx`（三模式）：
+     - 模式 1：工时产出率与单位成本（Units/man-hr、产出收入与人工成本比、单件人工成本、基准达成率）；
+     - 模式 2：混合工种综合薪资费率模型（资深/中级/初级阶梯配比、团队加权时薪、全职员工创收额、毛利边际）；
+     - 模式 3：工时负荷与利用率评估（直接可计费工时 vs 会议行政管理损耗、工时利用率 %、达标缺口小时数推算）。
+  2. 撰写高保真权威 SEO 文本 `LaborProductivitySeoContent.tsx`（1,344 词全页）：
+     - 嵌入 800x400 零 CLS 矢量图 `labor-productivity-formula.svg`；
+     - 详尽呈现直接工时 vs 间接工时利用率计算公式；
+     - 涵盖软件 SaaS、咨询专业服务、商业建筑、仓储履约、医疗门诊 5 大行业基准矩阵表；
+     - 提供物流履约实操工时核算与利用率达标补时算例；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 压缩至 55 字符（`Labor Productivity Calculator | Output & Workforce Rate`），Description 优化至 152 字符黄金区间。

@@ -1,6 +1,6 @@
 /**
- * [INPUT]: industries.json (静态配置), URL slug 参数, PhysicalTherapyCalculator, PhysicalTherapySeoContent, ManufacturingCalculator, ManufacturingSeoContent
- * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy 临床套件、manufacturing 工业套件，therapy 执行 301 权重合并
+ * [INPUT]: industries.json (静态配置), URL slug 参数, PhysicalTherapyCalculator, PhysicalTherapySeoContent, ManufacturingCalculator, ManufacturingSeoContent, LaborProductivityCalculator, LaborProductivitySeoContent
+ * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy 临床套件、manufacturing 工业套件、labor 人工工时套件，therapy 执行 301 权重合并
  * [POS]: pSEO 模板与垂直突围页 - 承接 slug 对应 20+ 行业页面，对高格式词权重合流
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -12,6 +12,8 @@ import PhysicalTherapyCalculator from "@/components/PhysicalTherapyCalculator";
 import PhysicalTherapySeoContent from "@/components/PhysicalTherapySeoContent";
 import ManufacturingCalculator from "@/components/ManufacturingCalculator";
 import ManufacturingSeoContent from "@/components/ManufacturingSeoContent";
+import LaborProductivityCalculator from "@/components/LaborProductivityCalculator";
+import LaborProductivitySeoContent from "@/components/LaborProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -62,6 +64,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const isPhysicalTherapy = slug === "physical-therapy";
     const isManufacturing = slug === "manufacturing";
+    const isLabor = slug === "labor";
 
     if (isPhysicalTherapy) {
         const title = "Physical Therapy Productivity Calculator | PT & OT";
@@ -175,6 +178,62 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
+    if (isLabor) {
+        const title = "Labor Productivity Calculator | Output & Workforce Rate";
+        const description = "Free labor productivity calculator. Calculate output per labor hour, workforce revenue efficiency, and labor utilization rates with industry benchmarks.";
+        return {
+            title: {
+                absolute: title,
+            },
+            description,
+            keywords: [
+                "labor productivity calculator",
+                "labor calculator",
+                "calculate productivity rate",
+                "how to find labor productivity",
+                "calculate labor productivity formula",
+                "labor force productivity calculator",
+                "productive hours calculation",
+                "employee productivity calculator",
+                "labor production rate",
+                "workforce productivity calculator",
+                "productivity calculator",
+            ],
+            alternates: {
+                canonical: pageUrl,
+                languages: {
+                    'x-default': pageUrl,
+                    'en': pageUrl,
+                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
+                    'es': `${BASE_URL}/es/calculator/${slug}`,
+                    'de': `${BASE_URL}/de/calculator/${slug}`,
+                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
+                },
+            },
+            openGraph: {
+                title,
+                description,
+                url: pageUrl,
+                type: "website",
+                siteName: "Productivity Calculator",
+                images: [
+                    {
+                        url: `${BASE_URL}/og-image.png`,
+                        width: 1200,
+                        height: 630,
+                        alt: "Labor Productivity Calculator",
+                    },
+                ],
+            },
+            twitter: {
+                card: "summary_large_image",
+                title,
+                description,
+                images: [`${BASE_URL}/og-image.png`],
+            },
+        };
+    }
+
     return {
         title: `${industry.title} 2026 | Free Online Tool`,
         description: industry.description,
@@ -225,6 +284,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 function generateIndustrySchema(industry: IndustryData) {
     const isPhysicalTherapy = industry.slug === "physical-therapy";
     const isManufacturing = industry.slug === "manufacturing";
+    const isLabor = industry.slug === "labor";
     const pageUrl = `${BASE_URL}/calculator/${industry.slug}`;
 
     const schemas: Record<string, unknown>[] = [
@@ -235,6 +295,8 @@ function generateIndustrySchema(industry: IndustryData) {
                 ? "Physical Therapy Productivity Calculator"
                 : isManufacturing
                 ? "Manufacturing Productivity Calculator"
+                : isLabor
+                ? "Labor Productivity Calculator"
                 : industry.title,
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web Browser",
@@ -248,6 +310,8 @@ function generateIndustrySchema(industry: IndustryData) {
                 ? "Free clinical physical therapy productivity calculator for PT, OT, and SLP therapists. Calculate daily productivity percentage, reverse clock-out time with lunch break, and Medicare 8-minute rule billing units."
                 : isManufacturing
                 ? "Free industrial manufacturing productivity calculator. Calculate gross and net production rates per hour, factory shift capacity projections, and Overall Equipment Effectiveness (OEE) with standard industry benchmarks."
+                : isLabor
+                ? "Free workforce labor productivity calculator. Measure physical output per labor hour, revenue-to-labor cost ratios, blended team hourly rates, and workforce capacity utilization."
                 : industry.description,
         },
         {
@@ -390,6 +454,63 @@ function generateIndustrySchema(industry: IndustryData) {
         });
     }
 
+    if (isLabor) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "How is labor productivity calculated?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Labor productivity is calculated by dividing total output by the labor hours invested: Labor Productivity = Total Output Units (or Revenue) ÷ Total Labor Hours Worked. For example, producing 500 units in 50 labor hours yields a productivity rate of 10 units per labor hour.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is a good labor productivity ratio?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "For financial productivity (Revenue-to-Labor ratio), a healthy target is 2.5x to 4.0x: generating at least $2.50 to $4.00 of gross revenue for every $1.00 spent on labor payroll. In professional services and consulting, a billable workforce utilization rate between 75% and 85% is considered top-tier.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the difference between direct and indirect labor?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Direct labor refers to workers and hours directly involved in producing goods or delivering billable client services (e.g., assembly technicians, developers, treating clinicians). Indirect labor refers to support and administrative functions (e.g., HR, accounting, facility maintenance) that support operations but do not directly generate units of output.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How do you calculate labor cost per unit?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Labor cost per unit is calculated by dividing total labor payroll costs by the number of units produced: Labor Cost Per Unit = Total Labor Cost ($) ÷ Total Units Produced. Alternatively, divide the hourly wage by your hourly productivity rate.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What causes low labor productivity in an organization?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "The primary causes of low labor productivity include excessive administrative meetings, inadequate tooling or legacy software, poor onboarding processes, unaddressed process bottlenecks, lack of standardized work procedures, and employee burnout or misalignment with organizational goals.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How does employee utilization impact profitability?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Higher utilization directly converts fixed payroll expenses into recognized revenue. For example, increasing a 10-person consultancy's billable utilization from 70% to 80% unlocks 40 additional billable hours per week—generating $300,000+ in pure gross margin annually without adding headcount.",
+                    },
+                },
+            ],
+        });
+    }
+
     if (industry.slug === "video-production") {
         schemas.push({
             "@context": "https://schema.org",
@@ -475,6 +596,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
 
     const isPhysicalTherapy = slug === "physical-therapy";
     const isManufacturing = slug === "manufacturing";
+    const isLabor = slug === "labor";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -514,6 +636,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Physical Therapy Clinical Suite"
                                     : isManufacturing
                                     ? "Manufacturing Operations Suite"
+                                    : isLabor
+                                    ? "Workforce Operations Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -525,6 +649,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Physical Therapy"
                                     : isManufacturing
                                     ? "Manufacturing"
+                                    : isLabor
+                                    ? "Labor"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">Productivity Calculator</span>
@@ -536,6 +662,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Clinical physical therapy productivity calculator, reverse clock-out planner, and Medicare 8-minute rule converter for PT, OT & SLP clinicians."
                                 : isManufacturing
                                 ? "Industrial manufacturing productivity calculator, machine throughput estimator, and OEE efficiency benchmark analyzer."
+                                : isLabor
+                                ? "Workforce labor productivity calculator, blended team payroll rate modeler, and employee capacity utilization analyzer."
                                 : industry.description}
                         </p>
 
@@ -552,6 +680,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <PhysicalTherapyCalculator />
                     ) : isManufacturing ? (
                         <ManufacturingCalculator />
+                    ) : isLabor ? (
+                        <LaborProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -561,6 +691,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <PhysicalTherapySeoContent />
                     ) : isManufacturing ? (
                         <ManufacturingSeoContent />
+                    ) : isLabor ? (
+                        <LaborProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">
