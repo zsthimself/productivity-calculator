@@ -78,3 +78,25 @@
      - 详述提升组织人效的 5 大执行策略；
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 采用绝对标题 55 字符（`Employee Productivity Calculator | Revenue per Employee`），Description 优化至 147 字符黄金区间。
+
+
+### DEC-007: /calculator/video-production 视频制作工效与成品分钟预算全案升级与 On-Page SEO 外科手术
+- **背景**:
+  1. GSC 表现：`/calculator/video-production` 为全站曝光量第 5 核心行业页（96 次曝光，1 次自然点击，平均排名 23.8，核心主词 `video production calculator` 59 次曝光）；
+  2. 哥飞 SERP 侦察：`video production calculator` 难度 KD 仅 **29.7 · 容易**，SERP Rank 1 `ubifire.com`（DR 仅 5，月流仅 1.1K）On-Page 仅 65 分，正文仅约 500 词，存在极强上位空位；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 278 词触发 <300 词封顶惩罚，Title 长达 90 字符截断，缺少多媒体配图。
+- **决定**:
+  1. 研发专业影视制作级 `VideoProductionCalculator.tsx`（三模式）：
+     - 模式 1：工时效率与出片率（Finished Minutes、Raw Footage Hours、Editing Hours、Shooting Ratio、Editing Pace）；
+     - 模式 2：制作预算与成品分钟成本（Pre-production, Production, Post-production Cost Breakdown、Cost per Finished Minute $/min、Budget Distribution）；
+     - 模式 3：交付周期与团队排期（Dedicated Editors、Daily Hours、Revision Buffer Rounds、Calendar Delivery Date）；
+     - 支持一键导出 Markdown 制作估算报告。
+  2. 撰写专业级权威 SEO 文本组件 `VideoProductionSeoContent.tsx`（1,477 词全页）：
+     - 嵌入 800x400 零 CLS 矢量图 `video-production-formula.svg`；
+     - 详述三大核心算式：Cost per Finished Minute、Shooting Ratio、Turnaround Timeline；
+     - 涵盖企业宣传片、商业广告、YouTube 创作者、短视频矩阵 4 大行业基准矩阵表；
+     - 提供真实 3 分钟企业宣传片工时与分钟成本算例；
+     - 提炼 5 大工程化剪辑提速实战策略；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 架构解耦优化：将大段 JSON-LD Schema 抽取至 `src/lib/industrySchemas.ts`，彻底消除 `page.tsx` 超长风险（由 889 行收敛至 539 行，满足 $\le 800$ 行架构铁律）。
+  4. 精调元数据：Title 压缩至 57 字符（`Video Production Calculator | Cost & Turnaround Estimator`），Description 优化至 154 字符黄金区间。

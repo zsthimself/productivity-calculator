@@ -103,3 +103,16 @@
     - 社交与结构化：10/10 满分
     - 技术与抓取：17/17 满分
     - 3-gram 关键词命中：`#5 employee productivity calculator` 出现 3 次，词频密度 0.21%，占位密度 0.63%（健康区间，0 堆砌告警）。
+
+
+## 2026-11-09: /calculator/video-production 视频制作全案升级与 On-Page SEO 外科手术
+
+- **执行概要**:
+  - 瞄准 GSC 全站排名第 5 核心行业词源 `/calculator/video-production`（96 次曝光，1 次点击，平均排名 23.8，容易难度 KD 29.7），实施从 55 D 级到 95+ A 级的全案外科手术。
+- **实施细节**:
+  1. 编写影视制作级交互组件 `src/components/VideoProductionCalculator.tsx`（513行）：工时效率与出片率、制作预算与成品分钟成本、交付周期与团队排期三模式，内置四大预设与一键日志复制；
+  2. 撰写专业级权威 SEO 文本组件 `src/components/VideoProductionSeoContent.tsx`（366行）：嵌入 800x400 零 CLS 矢量图 `video-production-formula.svg`，呈现四大行业基准矩阵、3分钟宣传片实操推演、5大剪辑提速策略及 6 大 PAA FAQ；
+  3. 解耦抽取 `src/lib/industrySchemas.ts`（387行），使 `src/app/calculator/[slug]/page.tsx` 从 889 行收敛至 539 行，满足单文件 $\le 800$ 行架构铁律；
+  4. 精调元数据：Title 压缩至 57 字符（`Video Production Calculator | Cost & Turnaround Estimator`）、Description 优化至 154 字符、注入 `WebApplication` + `FAQPage` 双重 Schema；
+  5. 静态编译通过，147 页面 SSG 构建完成（4.0s），实测产物 HTML 词数达 1,477 词（突破 300 词惩罚断崖，进入 1200-1800 黄金权重带）；
+  6. 待提交推送至 GitHub master，待 Cloudflare Pages 实时部署与线上体检复核。

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#06b6d4" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Grid pattern overlay -->
+  <g opacity="0.07" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="50" x2="800" y2="50" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="250" x2="800" y2="250" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="350" x2="800" y2="350" />
+    <line x1="100" y1="0" x2="100" y2="400" />
+    <line x1="200" y1="0" x2="200" y2="400" />
+    <line x1="300" y1="0" x2="300" y2="400" />
+    <line x1="400" y1="0" x2="400" y2="400" />
+    <line x1="500" y1="0" x2="500" y2="400" />
+    <line x1="600" y1="0" x2="600" y2="400" />
+    <line x1="700" y1="0" x2="700" y2="400" />
+  </g>
+
+  <!-- Title Badge -->
+  <g transform="translate(40, 32)">
+    <rect width="360" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="16" cy="16" r="6" fill="#06b6d4" />
+    <text x="32" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" letter-spacing="1">VIDEO PRODUCTION PRODUCTIVITY</text>
+  </g>
+
+  <!-- Formula Header -->
+  <text x="40" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700" fill="#f8fafc">
+    Cost Per Finished Minute &amp; Turnaround Architecture
+  </text>
+  <text x="40" y="122" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#64748b">
+    Three-stage budget synthesis, shooting ratio, and post-production labor efficiency
+  </text>
+
+  <!-- Box 1: Pre-Production & Shooting (Input) -->
+  <g transform="translate(40, 150)">
+    <rect width="215" height="150" rx="12" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5" filter="url(#glow)" />
+    <rect x="0" y="0" width="215" height="32" rx="12" fill="#1e293b" />
+    <rect x="0" y="20" width="215" height="12" fill="#1e293b" />
+    <text x="14" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#38bdf8">1. SHOOTING &amp; PRE-PRO</text>
+
+    <text x="14" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Scripting &amp; Storyboards</text>
+    <text x="14" y="78" font-family="ui-monospace, monospace" font-size="14" font-weight="700" fill="#f1f5f9">Pre-Pro Labor Hours</text>
+
+    <line x1="14" y1="95" x2="201" y2="95" stroke="#334155" stroke-dasharray="3 3" />
+
+    <text x="14" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Camera &amp; Sound Crew</text>
+    <text x="14" y="133" font-family="ui-monospace, monospace" font-size="14" font-weight="700" fill="#38bdf8">Day Rates + Gear Hire</text>
+  </g>
+
+  <!-- Operation + Sign -->
+  <g transform="translate(267, 215)">
+    <circle cx="12" cy="12" r="14" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="6" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#94a3b8">+</text>
+  </g>
+
+  <!-- Box 2: Post-Production Pipeline (Modifier) -->
+  <g transform="translate(305, 150)">
+    <rect width="215" height="150" rx="12" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.5" />
+    <rect x="0" y="0" width="215" height="32" rx="12" fill="#1e293b" />
+    <rect x="0" y="20" width="215" height="12" fill="#1e293b" />
+    <text x="14" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#c084fc">2. POST-PRODUCTION</text>
+
+    <text x="14" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Raw-to-Finished Ratio</text>
+    <text x="14" y="78" font-family="ui-monospace, monospace" font-size="14" font-weight="700" fill="#f1f5f9">10:1 to 30:1 Shooting</text>
+
+    <line x1="14" y1="95" x2="201" y2="95" stroke="#334155" stroke-dasharray="3 3" />
+
+    <text x="14" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Edit, Color, VFX &amp; Mix</text>
+    <text x="14" y="133" font-family="ui-monospace, monospace" font-size="14" font-weight="700" fill="#c084fc">Labor Hrs / Day / Editor</text>
+  </g>
+
+  <!-- Arrow Right Sign -->
+  <g transform="translate(532, 215)">
+    <circle cx="12" cy="12" r="14" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="7" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#94a3b8">→</text>
+  </g>
+
+  <!-- Box 3: Production Yield & Efficiency (Output) -->
+  <g transform="translate(570, 150)">
+    <rect width="190" height="150" rx="12" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+    <rect x="0" y="0" width="190" height="32" rx="12" fill="#1e293b" />
+    <rect x="0" y="20" width="190" height="12" fill="#1e293b" />
+    <text x="14" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#34d399">3. DELIVERED VALUE</text>
+
+    <text x="14" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Cost Per Finished Min</text>
+    <text x="14" y="78" font-family="ui-monospace, monospace" font-size="14" font-weight="700" fill="#34d399">$500 – $3,500/min</text>
+
+    <line x1="14" y1="95" x2="176" y2="95" stroke="#334155" stroke-dasharray="3 3" />
+
+    <text x="14" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Turnaround Window</text>
+    <text x="14" y="133" font-family="ui-monospace, monospace" font-size="14" font-weight="700" fill="#f1f5f9">3 to 14 Working Days</text>
+  </g>
+
+  <!-- Bottom Metric Bar -->
+  <g transform="translate(40, 325)">
+    <rect width="720" height="50" rx="8" fill="#1e293b" opacity="0.7" stroke="#334155" stroke-width="1" />
+    <text x="24" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">
+      CORE FORMULA:
+    </text>
+    <text x="135" y="30" font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#38bdf8">
+      Cost / Min = Total Budget ÷ Finished Mins
+    </text>
+    <text x="430" y="30" font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#c084fc">
+      Turnaround = Edit Hours ÷ (Editors × 8h)
+    </text>
+    <text x="685" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981">
+      ● 0 CLS
+    </text>
+  </g>
+</svg>
