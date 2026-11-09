@@ -287,6 +287,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         );
     }
 
+    if (slug === "welding") {
+        return buildMeta(
+            "Welding Productivity Calculator | Deposition Rate & AWS",
+            "Free welding productivity calculator to measure filler metal deposition rate, arc-on operating factor, joint volume consumption, and fabrication cost per foot.",
+            [
+                "welding productivity calculator",
+                "welding productivity",
+                "welder productivity per day",
+                "welding deposition rate calculator",
+                "welding cost per foot",
+                "welding operating factor",
+                "welding joint volume calculator",
+                "welder efficiency calculator",
+                "aws welding calculator",
+                "productivity calculator",
+            ],
+            pageUrl,
+            slug
+        );
+    }
+
     if (slug === "healthcare") {
         return buildMeta(
             "Healthcare Productivity Calculator | wRVU & HPPD Benchmark",
@@ -425,6 +446,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Commercial Janitorial & ISSA 612 Suite"
                                     : isHealthcare
                                     ? "Clinical Healthcare & Hospital Operations Suite"
+                                    : isWelding
+                                    ? "Structural Welding & AWS D1.1 Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -450,6 +473,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Commercial Cleaning Time"
                                     : isHealthcare
                                     ? "Healthcare & Clinical"
+                                    : isWelding
+                                    ? "Welding & Fabrication"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">
@@ -477,6 +502,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Commercial cleaning time calculator, janitorial square footage production rate analyzer, and contract bidding cost estimator based on official ISSA 612 standards."
                                 : isHealthcare
                                 ? "Clinical healthcare productivity calculator, physician wRVU production modeler, and hospital inpatient nursing HPPD staffing benchmark analyzer."
+                                : isWelding
+                                ? "Industrial welding productivity calculator, AWS filler metal deposition rate estimator, arc-on operating factor analyzer, and joint fabrication cost modeler."
                                 : industry.description}
                         </p>
 
@@ -507,6 +534,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <CleaningServicesProductivityCalculator />
                     ) : isHealthcare ? (
                         <HealthcareProductivityCalculator />
+                    ) : isWelding ? (
+                        <WeldingProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -530,6 +559,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <CleaningServicesProductivitySeoContent />
                     ) : isHealthcare ? (
                         <HealthcareProductivitySeoContent />
+                    ) : isWelding ? (
+                        <WeldingProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">
