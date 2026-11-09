@@ -231,3 +231,29 @@
     - 社交与结构化：10/10 满分
     - 技术与抓取：17/17 满分
     - 3-gram 关键词命中：`#1 healthcare productivity calculator` 出现 5 次，词频密度 0.34%，占位密度 1.02%（健康区间，独占 Rank 1 登顶，0 堆砌告警）。
+
+
+## 2026-11-09: /calculator/welding 焊接制造全案升级与 On-Page SEO 外科手术
+
+- **执行概要**:
+  - 瞄准 GSC 产生真实点击的第 10 个高潜力突破词源 `/calculator/welding`（16 次曝光，1 次点击，平均排名 41.3，容易难度 KD 24），实施从 55 D 级到 99 A 级的全案重构。
+- **实施细节**:
+  1. 研发专业焊接工业级交互组件 `src/components/WeldingProductivityCalculator.tsx`（730行）：AWS 熔敷率与电弧持续率模型、焊缝几何体积与焊丝消耗量模型、构件组焊人工与单英尺成本模型三模式，内置四大工业预设（建筑钢结构、重型管道、钣金薄板、桥梁板梁）与一键 Markdown 导出；
+  2. 撰写专业级权威 SEO 文本组件 `src/components/WeldingProductivitySeoContent.tsx`（345行）：嵌入 800x400 零 CLS 矢量图 `welding-productivity-formula.svg`，呈现 GMAW/FCAW/SMAW/SAW/GTAW 5 大工艺 AWS 基准表、300 延尺 5/16" 钢结构梁柱焊条转药芯省工案例、5 大精益焊接策略与 6 大 PAA FAQ；
+  3. 解耦优化 `src/lib/industrySchemas.ts`（705行）：为 welding 注入 WebApplication、BreadcrumbList 与 6 组 FAQPage JSON-LD 结构化数据；
+  4. 重构优化 `src/app/calculator/[slug]/page.tsx`（619行）：精炼 Title 57 字符（`Welding Productivity Calculator | Deposition Rate & AWS`）、Description 160 字符，配置专属 Badge 与 H1，严格遵守 $\le 800$ 行安全红线；
+  5. 静态编译通过，147 页面 SSG 构建完成（1.2s），实测产物 HTML 词数达 1,669 词（突破 300 词惩罚断崖，进入 1200-1800 最佳权重带）；
+  6. 提交 commit `577e87b` 与 `fe4c41b` 推送至 GitHub master，Cloudflare Pages 自动完成生产构建上线。
+- **验证结果**:
+  - `python tools/verify_memory_sync.py --site productivity-calculator` -> 准备同步验证
+  - 生产实时抓取：Title `Welding Productivity Calculator | Deposition Rate & AWS` (57 chars), Desc 160 chars, Img 1 SVG (800x400), HTML Words 1,669, 响应耗时 393ms, 体积 135KB
+  - `seo.web.cafe/audit/` 线上体检复核：**总分 99 / 100 (A 级 优秀，历史跃升 +44 分！)**
+    - 主题聚焦度：**100%**
+    - Meta 元信息：25/25 满分
+    - 内容质量：24/24 满分
+    - 关键词优化：38.52/40
+    - 链接结构：7/7 满分
+    - 图片与多媒体：8/8 满分
+    - 社交与结构化：10/10 满分
+    - 技术与抓取：17/17 满分
+    - 3-gram 关键词命中：`#4 welding productivity calculator` 出现 4 次，词频密度 0.24%，占位密度 0.72%（健康区间，0 堆砌告警）。

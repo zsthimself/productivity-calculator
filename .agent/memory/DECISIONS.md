@@ -188,3 +188,24 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 压缩至 59 字符（`Healthcare Productivity Calculator | wRVU & HPPD Benchmark`），Description 优化至 158 字符黄金区间。
   4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram 核心主词命中 Rank 1 登顶，占位密度 1.02%）。
+
+### DEC-012: /calculator/welding 工业焊接与金属构件制造全案升级与 On-Page SEO 外科手术
+- **背景**:
+  1. GSC 表现：`/calculator/welding` 为全站已产生真实自然点击的第 10 个高潜力突破页（16 次曝光，1 次自然点击，平均排名 41.3 位；核心主词 `welding productivity` 4次曝光、`welder productivity per day` 1次曝光）；
+  2. 哥飞 SERP 侦察：`welding productivity calculator` 难度 KD **24 · 容易**，SERP 前 10 名竞品整体较弱：Rank 2 `esab.com` On-Page 仅 45 D 级（粗糙，主题聚焦度仅 15%），Rank 6 `theproductivitycalc.com`（DR 仅 5，正文虚），Rank 8 `scribd.com` 仅为 PDF 空壳占位，Rank 9 `app.aws.org` 为深层子工具；盘面 4/6 结果当页承接；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 269 词触发 <300 词硬封顶，Description 部分覆盖，0 张配图，缺少专用工业焊接计算套件。
+- **决定**:
+  1. 研发专业焊接与构件制造级 `WeldingProductivityCalculator.tsx`（三模式）：
+     - 模式 1：AWS 熔敷率与电弧持续率模型（Gross Deposition Rate、Deposition Efficiency 85%–93%、Arc-On Operating Factor 20%–50%、Effective Deposition Rate lbs/hr、班次熔敷总量）；
+     - 模式 2：焊缝几何体积与焊丝消耗量模型（角焊缝 Fillet Leg Size 或对接焊缝 Single-V Bevel Angle、焊缝延米/英尺总长、钢材密度 0.2833 lbs/in³、净填充焊缝截面重量、毛坯焊丝采购量）；
+     - 模式 3：构件组焊人工与单英尺成本模型（焊工小时全包工资、焊枪行走速度 IPM、焊丝/保护气单耗、单英尺组焊成本 $/ft、工时与人工成本占比）；
+     - 提供四大工业预设（建筑钢结构立柱 5/16"、重型工业管道单V坡口、薄板钣金机箱 3/16"、厚板桥梁板梁 3/8"），支持一键导出 Markdown 焊接作业单报告。
+  2. 撰写专业级权威 SEO 文本组件 `WeldingProductivitySeoContent.tsx`（1,400+ 词全页）：
+     - 嵌入 800x400 零 CLS 矢量图 `welding-productivity-formula.svg`；
+     - 详述三大核心算式：AWS Deposition Model、Joint Volume Model、Shop Economic Linear Foot Cost；
+     - 涵盖 GMAW/MIG、FCAW 药芯、SMAW 焊条、SAW 埋弧、GTAW/TIG 5 大工艺 AWS 基准对照表；
+     - 提供真实 300 延尺 5/16" 钢结构梁柱焊条转药芯省工案例（单班次节省 $615、节约 12 人工工时）；
+     - 提炼 5 大精益焊接工效策略（连续药芯焊丝、变位机平焊消除仰立焊、散装桶装焊丝减少换盘、角焊缝规防过焊、数字电弧监控）；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 压缩至 57 字符（`Welding Productivity Calculator | Deposition Rate & AWS`），Description 优化至 160 字符黄金区间。
+  4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `welding productivity calculator` 命中 Top 4，占位密度 0.72%）。

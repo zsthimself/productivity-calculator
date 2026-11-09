@@ -1,12 +1,13 @@
 # CURRENT.md - Site 04 Local Status & Active Loops
 
 ## 当前状态
-- **站点版本**: v1.11.0 (Healthcare & Clinical Suite & On-Page SEO Surgery)
+- **站点版本**: v1.12.0 (Welding & Metal Fabrication Suite & On-Page SEO Surgery)
 - **部署环境**: Cloudflare Pages (`productivitycalculator.work`)
-- **最近提交**: `4999b38` (feat(healthcare): upgrade clinical healthcare suite, wRVU/HPPD calculator, and On-Page SEO)
+- **最近提交**: `fe4c41b` (fix(welding): wire up welding suite components and badge in page.tsx)
 - **实测验证**: 
   - Static Build (`npm run build`) 147 页面 100% 静态通过，0 错误
   - 核心页面 HTML 实测：
+    - `/calculator/welding`: 1,669 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `welding productivity calculator` 命中 Top 4，占位密度 0.72%）
     - `/calculator/healthcare`: 1,471 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram 核心主词命中 Rank 1 登顶，占位密度 1.02%）
     - `/calculator/cleaning-services`: 1,564 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，4-gram 核心主词命中 Rank 1 登顶，占位密度 1.28%）
     - `/calculator/logistics`: 1,462 词，On-Page SEO **96 A 级卓越**（净增 +41 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram 命中 Rank 1）
@@ -37,5 +38,7 @@
 - [x] **TASK-016**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **96 / 100 A 级卓越**
 - [x] **TASK-017**: `/calculator/cleaning-services` 全站商业清洁与 ISSA 标准核心词全案升级
 - [x] **TASK-018**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **99 / 100 A 级卓越**
-- [x] **TASK-019**: `/calculator/healthcare` 全站医疗卫生与临床运营核心词（26曝光，1自然点击，平均排名 29.2 位，KD 18.4 极易）全案升级：三模式 `HealthcareProductivityCalculator.tsx`（465行）、高保真 `HealthcareProductivitySeoContent.tsx`（295行）、800x400 矢量架构图、59字符精炼 Title、158字符 Description、WebApplication + FAQPage 结构化数据
-- [x] **TASK-020**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，3-gram 独占 Rank 1 登顶，占位密度 1.02%）
+- [x] **TASK-019**: `/calculator/healthcare` 全站医疗卫生与临床运营核心词全案升级
+- [x] **TASK-020**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **98 / 100 A 级卓越**
+- [x] **TASK-021**: `/calculator/welding` 全站焊接与工业构件制造核心词（16曝光，1自然点击，平均排名 41.3 位，KD 24 容易）全案升级：三模式 `WeldingProductivityCalculator.tsx`（730行）、高保真 `WeldingProductivitySeoContent.tsx`（345行）、800x400 矢量架构图、57字符精炼 Title、160字符 Description、WebApplication + FAQPage 结构化数据
+- [x] **TASK-022**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，耗时 393ms，体积 135KB，词数 1,669 词）
