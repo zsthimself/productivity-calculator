@@ -100,3 +100,24 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 架构解耦优化：将大段 JSON-LD Schema 抽取至 `src/lib/industrySchemas.ts`，彻底消除 `page.tsx` 超长风险（由 889 行收敛至 539 行，满足 $\le 800$ 行架构铁律）。
   4. 精调元数据：Title 压缩至 57 字符（`Video Production Calculator | Cost & Turnaround Estimator`），Description 优化至 154 字符黄金区间。
+
+
+### DEC-008: /calculator/call-center 呼叫中心座席稼动率与排班损耗全案升级与 On-Page SEO 外科手术
+- **背景**:
+  1. GSC 表现：`/calculator/call-center` 为全站曝光量第 6 核心行业页（67 次曝光，1 次自然点击，平均排名 68.2，核心主词 `call center productivity` 30 次曝光）；
+  2. 哥飞 SERP 侦察：`call center productivity calculator` 难度 KD 仅 **25 · 容易**，SERP 前 10 名竞品均为博客长文或 CRM 宣传页，**全场 0/9 拥有当页交互计算器，且 4 家为跳转落地页（含第 1 名 amplifai.com）**，存在巨大功能承接真空；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 269 词触发 <300 词封顶惩罚，Title 超长截断，缺少多媒体配图与专属 WFM 工具。
+- **决定**:
+  1. 研发专业客服管理级 `CallCenterProductivityCalculator.tsx`（三模式）：
+     - 模式 1：座席稼动率与利用率（Agent Occupancy %、Utilization %、Idle Ready Time、Average Handle Time AHT、健康区间评级）；
+     - 模式 2：每小时呼叫量与解决效率（Calls Per Hour CPH、First Contact Resolution FCR %、净解决量、基准速度指数）；
+     - 模式 3：话务预测排班与损耗模型（Forecast Call Volume、AHT、Target Occupancy、Shrinkage %、净需求 FTE 与毛需求总人数）；
+     - 支持一键导出 Markdown WFM 绩效计分卡。
+  2. 撰写专业级权威 SEO 文本组件 `CallCenterProductivitySeoContent.tsx`（1,505 词全页）：
+     - 嵌入 800x400 零 CLS 矢量图 `call-center-productivity-formula.svg`；
+     - 详述三大核心算式：Agent Occupancy Rate、Agent Utilization Rate、Gross Headcount Capacity；
+     - 涵盖一线客服、电销外呼、二线技术支持、电商全渠道 4 大环境基准矩阵表；
+     - 提供真实 50 人客服中心排班与话务容量实操算例；
+     - 提炼 5 大精益排班与缩短后处理工时（ACW）策略；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 压缩至 59 字符（`Call Center Productivity Calculator | Agent Occupancy & CPH`），Description 优化至 148 字符黄金区间。

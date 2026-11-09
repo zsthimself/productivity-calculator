@@ -13,6 +13,7 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
     const isLabor = industry.slug === "labor";
     const isEmployee = industry.slug === "employee";
     const isVideoProduction = industry.slug === "video-production";
+    const isCallCenter = industry.slug === "call-center";
     const pageUrl = `${baseUrl}/calculator/${industry.slug}`;
 
     const schemas: Record<string, unknown>[] = [
@@ -29,6 +30,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Employee Productivity Calculator"
                 : isVideoProduction
                 ? "Video Production Calculator"
+                : isCallCenter
+                ? "Call Center Productivity Calculator"
                 : industry.title,
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web Browser",
@@ -48,6 +51,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Free employee productivity calculator. Measure revenue per employee, net profit per FTE, employee ROI compensation multipliers, and department performance targets."
                 : isVideoProduction
                 ? "Free video production calculator. Estimate cost per finished minute, post-production editing turnaround time, shooting ratio, and crew labor efficiency."
+                : isCallCenter
+                ? "Free call center productivity calculator. Measure agent occupancy rate, calls per hour (CPH), average handle time (AHT), and shrinkage-adjusted staffing requirements."
                 : industry.description,
         },
         {
@@ -79,6 +84,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                         ? "Employee Productivity Calculator"
                         : isVideoProduction
                         ? "Video Production Calculator"
+                        : isCallCenter
+                        ? "Call Center Productivity Calculator"
                         : industry.title,
                     item: pageUrl,
                 },
@@ -357,6 +364,63 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                     acceptedAnswer: {
                         "@type": "Answer",
                         text: "Short-form vertical video relies on batch production: measuring cost per asset and daily throughput. A solo creator or two-person team can batch-shoot 15 to 20 videos in half a day, using standardized caption templates to achieve turnaround times under 48 hours.",
+                    },
+                },
+            ],
+        });
+    }
+
+    if (isCallCenter) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "How is call center agent productivity calculated?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Call center productivity is calculated by measuring agent occupancy: Occupancy % = (Talk Time + Hold Time + Wrap-up ACW) ÷ Logged-in Available Time × 100, alongside throughput KPIs such as Calls Per Hour (CPH), Average Handle Time (AHT), and First Contact Resolution (FCR).",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the difference between occupancy and utilization in a call center?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Occupancy measures how busy an agent is while logged into the queue ready for calls: (Handling Time ÷ Available Time) × 100. Utilization measures how much of the paid scheduled shift was spent logged in: (Logged-in Time ÷ Total Shift Time) × 100. Occupancy reflects call workload, while utilization reflects schedule adherence.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is an ideal occupancy rate for call center agents?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "The industry standard for agent occupancy is 75% to 85%. Below 70% indicates overstaffing and excessive idle waiting time. Above 88% causes back-to-back calls without rest, leading to agent cognitive fatigue and elevated employee churn.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is shrinkage in a call center and what is an acceptable rate?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Shrinkage is the percentage of paid working time when agents are unavailable for customer calls. It includes internal shrinkage (breaks, 1-on-1 coaching, training) and external shrinkage (PTO, vacation, sick leave). Standard contact center shrinkage ranges between 25% and 35%.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How do you calculate calls per hour (CPH)?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Calls Per Hour is calculated as: CPH = Total Calls Handled ÷ On-Queue Working Hours. For example, handling 64 calls over an 8-hour shift results in an average throughput of 8.0 CPH.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How does average handle time (AHT) impact call center productivity?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Average Handle Time (talk time + hold time + ACW) dictates required headcount. Reducing AHT by 30 seconds across a 50-agent desk handling 2,500 daily calls saves 20 labor hours per day, unlocking extra queue capacity without hiring additional staff.",
                     },
                 },
             ],

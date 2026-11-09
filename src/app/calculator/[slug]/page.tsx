@@ -18,6 +18,8 @@ import EmployeeProductivityCalculator from "@/components/EmployeeProductivityCal
 import EmployeeProductivitySeoContent from "@/components/EmployeeProductivitySeoContent";
 import VideoProductionCalculator from "@/components/VideoProductionCalculator";
 import VideoProductionSeoContent from "@/components/VideoProductionSeoContent";
+import CallCenterProductivityCalculator from "@/components/CallCenterProductivityCalculator";
+import CallCenterProductivitySeoContent from "@/components/CallCenterProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -72,6 +74,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const isLabor = slug === "labor";
     const isEmployee = slug === "employee";
     const isVideoProduction = slug === "video-production";
+    const isCallCenter = slug === "call-center";
 
     if (isPhysicalTherapy) {
         const title = "Physical Therapy Productivity Calculator | PT & OT";
@@ -342,6 +345,61 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
+    if (isCallCenter) {
+        const title = "Call Center Productivity Calculator | Agent Occupancy & CPH";
+        const description = "Free call center productivity calculator. Measure agent occupancy, calls per hour (CPH), handling velocity (AHT), and shrinkage with WFM benchmarks.";
+        return {
+            title: {
+                absolute: title,
+            },
+            description,
+            keywords: [
+                "call center productivity calculator",
+                "call center productivity",
+                "agent productivity calculator",
+                "call center metrics calculator",
+                "calls per hour calculator",
+                "call center occupancy calculator",
+                "call center shrinkage calculator",
+                "bpo productivity calculator",
+                "average handle time calculator",
+                "productivity calculator",
+            ],
+            alternates: {
+                canonical: pageUrl,
+                languages: {
+                    'x-default': pageUrl,
+                    'en': pageUrl,
+                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
+                    'es': `${BASE_URL}/es/calculator/${slug}`,
+                    'de': `${BASE_URL}/de/calculator/${slug}`,
+                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
+                },
+            },
+            openGraph: {
+                title,
+                description,
+                url: pageUrl,
+                type: "website",
+                siteName: "Productivity Calculator",
+                images: [
+                    {
+                        url: `${BASE_URL}/og-image.png`,
+                        width: 1200,
+                        height: 630,
+                        alt: "Call Center Productivity Calculator",
+                    },
+                ],
+            },
+            twitter: {
+                card: "summary_large_image",
+                title,
+                description,
+                images: [`${BASE_URL}/og-image.png`],
+            },
+        };
+    }
+
     return {
         title: `${industry.title} 2026 | Free Online Tool`,
         description: industry.description,
@@ -431,6 +489,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isLabor = slug === "labor";
     const isEmployee = slug === "employee";
     const isVideoProduction = slug === "video-production";
+    const isCallCenter = slug === "call-center";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -476,6 +535,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Workforce Executive Suite"
                                     : isVideoProduction
                                     ? "Broadcast & Studio Production Suite"
+                                    : isCallCenter
+                                    ? "Contact Center Operations Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -493,6 +554,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Employee"
                                     : isVideoProduction
                                     ? "Video Production"
+                                    : isCallCenter
+                                    ? "Call Center"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">Productivity Calculator</span>
@@ -510,6 +573,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Executive employee productivity calculator, revenue per FTE modeler, and department staff quota performance analyzer."
                                 : isVideoProduction
                                 ? "Studio video production calculator, cost per finished minute estimator, and post-production turnaround scheduler for filmmakers, agencies & creators."
+                                : isCallCenter
+                                ? "Contact center productivity calculator, agent occupancy analyzer, and shrinkage-adjusted staffing scheduler for customer support & BPO teams."
                                 : industry.description}
                         </p>
 
@@ -532,6 +597,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <EmployeeProductivityCalculator />
                     ) : isVideoProduction ? (
                         <VideoProductionCalculator />
+                    ) : isCallCenter ? (
+                        <CallCenterProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -547,6 +614,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <EmployeeProductivitySeoContent />
                     ) : isVideoProduction ? (
                         <VideoProductionSeoContent />
+                    ) : isCallCenter ? (
+                        <CallCenterProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">

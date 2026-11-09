@@ -129,3 +129,15 @@
     - 社交与结构化：10/10 满分
     - 技术与抓取：17/17 满分
     - 3-gram 关键词命中：`#4 video production calculator` 出现 4 次，词频密度 0.26%，占位密度 0.79%（健康区间，0 堆砌告警）。
+
+
+## 2026-11-09: /calculator/call-center 呼叫中心全案升级与 On-Page SEO 外科手术
+
+- **执行概要**:
+  - 瞄准 GSC 全站排名第 6 核心行业词源 `/calculator/call-center`（67 次曝光，1 次点击，平均排名 68.2，容易难度 KD 25），实施从 55 D 级到 95+ A 级的全案外科手术。
+- **实施细节**:
+  1. 编写客服运营级交互组件 `src/components/CallCenterProductivityCalculator.tsx`（482行）：座席稼动率与利用率、每小时呼叫量与解决效率、话务排班与损耗模型三模式，内置四大客服场景预设与一键日志复制；
+  2. 撰写专业级权威 SEO 文本组件 `src/components/CallCenterProductivitySeoContent.tsx`（360行）：嵌入 800x400 零 CLS 矢量图 `call-center-productivity-formula.svg`，呈现四大客服环境基准矩阵、50人客服排班推演、5大精益排班策略及 6 大 PAA FAQ；
+  3. 更新 `src/lib/industrySchemas.ts` 与 `src/app/calculator/[slug]/page.tsx`：精炼 Title 59 字符（`Call Center Productivity Calculator | Agent Occupancy & CPH`）、Description 148 字符、注入 `WebApplication` + `FAQPage` 双重 Schema；
+  4. 静态编译通过，147 页面 SSG 构建完成（3.2s），实测产物 HTML 词数达 1,505 词（突破 300 词惩罚断崖，进入 1200-1800 黄金权重带）；
+  5. 待提交推送至 GitHub master，待 Cloudflare Pages 实时部署与线上体检复核。
