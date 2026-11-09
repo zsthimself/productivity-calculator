@@ -1,7 +1,7 @@
 /**
  * [INPUT]: industries.json (静态数据), URL slug 参数, PhysicalTherapyCalculator, PhysicalTherapySeoContent
- * [OUTPUT]: IndustryCalculatorPage - 动态生成的行业专属计算器页面，physical-therapy 享有定制临床高阶引擎与深度指南
- * [POS]: pSEO 模板与垂直突破页 - 基于 slug 批量生成 20+ 行业页面，针对高流量词进行手术刀级定制
+ * [OUTPUT]: IndustryCalculatorPage - 动态生成的行业专属计算器页面，physical-therapy 享有定制临床高阶引擎与深度指南，therapy 执行 301 权重合流
+ * [POS]: pSEO 模板与垂直突破页 - 基于 slug 批量生成 20+ 行业页面，针对高流量词进行手术刀级定制与权重合流
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { Metadata } from "next";
@@ -40,7 +40,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     const pageUrl = `${BASE_URL}/calculator/${slug}`;
-    const isPhysicalTherapy = slug === "physical-therapy" || slug === "therapy";
+
+    // 04号站 GSC 权重合流：/calculator/therapy 301 统一汇流至 /calculator/physical-therapy
+    if (slug === "therapy") {
+        return {
+            title: {
+                absolute: "Physical Therapy Productivity Calculator | PT & OT",
+            },
+            description: "Free physical therapy productivity calculator for PT, OT, and therapists. Calculate clinical productivity percentage, treatment minutes, lunch break, and target hours.",
+            alternates: {
+                canonical: `${BASE_URL}/calculator/physical-therapy`,
+            },
+            robots: {
+                index: false,
+                follow: true,
+            },
+        };
+    }
+
+    const isPhysicalTherapy = slug === "physical-therapy";
 
     if (isPhysicalTherapy) {
         const title = "Physical Therapy Productivity Calculator | PT & OT";
@@ -55,8 +73,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
                 "physical therapy productivity calculator with lunch break",
                 "pt productivity calculator",
                 "therapy productivity calculator",
-                "snf productivity calculator",
                 "therapist productivity calculator with lunch break",
+                "snf productivity calculator",
                 "pt clock out calculator",
                 "medicare 8 minute rule calculator",
                 "occupational therapy productivity",
@@ -147,7 +165,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 // 生成行业特定的 Schema 结构化数据
 function generateIndustrySchema(industry: IndustryData) {
-    const isPhysicalTherapy = industry.slug === "physical-therapy" || industry.slug === "therapy";
+    const isPhysicalTherapy = industry.slug === "physical-therapy";
     const pageUrl = `${BASE_URL}/calculator/${industry.slug}`;
 
     const schemas: Record<string, unknown>[] = [
@@ -303,7 +321,37 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
         notFound();
     }
 
-    const isPhysicalTherapy = slug === "physical-therapy" || slug === "therapy";
+    // 04号站 GSC 权重合流：/calculator/therapy 静态备灾重定向页
+    if (slug === "therapy") {
+        return (
+            <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 text-center">
+                <div className="card-neon max-w-lg p-8 rounded-2xl border border-[var(--neon-cyan)]/40 space-y-4">
+                    <span className="text-3xl block">🏥</span>
+                    <h1 className="font-display text-2xl font-bold text-gradient">
+                        Redirecting to Physical Therapy Suite...
+                    </h1>
+                    <p className="text-sm text-[var(--text-secondary)] font-body">
+                        The therapy productivity calculator has been upgraded and merged into our specialized Clinical Physical Therapy Suite.
+                    </p>
+                    <div className="pt-2">
+                        <Link
+                            href="/calculator/physical-therapy"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--neon-cyan)] text-black font-display font-semibold text-sm hover:shadow-[0_0_15px_rgba(0,255,242,0.4)] transition-all"
+                        >
+                            Open Physical Therapy Calculator →
+                        </Link>
+                    </div>
+                </div>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `if (typeof window !== 'undefined') { window.location.replace('/calculator/physical-therapy'); }`,
+                    }}
+                />
+            </main>
+        );
+    }
+
+    const isPhysicalTherapy = slug === "physical-therapy";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">

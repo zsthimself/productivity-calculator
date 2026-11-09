@@ -1,9 +1,8 @@
 /**
- * @INPUT: industries.json (静态数据), locale (可选)
- * @OUTPUT: IndustryList React 组件 - 展示行业卡片网格，提供内链
- * @POS: 内链组件 - 用于页面底部，提升 SEO 和用户导航
- *
- * @SYNC: 一旦本文件逻辑发生变更，必须更新上述注释，并同步更新 components/_META.md。
+ * [INPUT]: industries.json (静态数据), locale (可选)
+ * [OUTPUT]: IndustryList React 组件 - 展示行业卡片网格，提供内链
+ * [POS]: 内链组件 - 用于页面底部，提升 SEO 和用户导航
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import Link from "next/link";
 import industries from "@/data/industries.json";
@@ -46,7 +45,7 @@ export default function IndustryList({ locale = DEFAULT_LOCALE }: IndustryListPr
             {/* Industry Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 {industryData
-                    .filter((ind) => ind.slug !== "general")
+                    .filter((ind) => ind.slug !== "general" && ind.slug !== "therapy")
                     .map((industry, index) => {
                         const industryT = getIndustryTranslation(locale, industry.slug);
                         return (

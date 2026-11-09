@@ -1,0 +1,6 @@
+# Cloudflare Pages 301 Redirects: Consolidate /calculator/therapy into /calculator/physical-therapy
+/calculator/therapy /calculator/physical-therapy 301
+/zh/calculator/therapy /zh/calculator/physical-therapy 301
+/es/calculator/therapy /es/calculator/physical-therapy 301
+/de/calculator/therapy /de/calculator/physical-therapy 301
+/ja/calculator/therapy /ja/calculator/physical-therapy 301

@@ -1,7 +1,8 @@
 /**
- * @INPUT: [lang] 参数, [slug] 参数, industries.json
- * @OUTPUT: 多语言行业计算器页面
- * @POS: 多语言 pSEO 页面 - 生成所有语言×行业组合
+ * [INPUT]: [lang] 参数, [slug] 参数, industries.json
+ * [OUTPUT]: 多语言行业计算器页面，therapy 路由支持 301 权重汇流
+ * [POS]: 多语言 pSEO 页面 - 生成所有语言×行业组合
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -55,6 +56,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const locale = lang as Locale;
     const industryT = getIndustryTranslation(locale, slug);
     const pageUrl = `${BASE_URL}/${lang}/calculator/${slug}`;
+
+    // 04号站多语言路由权重汇流：therapy 汇入 physical-therapy
+    if (slug === "therapy") {
+        return {
+            title: industryT?.title || industry.title,
+            description: industryT?.description || industry.description,
+            alternates: {
+                canonical: `${BASE_URL}/${lang}/calculator/physical-therapy`,
+            },
+            robots: {
+                index: false,
+                follow: true,
+            },
+        };
+    }
 
     // 生成所有语言版本的 alternates
     const languages: Record<string, string> = {
@@ -123,6 +139,32 @@ export default async function LocalizedIndustryCalculatorPage({ params }: PagePr
     const t = getTranslations(locale);
     const industryT = getIndustryTranslation(locale, slug);
     const langPath = getLocalePath(locale);
+
+    if (slug === "therapy") {
+        return (
+            <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 text-center">
+                <div className="card-neon max-w-lg p-8 rounded-2xl border border-[var(--neon-cyan)]/40 space-y-4">
+                    <span className="text-3xl block">🏥</span>
+                    <h1 className="font-display text-2xl font-bold text-gradient">
+                        Redirecting...
+                    </h1>
+                    <div className="pt-2">
+                        <Link
+                            href={`/${lang}/calculator/physical-therapy`}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--neon-cyan)] text-black font-display font-semibold text-sm hover:shadow-[0_0_15px_rgba(0,255,242,0.4)] transition-all"
+                        >
+                            Open Physical Therapy Calculator →
+                        </Link>
+                    </div>
+                </div>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `if (typeof window !== 'undefined') { window.location.replace('/${lang}/calculator/physical-therapy'); }`,
+                    }}
+                />
+            </main>
+        );
+    }
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
