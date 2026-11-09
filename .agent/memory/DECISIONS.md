@@ -166,3 +166,25 @@
   3. 精调元数据：Title 压缩至 57 字符（`Commercial Cleaning Time Calculator | ISSA Production Rates`），Description 优化至 157 字符黄金区间。
   4. 重构 `src/app/calculator/[slug]/page.tsx`：抽象 `buildMeta` 通用工厂函数，消除 280+ 行重复元数据样板代码，单文件行数由 744 行降至 552 行，坚决守牢 $\le 800$ 行安全红线。
   5. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，4-gram 核心主词命中 Rank 1 登顶，占位密度 1.28%）。
+
+
+### DEC-011: /calculator/healthcare 医疗卫生与临床运营全案升级与 On-Page SEO 外科手术
+- **背景**:
+  1. GSC 表现：`/calculator/healthcare` 为全站已产生真实自然点击的核心突破页（26 次曝光，1 次自然点击，平均排名 29.2 位；核心主词 `healthcare productivity calculator`、`healthcare productivity`、`physician productivity calculator`）；
+  2. 哥飞 SERP 侦察：`healthcare productivity calculator` 难度 KD **18.4 · 极易**，SERP 前 10 名竞品 Rank 1 `productivitycalc.com`（DR 仅 5，正文仅 661 词），Rank 3 `theproductivitycalculator.com` On-Page 仅 55 D 级（粗糙不堪，正文仅 205 词），Rank 4 为应用商店 App 占位（证明极度刚需，Web 纯前端无需安装具天然平替优势），全盘 7/8 结果当页承接；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 262 词触发 <300 词硬封顶，Description 未命中主词，缺少专属多媒体与临床专用工具。
+- **决定**:
+  1. 研发专业医疗临床级 `HealthcareProductivityCalculator.tsx`（三模式）：
+     - 模式 1：医生与门诊医师 wRVU 生产力模型（CMS 医保相对价值单位、年度/月度 wRVU 目标、出诊天数、单 wRVU 薪酬换算系数、MGMA 25%/50%/75%/90% 分位标杆对照）；
+     - 模式 2：住院部护理 HPPD 与病房排班模型（总有效工时 RN+LPN+CNA、午夜在院患者普查人数、Nurse-to-Patient 护患比、全美标准 HPPD 达标率与过载告警）；
+     - 模式 3：门诊接诊负荷与爽约率模型（排定接诊号源、爽约/取消率、医生有效接诊时数、每小时接诊人次、单次接诊均摊收入与爽约漏损分析）；
+     - 提供四大经典临床预设（全科门诊诊所、住院部普外科病房、重症监护室 ICU、多专科日间手术中心），支持一键导出 Markdown 医疗 KPI 报告。
+  2. 撰写专业级权威 SEO 文本组件 `HealthcareProductivitySeoContent.tsx`（1,400+ 词全页）：
+     - 嵌入 800x400 零 CLS 矢量图 `healthcare-productivity-formula.svg`；
+     - 详述三大核心算式：wRVU 医生考核公式、住院护理 HPPD 算式、门诊接诊流速方程；
+     - 涵盖全科门诊、住院普外、重症 ICU、急诊科 ED、外科手术室 5 大医疗场景 MGMA / ANA 基准表；
+     - 提供真实 30 床普外科住院病房排班纠偏算例；
+     - 提炼 5 大精益医疗人效策略（环境 AI 抄写、敏捷分诊排班、多学科快速出院晨会、自动化多渠道防爽约）；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 压缩至 59 字符（`Healthcare Productivity Calculator | wRVU & HPPD Benchmark`），Description 优化至 158 字符黄金区间。
+  4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram 核心主词命中 Rank 1 登顶，占位密度 1.02%）。
