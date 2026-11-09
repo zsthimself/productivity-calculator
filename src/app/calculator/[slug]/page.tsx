@@ -1,6 +1,6 @@
 /**
- * [INPUT]: industries.json (静态配置), URL slug 参数, PhysicalTherapyCalculator, PhysicalTherapySeoContent, ManufacturingCalculator, ManufacturingSeoContent, LaborProductivityCalculator, LaborProductivitySeoContent
- * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy 临床套件、manufacturing 工业套件、labor 人工工时套件，therapy 执行 301 权重合并
+ * [INPUT]: industries.json (静态配置), URL slug 参数, PhysicalTherapyCalculator, PhysicalTherapySeoContent, ManufacturingCalculator, ManufacturingSeoContent, LaborProductivityCalculator, LaborProductivitySeoContent, EmployeeProductivityCalculator, EmployeeProductivitySeoContent
+ * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy、manufacturing、labor、employee 专属套件，therapy 执行 301 权重合并
  * [POS]: pSEO 模板与垂直突围页 - 承接 slug 对应 20+ 行业页面，对高格式词权重合流
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -14,6 +14,8 @@ import ManufacturingCalculator from "@/components/ManufacturingCalculator";
 import ManufacturingSeoContent from "@/components/ManufacturingSeoContent";
 import LaborProductivityCalculator from "@/components/LaborProductivityCalculator";
 import LaborProductivitySeoContent from "@/components/LaborProductivitySeoContent";
+import EmployeeProductivityCalculator from "@/components/EmployeeProductivityCalculator";
+import EmployeeProductivitySeoContent from "@/components/EmployeeProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -65,6 +67,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const isPhysicalTherapy = slug === "physical-therapy";
     const isManufacturing = slug === "manufacturing";
     const isLabor = slug === "labor";
+    const isEmployee = slug === "employee";
 
     if (isPhysicalTherapy) {
         const title = "Physical Therapy Productivity Calculator | PT & OT";
@@ -234,6 +237,60 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
+    if (isEmployee) {
+        const title = "Employee Productivity Calculator | Revenue per Employee";
+        const description = "Free employee productivity calculator. Measure revenue per employee, profit per FTE, and department workforce performance with industry benchmarks.";
+        return {
+            title: {
+                absolute: title,
+            },
+            description,
+            keywords: [
+                "employee productivity calculator",
+                "how to calculate productivity per employee",
+                "calculate productivity per employee",
+                "revenue per employee calculator",
+                "profit per employee",
+                "workforce productivity calculator",
+                "employee performance calculator",
+                "productivity calculator",
+                "employee efficiency",
+            ],
+            alternates: {
+                canonical: pageUrl,
+                languages: {
+                    'x-default': pageUrl,
+                    'en': pageUrl,
+                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
+                    'es': `${BASE_URL}/es/calculator/${slug}`,
+                    'de': `${BASE_URL}/de/calculator/${slug}`,
+                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
+                },
+            },
+            openGraph: {
+                title,
+                description,
+                url: pageUrl,
+                type: "website",
+                siteName: "Productivity Calculator",
+                images: [
+                    {
+                        url: `${BASE_URL}/og-image.png`,
+                        width: 1200,
+                        height: 630,
+                        alt: "Employee Productivity Calculator",
+                    },
+                ],
+            },
+            twitter: {
+                card: "summary_large_image",
+                title,
+                description,
+                images: [`${BASE_URL}/og-image.png`],
+            },
+        };
+    }
+
     return {
         title: `${industry.title} 2026 | Free Online Tool`,
         description: industry.description,
@@ -285,6 +342,7 @@ function generateIndustrySchema(industry: IndustryData) {
     const isPhysicalTherapy = industry.slug === "physical-therapy";
     const isManufacturing = industry.slug === "manufacturing";
     const isLabor = industry.slug === "labor";
+    const isEmployee = industry.slug === "employee";
     const pageUrl = `${BASE_URL}/calculator/${industry.slug}`;
 
     const schemas: Record<string, unknown>[] = [
@@ -297,6 +355,8 @@ function generateIndustrySchema(industry: IndustryData) {
                 ? "Manufacturing Productivity Calculator"
                 : isLabor
                 ? "Labor Productivity Calculator"
+                : isEmployee
+                ? "Employee Productivity Calculator"
                 : industry.title,
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web Browser",
@@ -312,6 +372,8 @@ function generateIndustrySchema(industry: IndustryData) {
                 ? "Free industrial manufacturing productivity calculator. Calculate gross and net production rates per hour, factory shift capacity projections, and Overall Equipment Effectiveness (OEE) with standard industry benchmarks."
                 : isLabor
                 ? "Free workforce labor productivity calculator. Measure physical output per labor hour, revenue-to-labor cost ratios, blended team hourly rates, and workforce capacity utilization."
+                : isEmployee
+                ? "Free employee productivity calculator. Measure revenue per employee, net profit per FTE, employee ROI compensation multipliers, and department performance targets."
                 : industry.description,
         },
         {
@@ -511,6 +573,63 @@ function generateIndustrySchema(industry: IndustryData) {
         });
     }
 
+    if (isEmployee) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "How is employee productivity calculated?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Employee productivity is primarily calculated by dividing total business revenue by full-time equivalent staff: Revenue per Employee = Total Gross Revenue ÷ Total FTE Headcount. For specific departments, output can also be measured as units, projects, or deals closed divided by team headcount.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is a good revenue per employee benchmark?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Across S&P 500 companies, the overall median revenue per employee is approximately $320,000. In digital technology and software businesses, top-quartile companies generate between $400,000 and $1,000,000+ per employee. In professional services and agencies, $150,000 to $250,000 is considered a sustainable benchmark.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the difference between employee productivity and labor productivity?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Labor productivity typically measures short-term micro output per labor hour (e.g., units made per man-hour in a factory or warehouse). Employee productivity is a broader strategic and executive metric evaluating corporate revenue, operating leverage, and profit generated per full-time headcount annually.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How do part-time workers and contractors factor into FTE calculations?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Part-time workers and contractors are converted into Full-Time Equivalents (FTE) based on standard working hours. For example, two part-time employees working 20 hours per week equate to 1.0 FTE (40 hours total). A company with 10 full-time staff and 4 half-time contractors has a total headcount of 12.0 FTEs.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is a good employee ROI ratio?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "A healthy employee ROI multiplier is between 3.0x and 5.0x: an employee should ideally generate $3.00 to $5.00 in gross client value or business revenue for every $1.00 of loaded compensation (salary, medical benefits, taxes, and software) paid by the company. Ratios below 2.0x leave little margin for overhead and profitability.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How can a company increase profit per employee?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "To increase profit per employee, leadership should eliminate low-margin service offerings, automate manual tasks through software tools, establish disciplined hiring standards that prioritize talent density over raw headcount growth, and realign sales incentives around high-margin recurring revenue products.",
+                    },
+                },
+            ],
+        });
+    }
+
     if (industry.slug === "video-production") {
         schemas.push({
             "@context": "https://schema.org",
@@ -597,6 +716,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isPhysicalTherapy = slug === "physical-therapy";
     const isManufacturing = slug === "manufacturing";
     const isLabor = slug === "labor";
+    const isEmployee = slug === "employee";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -638,6 +758,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Manufacturing Operations Suite"
                                     : isLabor
                                     ? "Workforce Operations Suite"
+                                    : isEmployee
+                                    ? "Workforce Executive Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -651,6 +773,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Manufacturing"
                                     : isLabor
                                     ? "Labor"
+                                    : isEmployee
+                                    ? "Employee"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">Productivity Calculator</span>
@@ -664,6 +788,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Industrial manufacturing productivity calculator, machine throughput estimator, and OEE efficiency benchmark analyzer."
                                 : isLabor
                                 ? "Workforce labor productivity calculator, blended team payroll rate modeler, and employee capacity utilization analyzer."
+                                : isEmployee
+                                ? "Executive employee productivity calculator, revenue per FTE modeler, and department staff quota performance analyzer."
                                 : industry.description}
                         </p>
 
@@ -682,6 +808,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <ManufacturingCalculator />
                     ) : isLabor ? (
                         <LaborProductivityCalculator />
+                    ) : isEmployee ? (
+                        <EmployeeProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -693,6 +821,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <ManufacturingSeoContent />
                     ) : isLabor ? (
                         <LaborProductivitySeoContent />
+                    ) : isEmployee ? (
+                        <EmployeeProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">

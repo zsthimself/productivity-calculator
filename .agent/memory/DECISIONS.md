@@ -59,3 +59,22 @@
      - 提供物流履约实操工时核算与利用率达标补时算例；
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 压缩至 55 字符（`Labor Productivity Calculator | Output & Workforce Rate`），Description 优化至 152 字符黄金区间。
+
+
+### DEC-006: /calculator/employee 员工人效与人均创收全案升级与 On-Page SEO 外科手术
+- **背景**:
+  1. GSC 表现：`/calculator/employee` 为全站曝光量第 4 核心行业页（117 次曝光，0 点击，平均排名 29.1，核心主词 `employee productivity calculator` 46 次曝光）；
+  2. 哥飞 SERP 侦察：`employee productivity calculator` 难度 KD 仅 **26.6 · 容易**，SERP Top 1 `productivitycalc.com`（DR 仅 5，月流仅 33.3K）正文仅 661 词，内容深度单薄；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 270 词触发 <300 词封顶惩罚，Title 模板溢出达 80+ 字符，缺少专业图解与配图。
+- **决定**:
+  1. 研发专业高管级 `EmployeeProductivityCalculator.tsx`（三模式）：
+     - 模式 1：人均创收与人均利润（Revenue per Employee、Profit per FTE、S&P 500 基准对照）；
+     - 模式 2：员工综合成本与 ROI 乘数（Total Loaded Cost、Cost per FTE、ROI Multiplier %）；
+     - 模式 3：部门定额与绩效达成率（Department Actual vs Quota、Team Attainment Rate %、绩效评级）。
+  2. 撰写专业级权威 SEO 文本组件 `EmployeeProductivitySeoContent.tsx`（1,373 词全页）：
+     - 嵌入 800x400 零 CLS 矢量图 `employee-productivity-formula.svg`；
+     - 提供直接创收公式、全额雇佣成本倍数（1.25x~1.40x）、全美 S&P 500 行业标杆矩阵对照表；
+     - 呈现销售、研发、客户支持三大部门量化考核标准与真实案例推演；
+     - 详述提升组织人效的 5 大执行策略；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 采用绝对标题 55 字符（`Employee Productivity Calculator | Revenue per Employee`），Description 优化至 147 字符黄金区间。

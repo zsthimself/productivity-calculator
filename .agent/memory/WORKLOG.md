@@ -78,3 +78,15 @@
     - 社交与结构化：10/10 满分
     - 技术与抓取：17/17 满分
     - 3-gram 关键词命中：`#4 labor productivity calculator` 出现 3 次，词频密度 0.22%，占位密度 0.67%（健康区间，0 堆砌告警）。
+
+
+## 2026-11-09: /calculator/employee 员工人效全案升级与 On-Page SEO 外科手术
+
+- **执行概要**:
+  - 瞄准 GSC 全站排名第 4 核心行业词源 `/calculator/employee`（117 次曝光，0 点击，平均排名 29.1，容易难度 KD 26.6），实施从 55 D 级到 95+ A 级的全案外科手术。
+- **实施细节**:
+  1. 编写高管级交互组件 `src/components/EmployeeProductivityCalculator.tsx`（386行）：人均创收与人均利润、员工综合成本与 ROI 乘数、部门定额与绩效达成率三模式，内置四大预设与一键日志复制；
+  2. 撰写专业级权威 SEO 文本组件 `src/components/EmployeeProductivitySeoContent.tsx`（312行）：嵌入 800x400 零 CLS 矢量图 `employee-productivity-formula.svg`，呈现 S&P 500 行业基准矩阵、三大部门量化考核标准、全美标杆推演及 6 大 PAA FAQ；
+  3. 更新 `src/app/calculator/[slug]/page.tsx`：精炼 Title 55 字符（`Employee Productivity Calculator | Revenue per Employee`）、Description 147 字符、注入 `WebApplication` + `FAQPage` 双重 Schema；
+  4. 静态编译通过，147 页面 SSG 构建完成（3.3s），实测产物 HTML 词数达 1,373 词（突破 300 词惩罚断崖，进入 1200-1800 黄金权重带）；
+  5. 待提交推送至 GitHub master，待 Cloudflare Pages 实时部署与线上体检复核。
