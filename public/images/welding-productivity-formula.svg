@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="amber-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="orange-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bg-grad)"/>
+  <rect x="0.5" y="0.5" width="799" height="399" fill="none" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Subtle Industrial Grid -->
+  <path d="M0 80 H800 M0 160 H800 M0 240 H800 M0 320 H800" stroke="#1e293b" stroke-opacity="0.3" stroke-width="1"/>
+  <path d="M160 0 V400 M320 0 V400 M480 0 V400 M640 0 V400" stroke="#1e293b" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- Header Section -->
+  <g transform="translate(40, 28)">
+    <rect x="0" y="0" width="130" height="24" rx="12" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="1"/>
+    <text x="65" y="16" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">AWS D1.1 SUITE</text>
+    <text x="145" y="17" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" letter-spacing="-0.5">Welding Productivity Calculator Architecture</text>
+    <text x="0" y="38" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Quantifying Arc-On Operating Factor, Deposition Rate, and Linear Foot Fabrication Cost</text>
+  </g>
+
+  <!-- 3 Main Pillars -->
+
+  <!-- Pillar 1: Deposition Rate & Arc-On Time -->
+  <g transform="translate(40, 85)" filter="url(#shadow)">
+    <rect width="226" height="265" rx="14" fill="#0f172a" fill-opacity="0.85" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1.5"/>
+    <rect x="14" y="14" width="32" height="32" rx="8" fill="#f59e0b" fill-opacity="0.15"/>
+    <text x="30" y="35" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" text-anchor="middle">⚡</text>
+    <text x="56" y="27" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">MODE 1</text>
+    <text x="56" y="42" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Deposition &amp; Arc-On</text>
+    
+    <!-- Code / Formula Block -->
+    <rect x="14" y="60" width="198" height="48" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+    <text x="24" y="80" fill="#94a3b8" font-family="monospace" font-size="10">DepRate = WFS × W_in × Eff</text>
+    <text x="24" y="96" fill="#fbbf24" font-family="monospace" font-size="11" font-weight="700">Daily = DepRate × Shift × Arc%</text>
+
+    <!-- Key Metrics -->
+    <text x="14" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">AWS Process Efficiencies:</text>
+    <circle cx="20" cy="148" r="3" fill="#f59e0b"/>
+    <text x="30" y="152" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">GMAW (MIG): 92% – 95% Eff</text>
+    <circle cx="20" cy="172" r="3" fill="#f59e0b"/>
+    <text x="30" y="176" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">FCAW Flux-Cored: 82% – 88%</text>
+    <circle cx="20" cy="196" r="3" fill="#f59e0b"/>
+    <text x="30" y="200" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">SMAW Stick: 60% – 68%</text>
+
+    <!-- Badge -->
+    <rect x="14" y="222" width="198" height="28" rx="6" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="113" y="240" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">MIG Arc Factor: 35% – 50%</text>
+  </g>
+
+  <!-- Pillar 2: Joint Geometry & Filler Metal -->
+  <g transform="translate(286, 85)" filter="url(#shadow)">
+    <rect width="226" height="265" rx="14" fill="#0f172a" fill-opacity="0.85" stroke="#06b6d4" stroke-opacity="0.5" stroke-width="1.5"/>
+    <rect x="14" y="14" width="32" height="32" rx="8" fill="#06b6d4" fill-opacity="0.15"/>
+    <text x="30" y="35" fill="#06b6d4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" text-anchor="middle">📐</text>
+    <text x="56" y="27" fill="#06b6d4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">MODE 2</text>
+    <text x="56" y="42" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Joint Filler Metal Wt</text>
+
+    <!-- Code / Formula Block -->
+    <rect x="14" y="60" width="198" height="48" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+    <text x="24" y="80" fill="#94a3b8" font-family="monospace" font-size="10">Fillet Area = 0.5 × w²</text>
+    <text x="24" y="96" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="700">Filler = (Vol × 0.283) ÷ Eff</text>
+
+    <!-- Key Metrics -->
+    <text x="14" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">Steel Density &amp; Geometry:</text>
+    <circle cx="20" cy="148" r="3" fill="#06b6d4"/>
+    <text x="30" y="152" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Carbon Steel: 0.283 lb/in³</text>
+    <circle cx="20" cy="172" r="3" fill="#06b6d4"/>
+    <text x="30" y="176" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Single-V Bevel Butt Joints</text>
+    <circle cx="20" cy="196" r="3" fill="#06b6d4"/>
+    <text x="30" y="200" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Over-Welding Penalty: +40%</text>
+
+    <!-- Badge -->
+    <rect x="14" y="222" width="198" height="28" rx="6" fill="#06b6d4" fill-opacity="0.1" stroke="#06b6d4" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="113" y="240" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">5/16" Fillet: 0.207 lb/ft</text>
+  </g>
+
+  <!-- Pillar 3: Labor & Fabrication Cost -->
+  <g transform="translate(534, 85)" filter="url(#shadow)">
+    <rect width="226" height="265" rx="14" fill="#0f172a" fill-opacity="0.85" stroke="#fb923c" stroke-opacity="0.5" stroke-width="1.5"/>
+    <rect x="14" y="14" width="32" height="32" rx="8" fill="#fb923c" fill-opacity="0.15"/>
+    <text x="30" y="35" fill="#fb923c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" text-anchor="middle">💰</text>
+    <text x="56" y="27" fill="#fb923c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">MODE 3</text>
+    <text x="56" y="42" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Cost per Foot &amp; Labor</text>
+
+    <!-- Code / Formula Block -->
+    <rect x="14" y="60" width="198" height="48" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+    <text x="24" y="80" fill="#94a3b8" font-family="monospace" font-size="10">Labor = Wage ÷ TravelSpeed</text>
+    <text x="24" y="96" fill="#fb923c" font-family="monospace" font-size="11" font-weight="700">Total = Labor + Wire + Gas</text>
+
+    <!-- Key Metrics -->
+    <text x="14" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">Shop Economic Breakdown:</text>
+    <circle cx="20" cy="148" r="3" fill="#fb923c"/>
+    <text x="30" y="152" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Labor Represents 75%–85%</text>
+    <circle cx="20" cy="172" r="3" fill="#fb923c"/>
+    <text x="30" y="176" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Travel Speed 10–18 IPM</text>
+    <circle cx="20" cy="196" r="3" fill="#fb923c"/>
+    <text x="30" y="200" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Shielding Gas Flow 35 CFH</text>
+
+    <!-- Badge -->
+    <rect x="14" y="222" width="198" height="28" rx="6" fill="#fb923c" fill-opacity="0.1" stroke="#fb923c" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="113" y="240" fill="#fb923c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Target Cost: $1.80–$3.50 / Ft</text>
+  </g>
+
+  <!-- Footer Banner -->
+  <g transform="translate(40, 362)">
+    <text x="0" y="18" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">ProductivityCalculator.work • Industrial Welding Engineering Architecture • Official AWS Standards</text>
+  </g>
+</svg>

@@ -17,6 +17,7 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
     const isLogistics = industry.slug === "logistics";
     const isCleaningServices = industry.slug === "cleaning-services";
     const isHealthcare = industry.slug === "healthcare";
+    const isWelding = industry.slug === "welding";
     const pageUrl = `${baseUrl}/calculator/${industry.slug}`;
 
     const schemas: Record<string, unknown>[] = [
@@ -41,6 +42,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Commercial Cleaning Time Calculator"
                 : isHealthcare
                 ? "Healthcare Productivity Calculator"
+                : isWelding
+                ? "Welding Productivity Calculator"
                 : industry.title,
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web Browser",
@@ -68,6 +71,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Free commercial cleaning time calculator to estimate janitorial labor hours, square footage production rates, and contract bidding costs with ISSA standards."
                 : isHealthcare
                 ? "Free clinical healthcare productivity calculator. Measure physician wRVU production, inpatient nursing HPPD staffing, and ambulatory patient encounter velocity."
+                : isWelding
+                ? "Free welding productivity calculator to measure filler metal deposition rate, arc-on operating factor, joint volume consumption, and fabrication cost per foot."
                 : industry.description,
         },
         {
@@ -107,6 +112,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                         ? "Commercial Cleaning Time Calculator"
                         : isHealthcare
                         ? "Healthcare Productivity Calculator"
+                        : isWelding
+                        ? "Welding Productivity Calculator"
                         : industry.title,
                     item: pageUrl,
                 },
@@ -613,6 +620,63 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                     acceptedAnswer: {
                         "@type": "Answer",
                         text: "Hospitals reduce nurse overtime while sustaining required HPPD by instituting centralized float pools, leveraging automated shift bidding software, analyzing historical patient census trends to adjust core staffing 4 to 6 weeks in advance, and conducting daily mid-shift acuity balancing rather than relying on mandatory end-of-shift overtime.",
+                    },
+                },
+            ],
+        });
+    }
+
+    if (isWelding) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "How do you calculate welding productivity?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Welding productivity is measured through Effective Deposition Rate (lbs/hr = Gross Rate × Deposition Efficiency × Arc-On Operating Factor) and Labor Velocity (Completed Linear Feet ÷ Total Welder Hours). In structural shops, comparing actual metal deposited against theoretical arc capacity pinpoints production bottlenecks.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is welder productivity per day?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "An average welder depositing SMAW stick electrodes deposits 8 to 14 lbs of weld metal per 8-hour shift (20% to 25% arc time). With semi-automatic MIG (GMAW) or flux-cored (FCAW) wire, daily productivity jumps to 25 to 45 lbs per day (35% to 45% arc time). Automated SAW cells deposit over 100 to 180 lbs daily.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the arc-on operating factor in welding?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Operating factor is the percentage of a welder's scheduled shift where the electric arc is actively melting metal: Operating Factor (%) = (Arc Hours ÷ Total Shift Hours) × 100. The remaining shift time is consumed by tacking, preheating, nozzle cleaning, slag chipping, and joint fit-up.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How do you calculate welding deposition rate?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Deposition rate measures the weight of filler metal deposited into the joint per continuous arc hour: Deposition Rate = Wire Feed Speed (in/min) × 60 min/hr × Weight per Inch of Wire × Deposition Efficiency. It can also be verified empirically by weighing test plates before and after 2 minutes of continuous welding.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "Why does labor represent 80% to 85% of total welding costs?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Welding requires certified skilled labor. While solid wire costs $1.80 to $2.80 per pound and shielding gas adds $0.30 to $0.60 per pound, fully burdened welder labor costs $55 to $85+ per hour. Reducing arc and prep time through higher deposition wires saves substantially more money than buying cheaper electrodes.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the financial impact of over-welding?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Over-welding occurs when a fillet weld leg size exceeds engineering specifications. Because weld volume scales quadratically with leg size, increasing a fillet from 1/4 inch to 5/16 inch requires 56% more filler metal and 56% more labor hours, adding zero structural strength while causing heat distortion.",
                     },
                 },
             ],

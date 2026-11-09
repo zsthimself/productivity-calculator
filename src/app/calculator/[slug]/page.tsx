@@ -1,6 +1,6 @@
 /**
  * [INPUT]: industries.json (静态配置), URL slug 参数, 专用计算器组件群, generateIndustrySchema
- * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy、manufacturing、labor、employee、video-production、call-center、logistics、cleaning-services 专属套件
+ * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy、manufacturing、labor、employee、video-production、call-center、logistics、cleaning-services、healthcare、welding 专属套件
  * [POS]: pSEO 模板与垂直突围页 - 承接 slug 对应 20+ 行业页面，对高潜力词做专属架构承接
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -26,6 +26,8 @@ import { CleaningServicesProductivityCalculator } from "@/components/CleaningSer
 import CleaningServicesProductivitySeoContent from "@/components/CleaningServicesProductivitySeoContent";
 import { HealthcareProductivityCalculator } from "@/components/HealthcareProductivityCalculator";
 import HealthcareProductivitySeoContent from "@/components/HealthcareProductivitySeoContent";
+import WeldingProductivityCalculator from "@/components/WeldingProductivityCalculator";
+import WeldingProductivitySeoContent from "@/components/WeldingProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -369,6 +371,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isLogistics = slug === "logistics";
     const isCleaningServices = slug === "cleaning-services";
     const isHealthcare = slug === "healthcare";
+    const isWelding = slug === "welding";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
