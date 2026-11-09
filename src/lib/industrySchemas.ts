@@ -14,6 +14,7 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
     const isEmployee = industry.slug === "employee";
     const isVideoProduction = industry.slug === "video-production";
     const isCallCenter = industry.slug === "call-center";
+    const isLogistics = industry.slug === "logistics";
     const pageUrl = `${baseUrl}/calculator/${industry.slug}`;
 
     const schemas: Record<string, unknown>[] = [
@@ -32,6 +33,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Video Production Calculator"
                 : isCallCenter
                 ? "Call Center Productivity Calculator"
+                : isLogistics
+                ? "Logistics Productivity Calculator"
                 : industry.title,
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web Browser",
@@ -53,6 +56,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Free video production calculator. Estimate cost per finished minute, post-production editing turnaround time, shooting ratio, and crew labor efficiency."
                 : isCallCenter
                 ? "Free call center productivity calculator. Measure agent occupancy rate, calls per hour (CPH), average handle time (AHT), and shrinkage-adjusted staffing requirements."
+                : isLogistics
+                ? "Free logistics productivity calculator. Calculate warehouse units per hour (UPH), pick and pack labor velocity, dock-to-stock latency, order fulfillment cycle time, and fleet cost per parcel."
                 : industry.description,
         },
         {
@@ -86,6 +91,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                         ? "Video Production Calculator"
                         : isCallCenter
                         ? "Call Center Productivity Calculator"
+                        : isLogistics
+                        ? "Logistics Productivity Calculator"
                         : industry.title,
                     item: pageUrl,
                 },
@@ -421,6 +428,63 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                     acceptedAnswer: {
                         "@type": "Answer",
                         text: "Average Handle Time (talk time + hold time + ACW) dictates required headcount. Reducing AHT by 30 seconds across a 50-agent desk handling 2,500 daily calls saves 20 labor hours per day, unlocking extra queue capacity without hiring additional staff.",
+                    },
+                },
+            ],
+        });
+    }
+
+    if (isLogistics) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "What is a good warehouse picking UPH benchmark?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "In standard ecommerce small-parcel fulfillment, a competitive target pick velocity ranges between 120 and 150 units per hour (UPH) for manual cart piece-picking, and 200+ UPH for goods-to-person automated shuttle systems. For heavy pallet and case-picking in 3PL industrial warehouses, benchmarks typically range from 60 to 90 UPH due to forklift transit and safety protocols.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How do you calculate warehouse logistics productivity?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Warehouse logistics productivity is calculated by dividing total output volume (units picked, orders packed, or cartons loaded) by total direct labor hours consumed during the shift: UPH = Total Units Picked ÷ Direct Labor Hours. Economic productivity is evaluated by dividing total loaded payroll by completed shipments to obtain unit labor cost.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the difference between warehouse productivity and fulfillment efficiency?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Warehouse productivity measures operational output rate per resource unit (e.g., units per man-hour UPH or parcels per driver shift). Fulfillment efficiency is a broader measure that includes process quality, order accuracy percentage (e.g., 99.8% perfect order rate), dock-to-stock latency, and SLA compliance within customer delivery promises.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How does dock-to-stock time affect overall order cycle time?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Dock-to-stock latency measures the time elapsed from when an inbound shipment arrives at the receiving dock to when goods are scanned and available in inventory bins for picking. If dock-to-stock exceeds 4 hours, inventory replenishment bottlenecks cause stockouts on active pick lines, forcing pickers to wait and drastically reducing overall order cycle velocity.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the standard cost per order (CPO) in 3PL fulfillment?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Standard warehouse handling cost per order (excluding carrier postage) ranges between $2.50 and $4.80 for standard B2C parcels containing 1 to 3 items. Operations with advanced cartonization, automated sortation, and high UPH rates can lower handling costs below $2.00 per order, while fragile, serialized, or cold-chain goods often exceed $6.00 per order.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How does wave picking improve warehouse units per hour?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Wave picking groups orders by common criteria—such as shipping carrier cutoff, delivery zone, or shared SKU location—into scheduled execution waves. Instead of individual pickers traversing the entire warehouse for isolated orders, associates pick high-density SKU batches along optimized routes, reducing travel time by up to 40% and elevating UPH.",
                     },
                 },
             ],

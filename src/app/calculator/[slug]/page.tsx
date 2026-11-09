@@ -20,6 +20,8 @@ import VideoProductionCalculator from "@/components/VideoProductionCalculator";
 import VideoProductionSeoContent from "@/components/VideoProductionSeoContent";
 import CallCenterProductivityCalculator from "@/components/CallCenterProductivityCalculator";
 import CallCenterProductivitySeoContent from "@/components/CallCenterProductivitySeoContent";
+import { LogisticsProductivityCalculator } from "@/components/LogisticsProductivityCalculator";
+import LogisticsProductivitySeoContent from "@/components/LogisticsProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -75,6 +77,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const isEmployee = slug === "employee";
     const isVideoProduction = slug === "video-production";
     const isCallCenter = slug === "call-center";
+    const isLogistics = slug === "logistics";
 
     if (isPhysicalTherapy) {
         const title = "Physical Therapy Productivity Calculator | PT & OT";
@@ -400,6 +403,61 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
+    if (isLogistics) {
+        const title = "Logistics Productivity Calculator | Warehouse & Pick Rate";
+        const description = "Free logistics productivity calculator to measure warehouse units per hour (UPH), picking velocity, order fulfillment cycle time, and labor cost per order.";
+        return {
+            title: {
+                absolute: title,
+            },
+            description,
+            keywords: [
+                "logistics productivity calculator",
+                "warehouse productivity calculator",
+                "warehouse productivity calculation",
+                "units per hour uph",
+                "warehouse pick rate calculator",
+                "order fulfillment cycle time",
+                "warehouse labor productivity",
+                "dock to stock calculator",
+                "3pl productivity calculator",
+                "productivity calculator",
+            ],
+            alternates: {
+                canonical: pageUrl,
+                languages: {
+                    'x-default': pageUrl,
+                    'en': pageUrl,
+                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
+                    'es': `${BASE_URL}/es/calculator/${slug}`,
+                    'de': `${BASE_URL}/de/calculator/${slug}`,
+                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
+                },
+            },
+            openGraph: {
+                title,
+                description,
+                url: pageUrl,
+                type: "website",
+                siteName: "Productivity Calculator",
+                images: [
+                    {
+                        url: `${BASE_URL}/og-image.png`,
+                        width: 1200,
+                        height: 630,
+                        alt: "Logistics Productivity Calculator",
+                    },
+                ],
+            },
+            twitter: {
+                card: "summary_large_image",
+                title,
+                description,
+                images: [`${BASE_URL}/og-image.png`],
+            },
+        };
+    }
+
     return {
         title: `${industry.title} 2026 | Free Online Tool`,
         description: industry.description,
@@ -490,6 +548,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isEmployee = slug === "employee";
     const isVideoProduction = slug === "video-production";
     const isCallCenter = slug === "call-center";
+    const isLogistics = slug === "logistics";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -537,6 +596,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Broadcast & Studio Production Suite"
                                     : isCallCenter
                                     ? "Contact Center Operations Suite"
+                                    : isLogistics
+                                    ? "Warehouse & Supply Chain Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -556,6 +617,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Video Production"
                                     : isCallCenter
                                     ? "Call Center"
+                                    : isLogistics
+                                    ? "Logistics"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">Productivity Calculator</span>
@@ -575,6 +638,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Studio video production calculator, cost per finished minute estimator, and post-production turnaround scheduler for filmmakers, agencies & creators."
                                 : isCallCenter
                                 ? "Contact center productivity calculator, agent occupancy analyzer, and shrinkage-adjusted staffing scheduler for customer support & BPO teams."
+                                : isLogistics
+                                ? "Warehouse logistics productivity calculator, units per hour (UPH) estimator, dock-to-stock tracker, and fleet unit shipping cost modeler for distribution centers & 3PLs."
                                 : industry.description}
                         </p>
 
@@ -599,6 +664,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <VideoProductionCalculator />
                     ) : isCallCenter ? (
                         <CallCenterProductivityCalculator />
+                    ) : isLogistics ? (
+                        <LogisticsProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -616,6 +683,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <VideoProductionSeoContent />
                     ) : isCallCenter ? (
                         <CallCenterProductivitySeoContent />
+                    ) : isLogistics ? (
+                        <LogisticsProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">
