@@ -165,3 +165,4 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 压缩至 57 字符（`Commercial Cleaning Time Calculator | ISSA Production Rates`），Description 优化至 157 字符黄金区间。
   4. 重构 `src/app/calculator/[slug]/page.tsx`：抽象 `buildMeta` 通用工厂函数，消除 280+ 行重复元数据样板代码，单文件行数由 744 行降至 552 行，坚决守牢 $\le 800$ 行安全红线。
+  5. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，4-gram 核心主词命中 Rank 1 登顶，占位密度 1.28%）。
