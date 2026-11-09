@@ -1,7 +1,7 @@
 /**
- * [INPUT]: industries.json (静态数据), URL slug 参数, PhysicalTherapyCalculator, PhysicalTherapySeoContent
- * [OUTPUT]: IndustryCalculatorPage - 动态生成的行业专属计算器页面，physical-therapy 享有定制临床高阶引擎与深度指南，therapy 执行 301 权重合流
- * [POS]: pSEO 模板与垂直突破页 - 基于 slug 批量生成 20+ 行业页面，针对高流量词进行手术刀级定制与权重合流
+ * [INPUT]: industries.json (静态配置), URL slug 参数, PhysicalTherapyCalculator, PhysicalTherapySeoContent, ManufacturingCalculator, ManufacturingSeoContent
+ * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy 临床套件、manufacturing 工业套件，therapy 执行 301 权重合并
+ * [POS]: pSEO 模板与垂直突围页 - 承接 slug 对应 20+ 行业页面，对高格式词权重合流
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { Metadata } from "next";
@@ -10,6 +10,8 @@ import Link from "next/link";
 import Calculator from "@/components/Calculator";
 import PhysicalTherapyCalculator from "@/components/PhysicalTherapyCalculator";
 import PhysicalTherapySeoContent from "@/components/PhysicalTherapySeoContent";
+import ManufacturingCalculator from "@/components/ManufacturingCalculator";
+import ManufacturingSeoContent from "@/components/ManufacturingSeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -41,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const pageUrl = `${BASE_URL}/calculator/${slug}`;
 
-    // 04号站 GSC 权重合流：/calculator/therapy 301 统一汇流至 /calculator/physical-therapy
+    // 04号站 GSC 权重合流：/calculator/therapy 301 统一汇聚至 /calculator/physical-therapy
     if (slug === "therapy") {
         return {
             title: {
@@ -59,6 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     const isPhysicalTherapy = slug === "physical-therapy";
+    const isManufacturing = slug === "manufacturing";
 
     if (isPhysicalTherapy) {
         const title = "Physical Therapy Productivity Calculator | PT & OT";
@@ -117,6 +120,61 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
+    if (isManufacturing) {
+        const title = "Manufacturing Productivity Calculator | OEE & Labor Rate";
+        const description = "Free manufacturing productivity calculator. Measure factory output, labor productivity per hour, machine cycle efficiency, and OEE benchmarks instantly.";
+        return {
+            title: {
+                absolute: title,
+            },
+            description,
+            keywords: [
+                "manufacturing productivity calculator",
+                "manufacturing calculator",
+                "factory calculator",
+                "plant productivity calculator",
+                "oee calculator",
+                "labor productivity calculator manufacturing",
+                "manufacturing efficiency calculator",
+                "machine productivity calculator",
+                "production rate calculator",
+                "productivity calculator",
+            ],
+            alternates: {
+                canonical: pageUrl,
+                languages: {
+                    'x-default': pageUrl,
+                    'en': pageUrl,
+                    'zh-CN': `${BASE_URL}/zh/calculator/${slug}`,
+                    'es': `${BASE_URL}/es/calculator/${slug}`,
+                    'de': `${BASE_URL}/de/calculator/${slug}`,
+                    'ja': `${BASE_URL}/ja/calculator/${slug}`,
+                },
+            },
+            openGraph: {
+                title,
+                description,
+                url: pageUrl,
+                type: "website",
+                siteName: "Productivity Calculator",
+                images: [
+                    {
+                        url: `${BASE_URL}/og-image.png`,
+                        width: 1200,
+                        height: 630,
+                        alt: "Manufacturing Productivity Calculator",
+                    },
+                ],
+            },
+            twitter: {
+                card: "summary_large_image",
+                title,
+                description,
+                images: [`${BASE_URL}/og-image.png`],
+            },
+        };
+    }
+
     return {
         title: `${industry.title} 2026 | Free Online Tool`,
         description: industry.description,
@@ -163,16 +221,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
 }
 
-// 生成行业特定的 Schema 结构化数据
+// 行业特定 Schema 结构化数据
 function generateIndustrySchema(industry: IndustryData) {
     const isPhysicalTherapy = industry.slug === "physical-therapy";
+    const isManufacturing = industry.slug === "manufacturing";
     const pageUrl = `${BASE_URL}/calculator/${industry.slug}`;
 
     const schemas: Record<string, unknown>[] = [
         {
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            name: isPhysicalTherapy ? "Physical Therapy Productivity Calculator" : industry.title,
+            name: isPhysicalTherapy
+                ? "Physical Therapy Productivity Calculator"
+                : isManufacturing
+                ? "Manufacturing Productivity Calculator"
+                : industry.title,
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web Browser",
             url: pageUrl,
@@ -183,6 +246,8 @@ function generateIndustrySchema(industry: IndustryData) {
             },
             description: isPhysicalTherapy
                 ? "Free clinical physical therapy productivity calculator for PT, OT, and SLP therapists. Calculate daily productivity percentage, reverse clock-out time with lunch break, and Medicare 8-minute rule billing units."
+                : isManufacturing
+                ? "Free industrial manufacturing productivity calculator. Calculate gross and net production rates per hour, factory shift capacity projections, and Overall Equipment Effectiveness (OEE) with standard industry benchmarks."
                 : industry.description,
         },
         {
@@ -268,6 +333,63 @@ function generateIndustrySchema(industry: IndustryData) {
         });
     }
 
+    if (isManufacturing) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "How is manufacturing productivity calculated?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Manufacturing productivity is calculated by dividing total usable output by the input resources consumed: Productivity = Finished Good Units ÷ Direct Labor Hours (or machine hours). For whole-line equipment efficiency, factories use Overall Equipment Effectiveness: OEE = Availability × Performance × Quality.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is considered a good manufacturing productivity rate?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "In discrete manufacturing, an OEE score of 85% is internationally recognized as World-Class. Typical manufacturing operations operate between 60% and 75% OEE. For direct labor efficiency, maintaining a 95%+ target achievement rate with less than 2% scrap is considered top quartile performance.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How does scrap and defect rate affect manufacturing productivity?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Scrap directly penalizes both the Quality factor in OEE and the Net Production Rate. Because labor, machine cycle time, and utility power are consumed producing unusable scrap, high scrap rates artificially inflate the cost per unit while reducing overall plant capacity.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the difference between production volume and productivity?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Production volume is the raw quantity of goods manufactured over a timeframe (e.g., 50,000 units this month). Productivity is the ratio of that volume to the inputs invested (e.g., units per labor hour or units per dollar). Producing high volume by adding excessive overtime can actually decrease productivity.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "Can this manufacturing calculator handle multiple shifts and assembly lines?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Yes. Use the 'Factory Capacity' tab to set shift lengths (e.g., 8, 10, or 12 hours), the number of shifts per day (1, 2, or 3), parallel production lines, and working days per week to automatically project daily, weekly, monthly, and annual factory capacity.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How do you calculate labor hours in manufacturing?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Direct labor hours are calculated by multiplying the number of operators on the line by the shift duration: Direct Labor Hours = Number of Workers × Shift Hours Worked. For example, a 6-person assembly line operating for an 8-hour shift logs 48 direct labor hours.",
+                    },
+                },
+            ],
+        });
+    }
+
     if (industry.slug === "video-production") {
         schemas.push({
             "@context": "https://schema.org",
@@ -321,12 +443,12 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
         notFound();
     }
 
-    // 04号站 GSC 权重合流：/calculator/therapy 静态备灾重定向页
+    // 04号站 GSC 权重合流：/calculator/therapy 静态重定向页
     if (slug === "therapy") {
         return (
             <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 text-center">
                 <div className="card-neon max-w-lg p-8 rounded-2xl border border-[var(--neon-cyan)]/40 space-y-4">
-                    <span className="text-3xl block">🏥</span>
+                    <span className="text-3xl block">🔄</span>
                     <h1 className="font-display text-2xl font-bold text-gradient">
                         Redirecting to Physical Therapy Suite...
                     </h1>
@@ -352,6 +474,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     }
 
     const isPhysicalTherapy = slug === "physical-therapy";
+    const isManufacturing = slug === "manufacturing";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -387,14 +510,22 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full neon-border mb-6 animate-fade-in">
                             <span className="text-2xl">{industry.icon}</span>
                             <span className="font-display text-xs tracking-widest text-[var(--neon-cyan)] uppercase">
-                                {isPhysicalTherapy ? "Physical Therapy Clinical Suite" : industry.name}
+                                {isPhysicalTherapy
+                                    ? "Physical Therapy Clinical Suite"
+                                    : isManufacturing
+                                    ? "Manufacturing Operations Suite"
+                                    : industry.name}
                             </span>
                         </div>
 
                         {/* Main Title */}
                         <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight animate-fade-in stagger-1">
                             <span className="text-gradient neon-text-subtle">
-                                {isPhysicalTherapy ? "Physical Therapy" : industry.name}
+                                {isPhysicalTherapy
+                                    ? "Physical Therapy"
+                                    : isManufacturing
+                                    ? "Manufacturing"
+                                    : industry.name}
                             </span>{" "}
                             <span className="text-white">Productivity Calculator</span>
                         </h1>
@@ -403,6 +534,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto font-body leading-relaxed animate-fade-in stagger-2">
                             {isPhysicalTherapy
                                 ? "Clinical physical therapy productivity calculator, reverse clock-out planner, and Medicare 8-minute rule converter for PT, OT & SLP clinicians."
+                                : isManufacturing
+                                ? "Industrial manufacturing productivity calculator, machine throughput estimator, and OEE efficiency benchmark analyzer."
                                 : industry.description}
                         </p>
 
@@ -417,6 +550,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                     {/* Calculator Component */}
                     {isPhysicalTherapy ? (
                         <PhysicalTherapyCalculator />
+                    ) : isManufacturing ? (
+                        <ManufacturingCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -424,6 +559,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                     {/* SEO Content Section */}
                     {isPhysicalTherapy ? (
                         <PhysicalTherapySeoContent />
+                    ) : isManufacturing ? (
+                        <ManufacturingSeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">
@@ -452,19 +589,19 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     </h3>
                                     <ul className="space-y-3">
                                         <li className="flex items-start gap-3">
-                                            <span className="text-[var(--neon-cyan)]">→</span>
+                                            <span className="text-[var(--neon-cyan)]">⚡</span>
                                             <span>Identify bottlenecks and inefficiencies in your {industry.name.toLowerCase()} workflow</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <span className="text-[var(--neon-pink)]">→</span>
+                                            <span className="text-[var(--neon-pink)]">⚡</span>
                                             <span>Set realistic goals and benchmarks for your team</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <span className="text-[var(--neon-purple)]">→</span>
+                                            <span className="text-[var(--neon-purple)]">⚡</span>
                                             <span>Make data-driven decisions for continuous improvement</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <span className="text-[var(--neon-blue)]">→</span>
+                                            <span className="text-[var(--neon-blue)]">⚡</span>
                                             <span>Compare performance across teams or time periods</span>
                                         </li>
                                     </ul>

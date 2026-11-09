@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" fill="none">
+  <defs>
+    <linearGradient id="mfg-bg" x1="0" y1="0" x2="800" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#060913" />
+    </linearGradient>
+    <linearGradient id="cyan-mfg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00fff2" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="purple-mfg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9d00ff" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="card-mfg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141c2e" />
+      <stop offset="100%" stop-color="#0d1424" />
+    </linearGradient>
+  </defs>
+
+  <!-- Container -->
+  <rect width="800" height="400" rx="16" fill="url(#mfg-bg)" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Grid Accents -->
+  <g opacity="0.08" stroke="#00fff2" stroke-width="0.5">
+    <line x1="50" y1="0" x2="50" y2="400" />
+    <line x1="150" y1="0" x2="150" y2="400" />
+    <line x1="250" y1="0" x2="250" y2="400" />
+    <line x1="350" y1="0" x2="350" y2="400" />
+    <line x1="450" y1="0" x2="450" y2="400" />
+    <line x1="550" y1="0" x2="550" y2="400" />
+    <line x1="650" y1="0" x2="650" y2="400" />
+    <line x1="750" y1="0" x2="750" y2="400" />
+  </g>
+
+  <!-- Titles -->
+  <text x="40" y="50" fill="#00fff2" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="2">INDUSTRIAL OPERATIONS EFFICIENCY ENGINE</text>
+  <text x="40" y="82" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800">Manufacturing Productivity &amp; OEE Architecture</text>
+
+  <!-- Box 1: Total Units Produced -->
+  <rect x="40" y="115" width="215" height="150" rx="12" fill="url(#card-mfg)" stroke="#334155" stroke-width="1.5" />
+  <text x="56" y="145" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">FACTORY PRODUCTION OUTPUT</text>
+  <text x="56" y="180" fill="#ffffff" font-family="monospace" font-size="28" font-weight="700">1,000 <tspan font-size="14" fill="#94a3b8">UNITS</tspan></text>
+  <text x="56" y="205" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="13">Finished Assembly Run</text>
+
+  <rect x="56" y="222" width="183" height="26" rx="6" fill="#1e293b" />
+  <text x="66" y="239" fill="#f43f5e" font-family="monospace" font-size="11" font-weight="600">- 20 Scrap Units (2.0%)</text>
+
+  <!-- Division Icon -->
+  <circle cx="280" cy="190" r="14" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+  <text x="274" y="196" fill="#cbd5e1" font-family="sans-serif" font-size="16" font-weight="700">÷</text>
+
+  <!-- Box 2: Total Labor & Machine Hours -->
+  <rect x="305" y="115" width="215" height="150" rx="12" fill="url(#card-mfg)" stroke="#00fff2" stroke-width="1.5" stroke-opacity="0.4" />
+  <text x="321" y="145" fill="#00fff2" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">PRODUCTION INPUT HOURS</text>
+  <text x="321" y="180" fill="#00fff2" font-family="monospace" font-size="28" font-weight="700">8.0 <tspan font-size="14" fill="#94a3b8">HOURS</tspan></text>
+  <text x="321" y="205" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Standard Machine Shift</text>
+
+  <rect x="321" y="222" width="183" height="26" rx="6" fill="#022c22" stroke="#059669" stroke-width="0.8" />
+  <text x="331" y="239" fill="#34d399" font-family="monospace" font-size="11" font-weight="600">10 Operators (80 Man-Hrs)</text>
+
+  <!-- Equals Icon -->
+  <circle cx="545" cy="190" r="14" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+  <text x="539" y="196" fill="#cbd5e1" font-family="sans-serif" font-size="16" font-weight="700">=</text>
+
+  <!-- Box 3: Productivity Yield Metrics -->
+  <rect x="570" y="115" width="190" height="150" rx="12" fill="url(#card-mfg)" stroke="#9d00ff" stroke-width="1.5" stroke-opacity="0.6" />
+  <text x="586" y="145" fill="#c084fc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">PLANT PRODUCTIVITY</text>
+  <text x="586" y="180" fill="#ffffff" font-family="monospace" font-size="28" font-weight="800">125 <tspan font-size="14" fill="#c084fc">U/HR</tspan></text>
+  <text x="586" y="205" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">12.5 Units/Labor Hour</text>
+
+  <rect x="586" y="222" width="158" height="26" rx="6" fill="#2e1065" stroke="#7e22ce" stroke-width="0.8" />
+  <text x="596" y="239" fill="#e9d5ff" font-family="monospace" font-size="11" font-weight="600">Benchmark: Excellent</text>
+
+  <!-- Bottom Formula Bar -->
+  <rect x="40" y="295" width="720" height="75" rx="10" fill="#090e1a" stroke="#1e293b" stroke-width="1.5" />
+  <text x="60" y="325" fill="#64748b" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1">OVERALL EQUIPMENT EFFECTIVENESS (OEE) FORMULA</text>
+  <text x="60" y="352" fill="#00fff2" font-family="monospace" font-size="16" font-weight="600">OEE % = Availability (Run Time ÷ Planned) × Performance × Quality (Good ÷ Total)</text>
+  <text x="650" y="352" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">ISO 22400</text>
+</svg>

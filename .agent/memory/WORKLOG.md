@@ -1,32 +1,44 @@
 # WORKLOG.md - Site 04 Engineering Activity Log
 
-## 2026-11-09: On-Page SEO 体检与临床指南手术刀级重构
+## 2026-11-09: On-Page SEO 临床级外科手术重构
 
-- **执行概述**:
-  - 对标 `seo.web.cafe/audit/` 评分标准，针对 `physical therapy productivity calculator` 核心大词执行深度体检与改版。
-- **实施明细**:
-  1. 解耦创建 `src/components/PhysicalTherapySeoContent.tsx`（340行），实现单文件行数合规；
-  2. 修复 `src/app/calculator/[slug]/page.tsx` 中的 Metadata 标题（50字符）与描述（154字符）；
-  3. 新增 `public/images/pt-productivity-formula-diagram.svg` 并在页面直出显式宽高 `<img>` 标签；
-  4. 扩充正文词数至 1,455 词，覆盖 Timed vs Untimed CPT 编码与 CMS 混合余数规则；
-  5. 补充 6 项高价值 FAQ 并同步至 `generateIndustrySchema` JSON-LD 结构化数据；
-  6. 静态构建测试通过（147 个页面 SSG 生成完成，退出码 0）；
-  7. 代码与初始 memory 提交为 `60b84b5` 并推流 GitHub master。
-- **核验证据**:
+- **执行概要**:
+  - 对标 `seo.web.cafe/audit/` 深度体检标准，对 `physical therapy productivity calculator` 执行大手术改造。
+- **实施细节**:
+  1. 拆分创建 `src/components/PhysicalTherapySeoContent.tsx`（340行），实现单文件合规；
+  2. 修改 `src/app/calculator/[slug]/page.tsx` 中的 Metadata 标题（50字符）与描述（154字符）；
+  3. 引入 `public/images/pt-productivity-formula-diagram.svg` 页面显式 `<img>` 标签；
+  4. 扩展正文至 1,455 词，详解 Timed vs Untimed CPT 与 CMS 规则；
+  5. 补充 6 组高价值 FAQ 并同步 `generateIndustrySchema` JSON-LD 结构化数据；
+  6. 静态编译通过，147 个页面 SSG 构建完成，耗时约 30s；
+  7. 同步原子 memory 提交为 `60b84b5` 推送 GitHub master。
+- **验证结果**:
   - `python tools/verify_memory_sync.py --site productivity-calculator` -> SYNCED
-  - 生产环境实时抓取：Title `Physical Therapy Productivity Calculator | PT & OT` (50 chars), Desc 154 chars, Img 1 SVG, HTML Words 1,455
-  - `seo.web.cafe/audit/` 在线复测：**总分 98 / 100 (A · 优秀)**，增幅 ▲ +9 分；Meta 元信息 25/25 满分、图片与媒体 8/8 满分、社交与结构化 10/10 满分、技术与抓取 17/17 满分；4-gram `physical therapy productivity calculator` 登顶全页密度榜 Rank 1（占位密度 1.17%，0 堆砌警告）。
+  - 生产实时抓取：Title `Physical Therapy Productivity Calculator | PT & OT` (50 chars), Desc 154 chars, Img 1 SVG, HTML Words 1,455
+  - `seo.web.cafe/audit/` 最终复检：**总分 98 / 100 (A 级 优秀)**，净增 +9 分；Meta 元信息 25/25 满分、图片多媒体 8/8 满分、社交结构化 10/10 满分、抓取 17/17 满分；4-gram `physical therapy productivity calculator` 稳居全页词频榜 Rank 1，占位密度 1.17%（0 堆砌告警）。
 
-## 2026-11-09: 04号站 /calculator/therapy 301 权重汇流实施
+## 2026-11-09: 04号站 /calculator/therapy 301 权重合流实施
 
-- **执行概述**:
-  - 依据 GSC 曝光分析与哥飞 SERP 解密，将 `/calculator/therapy` (132次曝光, 1点击) 301 永久重定向至 98 分王牌页面 `/calculator/physical-therapy`，消除同站关键词相食。
-- **实施明细**:
-  1. 建立 `public/_redirects` 部署 Cloudflare Pages 边缘 301 规则（包含主站与 zh/es/de/ja 5条规约）；
-  2. 清洗 `public/sitemap.xml`，剔除 5 条 therapy 变体，仅保留 canonical 页面；
-  3. 更新 `src/components/IndustryList.tsx`，过滤 therapy 冗余卡片，内链 100% 聚焦 physical-therapy；
-  4. 升级 `src/app/calculator/[slug]/page.tsx` 与 `src/app/[lang]/calculator/[slug]/page.tsx`，为 therapy 注入 cross-URL canonical (`/calculator/physical-therapy`) 与 `robots: noindex, follow` 兜底；
-  5. 静态编译验证通过（147 页面 SSG 100% 成功，`out/_redirects` 确认产出，`out/calculator/therapy.html` 确认带有 noindex 与跨页 canonical）。
-- **核验证据**:
+- **执行概要**:
+  - 依据 GSC 曝光与 SERP 数据，将 `/calculator/therapy` (132曝光, 1点击) 301 重定向至 98 分王牌页 `/calculator/physical-therapy`，终结站内自相残杀。
+- **实施细节**:
+  1. 编写 `public/_redirects` 部署 Cloudflare Pages 边缘 301 规则（包含主站与 zh/es/de/ja 5语种）；
+  2. 清理 `public/sitemap.xml`，移除 5 处 therapy 节点，保持 canonical 页面纯净；
+  3. 修改 `src/components/IndustryList.tsx`，隐藏 therapy 分类卡片，流量 100% 聚焦 physical-therapy；
+  4. 修改 `src/app/calculator/[slug]/page.tsx` 与 `src/app/[lang]/calculator/[slug]/page.tsx`，为 therapy 注入 cross-URL canonical (`/calculator/physical-therapy`) 与 `robots: noindex, follow` 兜底；
+  5. 静态编译验证通过，147 页面 SSG 100% 成功，`out/_redirects` 确认产出，`out/calculator/therapy.html` 确认带有 noindex 与跨页 canonical。
+- **验证结果**:
   - `python tools/verify_memory_sync.py --site productivity-calculator` -> SYNCED
-  - 静态产物验证：`out/_redirects` 包含 5 条 301 规则；`sitemap.xml` 0 条 therapy、10 条 physical-therapy。
+  - 静态产物验证：`out/_redirects` 包含 5 条 301 规则，`sitemap.xml` 0 条 therapy、10 条 physical-therapy。
+
+## 2026-11-09: /calculator/manufacturing 工业制造全案升级与 On-Page SEO 外科手术
+
+- **执行概要**:
+  - 瞄准 GSC 排名第 2 核心词源 `/calculator/manufacturing`（228 次曝光，平均排名 20.6，极易难度 KD 4.5），实施从 55 D 级到 95+ A 级的全案重构。
+- **实施细节**:
+  1. 编写工业级交互组件 `src/components/ManufacturingCalculator.tsx`（420行）：工时产出率、工厂多班次排产规划、OEE 综合效率三模式，支持世界级 85% 标杆对照与一键工单日志复制；
+  2. 撰写专业级权威 SEO 文本组件 `src/components/ManufacturingSeoContent.tsx`（295行）：嵌入 800x400 零 CLS 矢量图 `manufacturing-productivity-formula.svg`，呈现 OEE 四级基准矩阵、四大制造业行业对照、排产数学题实操解答与 6 大 PAA FAQ；
+  3. 更新 `src/app/calculator/[slug]/page.tsx`：精炼 Title 56 字符（阻断模板溢出）、Description 152 字符（含精准关键词）、注入 `WebApplication` + `FAQPage` 双重 Schema；
+  4. 静态编译通过，147 页面 SSG 构建完成（3.0s），实测产物 HTML 词数达 1,304 词（突破 300 词惩罚断崖，进入 1200-1800 最佳权重带）。
+- **验证结果**:
+  - Static HTML 校验通过：Title 56 字符，Description 152 字符，Word count 1,304 词，配图 800x400 SVG，JSON-LD FAQPage + WebApplication 正常输出。
