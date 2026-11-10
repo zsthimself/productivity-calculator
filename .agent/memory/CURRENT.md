@@ -1,12 +1,13 @@
 # CURRENT.md - Site 04 Local Status & Active Loops
 
 ## 当前状态
-- **站点版本**: v1.19.0 (Retail Store SPLH & Space Density Suite)
+- **站点版本**: v1.20.0 (Agriculture Biological Yield & ASABE Field Capacity Suite)
 - **部署环境**: Cloudflare Pages (`productivitycalculator.work`)
-- **最近提交**: `9e3c226` (feat(seo): upgrade /calculator/retail with 3-mode SPLH/SPSF/GMROI engine, 1500w content & formula SVG)
+- **最近提交**: `b79cc2d` (feat(seo): upgrade /calculator/agriculture with 3-mode yield/EFC engine, 1500w content & formula SVG)
 - **实测验证**: 
   - Static Build (`npm run build`) 147 页面 100% 静态通过，0 错误
   - 核心页面 HTML 实测：
+    - `/calculator/agriculture`: 1,533 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 agriculture productivity calculator` 独占 Rank 1 登顶，出现 6 次，占位密度 1.17%，0 堆砌告警，狙击谷歌 US Top 1~3）
     - `/calculator/retail`: 1,678 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#5 retail productivity calculator` 命中，占位密度 1.07%，0 堆砌告警，狙击谷歌 Top 3）
     - `/calculator/marketing`: 1,444 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 marketing productivity calculator` 出现 8 次，占位密度 1.66%，独占 Rank 1 登顶，0 堆砌告警，狙击谷歌 Top 1）
     - `/calculator/data-entry`: 1,558 词，On-Page SEO **97 A 级卓越**（净增 +42 分，主题聚焦 100%，Meta 23.5/25，内容 19/19，媒体 8/8，结构化 10/10，抓取 17/17，4-gram `#1 data entry productivity calculator` 出现 6 次，占位密度 1.54%，独占 Rank 1 登顶，0 堆砌告警，谷歌实测 SERP Rank 3 稳固狙击第一）
@@ -63,4 +64,6 @@
 - [x] **TASK-034**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 401ms，体积 131KB，词数 1,444 词，3-gram `#1 marketing productivity calculator` 独占 Rank 1 登顶，占位密度 1.66%，0 堆砌告警）
 - [x] **TASK-035**: `/calculator/retail` 零售门店工效、每平方英尺销售额与 GMROI 核心词（81曝光，KD 2.2 极易）全案升级：三模式 `RetailProductivityCalculator.tsx`（759行）、高保真 `RetailProductivitySeoContent.tsx`（284行）、800x400 矢量架构图、53字符精炼 Title、160字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
 - [x] **TASK-036**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 476ms，体积 140KB，词数 1,678 词，3-gram 命中，0 堆砌告警，冲刺谷歌 Top 3）
-- [ ] **TASK-037**: Page 18 `/calculator/agriculture` (84曝光, KD 12.3 极易) 或 `/calculator/restaurant` (61曝光, KD 18.5 极易) 候选排期与基线侦察。
+- [x] **TASK-037**: `/calculator/agriculture` 农业耕作单产与农机 EFC 效率核心词（84曝光，谷歌美区自然排名 Rank 8 现存，KD 4.7 极易）全案升级：三模式 `AgricultureProductivityCalculator.tsx`（737行）、高保真 `AgricultureProductivitySeoContent.tsx`（325行）、800x400 矢量架构图、59字符精炼 Title、158字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
+- [x] **TASK-038**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 433ms，体积 140KB，词数 1,533 词，3-gram `#1 agriculture productivity calculator` 独占 Rank 1 登顶，出现 6 次，占位密度 1.17%，0 堆砌告警，狙击谷歌 US Top 1~3）
+- [ ] **TASK-039**: Page 19 `/calculator/restaurant` (61曝光, KD 18.5 极易) 或 `/calculator/software-development` (58曝光) 候选排期与基线侦察。

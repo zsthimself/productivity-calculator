@@ -358,3 +358,17 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 锁定 53 字符（`Retail Productivity Calculator | SPLH & Space Density`），Description 精准压缩至 160 字符黄金区间。
   4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 476ms，体积 140KB，词数 1,678 词，3-gram 命中，0 堆砌告警，冲刺谷歌 Top 3）。
+
+### DEC-020: /calculator/agriculture 农业耕作单产与农机作业效率(EFC)全案升级与 On-Page SEO 外科手术
+- **背景**:
+  1. GSC 表现与 SERP 侦察：`/calculator/agriculture` 累计 84 次真实曝光，哥飞 SERP 侦察显示 KD 仅 **4.7 · 极易**，且我们未经优化的 263 词极简页面已奇迹般排在 **Google 美区搜索结果第 8 名**！
+  2. 竞争格局分析：前 10 名中几乎无任何针对农业单产与农机作业效率的专业交互工具（Top 1/2 为政府税收与大学扩展长文，Top 5 为已放弃维护的 DR 0 农场杂项站），完全处于无防御真空带；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D级较差)，正文仅 263 词触发 <300 词硬性惩罚断崖，且缺少专属工具引擎、矢量配图与精准 TDK。
+- **决定**:
+  1. 研发专业级农业生产力交互组件 `src/components/AgricultureProductivityCalculator.tsx`（737行，严格 $\le 800$ 行）：生物单产与采收工效、ASABE D497 农机作业效率 (EFC) 与柴油消耗率、经营边际与保本单产三模式，内置四大场景预设（爱荷华玉米、堪萨斯旱地小麦、加州有机果蔬、华盛顿商用苹果）与一键 Markdown 审计报告导出；
+  2. 撰写专业级权威 SEO 文本组件 `src/components/AgricultureProductivitySeoContent.tsx`（325行，1,533 词）：嵌入 800x400 零 CLS 矢量图 `agriculture-productivity-formula.svg`，呈现 5 大农作物 USDA 标杆对照表、爱荷华 1,500 英亩玉米农场节油与增产实战案例、5 大精益精准农业策略与 6 大 PAA FAQ，并引用 USDA ERS、ASABE D497 与 UN FAO 权威信源；
+  3. 解耦扩充结构化数据：创建 `src/lib/schemas/faqs/agriculture.ts` 并注册至 `faqs/index.ts`，在 `meta.ts` 注册专用元数据；
+  4. 重构优化 `src/app/calculator/[slug]/page.tsx`（777行，严格守牢 $\le 800$ 行红线）：精炼 Title 59 字符（`Agriculture Productivity Calculator | Yield & Field Capacity`）、Description 158 字符，配置专属 Badge 与 H1；
+  5. 静态编译验证通过，147 页面 SSG 构建完成（1.01s），实测产物 HTML 词数达 1,533 词；
+  6. 提交 commit `b79cc2d` 推送至 GitHub master，Cloudflare Pages 自动构建上线；
+  7. 经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 433ms，体积 140KB，词数 1,533 词，3-gram `#1 agriculture productivity calculator` 独占 Rank 1 登顶，出现 6 次，占位密度 1.17%，0 堆砌告警，狙击谷歌 US Top 1~3）。
