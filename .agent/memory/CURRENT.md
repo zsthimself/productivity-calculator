@@ -1,12 +1,13 @@
 # CURRENT.md - Site 04 Local Status & Active Loops
 
 ## 当前状态
-- **站点版本**: v1.16.0 (Sales Productivity & Pipeline Velocity Suite)
+- **站点版本**: v1.17.0 (Data Entry KPH & Batch Velocity Suite)
 - **部署环境**: Cloudflare Pages (`productivitycalculator.work`)
-- **最近提交**: `8ecd466` (feat(calculator): upgrade sales suite with 3-mode calculator, SVG diagram, and deep SEO content)
+- **最近提交**: `2cd3614` (feat(seo): upgrade /calculator/data-entry with 3-mode KPH engine, 1500w content & formula SVG)
 - **实测验证**: 
   - Static Build (`npm run build`) 147 页面 100% 静态通过，0 错误
   - 核心页面 HTML 实测：
+    - `/calculator/data-entry`: 1,558 词，On-Page SEO **97 A 级卓越**（净增 +42 分，主题聚焦 100%，Meta 23.5/25，内容 19/19，媒体 8/8，结构化 10/10，抓取 17/17，4-gram `#1 data entry productivity calculator` 出现 6 次，占位密度 1.54%，独占 Rank 1 登顶，0 堆砌告警，谷歌实测 SERP Rank 3 稳固狙击第一）
     - `/calculator/sales`: 1,485 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 17.5/19，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 sales productivity calculator` 出现 8 次，占位密度 1.62%，独占 Rank 1 登顶，0 堆砌告警）
     - `/calculator/construction`: 1,602 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 construction productivity calculator` 出现 5 次，占位密度 0.94%，独占 Rank 1 登顶，0 堆砌告警）
     - `/calculator/machine`: 1,528 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 machine productivity calculator` 出现 6 次，占位密度 1.18%，独占 Rank 1 登顶，0 堆砌告警）
@@ -54,3 +55,6 @@
 - [x] **TASK-028**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 451ms，体积 136KB，词数 1,602 词，3-gram `#1 construction productivity calculator` 独占 Rank 1 登顶，占位密度 0.94%）
 - [x] **TASK-029**: `/calculator/sales` 销售人效与管道流速核心词（198 真实曝光，KD 27.2 容易）全案升级：三模式 `SalesProductivityCalculator.tsx`（717行）、高保真 `SalesProductivitySeoContent.tsx`（326行）、800x400 矢量架构图、57字符精炼 Title、159字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
 - [x] **TASK-030**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 17.5/19，媒体 8/8，结构化 10/10，抓取 17/17，耗时 1007ms，体积 139KB，词数 1,485 词，3-gram `#1 sales productivity calculator` 独占 Rank 1 登顶，占位密度 1.62%，0 堆砌告警）
+- [x] **TASK-031**: `/calculator/data-entry` 数据录入效率与 BPO 成本核心词（152曝光，1自然点击，谷歌排名 SERP Rank 3 稳守，KD 10.7 极易）全案升级：三模式 `DataEntryProductivityCalculator.tsx`（782行）、高保真 `DataEntryProductivitySeoContent.tsx`（283行）、800x400 矢量架构图、52字符精炼 Title、158字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
+- [x] **TASK-032**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **97 / 100 A 级卓越**（净增 +42 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 23.5/25，内容 19/19，媒体 8/8，结构化 10/10，抓取 17/17，耗时 380ms，体积 132KB，词数 1,558 词，4-gram `#1 data entry productivity calculator` 独占 Rank 1 登顶，占位密度 1.54%，0 堆砌告警）
+- [ ] **TASK-033**: Page 16 `/calculator/marketing` 或 `/calculator/customer-support` 候选页面排期与基线侦察。

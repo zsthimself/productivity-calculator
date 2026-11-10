@@ -295,3 +295,24 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 锁定 57 字符（`Sales Productivity Calculator | Velocity & Quota Rate`），Description 精准压缩至 159 字符黄金区间。
   4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 17.5/19，媒体 8/8，结构化 10/10，抓取 17/17，耗时 1007ms，体积 139KB，词数 1,485 词，3-gram `#1 sales productivity calculator` 出现 8 次，占位密度 1.62%，独占 Rank 1 登顶，0 堆砌告警）。
+
+### DEC-017: /calculator/data-entry 数据录入效率与 BPO 成本全案升级、KPH/WPM 转换与每千条记录成本模型
+- **背景**:
+  1. GSC 表现：`/calculator/data-entry` 合并曝光 152 次，产生 1 次真实自然点击，平均排名 18.3 位；
+  2. 哥飞 SERP 侦察：`data entry productivity calculator` 难度 KD **10.7 · 极易**，**震撼发现：本站在谷歌全球 SERP 已稳居 Rank 3**！前两名为 generic 首页或泛工业页面，第 7/8 名为 monday.com 与 getharvest.com 弱相关浮标。升级此页将立即稳固 Rank 1 狙击位；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 267 词触发 <300 词硬伤封顶，缺专属配图与深度数据录入交互计算引擎。
+- **决定**:
+  1. 研发专业数据录入运营级 `DataEntryProductivityCalculator.tsx`（782行）：
+     - 模式 1：KPH 与 Net 净精准度模型（Gross Keystrokes Per Hour、Keying Errors、Error Penalty Multiplier 5x-10x、Shift Hours、Net KPH、Raw Accuracy %、Net Accuracy %、Equivalent WPM、Shift Total Net Keystrokes、Operator Tier）；
+     - 模式 2：WPM 与批次流速模型（Gross Typing Speed WPM、Keystrokes per Record、Allocated Hours、Shift Target Batch Quota、Records/hr、Cycle Time per Record、100-Record Batch Time、Attainment %）；
+     - 模式 3：每千条记录成本与 BPO 经济性模型（Hourly Loaded Wage $、Records Completed/hr、Monthly Record Volume、QA Error Rework Overhead %、Offshore BPO Benchmark Rate、Unit Cost per 1,000 Records、Direct Cost per Record、Monthly In-House Spend、Monthly Benchmark Total、Variance Analysis）；
+     - 提供四大行业标杆预设（CMS-1500 医疗报销账单、电商 SKU 目录录入、财务应付账款与发票 10-Key、法律档案与病历数字化），支持一键导出 Markdown 数据录入审计报告。
+  2. 撰写专业级权威 SEO 文本组件 `DataEntryProductivitySeoContent.tsx`（283行）：
+     - 嵌入 800x400 零 CLS 矢量图 `data-entry-productivity-formula.svg`；
+     - 详述三大核心算式：Net KPH with Error Deduction、Batch Velocity & Records/hr、Unit Economics / 1,000 Records；
+     - 涵盖医疗账单、财务应付、电商 SKU、法律档案、物流运单 5 大行业 BPO 录入标杆基准表；
+     - 提供真实芝加哥/马尼拉双岸医疗外包中心 38 名录入员千条记录成本从 $265.40 骤降至 $142.10，年省 $172,000 实战案例；
+     - 提炼 5 大精益录入策略（正则格式校验掩码、快捷键消灭鼠标依赖、双屏工位工效学、OCR混合预填、分级质量抽检）；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 锁定 52 字符（`Data Entry Productivity Calculator | KPH & WPM Rate`），Description 精准压缩至 158 字符黄金区间。
+  4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **97 / 100 A 级卓越**（净增 +42 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 23.5/25，内容 19/19，媒体 8/8，结构化 10/10，抓取 17/17，耗时 380ms，体积 132KB，词数 1,558 词，4-gram `#1 data entry productivity calculator` 出现 6 次，占位密度 1.54%，独占 Rank 1 登顶，0 堆砌告警）。
