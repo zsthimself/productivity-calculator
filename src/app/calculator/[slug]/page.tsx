@@ -1,6 +1,6 @@
 /**
  * [INPUT]: industries.json (静态配置), URL slug 参数, 专用计算器组件群, generateIndustrySchema
- * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy、manufacturing、labor、employee、video-production、call-center、logistics、cleaning-services、healthcare、welding 专属套件
+ * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy、manufacturing、labor、employee、video-production、call-center、logistics、cleaning-services、healthcare、welding、technician 专属套件
  * [POS]: pSEO 模板与垂直突围页 - 承接 slug 对应 20+ 行业页面，对高潜力词做专属架构承接
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -28,6 +28,8 @@ import { HealthcareProductivityCalculator } from "@/components/HealthcareProduct
 import HealthcareProductivitySeoContent from "@/components/HealthcareProductivitySeoContent";
 import WeldingProductivityCalculator from "@/components/WeldingProductivityCalculator";
 import WeldingProductivitySeoContent from "@/components/WeldingProductivitySeoContent";
+import TechnicianProductivityCalculator from "@/components/TechnicianProductivityCalculator";
+import TechnicianProductivitySeoContent from "@/components/TechnicianProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -287,6 +289,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         );
     }
 
+    if (slug === "technician") {
+        return buildMeta(
+            "Technician Productivity Calculator | Efficiency & Hours",
+            "Free technician productivity calculator to measure automotive flat-rate efficiency, labor productivity, wrench-time utilization, and shop billable gross margin.",
+            [
+                "technician productivity calculator",
+                "technician efficiency calculator",
+                "service technician productivity",
+                "how to calculate technician efficiency",
+                "technician proficiency formula",
+                "automotive technician productivity",
+                "wrench time calculator",
+                "flat rate technician calculator",
+                "mechanic efficiency calculator",
+                "productivity calculator",
+            ],
+            pageUrl,
+            slug
+        );
+    }
+
     if (slug === "welding") {
         return buildMeta(
             "Welding Productivity Calculator | Deposition Rate & AWS",
@@ -393,6 +416,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isCleaningServices = slug === "cleaning-services";
     const isHealthcare = slug === "healthcare";
     const isWelding = slug === "welding";
+    const isTechnician = slug === "technician";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -448,6 +472,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Clinical Healthcare & Hospital Operations Suite"
                                     : isWelding
                                     ? "Structural Welding & AWS D1.1 Suite"
+                                    : isTechnician
+                                    ? "Automotive & Field Service Operations Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -475,6 +501,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Healthcare & Clinical"
                                     : isWelding
                                     ? "Welding & Fabrication"
+                                    : isTechnician
+                                    ? "Technician & Field Service"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">
@@ -504,6 +532,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Clinical healthcare productivity calculator, physician wRVU production modeler, and hospital inpatient nursing HPPD staffing benchmark analyzer."
                                 : isWelding
                                 ? "Industrial welding productivity calculator, AWS filler metal deposition rate estimator, arc-on operating factor analyzer, and joint fabrication cost modeler."
+                                : isTechnician
+                                ? "Industrial technician productivity calculator, automotive flat-rate efficiency modeler, and field service wrench-time analyzer."
                                 : industry.description}
                         </p>
 
@@ -536,6 +566,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <HealthcareProductivityCalculator />
                     ) : isWelding ? (
                         <WeldingProductivityCalculator />
+                    ) : isTechnician ? (
+                        <TechnicianProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -561,6 +593,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <HealthcareProductivitySeoContent />
                     ) : isWelding ? (
                         <WeldingProductivitySeoContent />
+                    ) : isTechnician ? (
+                        <TechnicianProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">

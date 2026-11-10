@@ -18,6 +18,7 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
     const isCleaningServices = industry.slug === "cleaning-services";
     const isHealthcare = industry.slug === "healthcare";
     const isWelding = industry.slug === "welding";
+    const isTechnician = industry.slug === "technician";
     const pageUrl = `${baseUrl}/calculator/${industry.slug}`;
 
     const schemas: Record<string, unknown>[] = [
@@ -44,6 +45,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Healthcare Productivity Calculator"
                 : isWelding
                 ? "Welding Productivity Calculator"
+                : isTechnician
+                ? "Technician Productivity Calculator"
                 : industry.title,
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web Browser",
@@ -73,6 +76,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                 ? "Free clinical healthcare productivity calculator. Measure physician wRVU production, inpatient nursing HPPD staffing, and ambulatory patient encounter velocity."
                 : isWelding
                 ? "Free welding productivity calculator to measure filler metal deposition rate, arc-on operating factor, joint volume consumption, and fabrication cost per foot."
+                : isTechnician
+                ? "Free technician productivity calculator to measure automotive flat-rate efficiency, labor productivity, wrench-time utilization, and shop billable gross margin."
                 : industry.description,
         },
         {
@@ -114,6 +119,8 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                         ? "Healthcare Productivity Calculator"
                         : isWelding
                         ? "Welding Productivity Calculator"
+                        : isTechnician
+                        ? "Technician Productivity Calculator"
                         : industry.title,
                     item: pageUrl,
                 },
@@ -677,6 +684,63 @@ export function generateIndustrySchema(industry: IndustryData, baseUrl: string =
                     acceptedAnswer: {
                         "@type": "Answer",
                         text: "Over-welding occurs when a fillet weld leg size exceeds engineering specifications. Because weld volume scales quadratically with leg size, increasing a fillet from 1/4 inch to 5/16 inch requires 56% more filler metal and 56% more labor hours, adding zero structural strength while causing heat distortion.",
+                    },
+                },
+            ],
+        });
+    }
+
+    if (isTechnician) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "How do you calculate technician productivity?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Technician productivity is calculated by dividing actual clocked hours working on repair orders by total available scheduled shift hours: Productivity (%) = (Clock Hours Worked ÷ Available Shift Hours) × 100. It measures shop schedule and bay utilization.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is the difference between technician efficiency and technician productivity?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Technician efficiency measures job completion speed against flat-rate standards (Billed Hours ÷ Clocked Hours), reflecting technical skill. Technician productivity measures schedule utilization (Clocked Hours ÷ Available Shift Hours), reflecting shop dispatch and absence of idle time.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is a good technician efficiency percentage in automotive repair?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Standard baseline technician efficiency in automotive repair ranges from 100% to 115% for experienced technicians. Master diagnostic technicians frequently achieve 125% to 145%+ efficiency, whereas shop averages below 90% indicate bottlenecks or diagnostic delays.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is wrench time in maintenance and field service?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Wrench time is the percentage of a field or industrial maintenance technician's shift spent physically performing hands-on repairs on equipment, excluding travel time, parts retrieval, and administrative delay. Standard operations average 35% to 45%, while world-class lean fleets reach 55% to 65%.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What is technician proficiency (or effective labor utilization)?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Technician proficiency combines efficiency and productivity to measure total revenue-generating performance: Proficiency (%) = (Billed Flat-Rate Hours ÷ Available Shift Hours) × 100. Billing 50 flat-rate hours in a 40-hour work week equals 125% proficiency.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How can service managers improve technician billable hours?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Service managers increase billable hours by pre-staging required parts before vehicles enter bays, assigning dedicated porters, utilizing digital vehicle inspections (DVI) for instant customer estimate approval, and structuring tiered flat-rate bonus incentives.",
                     },
                 },
             ],

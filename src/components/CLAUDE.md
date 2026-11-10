@@ -23,6 +23,8 @@ HealthcareProductivityCalculator.tsx: 医疗卫生与临床运营生产力计算
 HealthcareProductivitySeoContent.tsx: 医疗卫生权威深度语义指南，SVG架构图/MGMA基准表/住院排班案例/FAQ，295行
 WeldingProductivityCalculator.tsx: 焊接与构件制造生产力计算器，AWS熔敷率/电弧持续率/焊缝用量/单英尺成本，730行
 WeldingProductivitySeoContent.tsx: 焊接权威深度语义指南，SVG架构图/AWS基准表/钢结构案例/FAQ，345行
+TechnicianProductivityCalculator.tsx: 技师与外勤工程生产力计算器，汽修定额工时/外勤Wrench-Time/工单毛利，664行
+TechnicianProductivitySeoContent.tsx: 技师权威深度语义指南，SVG架构图/NADA基准表/6车位汽修厂案例/FAQ，345行
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗
