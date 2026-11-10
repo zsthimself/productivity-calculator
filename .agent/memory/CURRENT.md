@@ -1,10 +1,10 @@
 # CURRENT.md - Site 04 Local Status & Active Loops
 
 ## 当前状态
-- **站点版本**: v1.29.0 (AdSense Blocker Remediation: Noindex Thin i18n Clones & Expand Homepage)
+- **站点版本**: v1.30.0 (Header Non-English Switcher Isolation & Subtitle De-Stacking)
 - **部署环境**: Cloudflare Pages (`productivitycalculator.work`)
-- **最近提交**: 待本轮原子同步提交 (`TASK-055` / `DEC-029`)
-- **核心架构升级**: 完成 [src/app/[lang]/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/[lang]/page.tsx) 与 [src/app/[lang]/calculator/[slug]/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/[lang]/calculator/[slug]/page.tsx) `robots: noindex, follow` 收口；清理 [sitemap.xml](file:///d:/projects/sites/productivity-calculator/public/sitemap.xml) 为 31 条深内容英文 Canonical URL；扩写首页 [src/app/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/page.tsx) 至 1,350+ 词并嵌入公式图与跨行业基准表；消除 [calculatorRegistry.tsx](file:///d:/projects/sites/productivity-calculator/src/lib/calculatorRegistry.tsx) 与首页名词堆砌及 `"Clinical"` 模板文案。
+- **最近提交**: 待本轮原子同步提交 (`TASK-056` / `DEC-030`)
+- **核心架构升级**: 完成 [src/app/[lang]/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/[lang]/page.tsx) 与 [src/app/[lang]/calculator/[slug]/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/[lang]/calculator/[slug]/page.tsx) `robots: noindex, follow` 收口；清理 [sitemap.xml](file:///d:/projects/sites/productivity-calculator/public/sitemap.xml) 为 31 条深内容英文 Canonical URL；扩写首页 [src/app/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/page.tsx) 至 1,350+ 词；完成 [src/lib/calculatorRegistry.tsx](file:///d:/projects/sites/productivity-calculator/src/lib/calculatorRegistry.tsx) 全部 23 组三词逗号堆砌副标题自然句化改造，并在 [src/components/Header.tsx](file:///d:/projects/sites/productivity-calculator/src/components/Header.tsx) 上对默认英文站移除多语言切换器以防将用户导流至 `noindex` 译页。
 - **实测验证**: 
   - Static Build (`npm run build`) 147 页面 100% 静态编译通过，0 错误
   - 全部 8 大未升级页面经 `seo.web.cafe/audit/` 实测跑分，**100% 斩获 $\ge 96$ A 级卓越**：
@@ -36,3 +36,4 @@
 - [x] **TASK-053**: `/calculator/general` 全行业通用生产力基准全案升级（单要素工时、柯布道格拉斯 TFP、复合要素边际模型，commit `978bd85`）
 - [x] **TASK-054**: `/calculator/general` 线上体检复核，得分飙升至 **100 / 100 A 级满分大满贯**
 - [x] **TASK-055**: 修复 `seo.web.cafe/adsense/` 报出的 2 Blocker + 1 High（非英 <500 词译页设 `noindex`、精简 `sitemap.xml` 至 31 条英文精选路由、首页扩写至 1,350+ 词并嵌入 SVG 与基准表、清理营销副标题堆砌），147 页面 `npm run build` 编译 PASS
+- [x] **TASK-056**: 清除 `/adsense/` 残留的 `ADS-CONTENT-08` Medium 隐患：重写 [calculatorRegistry.tsx](file:///d:/projects/sites/productivity-calculator/src/lib/calculatorRegistry.tsx) 全部 23 组逗号堆砌副标题，并在 [Header.tsx](file:///d:/projects/sites/productivity-calculator/src/components/Header.tsx) 英文主站导航移除多语言切换器改直链高权重新核心内页，147 页面 `npm run build` 编译 PASS

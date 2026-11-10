@@ -75,7 +75,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     "physical-therapy": {
         badgeText: "Physical Therapy Clinical Suite",
         titlePrefix: "Physical Therapy",
-        subtitle: "Clinical physical therapy productivity calculator, reverse clock-out planner, and Medicare 8-minute rule converter for PT, OT & SLP clinicians.",
+        subtitle: "Calculate PT, OT & SLP billable utilization, plan shift clock-out targets, and apply the Medicare 8-minute rule.",
         metaTitle: "Physical Therapy Productivity Calculator | PT & OT",
         metaDescription: "Free physical therapy productivity calculator for PT, OT, and therapists. Calculate clinical productivity percentage, treatment minutes, lunch break, and target hours.",
         keywords: [
@@ -93,7 +93,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     manufacturing: {
         badgeText: "Manufacturing Operations Suite",
         titlePrefix: "Manufacturing",
-        subtitle: "Industrial manufacturing productivity calculator, machine throughput estimator, and OEE efficiency benchmark analyzer.",
+        subtitle: "Measure machine line throughput, shift output per labor hour, and Overall Equipment Effectiveness (OEE).",
         metaTitle: "Manufacturing Productivity Calculator | OEE & Labor Rate",
         metaDescription: "Free manufacturing productivity calculator. Measure factory output, labor productivity per hour, machine cycle efficiency, and OEE benchmarks instantly.",
         keywords: [
@@ -113,7 +113,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     labor: {
         badgeText: "Workforce Operations Suite",
         titlePrefix: "Labor",
-        subtitle: "Workforce labor productivity calculator, blended team payroll rate modeler, and employee capacity utilization analyzer.",
+        subtitle: "Compare output per worked hour against blended team payroll rates and shift capacity utilization.",
         metaTitle: "Labor Productivity Calculator | Units & Output per Hour",
         metaDescription: "Free labor productivity calculator. Measure workforce units per hour, revenue per labor dollar, and team capacity utilization with real-time benchmarks.",
         keywords: [
@@ -132,7 +132,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     employee: {
         badgeText: "Workforce Executive Suite",
         titlePrefix: "Employee",
-        subtitle: "Executive employee productivity calculator, revenue per FTE modeler, and department staff quota performance analyzer.",
+        subtitle: "Evaluate revenue per full-time employee (FTE), department output ratios, and quota pacing.",
         metaTitle: "Employee Productivity Calculator | Revenue per FTE & Target ROI",
         metaDescription: "Free employee productivity calculator. Measure revenue per employee, net profit per FTE, and employee compensation ROI with industry-level benchmarks.",
         keywords: [
@@ -152,7 +152,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     "video-production": {
         badgeText: "Broadcast & Studio Production Suite",
         titlePrefix: "Video Production",
-        subtitle: "Studio video production calculator, cost per finished minute estimator, and post-production turnaround scheduler for filmmakers, agencies & creators.",
+        subtitle: "Estimate delivered video minutes per editing hour, post-production turnaround, and shoot cost efficiency.",
         metaTitle: "Video Production Calculator | Cost & Turnaround Estimator",
         metaDescription: "Free video production calculator. Estimate video production costs per minute, editing turnaround time, and crew labor efficiency across all project tiers.",
         keywords: [
@@ -173,7 +173,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     "call-center": {
         badgeText: "Contact Center Operations Suite",
         titlePrefix: "Call Center",
-        subtitle: "Contact center productivity calculator, agent occupancy analyzer, and shrinkage-adjusted staffing scheduler for customer support & BPO teams.",
+        subtitle: "Measure contact center handle velocity, agent occupancy, and shrinkage-adjusted shift staffing.",
         metaTitle: "Call Center Productivity Calculator | Agent Occupancy & CPH",
         metaDescription: "Free call center productivity calculator. Measure agent occupancy, calls per hour (CPH), handling velocity (AHT), and shrinkage with WFM benchmarks.",
         keywords: [
@@ -194,7 +194,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     logistics: {
         badgeText: "Warehouse & Supply Chain Suite",
         titlePrefix: "Logistics",
-        subtitle: "Warehouse logistics productivity calculator, units per hour (UPH) estimator, dock-to-stock tracker, and fleet unit shipping cost modeler for distribution centers & 3PLs.",
+        subtitle: "Calculate warehouse units per hour (UPH), dock-to-stock speed, and per-order fulfillment labor cost.",
         metaTitle: "Logistics Productivity Calculator | Warehouse & Pick Rate",
         metaDescription: "Free logistics productivity calculator to measure warehouse units per hour (UPH), picking velocity, order fulfillment cycle time, and labor cost per order.",
         keywords: [
@@ -216,7 +216,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         badgeText: "Commercial Janitorial & ISSA 612 Suite",
         titlePrefix: "Commercial Cleaning Time",
         titleSuffix: "& Productivity Calculator",
-        subtitle: "Commercial cleaning time calculator, janitorial square footage production rate analyzer, and contract bidding cost estimator based on official ISSA 612 standards.",
+        subtitle: "Calculate commercial cleaning hours per building, square feet per cleaner hour, and bid margins using ISSA 612 rates.",
         metaTitle: "Commercial Cleaning Time Calculator | ISSA Production Rates",
         metaDescription: "Free commercial cleaning time calculator to estimate janitorial labor hours, square footage production rates, and contract bidding costs with ISSA standards.",
         keywords: [
@@ -237,7 +237,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     healthcare: {
         badgeText: "Clinical Healthcare & Hospital Operations Suite",
         titlePrefix: "Healthcare & Clinical",
-        subtitle: "Clinical healthcare productivity calculator, physician wRVU production modeler, and hospital inpatient nursing HPPD staffing benchmark analyzer.",
+        subtitle: "Track clinic visits per provider hour, physician wRVU output, and nursing hours per patient day (HPPD).",
         metaTitle: "Healthcare Productivity Calculator | wRVU & HPPD Benchmark",
         metaDescription: "Free clinical healthcare productivity calculator. Measure physician wRVU production, inpatient nursing HPPD staffing, and ambulatory patient encounter velocity.",
         keywords: [
@@ -258,7 +258,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     welding: {
         badgeText: "Structural Welding & AWS D1.1 Suite",
         titlePrefix: "Welding & Fabrication",
-        subtitle: "Industrial welding productivity calculator, AWS filler metal deposition rate estimator, arc-on operating factor analyzer, and joint fabrication cost modeler.",
+        subtitle: "Calculate weld metal deposition rates, arc-on time utilization, and fabrication labor cost per foot.",
         metaTitle: "Welding Productivity Calculator | Deposition Rate & AWS",
         metaDescription: "Free welding productivity calculator to measure filler metal deposition rate, arc-on operating factor, joint volume consumption, and fabrication cost per foot.",
         keywords: [
@@ -279,7 +279,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     technician: {
         badgeText: "Automotive & Field Service Operations Suite",
         titlePrefix: "Technician & Field Service",
-        subtitle: "Industrial technician productivity calculator, automotive flat-rate efficiency modeler, and field service wrench-time analyzer.",
+        subtitle: "Compare billed flat-rate hours against clocked shop time and measure field service wrench-time utilization.",
         metaTitle: "Technician Productivity Calculator | Efficiency & Hours",
         metaDescription: "Free technician productivity calculator to measure automotive flat-rate efficiency, labor productivity, wrench-time utilization, and shop billable gross margin.",
         keywords: [
@@ -300,7 +300,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     machine: {
         badgeText: "Automated Machinery & TPM Efficiency Suite",
         titlePrefix: "Machine & Equipment OEE",
-        subtitle: "Industrial machine productivity calculator, Overall Equipment Effectiveness (OEE) analyzer, and cycle time vs takt capacity modeler.",
+        subtitle: "Measure equipment availability, performance yield, and takt-time vs cycle-time production capacity.",
         metaTitle: "Machine Productivity Calculator | OEE & Cycle Time",
         metaDescription: "Free machine productivity calculator to measure OEE (Availability x Performance x Quality), cycle time vs takt time, throughput, and equipment downtime cost.",
         keywords: [
@@ -321,7 +321,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     construction: {
         badgeText: "Heavy Civil & Commercial Construction Suite",
         titlePrefix: "Construction & Crew Labor",
-        subtitle: "Industrial construction productivity calculator, trade man-hours per unit estimator, crew daily velocity forecaster, and Earned Value CPI analyzer.",
+        subtitle: "Measure trade man-hours per completed unit, crew daily output pacing, and Earned Value cost performance.",
         metaTitle: "Construction Productivity Calculator | Labor & Crew Rate",
         metaDescription: "Free construction productivity calculator to measure labor output rate, man-hours per unit, crew daily velocity, project duration, and CPI cost efficiency.",
         keywords: [
@@ -342,7 +342,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     sales: {
         badgeText: "Revenue Operations & B2B Sales Suite",
         titlePrefix: "Sales Pipeline & Quota",
-        subtitle: "Professional B2B sales productivity calculator, sales pipeline velocity forecaster, quota attainment analyzer, and sales per hour labor efficiency modeler.",
+        subtitle: "Track revenue per sales rep, pipeline deal velocity, and quota attainment against direct selling hours.",
         metaTitle: "Sales Productivity Calculator | Velocity & Quota Rate",
         metaDescription: "Free sales productivity calculator to measure pipeline velocity, quota attainment percentage, sales per hour, revenue per rep, and sales team labor efficiency.",
         keywords: [
@@ -363,7 +363,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     "data-entry": {
         badgeText: "Back-Office Operations & BPO Data Entry Suite",
         titlePrefix: "Data Entry Speed & Accuracy",
-        subtitle: "Free data entry productivity calculator, keystrokes per hour (KPH) analyzer, Net KPH accuracy modeler, and batch unit cost estimator for BPO operations.",
+        subtitle: "Calculate gross and net keystrokes per hour (KPH), error-adjusted speed, and BPO record processing costs.",
         metaTitle: "Data Entry Productivity Calculator | KPH & WPM Rate",
         metaDescription: "Free data entry productivity calculator to calculate keystrokes per hour (KPH), Net KPH accuracy, records per hour, batch velocity, and unit cost per 1,000 records.",
         keywords: [
@@ -449,7 +449,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     restaurant: {
         badgeText: "Hospitality & Dining Operations Suite",
         titlePrefix: "Restaurant RevPASH & Labor Cost",
-        subtitle: "Professional restaurant productivity calculator, Cornell RevPASH analyzer, prime cost modeler, and kitchen ticket velocity engine.",
+        subtitle: "Measure restaurant revenue per available seat hour (RevPASH), prime cost ratios, and kitchen ticket speed.",
         metaTitle: "Restaurant Productivity Calculator | RevPASH & Labor Cost",
         metaDescription: "Free restaurant productivity calculator. Measure RevPASH, table turnover velocity, prime cost ratios, and kitchen ticket output with industry benchmarks.",
         keywords: [
@@ -468,7 +468,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     "software-development": {
         badgeText: "DevOps & Engineering Velocity Suite",
         titlePrefix: "Software Development",
-        subtitle: "Professional developer productivity calculator, Google DORA release metrics, agile sprint story throughput, and ARR per engineer model.",
+        subtitle: "Benchmark engineering deployment frequency, sprint story throughput, and annual revenue per developer.",
         metaTitle: "Software Development Productivity Calculator | DORA Velocity",
         metaDescription: "Free software development productivity calculator. Measure DORA cycle velocity, sprint point throughput, and developer revenue ROI with industry benchmarks.",
         keywords: [
@@ -487,7 +487,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     "real-estate": {
         badgeText: "Realty & Brokerage Operations Suite",
         titlePrefix: "Real Estate Agent Commission &",
-        subtitle: "Professional realtor productivity calculator, GCI commission split modeler, showing conversion analyzer, and effective hourly wage engine.",
+        subtitle: "Calculate net brokerage commission after splits, showing-to-closing conversion rate, and real hourly earnings.",
         metaTitle: "Real Estate Productivity Calculator | Realtor Commission ROI",
         metaDescription: "Free real estate productivity calculator. Measure realtor commission splits, buyer showing conversion rates, and annual GCI per working hour with NAR standards.",
         keywords: [
@@ -505,7 +505,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     education: {
         badgeText: "Academic & Institutional Suite",
         titlePrefix: "Education & Teaching Faculty",
-        subtitle: "Professional education productivity calculator, NCES student-to-teacher ratio (STR), per-pupil spending, and credit hour yield model.",
+        subtitle: "Evaluate student-to-teacher ratios, instructional hour allocation, and cost per completed credit hour.",
         metaTitle: "Education Productivity Calculator | Teacher & School Metrics",
         metaDescription: "Free education productivity calculator. Measure student-teacher ratios, instructional hours per student, and academic tuition ROI with NCES benchmarks.",
         keywords: [
@@ -524,7 +524,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     "customer-support": {
         badgeText: "Customer Experience & Helpdesk Suite",
         titlePrefix: "Customer Support & Helpdesk",
-        subtitle: "Professional support agent productivity calculator, tickets per hour (TPH), first contact resolution (FCR), and cost per ticket engine.",
+        subtitle: "Track support tickets resolved per hour (TPH), first-contact resolution rate, and cost per support case.",
         metaTitle: "Customer Support Productivity Calculator | Helpdesk Metrics",
         metaDescription: "Free customer support productivity calculator. Measure tickets per agent hour, first contact resolution (FCR), CSAT yield, and support staffing with HDI data.",
         keywords: [
@@ -543,7 +543,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     "graphic-design": {
         badgeText: "Creative Studio & Agency Suite",
         titlePrefix: "Graphic Design & Creative Studio",
-        subtitle: "Professional design productivity calculator, asset turnaround time (TAT), revision drag ratio, and realized effective hourly rate model.",
+        subtitle: "Measure asset turnaround time, client revision drag percentage, and realized effective hourly rate.",
         metaTitle: "Graphic Design Productivity Calculator | Studio Metrics",
         metaDescription: "Free graphic design productivity calculator. Measure design turnaround time, revision loss ratio, effective hourly rate, and agency utilization with AIGA data.",
         keywords: [
@@ -562,7 +562,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     writing: {
         badgeText: "Editorial & Author Suite",
         titlePrefix: "Writing & Content Creation",
-        subtitle: "Professional writing productivity calculator, words per hour (WPH), editorial overhead drag, and effective hourly wage conversion.",
+        subtitle: "Calculate drafted words per hour (WPH), editing overhead ratio, and effective per-word hourly pay.",
         metaTitle: "Writing Productivity Calculator | Words Per Hour & Rates",
         metaDescription: "Free writing productivity calculator. Measure words per hour (WPH), effective freelance hourly rate, editing loss, and project ROI with editorial benchmarks.",
         keywords: [
@@ -581,7 +581,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     general: {
         badgeText: "Enterprise & Universal Baseline Suite",
         titlePrefix: "Universal Business Productivity",
-        subtitle: "Professional business productivity calculator, Cobb-Douglas Total Factor Productivity (TFP), and multifactor operating yield model.",
+        subtitle: "Measure labor output per hour, Cobb-Douglas Total Factor Productivity (TFP), and multifactor operating yield.",
         metaTitle: "Productivity Calculator | Total Factor & Business Metrics",
         metaDescription: "Free business productivity calculator. Measure Total Factor Productivity (TFP), labor efficiency ratios, capital return yields, and operational benchmarks.",
         keywords: [

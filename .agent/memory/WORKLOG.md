@@ -1,5 +1,15 @@
 # WORKLOG.md - Site 04 Engineering Activity Log
 
+## 2026-11-10: 清零 `ADS-CONTENT-08` 副标题堆砌并隔离英文导航语言切换 (`DEC-030`)
+
+- **执行概要**:
+  - 消除 `/adsense/` 唯一剩余的 1 条 Medium 告警，冲击 `0 Blocker / 0 High / 0 Medium`。
+- **实施细节**:
+  1. [src/lib/calculatorRegistry.tsx](file:///d:/projects/sites/productivity-calculator/src/lib/calculatorRegistry.tsx): 将全部 23 个行业套件的三名词逗号堆砌 `subtitle` 改写为流畅完整短句。
+  2. [src/components/Header.tsx](file:///d:/projects/sites/productivity-calculator/src/components/Header.tsx): 默认英文布局移除 `<LanguageSwitcher />`（仅在非英语 `[lang]` 路由保留），改为展示 `Industries`、`PT Suite`、`Manufacturing`、`About`、`Contact` 高价值导航链接。
+- **验证结果**:
+  - `npm run build`（Next.js 16.1.1 Turbopack）147 静态页面 100% 编译通过，0 错误。
+
 ## 2026-11-10: AdSense Blocker 解除（多语言薄页 noindex + 首页扩写 + sitemap 提纯）
 
 - **执行概要**:
