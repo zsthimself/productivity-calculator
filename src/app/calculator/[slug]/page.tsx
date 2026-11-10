@@ -36,6 +36,8 @@ import ConstructionProductivityCalculator from "@/components/ConstructionProduct
 import ConstructionProductivitySeoContent from "@/components/ConstructionProductivitySeoContent";
 import SalesProductivityCalculator from "@/components/SalesProductivityCalculator";
 import SalesProductivitySeoContent from "@/components/SalesProductivitySeoContent";
+import DataEntryProductivityCalculator from "@/components/DataEntryProductivityCalculator";
+import DataEntryProductivitySeoContent from "@/components/DataEntryProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -379,6 +381,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         );
     }
 
+    if (slug === "data-entry") {
+        return buildMeta(
+            "Data Entry Productivity Calculator | KPH & WPM Rate",
+            "Free data entry productivity calculator to calculate keystrokes per hour (KPH), Net KPH accuracy, records per hour, batch velocity, and unit cost per 1,000 records.",
+            [
+                "data entry productivity calculator",
+                "data entry speed calculator",
+                "keystrokes per hour calculator",
+                "kph calculator",
+                "net kph formula",
+                "data entry accuracy calculator",
+                "data entry cost per 1000 records",
+                "data entry words per minute",
+                "data entry production rate",
+                "productivity calculator",
+            ],
+            pageUrl,
+            slug
+        );
+    }
+
     if (slug === "welding") {
         return buildMeta(
             "Welding Productivity Calculator | Deposition Rate & AWS",
@@ -475,20 +498,11 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
         );
     }
 
-    const isPhysicalTherapy = slug === "physical-therapy";
-    const isManufacturing = slug === "manufacturing";
-    const isLabor = slug === "labor";
-    const isEmployee = slug === "employee";
-    const isVideoProduction = slug === "video-production";
-    const isCallCenter = slug === "call-center";
-    const isLogistics = slug === "logistics";
-    const isCleaningServices = slug === "cleaning-services";
-    const isHealthcare = slug === "healthcare";
-    const isWelding = slug === "welding";
-    const isTechnician = slug === "technician";
-    const isMachine = slug === "machine";
-    const isConstruction = slug === "construction";
-    const isSales = slug === "sales";
+    const isPhysicalTherapy = slug === "physical-therapy", isManufacturing = slug === "manufacturing";
+    const isLabor = slug === "labor", isEmployee = slug === "employee", isVideoProduction = slug === "video-production";
+    const isCallCenter = slug === "call-center", isLogistics = slug === "logistics", isCleaningServices = slug === "cleaning-services";
+    const isHealthcare = slug === "healthcare", isWelding = slug === "welding", isTechnician = slug === "technician";
+    const isMachine = slug === "machine", isConstruction = slug === "construction", isSales = slug === "sales", isDataEntry = slug === "data-entry";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -552,6 +566,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Heavy Civil & Commercial Construction Suite"
                                     : isSales
                                     ? "Revenue Operations & B2B Sales Suite"
+                                    : isDataEntry
+                                    ? "Back-Office Operations & BPO Data Entry Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -587,6 +603,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Construction & Crew Labor"
                                     : isSales
                                     ? "Sales Pipeline & Quota"
+                                    : isDataEntry
+                                    ? "Data Entry Speed & Accuracy"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">
@@ -624,6 +642,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Industrial construction productivity calculator, trade man-hours per unit estimator, crew daily velocity forecaster, and Earned Value CPI analyzer."
                                 : isSales
                                 ? "Professional B2B sales productivity calculator, sales pipeline velocity forecaster, quota attainment analyzer, and sales per hour labor efficiency modeler."
+                                : isDataEntry
+                                ? "Free data entry productivity calculator, keystrokes per hour (KPH) analyzer, Net KPH accuracy modeler, and batch unit cost estimator for BPO operations."
                                 : industry.description}
                         </p>
 
@@ -664,6 +684,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <ConstructionProductivityCalculator />
                     ) : isSales ? (
                         <SalesProductivityCalculator />
+                    ) : isDataEntry ? (
+                        <DataEntryProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -697,6 +719,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <ConstructionProductivitySeoContent />
                     ) : isSales ? (
                         <SalesProductivitySeoContent />
+                    ) : isDataEntry ? (
+                        <DataEntryProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">

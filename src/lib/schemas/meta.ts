@@ -100,6 +100,12 @@ export function getIndustryMeta(
                 description:
                     "Free sales productivity calculator to measure pipeline velocity, quota attainment percentage, sales per hour, revenue per rep, and sales team labor efficiency.",
             };
+        case "data-entry":
+            return {
+                name: "Data Entry Productivity Calculator",
+                description:
+                    "Free data entry productivity calculator to calculate keystrokes per hour (KPH), Net KPH accuracy, records per hour, batch velocity, and unit cost per 1,000 records.",
+            };
         default:
             return {
                 name: fallbackTitle,
