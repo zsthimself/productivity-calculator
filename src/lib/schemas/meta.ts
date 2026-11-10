@@ -88,6 +88,12 @@ export function getIndustryMeta(
                 description:
                     "Free machine productivity calculator to measure OEE (Availability x Performance x Quality), cycle time vs takt time, throughput, and equipment downtime cost.",
             };
+        case "construction":
+            return {
+                name: "Construction Productivity Calculator",
+                description:
+                    "Free construction productivity calculator to measure labor output rate, man-hours per unit, crew daily velocity, project duration, and CPI cost efficiency.",
+            };
         default:
             return {
                 name: fallbackTitle,

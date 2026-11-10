@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background:#090d16; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <pattern id="gridPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <!-- Background Grid -->
+  <rect width="800" height="400" fill="#090d16" />
+  <rect width="800" height="400" fill="url(#gridPattern)" />
+
+  <!-- Outer Card Frame -->
+  <rect x="15" y="15" width="770" height="370" rx="16" fill="#0f172a" fill-opacity="0.75" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Header Banner -->
+  <g transform="translate(40, 42)">
+    <rect x="0" y="0" width="165" height="24" rx="6" fill="#b45309" fill-opacity="0.25" stroke="#f59e0b" stroke-width="1" />
+    <text x="82" y="16" fill="#fbbf24" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">CII &amp; LEAN CONSTRUCTION</text>
+    <text x="180" y="18" fill="#f8fafc" font-size="19" font-weight="800" letter-spacing="-0.5">Construction Productivity &amp; Crew Velocity</text>
+  </g>
+
+  <!-- Flow Connector Line -->
+  <path d="M 260 180 L 300 180 M 520 180 L 560 180" stroke="#334155" stroke-width="2" stroke-dasharray="4,4" />
+
+  <!-- Pillar 1: Labor Productivity & Unit Rate -->
+  <g transform="translate(40, 95)">
+    <rect width="220" height="255" rx="12" fill="#131e33" stroke="#f59e0b" stroke-width="1.2" />
+    <rect x="12" y="12" width="196" height="30" rx="6" fill="#f59e0b" fill-opacity="0.15" />
+    <text x="110" y="32" fill="#fbbf24" font-size="12" font-weight="700" text-anchor="middle">1. UNIT RATE &amp; OUTPUT</text>
+
+    <!-- Formula Box -->
+    <rect x="16" y="54" width="188" height="48" rx="6" fill="#0b1324" stroke="#1e293b" stroke-width="1" />
+    <text x="110" y="74" fill="#94a3b8" font-size="10" text-anchor="middle">Labor Unit Rate Formula</text>
+    <text x="110" y="92" fill="#fbbf24" font-size="12" font-family="monospace" font-weight="700" text-anchor="middle">Man-Hours ÷ Work Units</text>
+
+    <text x="20" y="122" fill="#cbd5e1" font-size="11" font-weight="600">• Standard Jobsite Benchmarks</text>
+    <text x="28" y="138" fill="#64748b" font-size="10">Concrete Slab: 0.8–1.2 mh/m³</text>
+    <text x="28" y="152" fill="#64748b" font-size="10">Brick Masonry: 12–16 mh/1k</text>
+    <text x="28" y="166" fill="#64748b" font-size="10">Steel Erection: 8–14 mh/ton</text>
+
+    <rect x="16" y="180" width="188" height="55" rx="6" fill="#78350f" fill-opacity="0.25" stroke="#b45309" stroke-width="0.8" />
+    <text x="24" y="198" fill="#fde68a" font-size="10" font-weight="700">Output Rate (Units / Man-Hour)</text>
+    <text x="24" y="213" fill="#fef3c7" font-size="9.5">Measures trade physical velocity.</text>
+    <text x="24" y="226" fill="#fef3c7" font-size="9.5">Inverts to Unit Rate for estimating.</text>
+  </g>
+
+  <!-- Pillar 2: Crew Velocity & Project Duration -->
+  <g transform="translate(290, 95)">
+    <rect width="220" height="255" rx="12" fill="#131e33" stroke="#0ea5e9" stroke-width="1.2" />
+    <rect x="12" y="12" width="196" height="30" rx="6" fill="#0ea5e9" fill-opacity="0.15" />
+    <text x="110" y="32" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">2. CREW VELOCITY &amp; SCHEDULE</text>
+
+    <!-- Formula Box -->
+    <rect x="16" y="54" width="188" height="48" rx="6" fill="#0b1324" stroke="#1e293b" stroke-width="1" />
+    <text x="110" y="74" fill="#94a3b8" font-size="10" text-anchor="middle">Daily Production Velocity</text>
+    <text x="110" y="92" fill="#38bdf8" font-size="12" font-family="monospace" font-weight="700" text-anchor="middle">Crew Size × Hours × Output</text>
+
+    <text x="20" y="122" fill="#cbd5e1" font-size="11" font-weight="600">• Schedule Constraints</text>
+    <text x="28" y="138" fill="#64748b" font-size="10">Effective Shift: 7.0–7.5 net hrs</text>
+    <text x="28" y="152" fill="#64748b" font-size="10">Weather &amp; Staging Buffer: 10%–15%</text>
+    <text x="28" y="166" fill="#64748b" font-size="10">Liquidated Damages: $/day delay</text>
+
+    <rect x="16" y="180" width="188" height="55" rx="6" fill="#075985" fill-opacity="0.2" stroke="#0284c7" stroke-width="0.8" />
+    <text x="24" y="198" fill="#7dd3fc" font-size="10" font-weight="700">Duration = Scope ÷ Daily Rate</text>
+    <text x="24" y="213" fill="#bae6fd" font-size="9.5">Calculates critical path timeline.</text>
+    <text x="24" y="226" fill="#bae6fd" font-size="9.5">Prevents crew stacking congestion.</text>
+  </g>
+
+  <!-- Pillar 3: Labor Cost & CPI Index -->
+  <g transform="translate(540, 95)">
+    <rect width="220" height="255" rx="12" fill="#131e33" stroke="#10b981" stroke-width="1.2" />
+    <rect x="12" y="12" width="196" height="30" rx="6" fill="#10b981" fill-opacity="0.15" />
+    <text x="110" y="32" fill="#34d399" font-size="12" font-weight="700" text-anchor="middle">3. LABOR COST &amp; CPI INDEX</text>
+
+    <!-- Formula Box -->
+    <rect x="16" y="54" width="188" height="48" rx="6" fill="#0b1324" stroke="#1e293b" stroke-width="1" />
+    <text x="110" y="74" fill="#94a3b8" font-size="10" text-anchor="middle">Cost Performance Index</text>
+    <text x="110" y="92" fill="#34d399" font-size="12" font-family="monospace" font-weight="700" text-anchor="middle">CPI = Earned Value ÷ Actual</text>
+
+    <text x="20" y="122" fill="#cbd5e1" font-size="11" font-weight="600">• Financial Health Ranges</text>
+    <text x="28" y="138" fill="#64748b" font-size="10">CPI &gt; 1.0: Under Budget (Profitable)</text>
+    <text x="28" y="152" fill="#64748b" font-size="10">CPI = 1.0: On Track</text>
+    <text x="28" y="166" fill="#64748b" font-size="10">CPI &lt; 1.0: Cost Overrun Alert</text>
+
+    <rect x="16" y="180" width="188" height="55" rx="6" fill="#064e3b" fill-opacity="0.25" stroke="#059669" stroke-width="0.8" />
+    <text x="24" y="198" fill="#a7f3d0" font-size="10" font-weight="700">Cost per Work Unit ($/Unit)</text>
+    <text x="24" y="213" fill="#d1fae5" font-size="9.5">Unit Rate × Blended Hourly Wage.</text>
+    <text x="24" y="226" fill="#d1fae5" font-size="9.5">Isolates labor overrun before audit.</text>
+  </g>
+</svg>

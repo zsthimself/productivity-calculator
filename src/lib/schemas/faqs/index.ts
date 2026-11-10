@@ -19,6 +19,7 @@ import { weldingFaqs } from "./welding";
 import { technicianFaqs } from "./technician";
 import { machineFaqs } from "./machine";
 import { salesFaqs } from "./sales";
+import { constructionFaqs } from "./construction";
 
 export function getIndustryFaqs(slug: string): FAQItem[] {
     switch (slug) {
@@ -48,6 +49,8 @@ export function getIndustryFaqs(slug: string): FAQItem[] {
             return machineFaqs;
         case "sales":
             return salesFaqs;
+        case "construction":
+            return constructionFaqs;
         default:
             return [];
     }

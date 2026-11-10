@@ -32,6 +32,8 @@ import TechnicianProductivityCalculator from "@/components/TechnicianProductivit
 import TechnicianProductivitySeoContent from "@/components/TechnicianProductivitySeoContent";
 import MachineProductivityCalculator from "@/components/MachineProductivityCalculator";
 import MachineProductivitySeoContent from "@/components/MachineProductivitySeoContent";
+import ConstructionProductivityCalculator from "@/components/ConstructionProductivityCalculator";
+import ConstructionProductivitySeoContent from "@/components/ConstructionProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -333,6 +335,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         );
     }
 
+    if (slug === "construction") {
+        return buildMeta(
+            "Construction Productivity Calculator | Labor & Crew Rate",
+            "Free construction productivity calculator to measure labor output rate, man-hours per unit, crew daily velocity, project duration, and CPI cost efficiency.",
+            [
+                "construction productivity calculator",
+                "construction labor productivity",
+                "construction productivity rates",
+                "calculate labor productivity in construction",
+                "construction productivity calculation",
+                "how to measure construction productivity",
+                "standard labor productivity rates in construction",
+                "crew productivity calculator",
+                "construction time calculator",
+                "productivity calculator",
+            ],
+            pageUrl,
+            slug
+        );
+    }
+
     if (slug === "welding") {
         return buildMeta(
             "Welding Productivity Calculator | Deposition Rate & AWS",
@@ -441,6 +464,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isWelding = slug === "welding";
     const isTechnician = slug === "technician";
     const isMachine = slug === "machine";
+    const isConstruction = slug === "construction";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -500,6 +524,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Automotive & Field Service Operations Suite"
                                     : isMachine
                                     ? "Automated Machinery & TPM Efficiency Suite"
+                                    : isConstruction
+                                    ? "Heavy Civil & Commercial Construction Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -531,6 +557,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Technician & Field Service"
                                     : isMachine
                                     ? "Machine & Equipment OEE"
+                                    : isConstruction
+                                    ? "Construction & Crew Labor"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">
@@ -564,6 +592,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Industrial technician productivity calculator, automotive flat-rate efficiency modeler, and field service wrench-time analyzer."
                                 : isMachine
                                 ? "Industrial machine productivity calculator, Overall Equipment Effectiveness (OEE) analyzer, and cycle time vs takt capacity modeler."
+                                : isConstruction
+                                ? "Industrial construction productivity calculator, trade man-hours per unit estimator, crew daily velocity forecaster, and Earned Value CPI analyzer."
                                 : industry.description}
                         </p>
 
@@ -600,6 +630,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <TechnicianProductivityCalculator />
                     ) : isMachine ? (
                         <MachineProductivityCalculator />
+                    ) : isConstruction ? (
+                        <ConstructionProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -629,6 +661,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <TechnicianProductivitySeoContent />
                     ) : isMachine ? (
                         <MachineProductivitySeoContent />
+                    ) : isConstruction ? (
+                        <ConstructionProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">
