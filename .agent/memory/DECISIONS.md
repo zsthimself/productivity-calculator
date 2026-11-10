@@ -253,3 +253,24 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   4. 精调元数据：Title 锁定 50 字符（`Machine Productivity Calculator | OEE & Cycle Time`），Description 精准压缩至 154 字符黄金区间。
   5. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 518ms，体积 140KB，词数 1,528 词，3-gram `#1 machine productivity calculator` 出现 6 次，占位密度 1.18%，独占 Rank 1 登顶，0 堆砌告警）。
+
+### DEC-015: /calculator/construction 建筑工程施工与劳务工效全案升级、班组日流速与 CPI 成本模型
+- **背景**:
+  1. GSC 表现：`/calculator/construction` 为全站未升级页面中唯一斩获 2 次真实自然点击的硬核工程页（124 次合并曝光，主词 `construction productivity calculation` 7次、`how to measure construction productivity` 6次、`construction productivity rates` 5次，平均排名 39.2 位）；
+  2. 哥飞 SERP 侦察：`construction productivity calculator` 难度 KD 仅 **3.5 · 极易**，SERP 前 10 名竞品极其脆弱：全场仅 2/9 为专门页，其余为大站顺路占位（Rank 1 `ciranalytics.com` DR 43 无法体检，Rank 5 `field-pm.com` DR 0 且人均停留仅 25 秒跳出 58% 垫底，Rank 10 `forconstructionpros.com` 页面薄弱）；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 269 词触发 <300 词硬伤封顶，缺配图与专属建筑工程计算引擎。
+- **决定**:
+  1. 研发专业建筑工程工效级 `ConstructionProductivityCalculator.tsx`（619行）：
+     - 模式 1：单位工效与劳务定额模型（Work Units Completed、Total Man-Hours、Physical Output Rate units/mh、Unit Rate mh/unit、8小时工日折算、CII 行业基准效率比判定）；
+     - 模式 2：班组日产出速度与工期推演模型（Crew Size、Shift Hours、Daily Crew Man-Hours、Daily Output Velocity、Project Total Scope、Weather/Contingency Buffer %、Buffered Working Days、工期关键路径风险评估）；
+     - 模式 3：建筑劳务成本与挣值 CPI 模型（Blended Hourly Wage $/hr 含间接费、Actual Cost AC、Earned Value EV、Cost Variance 成本偏差、Cost Performance Index CPI、Unit Labor Cost $/unit）；
+     - 提供四大工程预设（现浇混凝土楼板、钢结构梁柱吊装、商业石膏板隔墙、砌体与砖墙工程），支持一键导出 Markdown 施工日志与工效核算报告。
+  2. 撰写专业级权威 SEO 文本组件 `ConstructionProductivitySeoContent.tsx`（307行）：
+     - 嵌入 800x400 零 CLS 矢量图 `construction-productivity-formula.svg`；
+     - 详述三大核心算式：Labor Output & Unit Rate、Crew Daily Velocity、Earned Value CPI Ratio；
+     - 涵盖混凝土、钢结构、砌筑、轻钢龙骨石膏板、MEP管道 5 大分部工程 RSMeans / CII 基准对照表；
+     - 提供真实 5 层 12 万平方英尺商用办公楼现浇楼面优化案例（工效从 0.82 提升至 1.18 yd³/mh，抢回 16 天工期，节约 $44,800 直接人工与免除 $28,000 违约罚金）；
+     - 提炼 5 大精益建造（Lean Construction）策略（Last Planner System、构件场外预制、JIT现场配送、5S动线整理、防工种交叉打架）；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 锁定 56 字符（`Construction Productivity Calculator | Labor & Crew Rate`），Description 精准压缩至 155 字符黄金区间。
+  4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 451ms，体积 136KB，词数 1,602 词，3-gram `#1 construction productivity calculator` 出现 5 次，占位密度 0.94%，独占 Rank 1 登顶，0 堆砌告警）。

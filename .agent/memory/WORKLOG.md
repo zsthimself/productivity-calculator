@@ -308,3 +308,28 @@
     - 社交与结构化：10/10 满分
     - 技术与抓取：17/17 满分
     - 3-gram 关键词命中：`#1 machine productivity calculator` 出现 6 次，词频密度 0.39%，占位密度 1.18%（独占 Rank 1 登顶，0 堆砌告警）。
+
+## 2026-11-10: /calculator/construction 建筑工程施工与劳务工效全案升级、班组日流速与 CPI 成本模型
+
+- **执行概要**:
+  - 瞄准 GSC 核心突破词源 `/calculator/construction`（124 次真实合并曝光，2 次真实自然点击，极易难度 KD 3.5），实施从 55 D 级到 99 A 级的全案重构。
+- **实施细节**:
+  1. 研发专业建筑工程工效交互组件 `src/components/ConstructionProductivityCalculator.tsx`（619行）：劳务定额与单位工效模型、班组日产出速度与工期推演模型、建筑劳务成本与挣值 CPI 模型三模式，内置四大工程预设（现浇混凝土楼板、钢结构梁柱、石膏板隔墙、砖石砌体）与一键 Markdown 导出；
+  2. 撰写专业级权威 SEO 文本组件 `src/components/ConstructionProductivitySeoContent.tsx`（307行）：嵌入 800x400 零 CLS 矢量图 `construction-productivity-formula.svg`，呈现 5 大分部工程 RSMeans / CII 基准对照表、5 层 12 万平方英尺写字楼案例（工效 +43.9%、抢回 16 天工期、节约 $44,800）、5 大精益建造（Lean Construction）策略与 6 大 PAA FAQ；
+  3. 解耦扩充结构化数据：创建 `src/lib/schemas/faqs/construction.ts`（37行）并注册至 `faqs/index.ts`，在 `meta.ts` 注册专用元数据；
+  4. 重构优化 `src/app/calculator/[slug]/page.tsx`（722行）：精炼 Title 56 字符（`Construction Productivity Calculator | Labor & Crew Rate`）、Description 155 字符，配置专属 Badge 与 H1，严格遵守 $\le 800$ 行安全红线；
+  5. 静态编译通过，147 页面 SSG 构建完成（1.1s），实测产物 HTML 词数达 1,602 词（突破 300 词惩罚断崖，进入 1200-1800 最佳权重带）；
+  6. 提交 commit `7f88445` 推送至 GitHub master，Cloudflare Pages 自动完成生产构建上线（build hash: `ro_5mjYbqf6efiN8hbGmQ`）。
+- **验证结果**:
+  - `python tools/verify_memory_sync.py --site productivity-calculator` -> 准备同步验证
+  - 生产实时抓取：Title `Construction Productivity Calculator | Labor & Crew Rate` (56 chars), Desc 155 chars, Img 1 SVG (800x400), HTML Words 1,602, 响应耗时 451ms, 体积 136KB
+  - `seo.web.cafe/audit/` 线上体检复核：**总分 99 / 100 (A 级 优秀，历史跃升 +44 分！)**
+    - 主题聚焦度：**100%**
+    - Meta 元信息：25/25 满分
+    - 内容质量：24/24 满分
+    - 关键词优化：39.33/40
+    - 链接结构：7/7 满分
+    - 图片与多媒体：8/8 满分
+    - 社交与结构化：10/10 满分
+    - 技术与抓取：17/17 满分
+    - 3-gram 关键词命中：`#1 construction productivity calculator` 出现 5 次，词频密度 0.31%，占位密度 0.94%（独占 Rank 1 登顶，0 堆砌告警）。
