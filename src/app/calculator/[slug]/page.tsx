@@ -315,7 +315,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     if (slug === "machine") {
         return buildMeta(
             "Machine Productivity Calculator | OEE & Cycle Time",
-            "Free machine productivity calculator to measure Overall Equipment Effectiveness (OEE), cycle time vs takt time, production throughput, and equipment downtime cost.",
+            "Free machine productivity calculator to measure OEE (Availability x Performance x Quality), cycle time vs takt time, throughput, and equipment downtime cost.",
             [
                 "machine productivity calculator",
                 "productivity machine",

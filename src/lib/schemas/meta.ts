@@ -86,7 +86,7 @@ export function getIndustryMeta(
             return {
                 name: "Machine Productivity Calculator",
                 description:
-                    "Free machine productivity calculator to measure Overall Equipment Effectiveness (OEE), cycle time vs takt time, production throughput, and equipment downtime cost.",
+                    "Free machine productivity calculator to measure OEE (Availability x Performance x Quality), cycle time vs takt time, throughput, and equipment downtime cost.",
             };
         default:
             return {

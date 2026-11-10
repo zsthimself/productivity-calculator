@@ -49,7 +49,7 @@ export default function MachineProductivitySeoContent() {
           <span>The Core Mathematics: 3 Essential Machine Productivity Formulas</span>
         </h2>
         <p className="text-sm text-muted-foreground">
-          To master equipment efficiency on the plant floor, manufacturers must separate running time, operational velocity, and first-pass quality into distinct mathematical levers. Below are the three foundational formulas utilized by world-class discrete factories:
+          To master equipment efficiency on the plant floor, manufacturers must separate running time, operational velocity, and first-pass quality into distinct mathematical levers. By modeling plant data inside a dedicated <strong>machine productivity calculator</strong>, engineering teams evaluate the three foundational formulas utilized by world-class discrete factories:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -236,7 +236,7 @@ export default function MachineProductivitySeoContent() {
           <span>5 Proven Lean Strategies to Maximize Machine Productivity</span>
         </h2>
         <p className="text-sm text-muted-foreground">
-          Increasing equipment output does not require purchasing multimillion-dollar new machinery. World-class manufacturers utilize these five lean tactics to extract hidden capacity from their existing asset fleet:
+          Increasing equipment output does not require purchasing multimillion-dollar new machinery. World-class manufacturers utilize this free <strong>machine productivity calculator</strong> alongside these five lean tactics to extract hidden capacity from their existing asset fleet:
         </p>
 
         <div className="space-y-3">
