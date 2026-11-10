@@ -209,3 +209,24 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 压缩至 57 字符（`Welding Productivity Calculator | Deposition Rate & AWS`），Description 优化至 160 字符黄金区间。
   4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `welding productivity calculator` 命中 Top 4，占位密度 0.72%）。
+
+### DEC-013: /calculator/technician 汽车售后维修与外勤工程全案升级与 On-Page SEO 外科手术
+- **背景**:
+  1. GSC 表现：`/calculator/technician` 为全站汽车与设备工程服务核心突破页（48 次曝光，平均排名 38.8 位；核心主词 `technician productivity` 4次曝光、`technician efficiency calculator` 3次曝光、`service technician productivity` 2次曝光）；
+  2. 哥飞 SERP 侦察：`technician productivity calculator` 难度 KD 仅 **8 · 极易**，SERP 前 10 名竞品极其脆弱：Rank 1 `carguysinc.com`（DR 仅 13，月流 6.5K，On-Page 仅 75 C，仅 376 词），Rank 3 `fullbay.com`（45 D 级纯跳转落地页），Rank 6 `productivitycalc.com`（DR 仅 5，拿物理治疗页面乱占位，On-Page 仅 65 C，661 词）；盘面完全属于未被充分满足的价值洼地；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 271 词触发 <300 词硬封顶，Description 部分覆盖，0 张配图，缺少专属汽车 NADA 定额工时与外勤 Wrench Time 计算引擎。
+- **决定**:
+  1. 研发专业技师工效级 `TechnicianProductivityCalculator.tsx`（三模式）：
+     - 模式 1：NADA 汽车定额工时与工效效率模型（Billed/Flat-Rate Hours、Clocked Job Hours、Available Shift Hours、Efficiency 效率比、Labor Productivity 调度利用率、Proficiency 综合创效能力、大师技师评级）；
+     - 模式 2：外勤工程与厂区运维 Wrench Time 模型（班次工时、直接扳手工时、路途通勤时长、行政/领料配单耗时、完工工单量、单单均耗与对标世界级 Lean 舰队 55%+ 判定）；
+     - 模式 3：售后车间工时创收与有效毛利模型（客户门市工时牌价 $/hr、技师包干工资 $/hr、周产出结算工时、配件工时配比系数、周工时总毛利与毛利率 %）；
+     - 提供四大工业预设（4S店诊断大师技师 130%、重卡商用车车队维修、暖通商用外勤服务车、综合汽修厂），支持一键导出 Markdown 技师考核单报告。
+  2. 撰写专业级权威 SEO 文本组件 `TechnicianProductivitySeoContent.tsx`（1,400+ 词全页）：
+     - 嵌入 800x400 零 CLS 矢量图 `technician-productivity-formula.svg`；
+     - 详述三大核心算式：Automotive Flat-Rate Efficiency、Labor Productivity、Wrench Time Equation；
+     - 涵盖 4S店大师、重卡柴油、商用暖通、厂区 MRO、电信外勤 5 大行业 NADA / AFE 标杆对照表；
+     - 提供真实 6 车位综合汽修厂工效从 80% 提升至 110% 案例（单车位周增毛利 $1,452，全厂月增 $34,848）；
+     - 提炼 5 大精益技师管理策略（提前配料、双工位轮换、数字车辆检测 DVI、阶梯定额提成、路径集约化调度）；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 压缩至 58 字符（`Technician Productivity Calculator | Efficiency & Hours`），Description 优化至 156 字符黄金区间。
+  4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 19/19，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 technician productivity calculator` 出现 4 次，占位密度 0.8%，独占 Rank 1 登顶，0 堆砌告警）。
