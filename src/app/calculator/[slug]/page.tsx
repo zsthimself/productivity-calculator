@@ -38,6 +38,8 @@ import SalesProductivityCalculator from "@/components/SalesProductivityCalculato
 import SalesProductivitySeoContent from "@/components/SalesProductivitySeoContent";
 import DataEntryProductivityCalculator from "@/components/DataEntryProductivityCalculator";
 import DataEntryProductivitySeoContent from "@/components/DataEntryProductivitySeoContent";
+import MarketingProductivityCalculator from "@/components/MarketingProductivityCalculator";
+import MarketingProductivitySeoContent from "@/components/MarketingProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -402,6 +404,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         );
     }
 
+    if (slug === "marketing") {
+        return buildMeta(
+            "Marketing Productivity Calculator | ROI & CAC Rate",
+            "Free marketing productivity calculator to measure marketing ROI, LTV:CAC ratio, pipeline velocity, cost per opportunity, and campaign labor efficiency.",
+            [
+                "marketing productivity calculator",
+                "marketing roi calculator",
+                "marketing efficiency calculator",
+                "cac to ltv calculator",
+                "marketing velocity formula",
+                "marketing labor productivity",
+                "how to calculate marketing productivity",
+                "cost per qualified opportunity",
+                "marketing capacity calculator",
+                "productivity calculator",
+            ],
+            pageUrl,
+            slug
+        );
+    }
+
     if (slug === "welding") {
         return buildMeta(
             "Welding Productivity Calculator | Deposition Rate & AWS",
@@ -498,11 +521,10 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
         );
     }
 
-    const isPhysicalTherapy = slug === "physical-therapy", isManufacturing = slug === "manufacturing";
-    const isLabor = slug === "labor", isEmployee = slug === "employee", isVideoProduction = slug === "video-production";
-    const isCallCenter = slug === "call-center", isLogistics = slug === "logistics", isCleaningServices = slug === "cleaning-services";
-    const isHealthcare = slug === "healthcare", isWelding = slug === "welding", isTechnician = slug === "technician";
-    const isMachine = slug === "machine", isConstruction = slug === "construction", isSales = slug === "sales", isDataEntry = slug === "data-entry";
+    const isPhysicalTherapy = slug === "physical-therapy", isManufacturing = slug === "manufacturing", isLabor = slug === "labor", isEmployee = slug === "employee";
+    const isVideoProduction = slug === "video-production", isCallCenter = slug === "call-center", isLogistics = slug === "logistics", isCleaningServices = slug === "cleaning-services";
+    const isHealthcare = slug === "healthcare", isWelding = slug === "welding", isTechnician = slug === "technician", isMachine = slug === "machine";
+    const isConstruction = slug === "construction", isSales = slug === "sales", isDataEntry = slug === "data-entry", isMarketing = slug === "marketing";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -568,6 +590,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Revenue Operations & B2B Sales Suite"
                                     : isDataEntry
                                     ? "Back-Office Operations & BPO Data Entry Suite"
+                                    : isMarketing
+                                    ? "Growth Marketing & Demand Generation Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -605,6 +629,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Sales Pipeline & Quota"
                                     : isDataEntry
                                     ? "Data Entry Speed & Accuracy"
+                                    : isMarketing
+                                    ? "Marketing ROI & Pipeline Velocity"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">
@@ -644,6 +670,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Professional B2B sales productivity calculator, sales pipeline velocity forecaster, quota attainment analyzer, and sales per hour labor efficiency modeler."
                                 : isDataEntry
                                 ? "Free data entry productivity calculator, keystrokes per hour (KPH) analyzer, Net KPH accuracy modeler, and batch unit cost estimator for BPO operations."
+                                : isMarketing
+                                ? "Enterprise marketing productivity calculator, CAC-to-LTV ratio analyzer, MQL pipeline velocity forecaster, and campaign labor efficiency modeler."
                                 : industry.description}
                         </p>
 
@@ -682,13 +710,10 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <MachineProductivityCalculator />
                     ) : isConstruction ? (
                         <ConstructionProductivityCalculator />
-                    ) : isSales ? (
-                        <SalesProductivityCalculator />
-                    ) : isDataEntry ? (
-                        <DataEntryProductivityCalculator />
-                    ) : (
-                        <Calculator industry={industry} />
-                    )}
+                    ) : isSales ? ( <SalesProductivityCalculator />
+                    ) : isDataEntry ? ( <DataEntryProductivityCalculator />
+                    ) : isMarketing ? ( <MarketingProductivityCalculator />
+                    ) : ( <Calculator industry={industry} /> )}
 
                     {/* SEO Content Section */}
                     {isPhysicalTherapy ? (
@@ -717,10 +742,9 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <MachineProductivitySeoContent />
                     ) : isConstruction ? (
                         <ConstructionProductivitySeoContent />
-                    ) : isSales ? (
-                        <SalesProductivitySeoContent />
-                    ) : isDataEntry ? (
-                        <DataEntryProductivitySeoContent />
+                    ) : isSales ? ( <SalesProductivitySeoContent />
+                    ) : isDataEntry ? ( <DataEntryProductivitySeoContent />
+                    ) : isMarketing ? ( <MarketingProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">
@@ -734,9 +758,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     </p>
 
                                     <div className="neon-border rounded-xl p-6 text-center my-8">
-                                        <code className="font-display text-lg md:text-xl text-[var(--neon-cyan)]">
-                                            {industry.resultLabel} = {industry.inputs.find(i => i.key === "output")?.label} ÷ {industry.inputs.find(i => i.key === "input")?.label}
-                                        </code>
+                                        <code className="font-display text-lg md:text-xl text-[var(--neon-cyan)]">{industry.resultLabel} = {industry.inputs.find(i => i.key === "output")?.label} ÷ {industry.inputs.find(i => i.key === "input")?.label}</code>
                                     </div>
 
                                     <p>
@@ -748,18 +770,9 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                         Why Track {industry.name} Productivity?
                                     </h3>
                                     <ul className="space-y-3">
-                                        <li className="flex items-start gap-3">
-                                            <span className="text-[var(--neon-cyan)]">⚡</span>
-                                            <span>Identify bottlenecks and inefficiencies in your {industry.name.toLowerCase()} workflow</span>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <span className="text-[var(--neon-pink)]">⚡</span>
-                                            <span>Set realistic goals and benchmarks for your team</span>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <span className="text-[var(--neon-cyan)]">⚡</span>
-                                            <span>Make data-driven decisions about resource allocation</span>
-                                        </li>
+                                        <li className="flex items-start gap-3"><span className="text-[var(--neon-cyan)]">⚡</span><span>Identify bottlenecks and inefficiencies in your {industry.name.toLowerCase()} workflow</span></li>
+                                        <li className="flex items-start gap-3"><span className="text-[var(--neon-pink)]">⚡</span><span>Set realistic goals and benchmarks for your team</span></li>
+                                        <li className="flex items-start gap-3"><span className="text-[var(--neon-cyan)]">⚡</span><span>Make data-driven decisions about resource allocation</span></li>
                                     </ul>
                                 </div>
                             </div>

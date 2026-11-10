@@ -106,6 +106,12 @@ export function getIndustryMeta(
                 description:
                     "Free data entry productivity calculator to calculate keystrokes per hour (KPH), Net KPH accuracy, records per hour, batch velocity, and unit cost per 1,000 records.",
             };
+        case "marketing":
+            return {
+                name: "Marketing Productivity Calculator",
+                description:
+                    "Free marketing productivity calculator to measure marketing ROI, LTV:CAC ratio, pipeline velocity, cost per opportunity, and campaign labor efficiency.",
+            };
         default:
             return {
                 name: fallbackTitle,
