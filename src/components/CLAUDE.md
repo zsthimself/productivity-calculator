@@ -25,6 +25,8 @@ WeldingProductivityCalculator.tsx: 焊接与构件制造生产力计算器，AWS
 WeldingProductivitySeoContent.tsx: 焊接权威深度语义指南，SVG架构图/AWS基准表/钢结构案例/FAQ，345行
 TechnicianProductivityCalculator.tsx: 技师与外勤工程生产力计算器，汽修定额工时/外勤Wrench-Time/工单毛利，664行
 TechnicianProductivitySeoContent.tsx: 技师权威深度语义指南，SVG架构图/NADA基准表/6车位汽修厂案例/FAQ，345行
+MachineProductivityCalculator.tsx: 机器设备生产力计算器，OEE综合设备效率/节拍周期/设备利用率与停机损失，655行
+MachineProductivitySeoContent.tsx: 机器设备权威深度语义指南，SVG架构图/TPM基准表/CNC车间案例/FAQ，378行
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

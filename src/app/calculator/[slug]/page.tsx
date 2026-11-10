@@ -1,6 +1,6 @@
 /**
  * [INPUT]: industries.json (静态配置), URL slug 参数, 专用计算器组件群, generateIndustrySchema
- * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy、manufacturing、labor、employee、video-production、call-center、logistics、cleaning-services、healthcare、welding、technician 专属套件
+ * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy、manufacturing、labor、employee、video-production、call-center、logistics、cleaning-services、healthcare、welding、technician、machine 专属套件
  * [POS]: pSEO 模板与垂直突围页 - 承接 slug 对应 20+ 行业页面，对高潜力词做专属架构承接
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -30,6 +30,8 @@ import WeldingProductivityCalculator from "@/components/WeldingProductivityCalcu
 import WeldingProductivitySeoContent from "@/components/WeldingProductivitySeoContent";
 import TechnicianProductivityCalculator from "@/components/TechnicianProductivityCalculator";
 import TechnicianProductivitySeoContent from "@/components/TechnicianProductivitySeoContent";
+import MachineProductivityCalculator from "@/components/MachineProductivityCalculator";
+import MachineProductivitySeoContent from "@/components/MachineProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -310,6 +312,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         );
     }
 
+    if (slug === "machine") {
+        return buildMeta(
+            "Machine Productivity Calculator | OEE & Cycle Time",
+            "Free machine productivity calculator to measure Overall Equipment Effectiveness (OEE), cycle time vs takt time, production throughput, and equipment downtime cost.",
+            [
+                "machine productivity calculator",
+                "productivity machine",
+                "how to calculate machine productivity",
+                "machine productivity formula",
+                "machine efficiency calculator",
+                "overall equipment effectiveness calculator",
+                "oee calculator",
+                "machine capacity calculator",
+                "cycle time calculator",
+                "productivity calculator",
+            ],
+            pageUrl,
+            slug
+        );
+    }
+
     if (slug === "welding") {
         return buildMeta(
             "Welding Productivity Calculator | Deposition Rate & AWS",
@@ -417,6 +440,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isHealthcare = slug === "healthcare";
     const isWelding = slug === "welding";
     const isTechnician = slug === "technician";
+    const isMachine = slug === "machine";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -474,6 +498,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Structural Welding & AWS D1.1 Suite"
                                     : isTechnician
                                     ? "Automotive & Field Service Operations Suite"
+                                    : isMachine
+                                    ? "Automated Machinery & TPM Efficiency Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -503,6 +529,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Welding & Fabrication"
                                     : isTechnician
                                     ? "Technician & Field Service"
+                                    : isMachine
+                                    ? "Machine & Equipment OEE"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">
@@ -534,6 +562,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Industrial welding productivity calculator, AWS filler metal deposition rate estimator, arc-on operating factor analyzer, and joint fabrication cost modeler."
                                 : isTechnician
                                 ? "Industrial technician productivity calculator, automotive flat-rate efficiency modeler, and field service wrench-time analyzer."
+                                : isMachine
+                                ? "Industrial machine productivity calculator, Overall Equipment Effectiveness (OEE) analyzer, and cycle time vs takt capacity modeler."
                                 : industry.description}
                         </p>
 
@@ -568,6 +598,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <WeldingProductivityCalculator />
                     ) : isTechnician ? (
                         <TechnicianProductivityCalculator />
+                    ) : isMachine ? (
+                        <MachineProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -595,6 +627,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <WeldingProductivitySeoContent />
                     ) : isTechnician ? (
                         <TechnicianProductivitySeoContent />
+                    ) : isMachine ? (
+                        <MachineProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">
