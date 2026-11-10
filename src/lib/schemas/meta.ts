@@ -94,6 +94,12 @@ export function getIndustryMeta(
                 description:
                     "Free construction productivity calculator to measure labor output rate, man-hours per unit, crew daily velocity, project duration, and CPI cost efficiency.",
             };
+        case "sales":
+            return {
+                name: "Sales Productivity Calculator",
+                description:
+                    "Free sales productivity calculator to measure pipeline velocity, quota attainment percentage, sales per hour, revenue per rep, and sales team labor efficiency.",
+            };
         default:
             return {
                 name: fallbackTitle,

@@ -29,6 +29,8 @@ MachineProductivityCalculator.tsx: 机器设备生产力计算器，OEE综合设
 MachineProductivitySeoContent.tsx: 机器设备权威深度语义指南，SVG架构图/TPM基准表/CNC车间案例/FAQ，378行
 ConstructionProductivityCalculator.tsx: 建筑施工劳务工效计算器，单方工时率/班组日流速/成本CPI模型，475行
 ConstructionProductivitySeoContent.tsx: 建筑施工权威深度语义指南，SVG架构图/CII与RSMeans基准表/混凝土案例/FAQ，360行
+SalesProductivityCalculator.tsx: 销售人效与管道流速计算器，配额达成率/销售流速V公式/每小时产值模型，717行
+SalesProductivitySeoContent.tsx: 销售权威深度语义指南，SVG架构图/BridgeGroup基准表/SaaS案例/FAQ，326行
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

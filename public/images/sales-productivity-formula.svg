@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background:#090d16; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="indigoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <pattern id="gridPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <!-- Background Grid -->
+  <rect width="800" height="400" fill="#090d16" />
+  <rect width="800" height="400" fill="url(#gridPattern)" />
+
+  <!-- Outer Card Frame -->
+  <rect x="15" y="15" width="770" height="370" rx="16" fill="#0f172a" fill-opacity="0.75" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Header Banner -->
+  <g transform="translate(40, 42)">
+    <rect x="0" y="0" width="165" height="24" rx="6" fill="#4338ca" fill-opacity="0.25" stroke="#6366f1" stroke-width="1" />
+    <text x="82" y="16" fill="#a5b4fc" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">REVOPS &amp; B2B PIPELINE</text>
+    <text x="180" y="18" fill="#f8fafc" font-size="19" font-weight="800" letter-spacing="-0.5">Sales Productivity &amp; Velocity Architecture</text>
+  </g>
+
+  <!-- Flow Connector Line -->
+  <path d="M 260 180 L 290 180 M 510 180 L 540 180" stroke="#334155" stroke-width="2" stroke-dasharray="4,4" />
+
+  <!-- Pillar 1: Quota Attainment & Revenue Per Rep -->
+  <g transform="translate(40, 95)">
+    <rect width="220" height="255" rx="12" fill="#131e33" stroke="#6366f1" stroke-width="1.2" />
+    <rect x="12" y="12" width="196" height="30" rx="6" fill="#6366f1" fill-opacity="0.15" />
+    <text x="110" y="32" fill="#a5b4fc" font-size="12" font-weight="700" text-anchor="middle">1. QUOTA &amp; REP ATTAINMENT</text>
+
+    <!-- Formula Box -->
+    <rect x="16" y="54" width="188" height="48" rx="6" fill="#0b1324" stroke="#1e293b" stroke-width="1" />
+    <text x="110" y="74" fill="#94a3b8" font-size="10" text-anchor="middle">Attainment &amp; Rep Capacity</text>
+    <text x="110" y="92" fill="#a5b4fc" font-size="12" font-family="monospace" font-weight="700" text-anchor="middle">Actual Rev ÷ Quota × 100</text>
+
+    <text x="20" y="122" fill="#cbd5e1" font-size="11" font-weight="600">• SaaS Industry Benchmarks</text>
+    <text x="28" y="138" fill="#64748b" font-size="10">Top Teams Quota: 70–80% Attain</text>
+    <text x="28" y="152" fill="#64748b" font-size="10">Annual ARR / Rep: $800k–$1.5M</text>
+    <text x="28" y="166" fill="#64748b" font-size="10">Ramp Period: 3.2–5.5 Months</text>
+
+    <rect x="16" y="180" width="188" height="55" rx="6" fill="#312e81" fill-opacity="0.25" stroke="#4f46e5" stroke-width="0.8" />
+    <text x="24" y="198" fill="#c7d2fe" font-size="10" font-weight="700">Revenue per Headcount</text>
+    <text x="24" y="213" fill="#e0e7ff" font-size="9.5">Measures sales team capacity.</text>
+    <text x="24" y="226" fill="#e0e7ff" font-size="9.5">Reveals quota distribution skew.</text>
+  </g>
+
+  <!-- Pillar 2: Sales Velocity Formula -->
+  <g transform="translate(290, 95)">
+    <rect width="220" height="255" rx="12" fill="#131e33" stroke="#06b6d4" stroke-width="1.2" />
+    <rect x="12" y="12" width="196" height="30" rx="6" fill="#06b6d4" fill-opacity="0.15" />
+    <text x="110" y="32" fill="#67e8f9" font-size="12" font-weight="700" text-anchor="middle">2. SALES PIPELINE VELOCITY</text>
+
+    <!-- Formula Box -->
+    <rect x="16" y="54" width="188" height="48" rx="6" fill="#0b1324" stroke="#1e293b" stroke-width="1" />
+    <text x="110" y="74" fill="#94a3b8" font-size="10" text-anchor="middle">Sales Velocity (V) Formula</text>
+    <text x="110" y="92" fill="#67e8f9" font-size="11" font-family="monospace" font-weight="700" text-anchor="middle">(Opps × Win% × Deal$) ÷ Days</text>
+
+    <text x="20" y="122" fill="#cbd5e1" font-size="11" font-weight="600">• Pipeline Health Variables</text>
+    <text x="28" y="138" fill="#64748b" font-size="10">Win Rate: 20–32% Qualified Opps</text>
+    <text x="28" y="152" fill="#64748b" font-size="10">Average Deal Size (ACV): $15k–$80k</text>
+    <text x="28" y="166" fill="#64748b" font-size="10">Sales Cycle Length: 45–90 Days</text>
+
+    <rect x="16" y="180" width="188" height="55" rx="6" fill="#083344" fill-opacity="0.3" stroke="#0891b2" stroke-width="0.8" />
+    <text x="24" y="198" fill="#a5f3fc" font-size="10" font-weight="700">Daily Revenue Generated ($/Day)</text>
+    <text x="24" y="213" fill="#cffafe" font-size="9.5">The gold standard pipeline equation.</text>
+    <text x="24" y="226" fill="#cffafe" font-size="9.5">Accelerates cycle or raises ASP.</text>
+  </g>
+
+  <!-- Pillar 3: Sales Per Hour & Labor Efficiency -->
+  <g transform="translate(540, 95)">
+    <rect width="220" height="255" rx="12" fill="#131e33" stroke="#10b981" stroke-width="1.2" />
+    <rect x="12" y="12" width="196" height="30" rx="6" fill="#10b981" fill-opacity="0.15" />
+    <text x="110" y="32" fill="#6ee7b7" font-size="12" font-weight="700" text-anchor="middle">3. SALES / HOUR &amp; ROI</text>
+
+    <!-- Formula Box -->
+    <rect x="16" y="54" width="188" height="48" rx="6" fill="#0b1324" stroke="#1e293b" stroke-width="1" />
+    <text x="110" y="74" fill="#94a3b8" font-size="10" text-anchor="middle">Sales Hourly Output Formula</text>
+    <text x="110" y="92" fill="#6ee7b7" font-size="12" font-family="monospace" font-weight="700" text-anchor="middle">Revenue ÷ Selling Hours</text>
+
+    <text x="20" y="122" fill="#cbd5e1" font-size="11" font-weight="600">• Labor Efficiency Benchmarks</text>
+    <text x="28" y="138" fill="#64748b" font-size="10">Active Selling Time: 33–36% Total</text>
+    <text x="28" y="152" fill="#64748b" font-size="10">Sales / Hour: $350–$1,200/hr</text>
+    <text x="28" y="166" fill="#64748b" font-size="10">CAC Payback: 10–16 Months</text>
+
+    <rect x="16" y="180" width="188" height="55" rx="6" fill="#064e3b" fill-opacity="0.3" stroke="#059669" stroke-width="0.8" />
+    <text x="24" y="198" fill="#a7f3d0" font-size="10" font-weight="700">Cost-to-Revenue Ratio</text>
+    <text x="24" y="213" fill="#d1fae5" font-size="9.5">Compares fully-loaded rep payroll</text>
+    <text x="24" y="226" fill="#d1fae5" font-size="9.5">against net generated ARR dollars.</text>
+  </g>
+</svg>

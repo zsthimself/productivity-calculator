@@ -34,6 +34,8 @@ import MachineProductivityCalculator from "@/components/MachineProductivityCalcu
 import MachineProductivitySeoContent from "@/components/MachineProductivitySeoContent";
 import ConstructionProductivityCalculator from "@/components/ConstructionProductivityCalculator";
 import ConstructionProductivitySeoContent from "@/components/ConstructionProductivitySeoContent";
+import SalesProductivityCalculator from "@/components/SalesProductivityCalculator";
+import SalesProductivitySeoContent from "@/components/SalesProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -356,6 +358,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         );
     }
 
+    if (slug === "sales") {
+        return buildMeta(
+            "Sales Productivity Calculator | Velocity & Quota Rate",
+            "Free sales productivity calculator to measure pipeline velocity, quota attainment percentage, sales per hour, revenue per rep, and sales team labor efficiency.",
+            [
+                "sales productivity calculator",
+                "sales per hour calculator",
+                "sales per hour",
+                "sales velocity formula",
+                "how to calculate sales productivity",
+                "sales rep productivity",
+                "quota attainment calculator",
+                "revenue per rep calculator",
+                "sales capacity calculator",
+                "productivity calculator",
+            ],
+            pageUrl,
+            slug
+        );
+    }
+
     if (slug === "welding") {
         return buildMeta(
             "Welding Productivity Calculator | Deposition Rate & AWS",
@@ -465,6 +488,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isTechnician = slug === "technician";
     const isMachine = slug === "machine";
     const isConstruction = slug === "construction";
+    const isSales = slug === "sales";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -526,6 +550,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Automated Machinery & TPM Efficiency Suite"
                                     : isConstruction
                                     ? "Heavy Civil & Commercial Construction Suite"
+                                    : isSales
+                                    ? "Revenue Operations & B2B Sales Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -559,6 +585,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     ? "Machine & Equipment OEE"
                                     : isConstruction
                                     ? "Construction & Crew Labor"
+                                    : isSales
+                                    ? "Sales Pipeline & Quota"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">
@@ -594,6 +622,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 ? "Industrial machine productivity calculator, Overall Equipment Effectiveness (OEE) analyzer, and cycle time vs takt capacity modeler."
                                 : isConstruction
                                 ? "Industrial construction productivity calculator, trade man-hours per unit estimator, crew daily velocity forecaster, and Earned Value CPI analyzer."
+                                : isSales
+                                ? "Professional B2B sales productivity calculator, sales pipeline velocity forecaster, quota attainment analyzer, and sales per hour labor efficiency modeler."
                                 : industry.description}
                         </p>
 
@@ -632,6 +662,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <MachineProductivityCalculator />
                     ) : isConstruction ? (
                         <ConstructionProductivityCalculator />
+                    ) : isSales ? (
+                        <SalesProductivityCalculator />
                     ) : (
                         <Calculator industry={industry} />
                     )}
@@ -663,6 +695,8 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <MachineProductivitySeoContent />
                     ) : isConstruction ? (
                         <ConstructionProductivitySeoContent />
+                    ) : isSales ? (
+                        <SalesProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">
