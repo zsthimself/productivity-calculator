@@ -148,6 +148,12 @@ export function getIndustryMeta(
                 description:
                     "Free education productivity calculator. Measure student-teacher ratios, instructional hours per student, and academic tuition ROI with NCES benchmarks.",
             };
+        case "customer-support":
+            return {
+                name: "Customer Support Productivity Calculator",
+                description:
+                    "Free customer support productivity calculator. Measure tickets per agent hour, first contact resolution (FCR), CSAT yield, and support staffing with HDI data.",
+            };
         default:
             return {
                 name: fallbackTitle,

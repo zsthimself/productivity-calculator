@@ -47,6 +47,8 @@ RealEstateProductivityCalculator.tsx: 房地产经纪人效计算器，GCI佣金
 RealEstateProductivitySeoContent.tsx: 房地产经纪权威深度语义指南，SVG架构图/NAR基准表/凤凰城经纪人案例/FAQ，335行
 EducationProductivityCalculator.tsx: 教育教学工效计算器，NCES生师比/生均支出/学费学时ROI模型，485行
 EducationProductivitySeoContent.tsx: 教育教学权威深度语义指南，SVG架构图/NCES基准表/俄亥俄学区案例/FAQ，340行
+CustomerSupportProductivityCalculator.tsx: 客服人效计算器，工单流速TPH/FCR首次解决率/单工单成本模型，485行
+CustomerSupportProductivitySeoContent.tsx: 客服人效权威深度语义指南，SVG架构图/HDI与Zendesk基准表/盐湖城SaaS案例/FAQ，340行
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

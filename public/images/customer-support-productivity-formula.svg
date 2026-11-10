@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14" />
+      <stop offset="50%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#070b14" />
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.7" />
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.7" />
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.7" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="400" fill="url(#bgGrad)" />
+
+  <!-- Subtle Grid Lines -->
+  <g stroke="#334155" stroke-width="0.5" stroke-opacity="0.25">
+    <line x1="0" y1="80" x2="800" y2="80" />
+    <line x1="0" y1="160" x2="800" y2="160" />
+    <line x1="0" y1="240" x2="800" y2="240" />
+    <line x1="0" y1="320" x2="800" y2="320" />
+    <line x1="266" y1="0" x2="266" y2="400" />
+    <line x1="533" y1="0" x2="533" y2="400" />
+  </g>
+
+  <!-- Top Title & Badge -->
+  <rect x="200" y="24" width="400" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <text x="400" y="42" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="1.5">CUSTOMER SUPPORT PRODUCTIVITY &amp; HELPDESK ARCHITECTURE</text>
+
+  <!-- Pillar 1: Ticket Throughput & Agent Velocity -->
+  <g transform="translate(35, 75)">
+    <rect width="220" height="285" rx="12" fill="url(#cardGrad1)" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.6" />
+    <circle cx="28" cy="28" r="14" fill="#06b6d4" fill-opacity="0.15" />
+    <text x="28" y="33" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#06b6d4">1</text>
+    <text x="52" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#f8fafc">Ticket Throughput</text>
+    <text x="52" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Tickets per Agent-Hour</text>
+
+    <!-- Formula Box 1 -->
+    <rect x="15" y="60" width="190" height="68" rx="8" fill="#090d16" stroke="#334155" stroke-width="0.8" />
+    <text x="110" y="82" text-anchor="middle" font-family="monospace" font-size="11" font-weight="600" fill="#22d3ee">TPH = Solved Tickets ÷ Hours</text>
+    <line x1="25" y1="92" x2="195" y2="92" stroke="#334155" stroke-dasharray="2 2" stroke-width="0.8" />
+    <text x="110" y="112" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">Daily Output = Tickets ÷ FTEs</text>
+
+    <!-- Metrics -->
+    <text x="18" y="155" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">Channel Benchmarks:</text>
+    <circle cx="26" cy="176" r="3" fill="#06b6d4" />
+    <text x="36" y="180" font-family="monospace" font-size="10" fill="#94a3b8">Email/Web: 4.0 - 7.0 tix/hr</text>
+    <circle cx="26" cy="198" r="3" fill="#06b6d4" />
+    <text x="36" y="202" font-family="monospace" font-size="10" fill="#94a3b8">Live Chat: 6.5 - 12.0 chats/hr</text>
+    <circle cx="26" cy="220" r="3" fill="#06b6d4" />
+    <text x="36" y="224" font-family="monospace" font-size="10" fill="#94a3b8">Phone: 4.5 - 8.0 calls/hr</text>
+    <circle cx="26" cy="242" r="3" fill="#06b6d4" />
+    <text x="36" y="246" font-family="monospace" font-size="10" fill="#94a3b8">Daily Volume: 30 - 45 tix/day</text>
+
+    <rect x="15" y="258" width="190" height="18" rx="4" fill="#06b6d4" fill-opacity="0.1" />
+    <text x="110" y="271" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="600" fill="#22d3ee">Queue Processing Velocity</text>
+  </g>
+
+  <!-- Pillar 2: First Contact Resolution & Handle Time -->
+  <g transform="translate(290, 75)">
+    <rect width="220" height="285" rx="12" fill="url(#cardGrad2)" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.6" />
+    <circle cx="28" cy="28" r="14" fill="#a855f7" fill-opacity="0.15" />
+    <text x="28" y="33" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#a855f7">2</text>
+    <text x="52" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#f8fafc">FCR &amp; Resolution</text>
+    <text x="52" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">First-Touch Efficiency</text>
+
+    <!-- Formula Box 2 -->
+    <rect x="15" y="60" width="190" height="68" rx="8" fill="#090d16" stroke="#334155" stroke-width="0.8" />
+    <text x="110" y="82" text-anchor="middle" font-family="monospace" font-size="11" font-weight="600" fill="#c084fc">FCR % = 1st-Touch Solved ÷ Total</text>
+    <line x1="25" y1="92" x2="195" y2="92" stroke="#334155" stroke-dasharray="2 2" stroke-width="0.8" />
+    <text x="110" y="112" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">AHT = Total Talk/Text + Wrap Time</text>
+
+    <!-- Metrics -->
+    <text x="18" y="155" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">HDI Quality Targets:</text>
+    <circle cx="26" cy="176" r="3" fill="#a855f7" />
+    <text x="36" y="180" font-family="monospace" font-size="10" fill="#94a3b8">FCR Target: 70% - 78%</text>
+    <circle cx="26" cy="198" r="3" fill="#a855f7" />
+    <text x="36" y="202" font-family="monospace" font-size="10" fill="#94a3b8">Chat FRT: &lt; 45 seconds</text>
+    <circle cx="26" cy="220" r="3" fill="#a855f7" />
+    <text x="36" y="224" font-family="monospace" font-size="10" fill="#94a3b8">Email FRT: &lt; 2.0 hours</text>
+    <circle cx="26" cy="242" r="3" fill="#a855f7" />
+    <text x="36" y="246" font-family="monospace" font-size="10" fill="#94a3b8">AHT Handle Time: 6 - 11 mins</text>
+
+    <rect x="15" y="258" width="190" height="18" rx="4" fill="#a855f7" fill-opacity="0.1" />
+    <text x="110" y="271" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="600" fill="#c084fc">Single-Touch Resolution Flow</text>
+  </g>
+
+  <!-- Pillar 3: Cost per Ticket & CSAT Satisfaction -->
+  <g transform="translate(545, 75)">
+    <rect width="220" height="285" rx="12" fill="url(#cardGrad3)" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.6" />
+    <circle cx="28" cy="28" r="14" fill="#10b981" fill-opacity="0.15" />
+    <text x="28" y="33" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#10b981">3</text>
+    <text x="52" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#f8fafc">Cost &amp; CSAT Score</text>
+    <text x="52" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Service Quality Economics</text>
+
+    <!-- Formula Box 3 -->
+    <rect x="15" y="60" width="190" height="68" rx="8" fill="#090d16" stroke="#334155" stroke-width="0.8" />
+    <text x="110" y="82" text-anchor="middle" font-family="monospace" font-size="11" font-weight="600" fill="#34d399">Cost/Ticket = Budget ÷ Solved</text>
+    <line x1="25" y1="92" x2="195" y2="92" stroke="#334155" stroke-dasharray="2 2" stroke-width="0.8" />
+    <text x="110" y="112" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">CSAT % = Positive ÷ Responses</text>
+
+    <!-- Metrics -->
+    <text x="18" y="155" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">Customer Experience ROI:</text>
+    <circle cx="26" cy="176" r="3" fill="#10b981" />
+    <text x="36" y="180" font-family="monospace" font-size="10" fill="#94a3b8">Tier 1 Cost: $5.80 - $12.50/tix</text>
+    <circle cx="26" cy="198" r="3" fill="#10b981" />
+    <text x="36" y="202" font-family="monospace" font-size="10" fill="#94a3b8">CSAT Target: 86% - 94%</text>
+    <circle cx="26" cy="220" r="3" fill="#10b981" />
+    <text x="36" y="224" font-family="monospace" font-size="10" fill="#94a3b8">Net Promoter NPS: 45 - 65</text>
+    <circle cx="26" cy="242" r="3" fill="#10b981" />
+    <text x="36" y="246" font-family="monospace" font-size="10" fill="#94a3b8">Agent Occupancy: 75% - 85%</text>
+
+    <rect x="15" y="258" width="190" height="18" rx="4" fill="#10b981" fill-opacity="0.1" />
+    <text x="110" y="271" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="600" fill="#34d399">Support Margin Defensibility</text>
+  </g>
+
+  <!-- Bottom Watermark & Standards -->
+  <text x="400" y="385" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#64748b" letter-spacing="0.5">HDI Service Management Standards · Zendesk Customer Experience Benchmark Methodology</text>
+</svg>

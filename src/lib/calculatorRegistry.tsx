@@ -50,6 +50,8 @@ import RealEstateProductivityCalculator from "@/components/RealEstateProductivit
 import RealEstateProductivitySeoContent from "@/components/RealEstateProductivitySeoContent";
 import EducationProductivityCalculator from "@/components/EducationProductivityCalculator";
 import EducationProductivitySeoContent from "@/components/EducationProductivitySeoContent";
+import CustomerSupportProductivityCalculator from "@/components/CustomerSupportProductivityCalculator";
+import CustomerSupportProductivitySeoContent from "@/components/CustomerSupportProductivitySeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -512,6 +514,25 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: EducationProductivityCalculator,
         SeoContent: EducationProductivitySeoContent,
+    },
+    "customer-support": {
+        badgeText: "Customer Experience & Helpdesk Suite",
+        titlePrefix: "Customer Support & Helpdesk",
+        subtitle: "Professional support agent productivity calculator, tickets per hour (TPH), first contact resolution (FCR), and cost per ticket engine.",
+        metaTitle: "Customer Support Productivity Calculator | Helpdesk Metrics",
+        metaDescription: "Free customer support productivity calculator. Measure tickets per agent hour, first contact resolution (FCR), CSAT yield, and support staffing with HDI data.",
+        keywords: [
+            "customer support productivity calculator",
+            "support agent productivity calculator",
+            "helpdesk productivity",
+            "how to measure customer support productivity",
+            "customer service productivity calculator",
+            "tickets per agent per day calculator",
+            "first response time calculator",
+            "productivity calculator",
+        ],
+        Calculator: CustomerSupportProductivityCalculator,
+        SeoContent: CustomerSupportProductivitySeoContent,
     },
 };
 
