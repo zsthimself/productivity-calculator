@@ -46,6 +46,8 @@ import RestaurantProductivityCalculator from "@/components/RestaurantProductivit
 import RestaurantProductivitySeoContent from "@/components/RestaurantProductivitySeoContent";
 import SoftwareDevelopmentProductivityCalculator from "@/components/SoftwareDevelopmentProductivityCalculator";
 import SoftwareDevelopmentSeoContent from "@/components/SoftwareDevelopmentSeoContent";
+import RealEstateProductivityCalculator from "@/components/RealEstateProductivityCalculator";
+import RealEstateProductivitySeoContent from "@/components/RealEstateProductivitySeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -458,7 +460,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         titlePrefix: "Software Development",
         subtitle: "Professional developer productivity calculator, Google DORA release metrics, agile sprint story throughput, and ARR per engineer model.",
         metaTitle: "Software Development Productivity Calculator | DORA Velocity",
-        metaDescription: "Free software development productivity calculator. Measure DORA delivery velocity, sprint story point throughput, and developer revenue ROI with tech benchmarks.",
+        metaDescription: "Free software development productivity calculator. Measure DORA cycle velocity, sprint point throughput, and developer revenue ROI with industry benchmarks.",
         keywords: [
             "software development productivity calculator",
             "developer productivity calculator",
@@ -471,6 +473,24 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: SoftwareDevelopmentProductivityCalculator,
         SeoContent: SoftwareDevelopmentSeoContent,
+    },
+    "real-estate": {
+        badgeText: "Realty & Brokerage Operations Suite",
+        titlePrefix: "Real Estate Agent Commission &",
+        subtitle: "Professional realtor productivity calculator, GCI commission split modeler, showing conversion analyzer, and effective hourly wage engine.",
+        metaTitle: "Real Estate Productivity Calculator | Realtor Commission ROI",
+        metaDescription: "Free real estate productivity calculator. Measure realtor commission splits, buyer showing conversion rates, and annual GCI per working hour with NAR benchmarks.",
+        keywords: [
+            "real estate productivity calculator",
+            "realtor productivity calculator",
+            "real estate agent productivity",
+            "real estate agent commission calculator",
+            "real estate lead conversion rate",
+            "realtor income calculator",
+            "productivity calculator",
+        ],
+        Calculator: RealEstateProductivityCalculator,
+        SeoContent: RealEstateProductivitySeoContent,
     },
 };
 

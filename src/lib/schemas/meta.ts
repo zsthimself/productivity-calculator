@@ -134,7 +134,13 @@ export function getIndustryMeta(
             return {
                 name: "Software Development Productivity Calculator",
                 description:
-                    "Free software development productivity calculator. Measure DORA delivery velocity, sprint story point throughput, and developer revenue ROI with tech benchmarks.",
+                    "Free software development productivity calculator. Measure DORA cycle velocity, sprint point throughput, and developer revenue ROI with industry benchmarks.",
+            };
+        case "real-estate":
+            return {
+                name: "Real Estate Productivity Calculator",
+                description:
+                    "Free real estate productivity calculator. Measure realtor commission splits, buyer showing conversion rates, and annual GCI per working hour with NAR benchmarks.",
             };
         default:
             return {
