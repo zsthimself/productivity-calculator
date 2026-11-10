@@ -48,6 +48,8 @@ import SoftwareDevelopmentProductivityCalculator from "@/components/SoftwareDeve
 import SoftwareDevelopmentSeoContent from "@/components/SoftwareDevelopmentSeoContent";
 import RealEstateProductivityCalculator from "@/components/RealEstateProductivityCalculator";
 import RealEstateProductivitySeoContent from "@/components/RealEstateProductivitySeoContent";
+import EducationProductivityCalculator from "@/components/EducationProductivityCalculator";
+import EducationProductivitySeoContent from "@/components/EducationProductivitySeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -479,7 +481,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         titlePrefix: "Real Estate Agent Commission &",
         subtitle: "Professional realtor productivity calculator, GCI commission split modeler, showing conversion analyzer, and effective hourly wage engine.",
         metaTitle: "Real Estate Productivity Calculator | Realtor Commission ROI",
-        metaDescription: "Free real estate productivity calculator. Measure realtor commission splits, buyer showing conversion rates, and annual GCI per working hour with NAR benchmarks.",
+        metaDescription: "Free real estate productivity calculator. Measure realtor commission splits, buyer showing conversion rates, and annual GCI per working hour with NAR standards.",
         keywords: [
             "real estate productivity calculator",
             "realtor productivity calculator",
@@ -491,6 +493,25 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: RealEstateProductivityCalculator,
         SeoContent: RealEstateProductivitySeoContent,
+    },
+    education: {
+        badgeText: "Academic & Institutional Suite",
+        titlePrefix: "Education & Teaching Faculty",
+        subtitle: "Professional education productivity calculator, NCES student-to-teacher ratio (STR), per-pupil spending, and credit hour yield model.",
+        metaTitle: "Education Productivity Calculator | Teacher & School Metrics",
+        metaDescription: "Free education productivity calculator. Measure student-teacher ratios, instructional hours per student, and academic tuition ROI with NCES benchmarks.",
+        keywords: [
+            "education productivity calculator",
+            "teacher productivity calculator",
+            "school productivity calculator",
+            "how to measure teacher productivity",
+            "student teacher ratio calculator",
+            "instructional cost per student",
+            "education efficiency metrics",
+            "productivity calculator",
+        ],
+        Calculator: EducationProductivityCalculator,
+        SeoContent: EducationProductivitySeoContent,
     },
 };
 

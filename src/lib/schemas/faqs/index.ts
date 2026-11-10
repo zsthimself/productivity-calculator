@@ -27,6 +27,7 @@ import { agricultureFaqs } from "./agriculture";
 import { restaurantFaqs } from "./restaurant";
 import { softwareDevelopmentFaqs } from "./softwareDevelopment";
 import { realEstateFaqs } from "./realEstate";
+import { educationFaqs } from "./education";
 
 export function getIndustryFaqs(slug: string): FAQItem[] {
     switch (slug) {
@@ -36,6 +37,8 @@ export function getIndustryFaqs(slug: string): FAQItem[] {
             return softwareDevelopmentFaqs;
         case "real-estate":
             return realEstateFaqs;
+        case "education":
+            return educationFaqs;
         case "physical-therapy":
             return physicalTherapyFaqs;
         case "manufacturing":

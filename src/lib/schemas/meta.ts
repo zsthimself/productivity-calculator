@@ -140,7 +140,13 @@ export function getIndustryMeta(
             return {
                 name: "Real Estate Productivity Calculator",
                 description:
-                    "Free real estate productivity calculator. Measure realtor commission splits, buyer showing conversion rates, and annual GCI per working hour with NAR benchmarks.",
+                    "Free real estate productivity calculator. Measure realtor commission splits, buyer showing conversion rates, and annual GCI per working hour with NAR standards.",
+            };
+        case "education":
+            return {
+                name: "Education Productivity Calculator",
+                description:
+                    "Free education productivity calculator. Measure student-teacher ratios, instructional hours per student, and academic tuition ROI with NCES benchmarks.",
             };
         default:
             return {
