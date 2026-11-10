@@ -1,55 +1,20 @@
 /**
- * [INPUT]: industries.json (静态配置), URL slug 参数, 专用计算器组件群, generateIndustrySchema
- * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 PT、制造、劳动力、营销、零售、农业 (agriculture) 等专属套件
- * [POS]: pSEO 模板与垂直突围页 - 承接 slug 对应 20+ 行业页面，对高潜力词做专属架构承接
+ * [INPUT]: industries.json (静态配置), URL slug 参数, getIndustrySuite (注册表路由), generateIndustrySchema
+ * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持所有专业垂直套件
+ * [POS]: pSEO 模板与垂直突围页 - 承接 slug 对应 26+ 行业页面，对高潜力词做专属架构承接
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Calculator from "@/components/Calculator";
-import PhysicalTherapyCalculator from "@/components/PhysicalTherapyCalculator";
-import PhysicalTherapySeoContent from "@/components/PhysicalTherapySeoContent";
-import ManufacturingCalculator from "@/components/ManufacturingCalculator";
-import ManufacturingSeoContent from "@/components/ManufacturingSeoContent";
-import LaborProductivityCalculator from "@/components/LaborProductivityCalculator";
-import LaborProductivitySeoContent from "@/components/LaborProductivitySeoContent";
-import EmployeeProductivityCalculator from "@/components/EmployeeProductivityCalculator";
-import EmployeeProductivitySeoContent from "@/components/EmployeeProductivitySeoContent";
-import VideoProductionCalculator from "@/components/VideoProductionCalculator";
-import VideoProductionSeoContent from "@/components/VideoProductionSeoContent";
-import CallCenterProductivityCalculator from "@/components/CallCenterProductivityCalculator";
-import CallCenterProductivitySeoContent from "@/components/CallCenterProductivitySeoContent";
-import { LogisticsProductivityCalculator } from "@/components/LogisticsProductivityCalculator";
-import LogisticsProductivitySeoContent from "@/components/LogisticsProductivitySeoContent";
-import { CleaningServicesProductivityCalculator } from "@/components/CleaningServicesProductivityCalculator";
-import CleaningServicesProductivitySeoContent from "@/components/CleaningServicesProductivitySeoContent";
-import { HealthcareProductivityCalculator } from "@/components/HealthcareProductivityCalculator";
-import HealthcareProductivitySeoContent from "@/components/HealthcareProductivitySeoContent";
-import WeldingProductivityCalculator from "@/components/WeldingProductivityCalculator";
-import WeldingProductivitySeoContent from "@/components/WeldingProductivitySeoContent";
-import TechnicianProductivityCalculator from "@/components/TechnicianProductivityCalculator";
-import TechnicianProductivitySeoContent from "@/components/TechnicianProductivitySeoContent";
-import MachineProductivityCalculator from "@/components/MachineProductivityCalculator";
-import MachineProductivitySeoContent from "@/components/MachineProductivitySeoContent";
-import ConstructionProductivityCalculator from "@/components/ConstructionProductivityCalculator";
-import ConstructionProductivitySeoContent from "@/components/ConstructionProductivitySeoContent";
-import SalesProductivityCalculator from "@/components/SalesProductivityCalculator";
-import SalesProductivitySeoContent from "@/components/SalesProductivitySeoContent";
-import DataEntryProductivityCalculator from "@/components/DataEntryProductivityCalculator";
-import DataEntryProductivitySeoContent from "@/components/DataEntryProductivitySeoContent";
-import MarketingProductivityCalculator from "@/components/MarketingProductivityCalculator";
-import MarketingProductivitySeoContent from "@/components/MarketingProductivitySeoContent";
-import RetailProductivityCalculator from "@/components/RetailProductivityCalculator";
-import RetailProductivitySeoContent from "@/components/RetailProductivitySeoContent";
-import AgricultureProductivityCalculator from "@/components/AgricultureProductivityCalculator";
-import AgricultureProductivitySeoContent from "@/components/AgricultureProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import industries from "@/data/industries.json";
 import { IndustryData } from "@/types/industry";
 import { generateIndustrySchema } from "@/lib/industrySchemas";
+import { getIndustrySuite } from "@/lib/calculatorRegistry";
 
 const industryData = industries as IndustryData[];
 const BASE_URL = "https://productivitycalculator.work";
@@ -142,374 +107,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
-    if (slug === "physical-therapy") {
+    const suite = getIndustrySuite(slug);
+    if (suite) {
         return buildMeta(
-            "Physical Therapy Productivity Calculator | PT & OT",
-            "Free physical therapy productivity calculator for PT, OT, and therapists. Calculate clinical productivity percentage, treatment minutes, lunch break, and target hours.",
-            [
-                "physical therapy productivity calculator",
-                "pt productivity calculator",
-                "occupational therapy productivity calculator",
-                "ot productivity calculator",
-                "slp productivity calculator",
-                "productivity calculator for physical therapy",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "manufacturing") {
-        return buildMeta(
-            "Manufacturing Productivity Calculator | OEE & Labor Rate",
-            "Free manufacturing productivity calculator. Measure factory output, labor productivity per hour, machine cycle efficiency, and OEE benchmarks instantly.",
-            [
-                "manufacturing productivity calculator",
-                "manufacturing calculator",
-                "factory calculator",
-                "calculate manufacturing productivity",
-                "manufacturing efficiency calculator",
-                "production productivity calculator",
-                "overall equipment effectiveness calculator",
-                "oee calculator",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "labor") {
-        return buildMeta(
-            "Labor Productivity Calculator | Units & Output per Hour",
-            "Free labor productivity calculator. Measure workforce units per hour, revenue per labor dollar, and team capacity utilization with real-time benchmarks.",
-            [
-                "labor productivity calculator",
-                "labor productivity formula",
-                "productivity calculator per hour",
-                "labor productivity formula with example",
-                "how to calculate labor productivity",
-                "calculate labor productivity",
-                "workforce productivity calculator",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "employee") {
-        return buildMeta(
-            "Employee Productivity Calculator | Revenue per FTE & Target ROI",
-            "Free employee productivity calculator. Measure revenue per employee, net profit per FTE, and employee compensation ROI with industry-level benchmarks.",
-            [
-                "employee productivity calculator",
-                "how to calculate productivity per employee",
-                "calculate productivity per employee",
-                "revenue per employee calculator",
-                "profit per employee",
-                "workforce productivity calculator",
-                "employee performance calculator",
-                "productivity calculator",
-                "employee efficiency",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "video-production") {
-        return buildMeta(
-            "Video Production Calculator | Cost & Turnaround Estimator",
-            "Free video production calculator. Estimate video production costs per minute, editing turnaround time, and crew labor efficiency across all project tiers.",
-            [
-                "video production calculator",
-                "video production cost estimator",
-                "video production costs estimator",
-                "video editing time calculator",
-                "cost per minute video production",
-                "video turnaround time calculator",
-                "video editor productivity calculator",
-                "shooting ratio calculator",
-                "video production efficiency",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "call-center") {
-        return buildMeta(
-            "Call Center Productivity Calculator | Agent Occupancy & CPH",
-            "Free call center productivity calculator. Measure agent occupancy, calls per hour (CPH), handling velocity (AHT), and shrinkage with WFM benchmarks.",
-            [
-                "call center productivity calculator",
-                "call center productivity",
-                "agent productivity calculator",
-                "call center metrics calculator",
-                "calls per hour calculator",
-                "call center occupancy calculator",
-                "call center shrinkage calculator",
-                "bpo productivity calculator",
-                "average handle time calculator",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "logistics") {
-        return buildMeta(
-            "Logistics Productivity Calculator | Warehouse & Pick Rate",
-            "Free logistics productivity calculator to measure warehouse units per hour (UPH), picking velocity, order fulfillment cycle time, and labor cost per order.",
-            [
-                "logistics productivity calculator",
-                "warehouse productivity calculator",
-                "warehouse productivity calculation",
-                "units per hour uph",
-                "warehouse pick rate calculator",
-                "order fulfillment cycle time",
-                "warehouse labor productivity",
-                "dock to stock calculator",
-                "3pl productivity calculator",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "cleaning-services") {
-        return buildMeta(
-            "Commercial Cleaning Time Calculator | ISSA Production Rates",
-            "Free commercial cleaning time calculator to estimate janitorial labor hours, square footage production rates, and contract bidding costs with ISSA standards.",
-            [
-                "commercial cleaning time calculator",
-                "cleaning time calculator",
-                "cleaning times calculator",
-                "how to calculate cleaning times",
-                "cleaning productivity calculator",
-                "commercial cleaning productivity calculator",
-                "janitorial bidding calculator",
-                "issa 612 cleaning times",
-                "cleaning square footage calculator",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "technician") {
-        return buildMeta(
-            "Technician Productivity Calculator | Efficiency & Hours",
-            "Free technician productivity calculator to measure automotive flat-rate efficiency, labor productivity, wrench-time utilization, and shop billable gross margin.",
-            [
-                "technician productivity calculator",
-                "technician efficiency calculator",
-                "service technician productivity",
-                "how to calculate technician efficiency",
-                "technician proficiency formula",
-                "automotive technician productivity",
-                "wrench time calculator",
-                "flat rate technician calculator",
-                "mechanic efficiency calculator",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "machine") {
-        return buildMeta(
-            "Machine Productivity Calculator | OEE & Cycle Time",
-            "Free machine productivity calculator to measure OEE (Availability x Performance x Quality), cycle time vs takt time, throughput, and equipment downtime cost.",
-            [
-                "machine productivity calculator",
-                "productivity machine",
-                "how to calculate machine productivity",
-                "machine productivity formula",
-                "machine efficiency calculator",
-                "overall equipment effectiveness calculator",
-                "oee calculator",
-                "machine capacity calculator",
-                "cycle time calculator",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "construction") {
-        return buildMeta(
-            "Construction Productivity Calculator | Labor & Crew Rate",
-            "Free construction productivity calculator to measure labor output rate, man-hours per unit, crew daily velocity, project duration, and CPI cost efficiency.",
-            [
-                "construction productivity calculator",
-                "construction labor productivity",
-                "construction productivity rates",
-                "calculate labor productivity in construction",
-                "construction productivity calculation",
-                "how to measure construction productivity",
-                "standard labor productivity rates in construction",
-                "crew productivity calculator",
-                "construction time calculator",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "sales") {
-        return buildMeta(
-            "Sales Productivity Calculator | Velocity & Quota Rate",
-            "Free sales productivity calculator to measure pipeline velocity, quota attainment percentage, sales per hour, revenue per rep, and sales team labor efficiency.",
-            [
-                "sales productivity calculator",
-                "sales per hour calculator",
-                "sales per hour",
-                "sales velocity formula",
-                "how to calculate sales productivity",
-                "sales rep productivity",
-                "quota attainment calculator",
-                "revenue per rep calculator",
-                "sales capacity calculator",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "data-entry") {
-        return buildMeta(
-            "Data Entry Productivity Calculator | KPH & WPM Rate",
-            "Free data entry productivity calculator to calculate keystrokes per hour (KPH), Net KPH accuracy, records per hour, batch velocity, and unit cost per 1,000 records.",
-            [
-                "data entry productivity calculator",
-                "data entry speed calculator",
-                "keystrokes per hour calculator",
-                "kph calculator",
-                "net kph formula",
-                "data entry accuracy calculator",
-                "data entry cost per 1000 records",
-                "data entry words per minute",
-                "data entry production rate",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "marketing") {
-        return buildMeta(
-            "Marketing Productivity Calculator | ROI & CAC Rate",
-            "Free marketing productivity calculator to measure marketing ROI, LTV:CAC ratio, pipeline velocity, cost per opportunity, and campaign labor efficiency.",
-            [
-                "marketing productivity calculator",
-                "marketing roi calculator",
-                "marketing efficiency calculator",
-                "cac to ltv calculator",
-                "marketing velocity formula",
-                "marketing labor productivity",
-                "how to calculate marketing productivity",
-                "cost per qualified opportunity",
-                "marketing capacity calculator",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "retail") {
-        return buildMeta(
-            "Retail Productivity Calculator | SPLH & Space Density",
-            "Free retail productivity calculator to measure sales per labor hour (SPLH), sales per square foot (SPSF), payroll cost percentage, GMROI, and store shrinkage.",
-            [
-                "retail productivity calculator",
-                "retail store productivity",
-                "sales per labor hour calculator",
-                "splh calculator",
-                "sales per square foot calculator",
-                "spsf calculator",
-                "gmroi calculator",
-                "retail labor cost percentage",
-                "retail shrinkage formula",
-                "how to calculate retail productivity",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "agriculture") {
-        return buildMeta(
-            "Agriculture Productivity Calculator | Yield & Field Capacity",
-            "Free agriculture productivity calculator. Measure crop yield per acre, machinery effective field capacity (EFC), fuel efficiency, and operating gross margins.",
-            [
-                "agriculture productivity calculator",
-                "agricultural productivity calculator",
-                "farm productivity calculator",
-                "crop yield calculator",
-                "effective field capacity calculator",
-                "efc calculator",
-                "machinery field capacity calculator",
-                "breakeven yield calculator",
-                "farm operating margin calculator",
-                "usda crop yield benchmarks",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "welding") {
-        return buildMeta(
-            "Welding Productivity Calculator | Deposition Rate & AWS",
-            "Free welding productivity calculator to measure filler metal deposition rate, arc-on operating factor, joint volume consumption, and fabrication cost per foot.",
-            [
-                "welding productivity calculator",
-                "welding productivity",
-                "welder productivity per day",
-                "welding deposition rate calculator",
-                "welding cost per foot",
-                "welding operating factor",
-                "welding joint volume calculator",
-                "welder efficiency calculator",
-                "aws welding calculator",
-                "productivity calculator",
-            ],
-            pageUrl,
-            slug
-        );
-    }
-
-    if (slug === "healthcare") {
-        return buildMeta(
-            "Healthcare Productivity Calculator | wRVU & HPPD Benchmark",
-            "Free clinical healthcare productivity calculator. Measure physician wRVU production, inpatient nursing HPPD staffing, and ambulatory patient encounter velocity.",
-            [
-                "healthcare productivity calculator",
-                "healthcare productivity",
-                "physician productivity calculator",
-                "productivity in healthcare",
-                "wrvu calculator",
-                "nursing hppd calculator",
-                "hours per patient day calculator",
-                "clinical productivity calculator",
-                "hospital productivity calculator",
-                "productivity calculator",
-            ],
+            suite.metaTitle,
+            suite.metaDescription,
+            suite.keywords,
             pageUrl,
             slug
         );
@@ -569,10 +172,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
         );
     }
 
-    const isPhysicalTherapy = slug === "physical-therapy", isManufacturing = slug === "manufacturing", isLabor = slug === "labor", isEmployee = slug === "employee";
-    const isVideoProduction = slug === "video-production", isCallCenter = slug === "call-center", isLogistics = slug === "logistics", isCleaningServices = slug === "cleaning-services";
-    const isHealthcare = slug === "healthcare", isWelding = slug === "welding", isTechnician = slug === "technician", isMachine = slug === "machine";
-    const isConstruction = slug === "construction", isSales = slug === "sales", isDataEntry = slug === "data-entry", isMarketing = slug === "marketing", isRetail = slug === "retail", isAgriculture = slug === "agriculture";
+    const suite = getIndustrySuite(slug);
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -608,77 +208,23 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full neon-border mb-6 animate-fade-in">
                             <span className="text-2xl">{industry.icon}</span>
                             <span className="font-display text-xs tracking-widest text-[var(--neon-cyan)] uppercase">
-                                {isPhysicalTherapy ? "Physical Therapy Clinical Suite"
-                                    : isManufacturing ? "Manufacturing Operations Suite"
-                                    : isLabor ? "Workforce Operations Suite"
-                                    : isEmployee ? "Workforce Executive Suite"
-                                    : isVideoProduction ? "Broadcast & Studio Production Suite"
-                                    : isCallCenter ? "Contact Center Operations Suite"
-                                    : isLogistics ? "Warehouse & Supply Chain Suite"
-                                    : isCleaningServices ? "Commercial Janitorial & ISSA 612 Suite"
-                                    : isHealthcare ? "Clinical Healthcare & Hospital Operations Suite"
-                                    : isWelding ? "Structural Welding & AWS D1.1 Suite"
-                                    : isTechnician ? "Automotive & Field Service Operations Suite"
-                                    : isMachine ? "Automated Machinery & TPM Efficiency Suite"
-                                    : isConstruction ? "Heavy Civil & Commercial Construction Suite"
-                                    : isSales ? "Revenue Operations & B2B Sales Suite"
-                                    : isDataEntry ? "Back-Office Operations & BPO Data Entry Suite"
-                                    : isMarketing ? "Growth Marketing & Demand Generation Suite"
-                                    : isRetail ? "Store Performance & Retail Operations Suite"
-                                    : isAgriculture ? "Agronomic Operations & Field Logistics Suite"
-                                    : industry.name}
+                                {suite ? suite.badgeText : industry.name}
                             </span>
                         </div>
 
                         {/* Main Title */}
                         <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight animate-fade-in stagger-1">
                             <span className="text-gradient neon-text-subtle">
-                                {isPhysicalTherapy ? "Physical Therapy"
-                                    : isManufacturing ? "Manufacturing"
-                                    : isLabor ? "Labor"
-                                    : isEmployee ? "Employee"
-                                    : isVideoProduction ? "Video Production"
-                                    : isCallCenter ? "Call Center"
-                                    : isLogistics ? "Logistics"
-                                    : isCleaningServices ? "Commercial Cleaning Time"
-                                    : isHealthcare ? "Healthcare & Clinical"
-                                    : isWelding ? "Welding & Fabrication"
-                                    : isTechnician ? "Technician & Field Service"
-                                    : isMachine ? "Machine & Equipment OEE"
-                                    : isConstruction ? "Construction & Crew Labor"
-                                    : isSales ? "Sales Pipeline & Quota"
-                                    : isDataEntry ? "Data Entry Speed & Accuracy"
-                                    : isMarketing ? "Marketing ROI & Pipeline Velocity"
-                                    : isRetail ? "Retail Store Sales & Space"
-                                    : isAgriculture ? "Agriculture Yield & Field Capacity"
-                                    : industry.name}
+                                {suite ? suite.titlePrefix : industry.name}
                             </span>{" "}
                             <span className="text-white">
-                                {isCleaningServices ? "& Productivity Calculator" : "Productivity Calculator"}
+                                {suite?.titleSuffix ?? "Productivity Calculator"}
                             </span>
                         </h1>
 
                         {/* Subtitle */}
                         <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto font-body leading-relaxed animate-fade-in stagger-2">
-                            {isPhysicalTherapy ? "Clinical physical therapy productivity calculator, reverse clock-out planner, and Medicare 8-minute rule converter for PT, OT & SLP clinicians."
-                                : isManufacturing ? "Industrial manufacturing productivity calculator, machine throughput estimator, and OEE efficiency benchmark analyzer."
-                                : isLabor ? "Workforce labor productivity calculator, blended team payroll rate modeler, and employee capacity utilization analyzer."
-                                : isEmployee ? "Executive employee productivity calculator, revenue per FTE modeler, and department staff quota performance analyzer."
-                                : isVideoProduction ? "Studio video production calculator, cost per finished minute estimator, and post-production turnaround scheduler for filmmakers, agencies & creators."
-                                : isCallCenter ? "Contact center productivity calculator, agent occupancy analyzer, and shrinkage-adjusted staffing scheduler for customer support & BPO teams."
-                                : isLogistics ? "Warehouse logistics productivity calculator, units per hour (UPH) estimator, dock-to-stock tracker, and fleet unit shipping cost modeler for distribution centers & 3PLs."
-                                : isCleaningServices ? "Commercial cleaning time calculator, janitorial square footage production rate analyzer, and contract bidding cost estimator based on official ISSA 612 standards."
-                                : isHealthcare ? "Clinical healthcare productivity calculator, physician wRVU production modeler, and hospital inpatient nursing HPPD staffing benchmark analyzer."
-                                : isWelding ? "Industrial welding productivity calculator, AWS filler metal deposition rate estimator, arc-on operating factor analyzer, and joint fabrication cost modeler."
-                                : isTechnician ? "Industrial technician productivity calculator, automotive flat-rate efficiency modeler, and field service wrench-time analyzer."
-                                : isMachine ? "Industrial machine productivity calculator, Overall Equipment Effectiveness (OEE) analyzer, and cycle time vs takt capacity modeler."
-                                : isConstruction ? "Industrial construction productivity calculator, trade man-hours per unit estimator, crew daily velocity forecaster, and Earned Value CPI analyzer."
-                                : isSales ? "Professional B2B sales productivity calculator, sales pipeline velocity forecaster, quota attainment analyzer, and sales per hour labor efficiency modeler."
-                                : isDataEntry ? "Free data entry productivity calculator, keystrokes per hour (KPH) analyzer, Net KPH accuracy modeler, and batch unit cost estimator for BPO operations."
-                                : isMarketing ? "Enterprise marketing productivity calculator, CAC-to-LTV ratio analyzer, MQL pipeline velocity forecaster, and campaign labor efficiency modeler."
-                                : isRetail ? "Free retail productivity calculator to measure sales per labor hour (SPLH), floor space density (SPSF), store labor cost percentage, GMROI, and shrinkage loss."
-                                : isAgriculture ? "Free agriculture productivity calculator to measure crop yield per acre, ASABE effective field capacity (EFC), tractor fuel rate, and per-acre breakeven margin."
-                                : industry.description}
+                            {suite ? suite.subtitle : industry.description}
                         </p>
 
                         {/* Decorative line */}
@@ -690,45 +236,11 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                     </div>
 
                     {/* Calculator Component */}
-                    {isPhysicalTherapy ? ( <PhysicalTherapyCalculator />
-                    ) : isManufacturing ? ( <ManufacturingCalculator />
-                    ) : isLabor ? ( <LaborProductivityCalculator />
-                    ) : isEmployee ? ( <EmployeeProductivityCalculator />
-                    ) : isVideoProduction ? ( <VideoProductionCalculator />
-                    ) : isCallCenter ? ( <CallCenterProductivityCalculator />
-                    ) : isLogistics ? ( <LogisticsProductivityCalculator />
-                    ) : isCleaningServices ? ( <CleaningServicesProductivityCalculator />
-                    ) : isHealthcare ? ( <HealthcareProductivityCalculator />
-                    ) : isWelding ? ( <WeldingProductivityCalculator />
-                    ) : isTechnician ? ( <TechnicianProductivityCalculator />
-                    ) : isMachine ? ( <MachineProductivityCalculator />
-                    ) : isConstruction ? ( <ConstructionProductivityCalculator />
-                    ) : isSales ? ( <SalesProductivityCalculator />
-                    ) : isDataEntry ? ( <DataEntryProductivityCalculator />
-                    ) : isMarketing ? ( <MarketingProductivityCalculator />
-                    ) : isRetail ? ( <RetailProductivityCalculator />
-                    ) : isAgriculture ? ( <AgricultureProductivityCalculator />
-                    ) : ( <Calculator industry={industry} /> )}
+                    {suite ? <suite.Calculator /> : <Calculator industry={industry} />}
 
                     {/* SEO Content Section */}
-                    {isPhysicalTherapy ? ( <PhysicalTherapySeoContent />
-                    ) : isManufacturing ? ( <ManufacturingSeoContent />
-                    ) : isLabor ? ( <LaborProductivitySeoContent />
-                    ) : isEmployee ? ( <EmployeeProductivitySeoContent />
-                    ) : isVideoProduction ? ( <VideoProductionSeoContent />
-                    ) : isCallCenter ? ( <CallCenterProductivitySeoContent />
-                    ) : isLogistics ? ( <LogisticsProductivitySeoContent />
-                    ) : isCleaningServices ? ( <CleaningServicesProductivitySeoContent />
-                    ) : isHealthcare ? ( <HealthcareProductivitySeoContent />
-                    ) : isWelding ? ( <WeldingProductivitySeoContent />
-                    ) : isTechnician ? ( <TechnicianProductivitySeoContent />
-                    ) : isMachine ? ( <MachineProductivitySeoContent />
-                    ) : isConstruction ? ( <ConstructionProductivitySeoContent />
-                    ) : isSales ? ( <SalesProductivitySeoContent />
-                    ) : isDataEntry ? ( <DataEntryProductivitySeoContent />
-                    ) : isMarketing ? ( <MarketingProductivitySeoContent />
-                    ) : isRetail ? ( <RetailProductivitySeoContent />
-                    ) : isAgriculture ? ( <AgricultureProductivitySeoContent />
+                    {suite ? (
+                        <suite.SeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">
@@ -742,7 +254,9 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     </p>
 
                                     <div className="neon-border rounded-xl p-6 text-center my-8">
-                                        <code className="font-display text-lg md:text-xl text-[var(--neon-cyan)]">{industry.resultLabel} = {industry.inputs.find(i => i.key === "output")?.label} ÷ {industry.inputs.find(i => i.key === "input")?.label}</code>
+                                        <code className="font-display text-lg md:text-xl text-[var(--neon-cyan)]">
+                                            {industry.resultLabel} = {industry.inputs.find((i) => i.key === "output")?.label} ÷ {industry.inputs.find((i) => i.key === "input")?.label}
+                                        </code>
                                     </div>
 
                                     <p>

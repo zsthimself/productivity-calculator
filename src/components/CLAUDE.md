@@ -39,6 +39,8 @@ RetailProductivityCalculator.tsx: 零售门店人效与空间密度计算器，S
 RetailProductivitySeoContent.tsx: 零售门店权威深度语义指南，SVG架构图/NRF基准表/芝加哥旗舰店案例/FAQ，284行
 AgricultureProductivityCalculator.tsx: 农业耕作单产与农机EFC计算器，生物产量/ASABE D497农机效率/保本边际模型，737行
 AgricultureProductivitySeoContent.tsx: 农业耕作权威深度语义指南，SVG架构图/USDA与ASABE基准表/爱荷华农场案例/FAQ，325行
+RestaurantProductivityCalculator.tsx: 餐饮门店工效计算器，Cornell RevPASH/翻台率/人工成本与后厨出餐模型，490行
+RestaurantProductivitySeoContent.tsx: 餐饮门店权威深度语义指南，SVG架构图/NRA与Cornell基准表/芝加哥餐馆案例/FAQ，340行
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

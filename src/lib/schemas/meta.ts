@@ -124,6 +124,12 @@ export function getIndustryMeta(
                 description:
                     "Free agriculture productivity calculator. Measure crop yield per acre, machinery effective field capacity (EFC), fuel efficiency, and operating gross margins.",
             };
+        case "restaurant":
+            return {
+                name: "Restaurant Productivity Calculator",
+                description:
+                    "Free restaurant productivity calculator. Measure RevPASH, table turnover velocity, prime cost ratios, and kitchen ticket output with industry benchmarks.",
+            };
         default:
             return {
                 name: fallbackTitle,
