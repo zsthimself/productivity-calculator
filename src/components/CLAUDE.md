@@ -51,6 +51,8 @@ CustomerSupportProductivityCalculator.tsx: 客服人效计算器，工单流速T
 CustomerSupportProductivitySeoContent.tsx: 客服人效权威深度语义指南，SVG架构图/HDI与Zendesk基准表/盐湖城SaaS案例/FAQ，340行
 GraphicDesignProductivityCalculator.tsx: 设计工坊工效计算器，工单交付周期/改稿损耗率/设计师小时产值与利用率模型，520行
 GraphicDesignProductivitySeoContent.tsx: 设计工坊权威深度语义指南，SVG架构图/AIGA与DMI基准表/波特兰工作室案例/FAQ，345行
+WritingProductivityCalculator.tsx: 内容创作人效计算器，纯写作WPH流速/非写作损耗比/千字费率时薪折算模型，520行
+WritingProductivitySeoContent.tsx: 内容创作权威深度语义指南，SVG架构图/EFA与ASJA基准表/奥斯汀特约撰稿人案例/FAQ，340行
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

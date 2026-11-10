@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14" />
+      <stop offset="50%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#070b14" />
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.7" />
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.7" />
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.7" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="400" fill="url(#bgGrad)" />
+
+  <!-- Subtle Grid Lines -->
+  <g stroke="#334155" stroke-width="0.5" stroke-opacity="0.25">
+    <line x1="0" y1="80" x2="800" y2="80" />
+    <line x1="0" y1="160" x2="800" y2="160" />
+    <line x1="0" y1="240" x2="800" y2="240" />
+    <line x1="0" y1="320" x2="800" y2="320" />
+    <line x1="266" y1="0" x2="266" y2="400" />
+    <line x1="533" y1="0" x2="533" y2="400" />
+  </g>
+
+  <!-- Top Title & Badge -->
+  <rect x="180" y="24" width="440" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <text x="400" y="42" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="1.5">WRITING PRODUCTIVITY &amp; FREELANCE EDITORIAL ARCHITECTURE</text>
+
+  <!-- Pillar 1: Drafting Velocity & Words Per Hour -->
+  <g transform="translate(35, 75)">
+    <rect width="220" height="285" rx="12" fill="url(#cardGrad1)" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.6" />
+    <circle cx="28" cy="28" r="14" fill="#38bdf8" fill-opacity="0.15" />
+    <text x="28" y="33" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#38bdf8">1</text>
+    <text x="52" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#f8fafc">Drafting Velocity</text>
+    <text x="52" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Words per Hour (WPH)</text>
+
+    <!-- Formula Box 1 -->
+    <rect x="15" y="60" width="190" height="68" rx="8" fill="#090d16" stroke="#334155" stroke-width="0.8" />
+    <text x="110" y="82" text-anchor="middle" font-family="monospace" font-size="11" font-weight="600" fill="#38bdf8">WPH = Draft Words ÷ Hours</text>
+    <line x1="25" y1="92" x2="195" y2="92" stroke="#334155" stroke-dasharray="2 2" stroke-width="0.8" />
+    <text x="110" y="112" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">Daily Output = Words ÷ Days</text>
+
+    <!-- Metrics -->
+    <text x="18" y="155" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">Editorial Speed Benchmarks:</text>
+    <circle cx="26" cy="176" r="3" fill="#38bdf8" />
+    <text x="36" y="180" font-family="monospace" font-size="10" fill="#94a3b8">SEO Content: 600 - 1,000 WPH</text>
+    <circle cx="26" cy="198" r="3" fill="#38bdf8" />
+    <text x="36" y="202" font-family="monospace" font-size="10" fill="#94a3b8">Technical/Whitepaper: 250 - 450 WPH</text>
+    <circle cx="26" cy="220" r="3" fill="#38bdf8" />
+    <text x="36" y="224" font-family="monospace" font-size="10" fill="#94a3b8">Fiction/Creative: 700 - 1,200 WPH</text>
+    <circle cx="26" cy="242" r="3" fill="#38bdf8" />
+    <text x="36" y="246" font-family="monospace" font-size="10" fill="#94a3b8">Daily Sustainable: 2,500 wds/day</text>
+
+    <rect x="15" y="258" width="190" height="18" rx="4" fill="#38bdf8" fill-opacity="0.1" />
+    <text x="110" y="271" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="600" fill="#38bdf8">Draft Generation Velocity</text>
+  </g>
+
+  <!-- Pillar 2: Research & Editing Drag -->
+  <g transform="translate(290, 75)">
+    <rect width="220" height="285" rx="12" fill="url(#cardGrad2)" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.6" />
+    <circle cx="28" cy="28" r="14" fill="#f59e0b" fill-opacity="0.15" />
+    <text x="28" y="33" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#f59e0b">2</text>
+    <text x="52" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#f8fafc">Editing &amp; Research</text>
+    <text x="52" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Non-Drafting Overhead</text>
+
+    <!-- Formula Box 2 -->
+    <rect x="15" y="60" width="190" height="68" rx="8" fill="#090d16" stroke="#334155" stroke-width="0.8" />
+    <text x="110" y="82" text-anchor="middle" font-family="monospace" font-size="11" font-weight="600" fill="#fbbf24">Drag % = (Non-Draft ÷ Total) × 100</text>
+    <line x1="25" y1="92" x2="195" y2="92" stroke="#334155" stroke-dasharray="2 2" stroke-width="0.8" />
+    <text x="110" y="112" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">Friction = Total Hours ÷ Draft Hrs</text>
+
+    <!-- Metrics -->
+    <text x="18" y="155" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">EFA Editorial Allocation:</text>
+    <circle cx="26" cy="176" r="3" fill="#f59e0b" />
+    <text x="36" y="180" font-family="monospace" font-size="10" fill="#94a3b8">Healthy Overhead: 30% - 45%</text>
+    <circle cx="26" cy="198" r="3" fill="#f59e0b" />
+    <text x="36" y="202" font-family="monospace" font-size="10" fill="#94a3b8">Research &amp; Outlining: 20% - 35%</text>
+    <circle cx="26" cy="220" r="3" fill="#f59e0b" />
+    <text x="36" y="224" font-family="monospace" font-size="10" fill="#94a3b8">Proofreading/Polishing: 10% - 20%</text>
+    <circle cx="26" cy="242" r="3" fill="#f59e0b" />
+    <text x="36" y="246" font-family="monospace" font-size="10" fill="#94a3b8">Client Revision SLA: 1 - 2 rounds</text>
+
+    <rect x="15" y="258" width="190" height="18" rx="4" fill="#f59e0b" fill-opacity="0.1" />
+    <text x="110" y="271" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="600" fill="#fbbf24">Editorial Latency Control</text>
+  </g>
+
+  <!-- Pillar 3: Effective Hourly Yield -->
+  <g transform="translate(545, 75)">
+    <rect width="220" height="285" rx="12" fill="url(#cardGrad3)" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.6" />
+    <circle cx="28" cy="28" r="14" fill="#10b981" fill-opacity="0.15" />
+    <text x="28" y="33" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#10b981">3</text>
+    <text x="52" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#f8fafc">Effective Hourly Rate</text>
+    <text x="52" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Clock Hour Realization</text>
+
+    <!-- Formula Box 3 -->
+    <rect x="15" y="60" width="190" height="68" rx="8" fill="#090d16" stroke="#334155" stroke-width="0.8" />
+    <text x="110" y="82" text-anchor="middle" font-family="monospace" font-size="11" font-weight="600" fill="#34d399">EHR = Assignment Fee ÷ Total Hrs</text>
+    <line x1="25" y1="92" x2="195" y2="92" stroke="#334155" stroke-dasharray="2 2" stroke-width="0.8" />
+    <text x="110" y="112" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">Rate/Word = Fee ($) ÷ Total Words</text>
+
+    <!-- Metrics -->
+    <text x="18" y="155" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">ASJA Professional Yields:</text>
+    <circle cx="26" cy="176" r="3" fill="#10b981" />
+    <text x="36" y="180" font-family="monospace" font-size="10" fill="#94a3b8">General Commercial: $0.20 - $0.45/wd</text>
+    <circle cx="26" cy="198" r="3" fill="#10b981" />
+    <text x="36" y="202" font-family="monospace" font-size="10" fill="#94a3b8">Technical/B2B Ghost: $0.60 - $1.50/wd</text>
+    <circle cx="26" cy="220" r="3" fill="#10b981" />
+    <text x="36" y="224" font-family="monospace" font-size="10" fill="#94a3b8">Target Freelance EHR: $65 - $150/hr</text>
+    <circle cx="26" cy="242" r="3" fill="#10b981" />
+    <text x="36" y="246" font-family="monospace" font-size="10" fill="#94a3b8">Effective Annualized: $75k - $140k</text>
+
+    <rect x="15" y="258" width="190" height="18" rx="4" fill="#10b981" fill-opacity="0.1" />
+    <text x="110" y="271" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="600" fill="#34d399">Editorial Hourly Realization</text>
+  </g>
+
+  <!-- Bottom Watermark & Standards -->
+  <text x="400" y="385" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#64748b" letter-spacing="0.5">Editorial Freelancers Association (EFA) Rate Baselines · ASJA Professional Guidelines</text>
+</svg>

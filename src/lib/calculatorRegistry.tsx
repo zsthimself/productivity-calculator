@@ -54,6 +54,8 @@ import CustomerSupportProductivityCalculator from "@/components/CustomerSupportP
 import CustomerSupportProductivitySeoContent from "@/components/CustomerSupportProductivitySeoContent";
 import GraphicDesignProductivityCalculator from "@/components/GraphicDesignProductivityCalculator";
 import GraphicDesignProductivitySeoContent from "@/components/GraphicDesignProductivitySeoContent";
+import WritingProductivityCalculator from "@/components/WritingProductivityCalculator";
+import WritingProductivitySeoContent from "@/components/WritingProductivitySeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -540,7 +542,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         badgeText: "Creative Studio & Agency Suite",
         titlePrefix: "Graphic Design & Creative Studio",
         subtitle: "Professional design productivity calculator, asset turnaround time (TAT), revision drag ratio, and realized effective hourly rate model.",
-        metaTitle: "Graphic Design Productivity Calculator | Studio & Design Metrics",
+        metaTitle: "Graphic Design Productivity Calculator | Studio Metrics",
         metaDescription: "Free graphic design productivity calculator. Measure design turnaround time, revision loss ratio, effective hourly rate, and agency utilization with AIGA data.",
         keywords: [
             "graphic design productivity calculator",
@@ -554,6 +556,25 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: GraphicDesignProductivityCalculator,
         SeoContent: GraphicDesignProductivitySeoContent,
+    },
+    writing: {
+        badgeText: "Editorial & Author Suite",
+        titlePrefix: "Writing & Content Creation",
+        subtitle: "Professional writing productivity calculator, words per hour (WPH), editorial overhead drag, and effective hourly wage conversion.",
+        metaTitle: "Writing Productivity Calculator | Words Per Hour & Rates",
+        metaDescription: "Free writing productivity calculator. Measure words per hour (WPH), effective freelance hourly rate, editing loss, and project ROI with editorial benchmarks.",
+        keywords: [
+            "freelance writing productivity calculator",
+            "writing productivity calculator",
+            "words per hour calculator",
+            "how to measure writer productivity",
+            "writer hourly rate calculator",
+            "content writing speed calculator",
+            "per word rate to hourly rate",
+            "productivity calculator",
+        ],
+        Calculator: WritingProductivityCalculator,
+        SeoContent: WritingProductivitySeoContent,
     },
 };
 

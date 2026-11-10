@@ -160,6 +160,12 @@ export function getIndustryMeta(
                 description:
                     "Free graphic design productivity calculator. Measure design turnaround time, revision loss ratio, effective hourly rate, and agency utilization with AIGA data.",
             };
+        case "writing":
+            return {
+                name: "Writing Productivity Calculator",
+                description:
+                    "Free writing productivity calculator. Measure words per hour (WPH), effective freelance hourly rate, editing loss, and project ROI with editorial benchmarks.",
+            };
         default:
             return {
                 name: fallbackTitle,
