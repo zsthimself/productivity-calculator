@@ -44,6 +44,8 @@ import AgricultureProductivityCalculator from "@/components/AgricultureProductiv
 import AgricultureProductivitySeoContent from "@/components/AgricultureProductivitySeoContent";
 import RestaurantProductivityCalculator from "@/components/RestaurantProductivityCalculator";
 import RestaurantProductivitySeoContent from "@/components/RestaurantProductivitySeoContent";
+import SoftwareDevelopmentProductivityCalculator from "@/components/SoftwareDevelopmentProductivityCalculator";
+import SoftwareDevelopmentSeoContent from "@/components/SoftwareDevelopmentSeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -450,6 +452,25 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: RestaurantProductivityCalculator,
         SeoContent: RestaurantProductivitySeoContent,
+    },
+    "software-development": {
+        badgeText: "DevOps & Engineering Velocity Suite",
+        titlePrefix: "Software Development",
+        subtitle: "Professional developer productivity calculator, Google DORA release metrics, agile sprint story throughput, and ARR per engineer model.",
+        metaTitle: "Software Development Productivity Calculator | DORA Velocity",
+        metaDescription: "Free software development productivity calculator. Measure DORA delivery velocity, sprint story point throughput, and developer revenue ROI with tech benchmarks.",
+        keywords: [
+            "software development productivity calculator",
+            "developer productivity calculator",
+            "engineering productivity calculator",
+            "how to measure developer productivity",
+            "software developer productivity metrics",
+            "dora metrics calculator",
+            "software engineering productivity",
+            "productivity calculator",
+        ],
+        Calculator: SoftwareDevelopmentProductivityCalculator,
+        SeoContent: SoftwareDevelopmentSeoContent,
     },
 };
 

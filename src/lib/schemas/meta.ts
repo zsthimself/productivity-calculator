@@ -130,6 +130,12 @@ export function getIndustryMeta(
                 description:
                     "Free restaurant productivity calculator. Measure RevPASH, table turnover velocity, prime cost ratios, and kitchen ticket output with industry benchmarks.",
             };
+        case "software-development":
+            return {
+                name: "Software Development Productivity Calculator",
+                description:
+                    "Free software development productivity calculator. Measure DORA delivery velocity, sprint story point throughput, and developer revenue ROI with tech benchmarks.",
+            };
         default:
             return {
                 name: fallbackTitle,

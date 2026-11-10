@@ -25,11 +25,14 @@ import { marketingFaqs } from "./marketing";
 import { retailFaqs } from "./retail";
 import { agricultureFaqs } from "./agriculture";
 import { restaurantFaqs } from "./restaurant";
+import { softwareDevelopmentFaqs } from "./softwareDevelopment";
 
 export function getIndustryFaqs(slug: string): FAQItem[] {
     switch (slug) {
         case "restaurant":
             return restaurantFaqs;
+        case "software-development":
+            return softwareDevelopmentFaqs;
         case "physical-therapy":
             return physicalTherapyFaqs;
         case "manufacturing":
