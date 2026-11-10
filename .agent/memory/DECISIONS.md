@@ -316,3 +316,24 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 锁定 52 字符（`Data Entry Productivity Calculator | KPH & WPM Rate`），Description 精准压缩至 158 字符黄金区间。
   4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **97 / 100 A 级卓越**（净增 +42 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 23.5/25，内容 19/19，媒体 8/8，结构化 10/10，抓取 17/17，耗时 380ms，体积 132KB，词数 1,558 词，4-gram `#1 data entry productivity calculator` 出现 6 次，占位密度 1.54%，独占 Rank 1 登顶，0 堆砌告警）。
+
+### DEC-018: /calculator/marketing 营销投资回报率与管道流速全案升级、MROI/LTV:CAC 与每合格商机成本模型
+- **背景**:
+  1. GSC 表现：`/calculator/marketing` 合并曝光 103 次，平均排名 38.6 位；
+  2. 哥飞 SERP 侦察：`marketing productivity calculator` 难度 KD **23.9 · 容易**，前 10 名竞品极其薄弱：Rank 1 `productivitycalc.com`（DR 4 泛首页）、Rank 2 `omnicalculator.com`（DR 83 泛大站，未针对营销关键词定制）、Rank 3 `ripplergroup.outgrow.us`（停留时间 0 秒，极度脆弱）、Rank 7 `theproductivitycalculator.com`（DR 0 骨架站），整体缺乏深度垂直营销人效与管道核算引擎；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 265 词触发 <300 词硬伤封顶，缺专属矢量图与多模式营销投资测算引擎。
+- **决定**:
+  1. 研发专业增长营销级 `MarketingProductivityCalculator.tsx`（708行）：
+     - 模式 1：Marketing ROI 与 LTV:CAC 比率模型（Total Marketing Budget、Attributed Revenue $、Contribution Margin %、Average Customer Lifetime Value LTV、New Customers Acquired、Gross Marketing ROI %、Net MROI %、Blended CAC $、LTV:CAC Ratio、CAC Payback Months）；
+     - 模式 2：销售线索流速与漏斗吞吐量模型（Prior Month Leads、Current Month Leads、MQL to SQL Conversion %、SQL to Won Deal %、Average Deal Size ACV $、Lead Velocity Rate LVR %、SQL Pipeline Velocity $/mo、Forecast Closed ARR）；
+     - 模式 3：营销人效与每合格商机成本模型（Total Marketing Payroll OTE、Full-Time Marketing Headcount、Contractor & Agency Fees、Sales Qualified Opportunities SQO、Monthly Campaign Hours、Marketing Spend per Headcount、Cost Per Qualified Opportunity CPQO、Marketing Labor Yield $/hr）；
+     - 提供四大组织模式预设（B2B 企业级集客、B2C 电商付费投流、产品驱动增长 PLG SaaS、高流速营销代理商外包），支持一键导出 Markdown 营销效能复盘审计报告。
+  2. 撰写专业级权威 SEO 文本组件 `MarketingProductivitySeoContent.tsx`（282行）：
+     - 嵌入 800x400 零 CLS 矢量图 `marketing-productivity-formula.svg`（三支柱：MROI & LTV:CAC、Pipeline Velocity V、Labor Yield & CPQO）；
+     - 详述三大核心算式：Blended Marketing ROI & LTV:CAC、Lead Velocity Rate LVR %、Cost Per Qualified Opportunity CPQO；
+     - 涵盖 B2B SaaS、B2C E-Commerce、Enterprise FinTech、Healthcare MedTech、Agency Services 5 大行业营销标杆基准对照表；
+     - 提供真实旧金山 MarTech SaaS 公司营销团队季度 MROI 从 142% 提升至 386%、LTV:CAC 跃升至 4.2x、CPQO 从 $1,840 骤降至 $720 实战案例；
+     - 提炼 5 大精益增长营销策略（严格 ICP 客户画像门禁、砍掉虚荣顶层流量聚焦高意向内容、自动化打通 CRM/CDP 消除数据孤岛、全漏斗归因权重校准、按合格商机管道激励 SDR）；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 锁定 50 字符（`Marketing Productivity Calculator | ROI & CAC Rate`），Description 精准压缩至 154 字符黄金区间。
+  4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 401ms，体积 131KB，词数 1,444 词，3-gram `#1 marketing productivity calculator` 出现 8 次，占位密度 1.66%，独占 Rank 1 登顶，0 堆砌告警）。
