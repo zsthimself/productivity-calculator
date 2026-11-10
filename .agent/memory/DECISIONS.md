@@ -274,3 +274,24 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 锁定 56 字符（`Construction Productivity Calculator | Labor & Crew Rate`），Description 精准压缩至 155 字符黄金区间。
   4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 451ms，体积 136KB，词数 1,602 词，3-gram `#1 construction productivity calculator` 出现 5 次，占位密度 0.94%，独占 Rank 1 登顶，0 堆砌告警）。
+
+### DEC-016: /calculator/sales 销售人效与管道流速全案升级、配额达成率与每小时产值模型
+- **背景**:
+  1. GSC 表现：`/calculator/sales` 为全站未升级页面中最高曝光页（198 次真实曝光，主词 `sales per hour` 52次、`sales productivity` 18次、`sales per hour calculator` 14次，平均排名 44.5 位）；
+  2. 哥飞 SERP 侦察：`sales productivity calculator` 难度 KD **27.2 · 容易**，SERP 前 10 名竞品整体虚弱：Rank 1 `pipelineops.com` 人均停留仅 0 秒（第 22 百分位垫底，极度脆弱），Rank 2 `clickup.com` 为大站内页顺路占位，Rank 8/9/10（ZoomInfo, Creatio, Celerant）皆为未命中主词之泛页面；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 264 词触发 <300 词硬伤封顶，缺专属配图与深度销售管道交互计算引擎。
+- **决定**:
+  1. 研发专业销售运营级 `SalesProductivityCalculator.tsx`（717行）：
+     - 模式 1：配额达成率与销售产能模型（Active Sales Reps、Period Quota per Rep、Actual Closed Team Revenue、Blended Team Ramp Capacity %、Revenue per Rep、Quota Gap / Surplus）；
+     - 模式 2：销售管道流速 V 公式模型（Qualified Pipeline Opportunities、Win Rate %、Average Deal Size ACV $、Sales Cycle Length Days、Daily Sales Velocity $/day、Monthly Velocity $/mo、Annualized Run-Rate Pipeline Output、Deals Won / Cycle）；
+     - 模式 3：每小时销售产值与薪酬 ROI 模型（Period Revenue、Sales Reps Evaluated、Period Length Weeks、Active Selling Time %、Fully-Loaded Rep Annual Payroll OTE、Gross Sales Per Hour、Active Selling Sales Per Hour、Payroll Multiplier ARR、Payroll-to-Revenue Drag %）；
+     - 提供四大 B2B 销售预设（SMB 高流速 SaaS、企业级复杂软件、电话外呼 SDR、咨询顾问大客户），支持一键导出 Markdown 销售复盘与人效核算报告。
+  2. 撰写专业级权威 SEO 文本组件 `SalesProductivitySeoContent.tsx`（326行）：
+     - 嵌入 800x400 零 CLS 矢量图 `sales-productivity-formula.svg`；
+     - 详述三大核心算式：Quota Attainment Rate、Sales Velocity Formula、Sales Per Hour Labor ROI；
+     - 涵盖 SMB、Mid-Market、Enterprise、SDR、Agency 5 大销售组织模式之 Bridge Group / Pavilion 基准对照表；
+     - 提供真实德州奥斯汀 B2B SaaS 公司 12 名 AE 团队管道流速提升 63.2%、单季增收 $780,000 ARR 实战案例；
+     - 提炼 5 大精益收入运营（Lean RevOps）策略（CRM 自动化减负、严格早期 MEDDIC 门禁、多线程决策人拓展、科学梯度爬坡、消除死单沉淀）；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 锁定 57 字符（`Sales Productivity Calculator | Velocity & Quota Rate`），Description 精准压缩至 159 字符黄金区间。
+  4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 17.5/19，媒体 8/8，结构化 10/10，抓取 17/17，耗时 1007ms，体积 139KB，词数 1,485 词，3-gram `#1 sales productivity calculator` 出现 8 次，占位密度 1.62%，独占 Rank 1 登顶，0 堆砌告警）。

@@ -1,12 +1,13 @@
 # CURRENT.md - Site 04 Local Status & Active Loops
 
 ## 当前状态
-- **站点版本**: v1.15.0 (Construction Labor Productivity & Crew Velocity Suite)
+- **站点版本**: v1.16.0 (Sales Productivity & Pipeline Velocity Suite)
 - **部署环境**: Cloudflare Pages (`productivitycalculator.work`)
-- **最近提交**: `7f88445` (feat(seo): upgrade /calculator/construction with 3-mode engine, 800x400 SVG and CII benchmarks)
+- **最近提交**: `8ecd466` (feat(calculator): upgrade sales suite with 3-mode calculator, SVG diagram, and deep SEO content)
 - **实测验证**: 
   - Static Build (`npm run build`) 147 页面 100% 静态通过，0 错误
   - 核心页面 HTML 实测：
+    - `/calculator/sales`: 1,485 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 17.5/19，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 sales productivity calculator` 出现 8 次，占位密度 1.62%，独占 Rank 1 登顶，0 堆砌告警）
     - `/calculator/construction`: 1,602 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 construction productivity calculator` 出现 5 次，占位密度 0.94%，独占 Rank 1 登顶，0 堆砌告警）
     - `/calculator/machine`: 1,528 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 machine productivity calculator` 出现 6 次，占位密度 1.18%，独占 Rank 1 登顶，0 堆砌告警）
     - `/calculator/technician`: 1,492 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 19/19，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 technician productivity calculator` 出现 4 次，占位密度 0.8%，独占 Rank 1 登顶，0 堆砌告警）
@@ -51,3 +52,5 @@
 - [x] **TASK-026**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 518ms，体积 140KB，词数 1,528 词，3-gram `#1 machine productivity calculator` 独占 Rank 1 登顶，占位密度 1.18%）
 - [x] **TASK-027**: `/calculator/construction` 建筑工程施工工效核心词（124 曝光，2 自然点击，KD 3.5 极易）全案升级：三模式 `ConstructionProductivityCalculator.tsx`（619行）、高保真 `ConstructionProductivitySeoContent.tsx`（307行）、800x400 矢量架构图、56字符精炼 Title、155字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
 - [x] **TASK-028**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 451ms，体积 136KB，词数 1,602 词，3-gram `#1 construction productivity calculator` 独占 Rank 1 登顶，占位密度 0.94%）
+- [x] **TASK-029**: `/calculator/sales` 销售人效与管道流速核心词（198 真实曝光，KD 27.2 容易）全案升级：三模式 `SalesProductivityCalculator.tsx`（717行）、高保真 `SalesProductivitySeoContent.tsx`（326行）、800x400 矢量架构图、57字符精炼 Title、159字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
+- [x] **TASK-030**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 17.5/19，媒体 8/8，结构化 10/10，抓取 17/17，耗时 1007ms，体积 139KB，词数 1,485 词，3-gram `#1 sales productivity calculator` 独占 Rank 1 登顶，占位密度 1.62%，0 堆砌告警）
