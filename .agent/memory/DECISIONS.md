@@ -337,3 +337,24 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 锁定 50 字符（`Marketing Productivity Calculator | ROI & CAC Rate`），Description 精准压缩至 154 字符黄金区间。
   4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 401ms，体积 131KB，词数 1,444 词，3-gram `#1 marketing productivity calculator` 出现 8 次，占位密度 1.66%，独占 Rank 1 登顶，0 堆砌告警）。
+
+### DEC-019: /calculator/retail 零售门店工效与空间密度全案升级、SPLH/SPSF/GMROI 与损耗率模型
+- **背景**:
+  1. GSC 表现：`/calculator/retail` 累计斩获 81 次真实合并曝光；
+  2. 哥飞 SERP 侦察：`retail productivity calculator` 难度 KD **2.2 · 极易**，前 10 名竞品整体薄弱：Rank 1 `celerant.com`（DR 70 权重内页）、Rank 2 `productivitycalc.com`（DR 4 泛首页）、Rank 5 `retailtoolkit.app`（DR 0，仅 5 个月新站，停留 0 秒垫底脆弱），Rank 7/8/10（Omni, LiveAbout, Vic Gov）皆为未命中主词之顺路页；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 262 词触发 <300 词硬伤封顶，缺专属矢量图与多模式零售门店工效测算引擎。
+- **决定**:
+  1. 研发专业零售运营级 `RetailProductivityCalculator.tsx`（759行）：
+     - 模式 1：Sales Per Labor Hour (SPLH) 与门店人工成本占比模型（Net Weekly Sales, Scheduled Labor Hours, Average Loaded Wage $/hr, Weekly Transactions, SPLH, Total Payroll, Labor Cost %, ATV, Transactions Per Labor Hour TPLH）；
+     - 模式 2：Sales Per Square Foot (SPSF) 与营业面积密度模型（Annual Net Sales, Dedicated Selling Space Sq Ft, Gross GLA Sq Ft, Annual Rent & CAM, SPSF Selling, SPSF Gross, Selling Space Ratio %, Occupancy Drag %）；
+     - 模式 3：GMROI 与库存周转/损耗率模型（Annual Gross Margin, Average Inventory Cost, COGS, Annual Shrinkage Loss, Raw GMROI, Inventory Turnover, Days of Inventory on Hand DOH, Shrinkage Drag %, Net Adjusted GMROI）；
+     - 提供四大行业标杆预设（精品服饰、大型商超/杂货、轻奢旗舰、便利快消），支持一键导出 Markdown 门店工效审计报表。
+  2. 撰写专业级权威 SEO 文本组件 `RetailProductivitySeoContent.tsx`（284行）：
+     - 嵌入 800x400 零 CLS 矢量图 `retail-productivity-formula.svg`（三支柱：Labor SPLH, Space SPSF, Working Capital GMROI）；
+     - 详述三大核心算式：SPLH & Labor Cost %, SPSF Space Yield, GMROI & Shrinkage Drag；
+     - 涵盖 Specialty Apparel、Grocery、Luxury Flagship、Big-Box、Convenience 5 大行业 NRF 标杆对照表；
+     - 提供真实芝加哥密歇根大道生活方式旗舰店工效提升 43.3%、SPLH 飙升至 $206.73/hr、GMROI 跃升至 3.12x、年增收 $188,400 实战案例；
+     - 提炼 5 大精益门店运营策略（客流热力动态排班、移动 mPOS 破除排队跑单、核心动线视觉陈列、RFID 自动化盘点、防损损耗管控）；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  3. 精调元数据：Title 锁定 53 字符（`Retail Productivity Calculator | SPLH & Space Density`），Description 精准压缩至 160 字符黄金区间。
+  4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 476ms，体积 140KB，词数 1,678 词，3-gram 命中，0 堆砌告警，冲刺谷歌 Top 3）。

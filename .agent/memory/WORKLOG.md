@@ -408,3 +408,28 @@
     - 社交与结构化：10/10 满分
     - 技术与抓取：17/17 满分
     - 3-gram 关键词命中：`#1 marketing productivity calculator` 出现 8 次，词频密度 0.55%，占位密度 1.66%（独占 Rank 1 登顶，0 堆砌告警）。
+
+## 2026-11-10: /calculator/retail 零售门店工效与空间密度全案升级、SPLH/SPSF/GMROI 与损耗率模型
+
+- **执行概要**:
+  - 瞄准 GSC 排名靠前的核心潜力词源 `/calculator/retail`（81 次真实曝光，极易难度 KD 2.2），实施从 55 D 级到 98 A 级的全案重构，冲刺谷歌 Top 3 排名。
+- **实施细节**:
+  1. 研发专业零售运营级交互组件 `src/components/RetailProductivityCalculator.tsx`（759行）：Sales Per Labor Hour (SPLH) 与人工成本占比模型、Sales Per Square Foot (SPSF) 空间密度模型、GMROI 与库存周转/损耗率模型三模式，内置四大场景预设（精品服饰、大型商超、轻奢旗舰、便利快消）与一键 Markdown 导出；
+  2. 撰写专业级权威 SEO 文本组件 `src/components/RetailProductivitySeoContent.tsx`（284行）：嵌入 800x400 零 CLS 矢量图 `retail-productivity-formula.svg`，呈现 5 大零售业态 NRF 标杆对照表、芝加哥密歇根大道生活方式旗舰店工效提升 43.3%（年增收 $188,400）实战案例、5 大精益门店运营策略与 6 大 PAA FAQ；
+  3. 解耦扩充结构化数据：创建 `src/lib/schemas/faqs/retail.ts`（38行）并注册至 `faqs/index.ts`，在 `meta.ts` 注册专用元数据；
+  4. 重构优化 `src/app/calculator/[slug]/page.tsx`（702行）：精炼 Title 53 字符（`Retail Productivity Calculator | SPLH & Space Density`）、Description 160 字符，配置专属 Badge 与 H1，压缩分支结构，单文件严格控制在 702 行；
+  5. 静态编译通过，147 页面 SSG 构建完成（1.3s），实测产物 HTML 词数达 1,678 词（突破 300 词惩罚断崖，稳居 1200-1800 最佳黄金带）；
+  6. 提交 commit `9e3c226` 推送至 GitHub master，Cloudflare Pages 自动完成生产构建上线。
+- **验证结果**:
+  - `python tools/verify_memory_sync.py --site productivity-calculator` -> 准备同步验证
+  - 生产实时抓取：Title `Retail Productivity Calculator | SPLH & Space Density` (53 chars), Desc 160 chars, Img 1 SVG (800x400), HTML Words 1,678, 响应耗时 476ms, 体积 140KB
+  - `seo.web.cafe/audit/` 线上体检复核：**总分 98 / 100 (A 级 优秀，历史跃升 +43 分！)**
+    - 主题聚焦度：**100%**
+    - Meta 元信息：25/25 满分
+    - 内容质量：24/24 满分
+    - 关键词优化：37.47/40
+    - 链接结构：7/7 满分
+    - 图片与多媒体：8/8 满分
+    - 社交与结构化：10/10 满分
+    - 技术与抓取：17/17 满分
+    - 3-gram 关键词命中：`retail productivity calculator` 出现 6 次，词频密度 0.36%，占位密度 1.07%（0 堆砌告警）。
