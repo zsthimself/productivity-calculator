@@ -1,69 +1,37 @@
 # CURRENT.md - Site 04 Local Status & Active Loops
 
 ## 当前状态
-- **站点版本**: v1.20.0 (Agriculture Biological Yield & ASABE Field Capacity Suite)
+- **站点版本**: v1.28.0 (Batch 8 Industry Suites Full-Lifecycle Optimization Complete)
 - **部署环境**: Cloudflare Pages (`productivitycalculator.work`)
-- **最近提交**: `b79cc2d` (feat(seo): upgrade /calculator/agriculture with 3-mode yield/EFC engine, 1500w content & formula SVG)
+- **最近提交**: `978bd85` (feat(seo): upgrade /calculator/general with 3-mode engine, 1500w content & formula SVG)
+- **核心架构升级**: 完成 `src/app/calculator/[slug]/page.tsx` 架构解耦，抽离 `src/lib/calculatorRegistry.tsx` (605行)，使 `page.tsx` 由 777 行瘦身至 291 行，彻底根除单文件膨胀坏味道。
 - **实测验证**: 
-  - Static Build (`npm run build`) 147 页面 100% 静态通过，0 错误
-  - 核心页面 HTML 实测：
-    - `/calculator/agriculture`: 1,533 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 agriculture productivity calculator` 独占 Rank 1 登顶，出现 6 次，占位密度 1.17%，0 堆砌告警，狙击谷歌 US Top 1~3）
-    - `/calculator/retail`: 1,678 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#5 retail productivity calculator` 命中，占位密度 1.07%，0 堆砌告警，狙击谷歌 Top 3）
-    - `/calculator/marketing`: 1,444 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 marketing productivity calculator` 出现 8 次，占位密度 1.66%，独占 Rank 1 登顶，0 堆砌告警，狙击谷歌 Top 1）
-    - `/calculator/data-entry`: 1,558 词，On-Page SEO **97 A 级卓越**（净增 +42 分，主题聚焦 100%，Meta 23.5/25，内容 19/19，媒体 8/8，结构化 10/10，抓取 17/17，4-gram `#1 data entry productivity calculator` 出现 6 次，占位密度 1.54%，独占 Rank 1 登顶，0 堆砌告警，谷歌实测 SERP Rank 3 稳固狙击第一）
-    - `/calculator/sales`: 1,485 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 17.5/19，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 sales productivity calculator` 出现 8 次，占位密度 1.62%，独占 Rank 1 登顶，0 堆砌告警）
-    - `/calculator/construction`: 1,602 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 construction productivity calculator` 出现 5 次，占位密度 0.94%，独占 Rank 1 登顶，0 堆砌告警）
-    - `/calculator/machine`: 1,528 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 machine productivity calculator` 出现 6 次，占位密度 1.18%，独占 Rank 1 登顶，0 堆砌告警）
-    - `/calculator/technician`: 1,492 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 19/19，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 technician productivity calculator` 出现 4 次，占位密度 0.8%，独占 Rank 1 登顶，0 堆砌告警）
-    - `/calculator/welding`: 1,669 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `welding productivity calculator` 命中 Top 4，占位密度 0.72%）
-    - `/calculator/healthcare`: 1,471 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram 核心主词命中 Rank 1 登顶，占位密度 1.02%）
-    - `/calculator/cleaning-services`: 1,564 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，4-gram 核心主词命中 Rank 1 登顶，占位密度 1.28%）
-    - `/calculator/logistics`: 1,462 词，On-Page SEO **96 A 级卓越**（净增 +41 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，3-gram 命中 Rank 1）
-    - `/calculator/call-center`: 1,538 词，On-Page SEO **98 A 级卓越**（净增 +43 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17）
-    - `/calculator/video-production`: 1,511 词，On-Page SEO **100 A 级满分大满贯**（净增 +45 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17）
-    - `/calculator/employee`: 1,424 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17）
-    - `/calculator/labor`: 1,338 词，On-Page SEO **99 A 级卓越**（净增 +44 分，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17）
-    - `/calculator/manufacturing`: 1,298 词，On-Page SEO **99 A 级卓越**
-    - `/calculator/physical-therapy`: 1,455 词，On-Page SEO **98 A 级卓越**
-    - `/calculator/therapy`: 301 边缘重定向 + noindex + cross-URL canonical 稳定生效
+  - Static Build (`npm run build`) 147 页面 100% 静态编译通过，0 错误
+  - 全部 8 大未升级页面经 `seo.web.cafe/audit/` 实测跑分，**100% 斩获 $\ge 96$ A 级卓越**：
+    1. `/calculator/restaurant`: 1,515 词，On-Page SEO **97 A 级**（RevPASH、翻台率、食材损耗模型，SVG 架构图，Rank 1）
+    2. `/calculator/software-development`: 1,520 词，On-Page SEO **96 A 级**（DORA 交付流速、Sprint 故事点、人均 ARR 产出模型）
+    3. `/calculator/real-estate`: 1,480 词，On-Page SEO **98 A 级**（NAR 佣金分账、带看成交率、时薪产值模型）
+    4. `/calculator/education`: 1,510 词，On-Page SEO **98 A 级**（NCES 生师比 STR、生均支出、学费学时收益模型，SERP Rank 3）
+    5. `/calculator/customer-support`: 1,535 词，On-Page SEO **99 A 级**（HDI/Zendesk 工单流速 TPH、FCR 首次解决率、单工单成本与 CSAT 模型，SERP Rank 2）
+    6. `/calculator/graphic-design`: 1,540 词，On-Page SEO **99 A 级**（AIGA/DMI 工单交付周期 TAT、改稿损耗率、设计师小时产值与利用率模型，SERP Rank 1 登顶）
+    7. `/calculator/writing`: 1,525 词，On-Page SEO **96 A 级**（EFA/ASJA 纯写作时钟 WPH、非写作损耗比、千字费率与实际时薪折算模型）
+    8. `/calculator/general`: 1,550 词，On-Page SEO **100 A 级满分大满贯**（BLS/OECD 单要素工时产出、柯布道格拉斯 TFP 创新指数、复合要素边际回报模型）
 
 ## 活跃任务
-- [x] **TASK-001**: Physical Therapy 临床级标准重构
-- [x] **TASK-002**: 深度 On-Page SEO 外科手术
-- [x] **TASK-003**: 哥飞 `seo.web.cafe/audit/` 实测跑分，从 89 分跃升至 **98 / 100 A 级卓越**
-- [x] **TASK-004**: GSC 权重合流：`/calculator/therapy` (132曝光) 301 重定向至 `/calculator/physical-therapy` (408曝光)
-- [x] **TASK-005**: `/calculator/manufacturing` 工业制造全案升级
-- [x] **TASK-006**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **99 / 100 A 级卓越**
-- [x] **TASK-007**: `/calculator/labor` 全站第 1 曝光词全案升级
-- [x] **TASK-008**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **99 / 100 A 级卓越**
-- [x] **TASK-009**: `/calculator/employee` 全站第 4 曝光词全案升级
-- [x] **TASK-010**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **99 / 100 A 级卓越**
-- [x] **TASK-011**: `/calculator/video-production` 全站第 5 核心曝光词全案升级
-- [x] **TASK-012**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **100 / 100 A 级满分大满贯**
-- [x] **TASK-013**: `/calculator/call-center` 全站第 6 核心曝光词全案升级
-- [x] **TASK-014**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **98 / 100 A 级卓越**
-- [x] **TASK-015**: `/calculator/logistics` 全站真实点击突破词全案升级
-- [x] **TASK-016**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **96 / 100 A 级卓越**
-- [x] **TASK-017**: `/calculator/cleaning-services` 全站商业清洁与 ISSA 标准核心词全案升级
-- [x] **TASK-018**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **99 / 100 A 级卓越**
-- [x] **TASK-019**: `/calculator/healthcare` 全站医疗卫生与临床运营核心词全案升级
-- [x] **TASK-020**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **98 / 100 A 级卓越**
-- [x] **TASK-021**: `/calculator/welding` 全站焊接与工业构件制造核心词全案升级
-- [x] **TASK-022**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分飙升至 **99 / 100 A 级卓越**
-- [x] **TASK-023**: `/calculator/technician` 全站汽车售后维修与外勤设备工程核心词全案升级
-- [x] **TASK-024**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **99 / 100 A 级卓越**
-- [x] **TASK-025**: `/calculator/machine` 机械设备与自动化生产线核心词（123曝光，KD 11.4 极易）全案升级：三模式 `MachineProductivityCalculator.tsx`（655行）、高保真 `MachineProductivitySeoContent.tsx`（378行）、800x400 矢量架构图、50字符精炼 Title、154字符 Description、WebApplication + FAQPage 结构化数据，并将 `industrySchemas.ts` 实施模块化解耦（从 768 行瘦身至 76 行，彻底消灭单文件膨胀坏味道）
-- [x] **TASK-026**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 518ms，体积 140KB，词数 1,528 词，3-gram `#1 machine productivity calculator` 独占 Rank 1 登顶，占位密度 1.18%）
-- [x] **TASK-027**: `/calculator/construction` 建筑工程施工工效核心词（124 曝光，2 自然点击，KD 3.5 极易）全案升级：三模式 `ConstructionProductivityCalculator.tsx`（619行）、高保真 `ConstructionProductivitySeoContent.tsx`（307行）、800x400 矢量架构图、56字符精炼 Title、155字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
-- [x] **TASK-028**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 451ms，体积 136KB，词数 1,602 词，3-gram `#1 construction productivity calculator` 独占 Rank 1 登顶，占位密度 0.94%）
-- [x] **TASK-029**: `/calculator/sales` 销售人效与管道流速核心词（198 真实曝光，KD 27.2 容易）全案升级：三模式 `SalesProductivityCalculator.tsx`（717行）、高保真 `SalesProductivitySeoContent.tsx`（326行）、800x400 矢量架构图、57字符精炼 Title、159字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
-- [x] **TASK-030**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 17.5/19，媒体 8/8，结构化 10/10，抓取 17/17，耗时 1007ms，体积 139KB，词数 1,485 词，3-gram `#1 sales productivity calculator` 独占 Rank 1 登顶，占位密度 1.62%，0 堆砌告警）
-- [x] **TASK-031**: `/calculator/data-entry` 数据录入效率与 BPO 成本核心词（152曝光，1自然点击，谷歌排名 SERP Rank 3 稳守，KD 10.7 极易）全案升级：三模式 `DataEntryProductivityCalculator.tsx`（782行）、高保真 `DataEntryProductivitySeoContent.tsx`（283行）、800x400 矢量架构图、52字符精炼 Title、158字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
-- [x] **TASK-032**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **97 / 100 A 级卓越**（净增 +42 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 23.5/25，内容 19/19，媒体 8/8，结构化 10/10，抓取 17/17，耗时 380ms，体积 132KB，词数 1,558 词，4-gram `#1 data entry productivity calculator` 独占 Rank 1 登顶，占位密度 1.54%，0 堆砌告警）
-- [x] **TASK-033**: `/calculator/marketing` 市场营销投资回报率与管道流速核心词（103曝光，KD 23.9 容易）全案升级：三模式 `MarketingProductivityCalculator.tsx`（708行）、高保真 `MarketingProductivitySeoContent.tsx`（282行）、800x400 矢量架构图、50字符精炼 Title、154字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
-- [x] **TASK-034**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 401ms，体积 131KB，词数 1,444 词，3-gram `#1 marketing productivity calculator` 独占 Rank 1 登顶，占位密度 1.66%，0 堆砌告警）
-- [x] **TASK-035**: `/calculator/retail` 零售门店工效、每平方英尺销售额与 GMROI 核心词（81曝光，KD 2.2 极易）全案升级：三模式 `RetailProductivityCalculator.tsx`（759行）、高保真 `RetailProductivitySeoContent.tsx`（284行）、800x400 矢量架构图、53字符精炼 Title、160字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
-- [x] **TASK-036**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 476ms，体积 140KB，词数 1,678 词，3-gram 命中，0 堆砌告警，冲刺谷歌 Top 3）
-- [x] **TASK-037**: `/calculator/agriculture` 农业耕作单产与农机 EFC 效率核心词（84曝光，谷歌美区自然排名 Rank 8 现存，KD 4.7 极易）全案升级：三模式 `AgricultureProductivityCalculator.tsx`（737行）、高保真 `AgricultureProductivitySeoContent.tsx`（325行）、800x400 矢量架构图、59字符精炼 Title、158字符 Description、WebApplication + FAQPage 结构化数据，严格守牢 $\le 800$ 行安全红线
-- [x] **TASK-038**: 哥飞 `seo.web.cafe/audit/` 线上体检复核，得分由基线 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 433ms，体积 140KB，词数 1,533 词，3-gram `#1 agriculture productivity calculator` 独占 Rank 1 登顶，出现 6 次，占位密度 1.17%，0 堆砌告警，狙击谷歌 US Top 1~3）
-- [ ] **TASK-039**: Page 19 `/calculator/restaurant` (61曝光, KD 18.5 极易) 或 `/calculator/software-development` (58曝光) 候选排期与基线侦察。
+- [x] **TASK-001** ~ **TASK-038**: 历史完成的前 18 个行业计算器套件升级与体检卓越验证（详见历史 WORKLOG）
+- [x] **TASK-039**: `/calculator/restaurant` 餐饮门店工效全案升级（RevPASH、翻台率、食材损耗模型，commit `89e7957`）
+- [x] **TASK-040**: `/calculator/restaurant` 线上体检复核，得分飙升至 **97 / 100 A 级卓越**
+- [x] **TASK-041**: `/calculator/software-development` 产研人效全案升级（DORA 交付流速、Sprint 估算、人均 ARR 模型，commit `d37c0c1`）
+- [x] **TASK-042**: `/calculator/software-development` 线上体检复核，得分飙升至 **96 / 100 A 级卓越**
+- [x] **TASK-043**: `/calculator/real-estate` 房地产经纪人效全案升级（GCI 佣金分账、带看成交率、时薪回报模型，commit `3de69fc`）
+- [x] **TASK-044**: `/calculator/real-estate` 线上体检复核，得分飙升至 **98 / 100 A 级卓越**
+- [x] **TASK-045**: `/calculator/education` 教育教学工效全案升级（NCES 生师比 STR、生均支出、学费学时收益模型，commit `b73d800`）
+- [x] **TASK-046**: `/calculator/education` 线上体检复核，得分飙升至 **98 / 100 A 级卓越**
+- [x] **TASK-047**: `/calculator/customer-support` 客服人效全案升级（工单流速 TPH、FCR、单工单成本与 CSAT 模型，commit `ef452bb`）
+- [x] **TASK-048**: `/calculator/customer-support` 线上体检复核，得分飙升至 **99 / 100 A 级卓越**
+- [x] **TASK-049**: `/calculator/graphic-design` 设计工坊工效全案升级（工单周期、改稿损耗率、小时产值与利用率模型，commit `5b246bf`）
+- [x] **TASK-050**: `/calculator/graphic-design` 线上体检复核，得分飙升至 **99 / 100 A 级卓越**（Google SERP Rank 1 登顶）
+- [x] **TASK-051**: `/calculator/writing` 内容创作人效全案升级（纯写作 WPH、非写作损耗比、千字费率时薪折算模型，commit `7b6068d`）
+- [x] **TASK-052**: `/calculator/writing` 线上体检复核，得分飙升至 **96 / 100 A 级卓越**
+- [x] **TASK-053**: `/calculator/general` 全行业通用生产力基准全案升级（单要素工时、柯布道格拉斯 TFP、复合要素边际模型，commit `978bd85`）
+- [x] **TASK-054**: `/calculator/general` 线上体检复核，得分飙升至 **100 / 100 A 级满分大满贯**
