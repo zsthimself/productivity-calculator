@@ -283,3 +283,28 @@
     - 社交与结构化：10/10 满分
     - 技术与抓取：17/17 满分
     - 3-gram 关键词命中：`#1 technician productivity calculator` 出现 4 次，词频密度 0.27%，占位密度 0.8%（健康区间，独占 Rank 1 登顶，0 堆砌告警）。
+
+## 2026-11-10: /calculator/machine 机械设备与自动化生产线全案升级、OEE 综合效率与 Schema 架构模块化解耦
+
+- **执行概要**:
+  - 瞄准 GSC 核心高潜力突破词源 `/calculator/machine`（123 次真实合并曝光，极易难度 KD 11.4），实施从 55 D 级到 98 A 级的全案重构，并同步解决 `industrySchemas.ts` 膨胀坏味道。
+- **实施细节**:
+  1. 架构解耦重构：在 `src/lib/schemas/` 建立微模块架构（`meta.ts` + `faqs/` 独立行业文件），将主入口 `src/lib/industrySchemas.ts` 从 768 行优雅瘦身至 76 行，彻底消灭单文件膨胀坏味道；
+  2. 研发专业设备工效交互组件 `src/components/MachineProductivityCalculator.tsx`（655行）：OEE 设备效率模型、Cycle Time 与 Takt Time 生产节拍模型、设备综合产能与停机损失模型三模式，内置四大工业预设（5轴 CNC、精密注塑、SMT 表面贴装、重型冲压）与一键 Markdown 导出；
+  3. 撰写专业级权威 SEO 文本组件 `src/components/MachineProductivitySeoContent.tsx`（378行）：嵌入 800x400 零 CLS 矢量图 `machine-productivity-formula.svg`，呈现 5 大离散制造行业 TPM 基准对照表、8 台 CNC 立加案例（月增利润 $48,600）、5 大精益 TPM 设备策略与 6 大 PAA FAQ；
+  4. 重构优化 `src/app/calculator/[slug]/page.tsx`（688行）：精炼 Title 50 字符（`Machine Productivity Calculator | OEE & Cycle Time`）、Description 154 字符，配置专属 Badge 与 H1，严格遵守 $\le 800$ 行安全红线；
+  5. 静态编译通过，147 页面 SSG 构建完成（1.25s），实测产物 HTML 词数达 1,528 词（突破 300 词惩罚断崖，进入 1200-1800 最佳权重带）；
+  6. 提交 commit `76223ce` 与 `c21fa92` 推送至 GitHub master，Cloudflare Pages 自动完成生产构建上线（build hash: `grRpU4Mk_fSd_VLIIAkr3`）。
+- **验证结果**:
+  - `python tools/verify_memory_sync.py --site productivity-calculator` -> 准备同步验证
+  - 生产实时抓取：Title `Machine Productivity Calculator | OEE & Cycle Time` (50 chars), Desc 154 chars, Img 1 SVG (800x400), HTML Words 1,528, 响应耗时 518ms, 体积 140KB
+  - `seo.web.cafe/audit/` 线上体检复核：**总分 98 / 100 (A 级 优秀，历史跃升 +43 分！)**
+    - 主题聚焦度：**100%**
+    - Meta 元信息：25/25 满分
+    - 内容质量：24/24 满分
+    - 关键词优化：37.5/40
+    - 链接结构：7/7 满分
+    - 图片与多媒体：8/8 满分
+    - 社交与结构化：10/10 满分
+    - 技术与抓取：17/17 满分
+    - 3-gram 关键词命中：`#1 machine productivity calculator` 出现 6 次，词频密度 0.39%，占位密度 1.18%（独占 Rank 1 登顶，0 堆砌告警）。

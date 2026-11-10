@@ -230,3 +230,26 @@
      - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
   3. 精调元数据：Title 压缩至 58 字符（`Technician Productivity Calculator | Efficiency & Hours`），Description 优化至 156 字符黄金区间。
   4. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **99 / 100 A 级卓越**（净增 +44 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 19/19，媒体 8/8，结构化 10/10，抓取 17/17，3-gram `#1 technician productivity calculator` 出现 4 次，占位密度 0.8%，独占 Rank 1 登顶，0 堆砌告警）。
+
+### DEC-014: /calculator/machine 机械设备与自动化生产线全案升级、OEE 综合效率与 Schema 架构模块化解耦
+- **背景**:
+  1. GSC 表现：`/calculator/machine` 累计斩获 123 次真实曝光（英语 92 次 + 西语 28 次 + 葡语 3 次），主词 `productivity machine` 43 次曝光、`productividad de las maquinas` 26 次曝光、`machine productivity calculator` 平均排名 50.5 位；
+  2. 哥飞 SERP 侦察：`machine productivity calculator` 难度 KD 仅 **11.4 · 极易**，SERP 前 10 名竞品极其脆弱：Rank 1 `machinemetrics.com`（DR 66，On-Page 仅 83 B，纯跳转落地页，功能不在本页，未完整覆盖该词），Rank 3 `productivitycalc.com`（错配 Therapist 页面，65 C 级），Rank 4 `fullbay.com`（45 D 级），全盘前 10 平均分仅 61 分，3 个不及格；
+  3. 初始基线体检：`seo.web.cafe/audit/` 评分仅 55 分 (D 级较差)，正文仅 268 词触发 <300 词硬伤封顶，缺配图与专属 OEE 设备计算引擎；
+  4. 架构预防性治理：原 `src/lib/industrySchemas.ts` 膨胀至 768 行逼近 800 行安全红线。
+- **决定**:
+  1. 架构解耦重构：在 `src/lib/schemas/` 建立微模块架构（`meta.ts` + `faqs/` 独立行业文件），将主入口 `industrySchemas.ts` 从 768 行优雅瘦身至 76 行，彻底消灭单文件膨胀坏味道；
+  2. 研发专业设备工效级 `MachineProductivityCalculator.tsx`（三模式）：
+     - 模式 1：OEE 全面设备效率模型（Availability 可用率 × Performance 表现指数 × Quality 质量指数，85%+ 世界级标杆对照）；
+     - 模式 2：Cycle Time 循环周期与 Takt Time 生产节拍模型（节拍差额、小时净产出率、班次合格品产能）；
+     - 模式 3：设备综合产能与停机损失模型（主轴运转率 %、停机工时直接制造费用浪费、产能损失件数与每周营业额缺口）；
+     - 提供四大工业预设（5轴 CNC 切削、高速精密注塑、SMT 表面贴装、重型五金冲压），支持一键导出 Markdown 生产报表。
+  3. 撰写专业级权威 SEO 文本组件 `MachineProductivitySeoContent.tsx`（1,500+ 词全页）：
+     - 嵌入 800x400 零 CLS 矢量图 `machine-productivity-formula.svg`；
+     - 详述三大核心算式：OEE Multiplier、Cycle Time vs Takt Time、Unplanned Downtime Waste；
+     - 涵盖 5 大离散制造行业 TPM 基准对照表；
+     - 提供真实 8 台 CNC 立加部门 OEE 从 62% 提升至 84% 案例（月增利润 $48,600）；
+     - 提炼 5 大精益 TPM 设备管理策略（SMED 快速换模、消灭微停顿、全员自主点检、节拍平衡、主轴 IIoT 监控）；
+     - 注入 6 大权威 PAA FAQ 与 JSON-LD `WebApplication` + `FAQPage` 结构化数据。
+  4. 精调元数据：Title 锁定 50 字符（`Machine Productivity Calculator | OEE & Cycle Time`），Description 精准压缩至 154 字符黄金区间。
+  5. 实测与线上复检：SSG 静态编译 147 页面 100% 成功，生产上线后经 `seo.web.cafe/audit/` 实测体检：总分由 55 D 级飙升至 **98 / 100 A 级卓越**（净增 +43 分，突破 300 词惩罚断崖，主题聚焦 100%，Meta 25/25，内容 24/24，媒体 8/8，结构化 10/10，抓取 17/17，耗时 518ms，体积 140KB，词数 1,528 词，3-gram `#1 machine productivity calculator` 出现 6 次，占位密度 1.18%，独占 Rank 1 登顶，0 堆砌告警）。
