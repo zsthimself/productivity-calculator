@@ -72,15 +72,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
-    // 生成所有语言版本的 alternates
-    const languages: Record<string, string> = {
-        'x-default': `${BASE_URL}/calculator/${slug}`,
-        en: `${BASE_URL}/calculator/${slug}`,
-    };
-    LOCALES.filter((l) => l !== DEFAULT_LOCALE).forEach((l) => {
-        languages[LOCALE_HTML_LANG[l]] = `${BASE_URL}/${l}/calculator/${slug}`;
-    });
-
     return {
         title: industryT?.title || industry.title,
         description: industryT?.description || industry.description,
@@ -90,8 +81,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             "productivity calculator",
         ],
         alternates: {
-            canonical: pageUrl,
-            languages,
+            canonical: `${BASE_URL}/calculator/${slug}`,
+        },
+        robots: {
+            index: false,
+            follow: true,
         },
         openGraph: {
             title: `${industryT?.title || industry.title}`,

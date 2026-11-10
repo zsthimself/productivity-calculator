@@ -1,5 +1,17 @@
 # WORKLOG.md - Site 04 Engineering Activity Log
 
+## 2026-11-10: AdSense Blocker 解除（多语言薄页 noindex + 首页扩写 + sitemap 提纯）
+
+- **执行概要**:
+  - 吸收 `seo.web.cafe/adsense/` 73 项+AI 审计报出的 2 Blocker + 1 High（`/de/`, `/es/` 等 282-355 词机翻薄页触发 `ADS-CONTENT-01` / `ADS-CONTENT-08`，首页 616 词已挂 AdSense 触发 `ADS-CONTENT-05`）。
+- **实施细节**:
+  1. 在 `src/app/[lang]/page.tsx` 与 `src/app/[lang]/calculator/[slug]/page.tsx` 对所有非英语路由统一配置 `robots: { index: false, follow: true }` 并规范 `canonical` 至英文母页；
+  2. 重写 `public/sitemap.xml` 收敛至 31 条深内容英文 Canonical URL（首页 + 26 个 96-100 分计算器 + 4 法律页）；
+  3. 扩写 `src/app/page.tsx` 至 1,350+ 词（补充 BLS/OECD 单要素与 TFP 方法论、6 行业基准对照表、2 组实例及 `general-productivity-formula.svg`），消除 `ADS-CONTENT-05` 与“Clinical Suites”模板词；
+  4. 清理 `src/lib/calculatorRegistry.tsx` 中 `/calculator/marketing` 副标题名词堆砌。
+- **验证结果**:
+  - `npm run build`（Next.js 16.1.1 Turbopack）147 静态页面 100% 编译通过，0 错误。
+
 ## 2026-11-09: On-Page SEO 临床级外科手术重构
 
 - **执行概要**:

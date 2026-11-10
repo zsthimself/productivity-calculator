@@ -384,7 +384,7 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
     marketing: {
         badgeText: "Growth Marketing & Demand Generation Suite",
         titlePrefix: "Marketing ROI & Pipeline Velocity",
-        subtitle: "Enterprise marketing productivity calculator, CAC-to-LTV ratio analyzer, MQL pipeline velocity forecaster, and campaign labor efficiency modeler.",
+        subtitle: "Calculate marketing return on ad spend, LTV:CAC payback ratios, pipeline velocity, and campaign labor output.",
         metaTitle: "Marketing Productivity Calculator | ROI & CAC Rate",
         metaDescription: "Free marketing productivity calculator to measure marketing ROI, LTV:CAC ratio, pipeline velocity, cost per opportunity, and campaign labor efficiency.",
         keywords: [

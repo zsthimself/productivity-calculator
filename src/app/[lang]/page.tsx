@@ -41,15 +41,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const t = getTranslations(lang);
     const pageUrl = `${BASE_URL}/${lang}`;
 
-    // 生成所有语言版本的 alternates
-    const languages: Record<string, string> = {
-        'x-default': BASE_URL,
-        en: BASE_URL,
-    };
-    LOCALES.filter((l) => l !== DEFAULT_LOCALE).forEach((l) => {
-        languages[LOCALE_HTML_LANG[l]] = `${BASE_URL}/${l}`;
-    });
-
     return {
         title: t.site.title,
         description: t.site.description,
@@ -59,8 +50,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             "efficiency calculator",
         ],
         alternates: {
-            canonical: pageUrl,
-            languages,
+            canonical: BASE_URL,
+        },
+        robots: {
+            index: false,
+            follow: true,
         },
         openGraph: {
             title: t.site.title,

@@ -32,14 +32,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: BASE_URL,
-    languages: {
-      'x-default': BASE_URL,
-      'en': BASE_URL,
-      'zh-CN': `${BASE_URL}/zh`,
-      'es': `${BASE_URL}/es`,
-      'de': `${BASE_URL}/de`,
-      'ja': `${BASE_URL}/ja`,
-    },
   },
   openGraph: {
     title: "Productivity Calculator 2026: Free Tool for 20+ Industries",
@@ -126,10 +118,10 @@ export default function HomePage() {
                 <span className="p-2.5 rounded-xl bg-[var(--neon-cyan)]/10 text-[var(--neon-cyan)] text-xl">⚡</span>
                 <div>
                   <h3 className="font-display text-sm md:text-base font-bold text-white tracking-wide">
-                    Looking for Specialized Clinical & Professional Suites?
+                    Popular Industry Productivity Calculators
                   </h3>
                   <p className="text-xs text-[var(--text-secondary)] font-body mt-0.5">
-                    Direct access to specialized formulas, shift clock-out planners, and CMS benchmark suites:
+                    Focused formulas for daily clinical, production, and revenue workflows:
                   </p>
                 </div>
               </div>
@@ -144,10 +136,10 @@ export default function HomePage() {
                   <span className="text-xl">🩺</span>
                   <div>
                     <div className="text-xs font-bold text-white group-hover:text-[var(--neon-cyan)] transition-colors">
-                      Physical Therapy & Rehab
+                      Physical Therapy &amp; Rehab
                     </div>
                     <div className="text-[11px] text-[var(--text-muted)]">
-                      85% Quota & Clock-Out Planner
+                      Billable utilization &amp; clock-out pacing
                     </div>
                   </div>
                 </div>
@@ -162,10 +154,10 @@ export default function HomePage() {
                   <span className="text-xl">🎬</span>
                   <div>
                     <div className="text-xs font-bold text-white group-hover:text-[var(--neon-pink)] transition-colors">
-                      Video Production & Editing
+                      Video Production &amp; Editing
                     </div>
                     <div className="text-[11px] text-[var(--text-muted)]">
-                      Footage Delivery Velocity
+                      Editing hours vs delivered minutes
                     </div>
                   </div>
                 </div>
@@ -180,10 +172,10 @@ export default function HomePage() {
                   <span className="text-xl">💼</span>
                   <div>
                     <div className="text-xs font-bold text-white group-hover:text-[var(--neon-purple)] transition-colors">
-                      Sales Teams & Reps
+                      Sales Teams &amp; Reps
                     </div>
                     <div className="text-[11px] text-[var(--text-muted)]">
-                      Revenue per Rep & Quota Rate
+                      Quota attainment &amp; revenue per hour
                     </div>
                   </div>
                 </div>
@@ -229,21 +221,130 @@ export default function HomePage() {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="text-[var(--neon-cyan)]">→</span>
-                    <span><strong className="text-white">Identify inefficiencies:</strong> Find where time or resources are being wasted</span>
+                    <span><strong className="text-white">Identify bottlenecks early:</strong> Spot where non-billable administrative overhead, rework loops, or machine downtime silently erode total shift output.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[var(--neon-pink)]">→</span>
-                    <span><strong className="text-white">Set goals:</strong> Establish benchmarks to improve over time</span>
+                    <span><strong className="text-white">Set realistic staffing targets:</strong> Ground shift quotas and project timelines in historical empirical averages instead of guesswork.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[var(--neon-purple)]">→</span>
-                    <span><strong className="text-white">Compare performance:</strong> Track teams, projects, or individuals</span>
+                    <span><strong className="text-white">Compare teams fairly:</strong> Normalize raw output by actual worked hours so small crews and enterprise departments share one objective yardstick.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[var(--neon-blue)]">→</span>
-                    <span><strong className="text-white">Make decisions:</strong> Use data to allocate resources effectively</span>
+                    <span><strong className="text-white">Protect sustainable margins:</strong> Track whether revenue per labor hour grows faster than overtime, materials, and software costs.</span>
                   </li>
                 </ul>
+
+                <div className="rounded-xl overflow-hidden border border-white/10 bg-black/30 p-3 my-8">
+                  <img
+                    src="/images/general-productivity-formula.svg"
+                    alt="Productivity formula comparison across single-factor labor output, Total Factor Productivity TFP, and multifactor efficiency"
+                    width={800}
+                    height={400}
+                    className="w-full h-auto rounded-lg"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <h3 className="font-display text-xl font-semibold text-white mt-10 mb-4">
+                  Single-Factor Labor vs. Multi-Factor &amp; Total Factor Productivity (TFP)
+                </h3>
+                <p>
+                  Following U.S. Bureau of Labor Statistics (BLS) and OECD productivity accounting standards, no single ratio captures every operational trade-off. Single-factor labor productivity measures units produced, revenue, or patients treated per paid hour worked. It excels at daily shift scheduling and overtime audits, yet it misses capital equipment costs or outsourced software expenses.
+                </p>
+                <p>
+                  Multi-factor productivity (MFP) evaluates total economic output against combined labor, capital depreciation, energy, and material inputs. Meanwhile, the Solow Total Factor Productivity model isolates process efficiency and technical progress that cannot be explained purely by adding more staff or longer machine hours. Comparing both lenses prevents a common management trap: boosting output per employee simply by purchasing expensive automation that destroys net return on capital.
+                </p>
+
+                <h3 className="font-display text-xl font-semibold text-white mt-10 mb-4">
+                  Input Scope Traps: Gross Paid Hours vs. Net Productive Time
+                </h3>
+                <p>
+                  Consistent input definitions matter more than spreadsheet complexity. When entering Total Input into this productivity calculator, decide upfront whether your denominator reflects gross scheduled payroll hours (including paid rest breaks, training, and team huddles) or net direct production hours. Mixing the two across quarters creates phantom efficiency spikes. For client-billing fields such as physical therapy, legal consulting, or field maintenance, always track unbillable documentation time separately from billable treatment or wrench time so capacity models remain honest.
+                </p>
+
+                <h3 className="font-display text-xl font-semibold text-white mt-10 mb-4">
+                  2026 Cross-Industry Productivity Benchmark Reference
+                </h3>
+                <div className="overflow-x-auto rounded-xl border border-white/10 bg-black/25">
+                  <table className="w-full text-xs sm:text-sm text-left border-collapse">
+                    <thead className="bg-white/5 text-white font-display uppercase tracking-wider text-[11px]">
+                      <tr>
+                        <th className="p-3 border-b border-white/10">Industry Sector</th>
+                        <th className="p-3 border-b border-white/10">Primary Metric</th>
+                        <th className="p-3 border-b border-white/10">Healthy Target Range</th>
+                        <th className="p-3 border-b border-white/10">Primary Drag Factor</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-white/10 text-[var(--text-secondary)]">
+                      <tr>
+                        <td className="p-3 font-semibold text-white">Physical Therapy &amp; Rehab</td>
+                        <td className="p-3">Billable Utilization %</td>
+                        <td className="p-3 font-mono text-[var(--neon-cyan)]">80% – 85%</td>
+                        <td className="p-3">Patient cancellations &amp; SOAP notes</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 font-semibold text-white">Manufacturing &amp; Assembly</td>
+                        <td className="p-3">Overall Equipment Effectiveness</td>
+                        <td className="p-3 font-mono text-[var(--neon-cyan)]">75% – 85% OEE</td>
+                        <td className="p-3">Unplanned changeovers &amp; scrap</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 font-semibold text-white">Customer Support Centers</td>
+                        <td className="p-3">Tickets Resolved / Hour</td>
+                        <td className="p-3 font-mono text-[var(--neon-cyan)]">8 – 14 TPH</td>
+                        <td className="p-3">Reopened escalations &amp; low FCR</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 font-semibold text-white">Commercial Copywriting</td>
+                        <td className="p-3">Edited Words / Hour</td>
+                        <td className="p-3 font-mono text-[var(--neon-cyan)]">600 – 1,000 WPH</td>
+                        <td className="p-3">Research scope creep &amp; revisions</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 font-semibold text-white">Retail Store Operations</td>
+                        <td className="p-3">Sales Per Labor Hour (SPLH)</td>
+                        <td className="p-3 font-mono text-[var(--neon-cyan)]">$180 – $300 / hr</td>
+                        <td className="p-3">Off-peak overstaffing &amp; stockouts</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 font-semibold text-white">Logistics &amp; Fulfillment</td>
+                        <td className="p-3">Units Picked / Paid Hour</td>
+                        <td className="p-3 font-mono text-[var(--neon-cyan)]">120 – 180 UPH</td>
+                        <td className="p-3">Aisle travel congestion &amp; mispicks</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 className="font-display text-xl font-semibold text-white mt-10 mb-4">
+                  Worked Calculation Examples
+                </h3>
+                <div className="space-y-4">
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-5">
+                    <h4 className="font-display text-sm font-bold text-[var(--neon-cyan)] mb-2">
+                      Example 1: Small Operations Team Output &amp; Overtime Check
+                    </h4>
+                    <p className="text-xs sm:text-sm leading-relaxed">
+                      Suppose a 4-person fulfillment crew processes <strong>2,240 packaged orders</strong> during a 40-hour workweek (160 total paid hours). Dividing output by input yields <strong>14.0 orders per labor hour</strong>. If order volume rises to 2,800 packages the following week and the crew logs 20 overtime hours (180 total hours), output climbs 25% while hourly productivity increases to <strong>15.56 orders per hour (+11.1%)</strong>—confirming genuine process improvement rather than simple overtime padding.
+                    </p>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-5">
+                    <h4 className="font-display text-sm font-bold text-[var(--neon-pink)] mb-2">
+                      Example 2: Service Agency Utilization &amp; Effective Hourly Yield
+                    </h4>
+                    <p className="text-xs sm:text-sm leading-relaxed">
+                      A design consultancy bills $6,000 for a web sprint requiring 40 direct production hours, 8 client review calls, and 4 hours of rework (52 total hours). Looking only at billable scope suggests $150/hour, whereas true total-input productivity is <strong>$115.38 per hour</strong> ($6,000 &divide; 52). Tracking total hours exposes the 23% margin drag from unbilled revision cycles.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-[var(--neon-cyan)]/25 bg-[var(--neon-cyan)]/5 p-5 mt-8 text-xs text-[var(--text-secondary)] leading-relaxed">
+                  <strong className="text-white">Editorial &amp; Privacy Standard:</strong> All mathematical formulas on ProductivityCalculator.work reference standard economic definitions published by the BLS and OECD. Calculations run 100% client-side inside your browser; shift inputs, payroll assumptions, and business figures are never uploaded to external servers. For deep single-sector benchmarks, explore our dedicated 26 industry calculators listed below.
+                </div>
               </div>
             </div>
           </section>

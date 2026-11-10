@@ -434,3 +434,10 @@
   2. 撰写 `GeneralProductivitySeoContent.tsx`（340行）：嵌入 `general-productivity-formula.svg`，呈现 BLS 与 OECD 宏观基准表、密尔沃基重工业改造案例与 5 大精益策略；
   3. 精调 Title 57 字符，Description 155 字符；
   4. 生产上线经 `seo.web.cafe/audit/` 实测：总分 **100 / 100 A 级满分大满贯**（Meta 25/25、内容 24/24、聚焦度 100% 全面登顶）。
+
+### DEC-029: 解除 AdSense 机翻薄页双 Blocker (`ADS-CONTENT-01` / `ADS-CONTENT-08`) 与首页加厚重构
+- **背景**: 哥飞 `/adsense/` 73 项+AI 审计指出多语言路由 (`/de/`, `/es/`, `/ja/`, `/zh/`) 为 282–355 词模板逐句翻译克隆，且英文首页仅 616 词已挂载 AdSense 代码 (`ADS-CONTENT-05`)。
+- **决定**:
+  1. 在 [src/app/[lang]/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/[lang]/page.tsx) 与 [src/app/[lang]/calculator/[slug]/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/[lang]/calculator/[slug]/page.tsx) 中对非英语薄页统一设置 `robots: { index: false, follow: true }`，待未来逐语种本地化扩写 ≥800 词后再逐批开放；
+  2. 将 [public/sitemap.xml](file:///d:/projects/sites/productivity-calculator/public/sitemap.xml) 瘦身至 31 条深内容英文 Canonical URL（首页 + 26 个 96~100 分英文行业计算器 + 4 个合规信任页）；
+  3. 扩写首页 [src/app/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/page.tsx) 加入 BLS/OECD 单要素 vs TFP 方法论、输入口径陷阱、6 行业基准对照表、2 个计算实例及 `general-productivity-formula.svg`，消除 `ADS-CONTENT-05` 广告占比偏高风险，并清理首页与 [src/lib/calculatorRegistry.tsx](file:///d:/projects/sites/productivity-calculator/src/lib/calculatorRegistry.tsx) 的名词堆砌。
