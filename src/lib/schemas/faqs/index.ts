@@ -29,9 +29,12 @@ import { softwareDevelopmentFaqs } from "./softwareDevelopment";
 import { realEstateFaqs } from "./realEstate";
 import { educationFaqs } from "./education";
 import { customerSupportFaqs } from "./customerSupport";
+import { graphicDesignFaqs } from "./graphicDesign";
 
 export function getIndustryFaqs(slug: string): FAQItem[] {
     switch (slug) {
+        case "graphic-design":
+            return graphicDesignFaqs;
         case "restaurant":
             return restaurantFaqs;
         case "software-development":

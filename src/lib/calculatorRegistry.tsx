@@ -52,6 +52,8 @@ import EducationProductivityCalculator from "@/components/EducationProductivityC
 import EducationProductivitySeoContent from "@/components/EducationProductivitySeoContent";
 import CustomerSupportProductivityCalculator from "@/components/CustomerSupportProductivityCalculator";
 import CustomerSupportProductivitySeoContent from "@/components/CustomerSupportProductivitySeoContent";
+import GraphicDesignProductivityCalculator from "@/components/GraphicDesignProductivityCalculator";
+import GraphicDesignProductivitySeoContent from "@/components/GraphicDesignProductivitySeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -533,6 +535,25 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: CustomerSupportProductivityCalculator,
         SeoContent: CustomerSupportProductivitySeoContent,
+    },
+    "graphic-design": {
+        badgeText: "Creative Studio & Agency Suite",
+        titlePrefix: "Graphic Design & Creative Studio",
+        subtitle: "Professional design productivity calculator, asset turnaround time (TAT), revision drag ratio, and realized effective hourly rate model.",
+        metaTitle: "Graphic Design Productivity Calculator | Studio & Design Metrics",
+        metaDescription: "Free graphic design productivity calculator. Measure design turnaround time, revision loss ratio, effective hourly rate, and agency utilization with AIGA data.",
+        keywords: [
+            "graphic design productivity calculator",
+            "designer productivity calculator",
+            "design studio productivity",
+            "how to measure graphic designer productivity",
+            "design turnaround time calculator",
+            "graphic design revision rate",
+            "designer hourly rate calculator",
+            "productivity calculator",
+        ],
+        Calculator: GraphicDesignProductivityCalculator,
+        SeoContent: GraphicDesignProductivitySeoContent,
     },
 };
 

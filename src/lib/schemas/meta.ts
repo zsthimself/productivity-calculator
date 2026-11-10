@@ -154,6 +154,12 @@ export function getIndustryMeta(
                 description:
                     "Free customer support productivity calculator. Measure tickets per agent hour, first contact resolution (FCR), CSAT yield, and support staffing with HDI data.",
             };
+        case "graphic-design":
+            return {
+                name: "Graphic Design Productivity Calculator",
+                description:
+                    "Free graphic design productivity calculator. Measure design turnaround time, revision loss ratio, effective hourly rate, and agency utilization with AIGA data.",
+            };
         default:
             return {
                 name: fallbackTitle,
