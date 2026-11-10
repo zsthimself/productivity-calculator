@@ -40,6 +40,8 @@ import DataEntryProductivityCalculator from "@/components/DataEntryProductivityC
 import DataEntryProductivitySeoContent from "@/components/DataEntryProductivitySeoContent";
 import MarketingProductivityCalculator from "@/components/MarketingProductivityCalculator";
 import MarketingProductivitySeoContent from "@/components/MarketingProductivitySeoContent";
+import RetailProductivityCalculator from "@/components/RetailProductivityCalculator";
+import RetailProductivitySeoContent from "@/components/RetailProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -425,6 +427,28 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         );
     }
 
+    if (slug === "retail") {
+        return buildMeta(
+            "Retail Productivity Calculator | SPLH & Space Density",
+            "Free retail productivity calculator to measure sales per labor hour (SPLH), sales per square foot (SPSF), payroll cost percentage, GMROI, and store shrinkage.",
+            [
+                "retail productivity calculator",
+                "retail store productivity",
+                "sales per labor hour calculator",
+                "splh calculator",
+                "sales per square foot calculator",
+                "spsf calculator",
+                "gmroi calculator",
+                "retail labor cost percentage",
+                "retail shrinkage formula",
+                "how to calculate retail productivity",
+                "productivity calculator",
+            ],
+            pageUrl,
+            slug
+        );
+    }
+
     if (slug === "welding") {
         return buildMeta(
             "Welding Productivity Calculator | Deposition Rate & AWS",
@@ -524,7 +548,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isPhysicalTherapy = slug === "physical-therapy", isManufacturing = slug === "manufacturing", isLabor = slug === "labor", isEmployee = slug === "employee";
     const isVideoProduction = slug === "video-production", isCallCenter = slug === "call-center", isLogistics = slug === "logistics", isCleaningServices = slug === "cleaning-services";
     const isHealthcare = slug === "healthcare", isWelding = slug === "welding", isTechnician = slug === "technician", isMachine = slug === "machine";
-    const isConstruction = slug === "construction", isSales = slug === "sales", isDataEntry = slug === "data-entry", isMarketing = slug === "marketing";
+    const isConstruction = slug === "construction", isSales = slug === "sales", isDataEntry = slug === "data-entry", isMarketing = slug === "marketing", isRetail = slug === "retail";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -560,38 +584,23 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full neon-border mb-6 animate-fade-in">
                             <span className="text-2xl">{industry.icon}</span>
                             <span className="font-display text-xs tracking-widest text-[var(--neon-cyan)] uppercase">
-                                {isPhysicalTherapy
-                                    ? "Physical Therapy Clinical Suite"
-                                    : isManufacturing
-                                    ? "Manufacturing Operations Suite"
-                                    : isLabor
-                                    ? "Workforce Operations Suite"
-                                    : isEmployee
-                                    ? "Workforce Executive Suite"
-                                    : isVideoProduction
-                                    ? "Broadcast & Studio Production Suite"
-                                    : isCallCenter
-                                    ? "Contact Center Operations Suite"
-                                    : isLogistics
-                                    ? "Warehouse & Supply Chain Suite"
-                                    : isCleaningServices
-                                    ? "Commercial Janitorial & ISSA 612 Suite"
-                                    : isHealthcare
-                                    ? "Clinical Healthcare & Hospital Operations Suite"
-                                    : isWelding
-                                    ? "Structural Welding & AWS D1.1 Suite"
-                                    : isTechnician
-                                    ? "Automotive & Field Service Operations Suite"
-                                    : isMachine
-                                    ? "Automated Machinery & TPM Efficiency Suite"
-                                    : isConstruction
-                                    ? "Heavy Civil & Commercial Construction Suite"
-                                    : isSales
-                                    ? "Revenue Operations & B2B Sales Suite"
-                                    : isDataEntry
-                                    ? "Back-Office Operations & BPO Data Entry Suite"
-                                    : isMarketing
-                                    ? "Growth Marketing & Demand Generation Suite"
+                                {isPhysicalTherapy ? "Physical Therapy Clinical Suite"
+                                    : isManufacturing ? "Manufacturing Operations Suite"
+                                    : isLabor ? "Workforce Operations Suite"
+                                    : isEmployee ? "Workforce Executive Suite"
+                                    : isVideoProduction ? "Broadcast & Studio Production Suite"
+                                    : isCallCenter ? "Contact Center Operations Suite"
+                                    : isLogistics ? "Warehouse & Supply Chain Suite"
+                                    : isCleaningServices ? "Commercial Janitorial & ISSA 612 Suite"
+                                    : isHealthcare ? "Clinical Healthcare & Hospital Operations Suite"
+                                    : isWelding ? "Structural Welding & AWS D1.1 Suite"
+                                    : isTechnician ? "Automotive & Field Service Operations Suite"
+                                    : isMachine ? "Automated Machinery & TPM Efficiency Suite"
+                                    : isConstruction ? "Heavy Civil & Commercial Construction Suite"
+                                    : isSales ? "Revenue Operations & B2B Sales Suite"
+                                    : isDataEntry ? "Back-Office Operations & BPO Data Entry Suite"
+                                    : isMarketing ? "Growth Marketing & Demand Generation Suite"
+                                    : isRetail ? "Store Performance & Retail Operations Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -599,38 +608,23 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                         {/* Main Title */}
                         <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight animate-fade-in stagger-1">
                             <span className="text-gradient neon-text-subtle">
-                                {isPhysicalTherapy
-                                    ? "Physical Therapy"
-                                    : isManufacturing
-                                    ? "Manufacturing"
-                                    : isLabor
-                                    ? "Labor"
-                                    : isEmployee
-                                    ? "Employee"
-                                    : isVideoProduction
-                                    ? "Video Production"
-                                    : isCallCenter
-                                    ? "Call Center"
-                                    : isLogistics
-                                    ? "Logistics"
-                                    : isCleaningServices
-                                    ? "Commercial Cleaning Time"
-                                    : isHealthcare
-                                    ? "Healthcare & Clinical"
-                                    : isWelding
-                                    ? "Welding & Fabrication"
-                                    : isTechnician
-                                    ? "Technician & Field Service"
-                                    : isMachine
-                                    ? "Machine & Equipment OEE"
-                                    : isConstruction
-                                    ? "Construction & Crew Labor"
-                                    : isSales
-                                    ? "Sales Pipeline & Quota"
-                                    : isDataEntry
-                                    ? "Data Entry Speed & Accuracy"
-                                    : isMarketing
-                                    ? "Marketing ROI & Pipeline Velocity"
+                                {isPhysicalTherapy ? "Physical Therapy"
+                                    : isManufacturing ? "Manufacturing"
+                                    : isLabor ? "Labor"
+                                    : isEmployee ? "Employee"
+                                    : isVideoProduction ? "Video Production"
+                                    : isCallCenter ? "Call Center"
+                                    : isLogistics ? "Logistics"
+                                    : isCleaningServices ? "Commercial Cleaning Time"
+                                    : isHealthcare ? "Healthcare & Clinical"
+                                    : isWelding ? "Welding & Fabrication"
+                                    : isTechnician ? "Technician & Field Service"
+                                    : isMachine ? "Machine & Equipment OEE"
+                                    : isConstruction ? "Construction & Crew Labor"
+                                    : isSales ? "Sales Pipeline & Quota"
+                                    : isDataEntry ? "Data Entry Speed & Accuracy"
+                                    : isMarketing ? "Marketing ROI & Pipeline Velocity"
+                                    : isRetail ? "Retail Store Sales & Space"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">
@@ -640,38 +634,23 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
 
                         {/* Subtitle */}
                         <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto font-body leading-relaxed animate-fade-in stagger-2">
-                            {isPhysicalTherapy
-                                ? "Clinical physical therapy productivity calculator, reverse clock-out planner, and Medicare 8-minute rule converter for PT, OT & SLP clinicians."
-                                : isManufacturing
-                                ? "Industrial manufacturing productivity calculator, machine throughput estimator, and OEE efficiency benchmark analyzer."
-                                : isLabor
-                                ? "Workforce labor productivity calculator, blended team payroll rate modeler, and employee capacity utilization analyzer."
-                                : isEmployee
-                                ? "Executive employee productivity calculator, revenue per FTE modeler, and department staff quota performance analyzer."
-                                : isVideoProduction
-                                ? "Studio video production calculator, cost per finished minute estimator, and post-production turnaround scheduler for filmmakers, agencies & creators."
-                                : isCallCenter
-                                ? "Contact center productivity calculator, agent occupancy analyzer, and shrinkage-adjusted staffing scheduler for customer support & BPO teams."
-                                : isLogistics
-                                ? "Warehouse logistics productivity calculator, units per hour (UPH) estimator, dock-to-stock tracker, and fleet unit shipping cost modeler for distribution centers & 3PLs."
-                                : isCleaningServices
-                                ? "Commercial cleaning time calculator, janitorial square footage production rate analyzer, and contract bidding cost estimator based on official ISSA 612 standards."
-                                : isHealthcare
-                                ? "Clinical healthcare productivity calculator, physician wRVU production modeler, and hospital inpatient nursing HPPD staffing benchmark analyzer."
-                                : isWelding
-                                ? "Industrial welding productivity calculator, AWS filler metal deposition rate estimator, arc-on operating factor analyzer, and joint fabrication cost modeler."
-                                : isTechnician
-                                ? "Industrial technician productivity calculator, automotive flat-rate efficiency modeler, and field service wrench-time analyzer."
-                                : isMachine
-                                ? "Industrial machine productivity calculator, Overall Equipment Effectiveness (OEE) analyzer, and cycle time vs takt capacity modeler."
-                                : isConstruction
-                                ? "Industrial construction productivity calculator, trade man-hours per unit estimator, crew daily velocity forecaster, and Earned Value CPI analyzer."
-                                : isSales
-                                ? "Professional B2B sales productivity calculator, sales pipeline velocity forecaster, quota attainment analyzer, and sales per hour labor efficiency modeler."
-                                : isDataEntry
-                                ? "Free data entry productivity calculator, keystrokes per hour (KPH) analyzer, Net KPH accuracy modeler, and batch unit cost estimator for BPO operations."
-                                : isMarketing
-                                ? "Enterprise marketing productivity calculator, CAC-to-LTV ratio analyzer, MQL pipeline velocity forecaster, and campaign labor efficiency modeler."
+                            {isPhysicalTherapy ? "Clinical physical therapy productivity calculator, reverse clock-out planner, and Medicare 8-minute rule converter for PT, OT & SLP clinicians."
+                                : isManufacturing ? "Industrial manufacturing productivity calculator, machine throughput estimator, and OEE efficiency benchmark analyzer."
+                                : isLabor ? "Workforce labor productivity calculator, blended team payroll rate modeler, and employee capacity utilization analyzer."
+                                : isEmployee ? "Executive employee productivity calculator, revenue per FTE modeler, and department staff quota performance analyzer."
+                                : isVideoProduction ? "Studio video production calculator, cost per finished minute estimator, and post-production turnaround scheduler for filmmakers, agencies & creators."
+                                : isCallCenter ? "Contact center productivity calculator, agent occupancy analyzer, and shrinkage-adjusted staffing scheduler for customer support & BPO teams."
+                                : isLogistics ? "Warehouse logistics productivity calculator, units per hour (UPH) estimator, dock-to-stock tracker, and fleet unit shipping cost modeler for distribution centers & 3PLs."
+                                : isCleaningServices ? "Commercial cleaning time calculator, janitorial square footage production rate analyzer, and contract bidding cost estimator based on official ISSA 612 standards."
+                                : isHealthcare ? "Clinical healthcare productivity calculator, physician wRVU production modeler, and hospital inpatient nursing HPPD staffing benchmark analyzer."
+                                : isWelding ? "Industrial welding productivity calculator, AWS filler metal deposition rate estimator, arc-on operating factor analyzer, and joint fabrication cost modeler."
+                                : isTechnician ? "Industrial technician productivity calculator, automotive flat-rate efficiency modeler, and field service wrench-time analyzer."
+                                : isMachine ? "Industrial machine productivity calculator, Overall Equipment Effectiveness (OEE) analyzer, and cycle time vs takt capacity modeler."
+                                : isConstruction ? "Industrial construction productivity calculator, trade man-hours per unit estimator, crew daily velocity forecaster, and Earned Value CPI analyzer."
+                                : isSales ? "Professional B2B sales productivity calculator, sales pipeline velocity forecaster, quota attainment analyzer, and sales per hour labor efficiency modeler."
+                                : isDataEntry ? "Free data entry productivity calculator, keystrokes per hour (KPH) analyzer, Net KPH accuracy modeler, and batch unit cost estimator for BPO operations."
+                                : isMarketing ? "Enterprise marketing productivity calculator, CAC-to-LTV ratio analyzer, MQL pipeline velocity forecaster, and campaign labor efficiency modeler."
+                                : isRetail ? "Free retail productivity calculator to measure sales per labor hour (SPLH), floor space density (SPSF), store labor cost percentage, GMROI, and shrinkage loss."
                                 : industry.description}
                         </p>
 
@@ -684,67 +663,43 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                     </div>
 
                     {/* Calculator Component */}
-                    {isPhysicalTherapy ? (
-                        <PhysicalTherapyCalculator />
-                    ) : isManufacturing ? (
-                        <ManufacturingCalculator />
-                    ) : isLabor ? (
-                        <LaborProductivityCalculator />
-                    ) : isEmployee ? (
-                        <EmployeeProductivityCalculator />
-                    ) : isVideoProduction ? (
-                        <VideoProductionCalculator />
-                    ) : isCallCenter ? (
-                        <CallCenterProductivityCalculator />
-                    ) : isLogistics ? (
-                        <LogisticsProductivityCalculator />
-                    ) : isCleaningServices ? (
-                        <CleaningServicesProductivityCalculator />
-                    ) : isHealthcare ? (
-                        <HealthcareProductivityCalculator />
-                    ) : isWelding ? (
-                        <WeldingProductivityCalculator />
-                    ) : isTechnician ? (
-                        <TechnicianProductivityCalculator />
-                    ) : isMachine ? (
-                        <MachineProductivityCalculator />
-                    ) : isConstruction ? (
-                        <ConstructionProductivityCalculator />
+                    {isPhysicalTherapy ? ( <PhysicalTherapyCalculator />
+                    ) : isManufacturing ? ( <ManufacturingCalculator />
+                    ) : isLabor ? ( <LaborProductivityCalculator />
+                    ) : isEmployee ? ( <EmployeeProductivityCalculator />
+                    ) : isVideoProduction ? ( <VideoProductionCalculator />
+                    ) : isCallCenter ? ( <CallCenterProductivityCalculator />
+                    ) : isLogistics ? ( <LogisticsProductivityCalculator />
+                    ) : isCleaningServices ? ( <CleaningServicesProductivityCalculator />
+                    ) : isHealthcare ? ( <HealthcareProductivityCalculator />
+                    ) : isWelding ? ( <WeldingProductivityCalculator />
+                    ) : isTechnician ? ( <TechnicianProductivityCalculator />
+                    ) : isMachine ? ( <MachineProductivityCalculator />
+                    ) : isConstruction ? ( <ConstructionProductivityCalculator />
                     ) : isSales ? ( <SalesProductivityCalculator />
                     ) : isDataEntry ? ( <DataEntryProductivityCalculator />
                     ) : isMarketing ? ( <MarketingProductivityCalculator />
+                    ) : isRetail ? ( <RetailProductivityCalculator />
                     ) : ( <Calculator industry={industry} /> )}
 
                     {/* SEO Content Section */}
-                    {isPhysicalTherapy ? (
-                        <PhysicalTherapySeoContent />
-                    ) : isManufacturing ? (
-                        <ManufacturingSeoContent />
-                    ) : isLabor ? (
-                        <LaborProductivitySeoContent />
-                    ) : isEmployee ? (
-                        <EmployeeProductivitySeoContent />
-                    ) : isVideoProduction ? (
-                        <VideoProductionSeoContent />
-                    ) : isCallCenter ? (
-                        <CallCenterProductivitySeoContent />
-                    ) : isLogistics ? (
-                        <LogisticsProductivitySeoContent />
-                    ) : isCleaningServices ? (
-                        <CleaningServicesProductivitySeoContent />
-                    ) : isHealthcare ? (
-                        <HealthcareProductivitySeoContent />
-                    ) : isWelding ? (
-                        <WeldingProductivitySeoContent />
-                    ) : isTechnician ? (
-                        <TechnicianProductivitySeoContent />
-                    ) : isMachine ? (
-                        <MachineProductivitySeoContent />
-                    ) : isConstruction ? (
-                        <ConstructionProductivitySeoContent />
+                    {isPhysicalTherapy ? ( <PhysicalTherapySeoContent />
+                    ) : isManufacturing ? ( <ManufacturingSeoContent />
+                    ) : isLabor ? ( <LaborProductivitySeoContent />
+                    ) : isEmployee ? ( <EmployeeProductivitySeoContent />
+                    ) : isVideoProduction ? ( <VideoProductionSeoContent />
+                    ) : isCallCenter ? ( <CallCenterProductivitySeoContent />
+                    ) : isLogistics ? ( <LogisticsProductivitySeoContent />
+                    ) : isCleaningServices ? ( <CleaningServicesProductivitySeoContent />
+                    ) : isHealthcare ? ( <HealthcareProductivitySeoContent />
+                    ) : isWelding ? ( <WeldingProductivitySeoContent />
+                    ) : isTechnician ? ( <TechnicianProductivitySeoContent />
+                    ) : isMachine ? ( <MachineProductivitySeoContent />
+                    ) : isConstruction ? ( <ConstructionProductivitySeoContent />
                     ) : isSales ? ( <SalesProductivitySeoContent />
                     ) : isDataEntry ? ( <DataEntryProductivitySeoContent />
                     ) : isMarketing ? ( <MarketingProductivitySeoContent />
+                    ) : isRetail ? ( <RetailProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">

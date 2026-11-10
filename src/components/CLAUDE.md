@@ -35,6 +35,8 @@ DataEntryProductivityCalculator.tsx: 数据录入效率与BPO成本计算器，K
 DataEntryProductivitySeoContent.tsx: 数据录入权威深度语义指南，SVG架构图/BPO行业基准表/医疗账单案例/FAQ，283行
 MarketingProductivityCalculator.tsx: 市场营销人效与获客计算器，MROI/LTV:CAC/管道流速V/工时产值，708行
 MarketingProductivitySeoContent.tsx: 市场营销权威深度语义指南，SVG架构图/SaaS基准表/MarTech案例/FAQ，282行
+RetailProductivityCalculator.tsx: 零售门店人效与空间密度计算器，SPLH/SPSF/GMROI/损耗率模型，759行
+RetailProductivitySeoContent.tsx: 零售门店权威深度语义指南，SVG架构图/NRF基准表/芝加哥旗舰店案例/FAQ，284行
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

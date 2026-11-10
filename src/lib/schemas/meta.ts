@@ -112,6 +112,12 @@ export function getIndustryMeta(
                 description:
                     "Free marketing productivity calculator to measure marketing ROI, LTV:CAC ratio, pipeline velocity, cost per opportunity, and campaign labor efficiency.",
             };
+        case "retail":
+            return {
+                name: "Retail Productivity Calculator",
+                description:
+                    "Free retail productivity calculator to measure sales per labor hour (SPLH), sales per square foot (SPSF), payroll cost percentage, GMROI, and store shrinkage.",
+            };
         default:
             return {
                 name: fallbackTitle,
