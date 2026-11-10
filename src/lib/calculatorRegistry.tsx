@@ -56,6 +56,8 @@ import GraphicDesignProductivityCalculator from "@/components/GraphicDesignProdu
 import GraphicDesignProductivitySeoContent from "@/components/GraphicDesignProductivitySeoContent";
 import WritingProductivityCalculator from "@/components/WritingProductivityCalculator";
 import WritingProductivitySeoContent from "@/components/WritingProductivitySeoContent";
+import GeneralProductivityCalculator from "@/components/GeneralProductivityCalculator";
+import GeneralProductivitySeoContent from "@/components/GeneralProductivitySeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -575,6 +577,25 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: WritingProductivityCalculator,
         SeoContent: WritingProductivitySeoContent,
+    },
+    general: {
+        badgeText: "Enterprise & Universal Baseline Suite",
+        titlePrefix: "Universal Business Productivity",
+        subtitle: "Professional business productivity calculator, Cobb-Douglas Total Factor Productivity (TFP), and multifactor operating yield model.",
+        metaTitle: "Productivity Calculator | Total Factor & Business Metrics",
+        metaDescription: "Free business productivity calculator. Measure Total Factor Productivity (TFP), labor efficiency ratios, capital return yields, and operational benchmarks.",
+        keywords: [
+            "productivity calculator",
+            "general productivity calculator",
+            "business productivity calculator",
+            "how to calculate productivity",
+            "total factor productivity calculator",
+            "labor productivity formula",
+            "multifactor productivity calculator",
+            "cobb douglas production function calculator",
+        ],
+        Calculator: GeneralProductivityCalculator,
+        SeoContent: GeneralProductivitySeoContent,
     },
 };
 

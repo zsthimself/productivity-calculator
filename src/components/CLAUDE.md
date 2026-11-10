@@ -53,6 +53,8 @@ GraphicDesignProductivityCalculator.tsx: 设计工坊工效计算器，工单交
 GraphicDesignProductivitySeoContent.tsx: 设计工坊权威深度语义指南，SVG架构图/AIGA与DMI基准表/波特兰工作室案例/FAQ，345行
 WritingProductivityCalculator.tsx: 内容创作人效计算器，纯写作WPH流速/非写作损耗比/千字费率时薪折算模型，520行
 WritingProductivitySeoContent.tsx: 内容创作权威深度语义指南，SVG架构图/EFA与ASJA基准表/奥斯汀特约撰稿人案例/FAQ，340行
+GeneralProductivityCalculator.tsx: 全行业通用生产力计算器，单要素工时产出/柯布道格拉斯TFP/复合要素边际模型，520行
+GeneralProductivitySeoContent.tsx: 全行业通用权威深度语义指南，SVG架构图/BLS与OECD宏观基准表/密尔沃基重工业案例/FAQ，340行
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

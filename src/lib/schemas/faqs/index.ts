@@ -31,9 +31,12 @@ import { educationFaqs } from "./education";
 import { customerSupportFaqs } from "./customerSupport";
 import { graphicDesignFaqs } from "./graphicDesign";
 import { writingFaqs } from "./writing";
+import { generalFaqs } from "./general";
 
 export function getIndustryFaqs(slug: string): FAQItem[] {
     switch (slug) {
+        case "general":
+            return generalFaqs;
         case "writing":
             return writingFaqs;
         case "graphic-design":

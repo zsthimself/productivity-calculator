@@ -166,6 +166,12 @@ export function getIndustryMeta(
                 description:
                     "Free writing productivity calculator. Measure words per hour (WPH), effective freelance hourly rate, editing loss, and project ROI with editorial benchmarks.",
             };
+        case "general":
+            return {
+                name: "Productivity Calculator",
+                description:
+                    "Free business productivity calculator. Measure Total Factor Productivity (TFP), labor efficiency ratios, capital return yields, and operational benchmarks.",
+            };
         default:
             return {
                 name: fallbackTitle,
