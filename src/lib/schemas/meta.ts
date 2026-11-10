@@ -118,6 +118,12 @@ export function getIndustryMeta(
                 description:
                     "Free retail productivity calculator to measure sales per labor hour (SPLH), sales per square foot (SPSF), payroll cost percentage, GMROI, and store shrinkage.",
             };
+        case "agriculture":
+            return {
+                name: "Agriculture Productivity Calculator",
+                description:
+                    "Free agriculture productivity calculator. Measure crop yield per acre, machinery effective field capacity (EFC), fuel efficiency, and operating gross margins.",
+            };
         default:
             return {
                 name: fallbackTitle,

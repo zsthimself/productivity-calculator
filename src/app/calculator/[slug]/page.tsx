@@ -1,6 +1,6 @@
 /**
  * [INPUT]: industries.json (静态配置), URL slug 参数, 专用计算器组件群, generateIndustrySchema
- * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 physical-therapy、manufacturing、labor、employee、video-production、call-center、logistics、cleaning-services、healthcare、welding、technician、machine 专属套件
+ * [OUTPUT]: IndustryCalculatorPage - 动态生成行业专属页面，支持 PT、制造、劳动力、营销、零售、农业 (agriculture) 等专属套件
  * [POS]: pSEO 模板与垂直突围页 - 承接 slug 对应 20+ 行业页面，对高潜力词做专属架构承接
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -42,6 +42,8 @@ import MarketingProductivityCalculator from "@/components/MarketingProductivityC
 import MarketingProductivitySeoContent from "@/components/MarketingProductivitySeoContent";
 import RetailProductivityCalculator from "@/components/RetailProductivityCalculator";
 import RetailProductivitySeoContent from "@/components/RetailProductivitySeoContent";
+import AgricultureProductivityCalculator from "@/components/AgricultureProductivityCalculator";
+import AgricultureProductivitySeoContent from "@/components/AgricultureProductivitySeoContent";
 import IndustryList from "@/components/IndustryList";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -449,6 +451,28 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         );
     }
 
+    if (slug === "agriculture") {
+        return buildMeta(
+            "Agriculture Productivity Calculator | Yield & Field Capacity",
+            "Free agriculture productivity calculator. Measure crop yield per acre, machinery effective field capacity (EFC), fuel efficiency, and operating gross margins.",
+            [
+                "agriculture productivity calculator",
+                "agricultural productivity calculator",
+                "farm productivity calculator",
+                "crop yield calculator",
+                "effective field capacity calculator",
+                "efc calculator",
+                "machinery field capacity calculator",
+                "breakeven yield calculator",
+                "farm operating margin calculator",
+                "usda crop yield benchmarks",
+                "productivity calculator",
+            ],
+            pageUrl,
+            slug
+        );
+    }
+
     if (slug === "welding") {
         return buildMeta(
             "Welding Productivity Calculator | Deposition Rate & AWS",
@@ -548,7 +572,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
     const isPhysicalTherapy = slug === "physical-therapy", isManufacturing = slug === "manufacturing", isLabor = slug === "labor", isEmployee = slug === "employee";
     const isVideoProduction = slug === "video-production", isCallCenter = slug === "call-center", isLogistics = slug === "logistics", isCleaningServices = slug === "cleaning-services";
     const isHealthcare = slug === "healthcare", isWelding = slug === "welding", isTechnician = slug === "technician", isMachine = slug === "machine";
-    const isConstruction = slug === "construction", isSales = slug === "sales", isDataEntry = slug === "data-entry", isMarketing = slug === "marketing", isRetail = slug === "retail";
+    const isConstruction = slug === "construction", isSales = slug === "sales", isDataEntry = slug === "data-entry", isMarketing = slug === "marketing", isRetail = slug === "retail", isAgriculture = slug === "agriculture";
 
     return (
         <main className="min-h-screen bg-gradient-radial bg-grid relative overflow-hidden">
@@ -601,6 +625,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     : isDataEntry ? "Back-Office Operations & BPO Data Entry Suite"
                                     : isMarketing ? "Growth Marketing & Demand Generation Suite"
                                     : isRetail ? "Store Performance & Retail Operations Suite"
+                                    : isAgriculture ? "Agronomic Operations & Field Logistics Suite"
                                     : industry.name}
                             </span>
                         </div>
@@ -625,6 +650,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                     : isDataEntry ? "Data Entry Speed & Accuracy"
                                     : isMarketing ? "Marketing ROI & Pipeline Velocity"
                                     : isRetail ? "Retail Store Sales & Space"
+                                    : isAgriculture ? "Agriculture Yield & Field Capacity"
                                     : industry.name}
                             </span>{" "}
                             <span className="text-white">
@@ -651,6 +677,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                                 : isDataEntry ? "Free data entry productivity calculator, keystrokes per hour (KPH) analyzer, Net KPH accuracy modeler, and batch unit cost estimator for BPO operations."
                                 : isMarketing ? "Enterprise marketing productivity calculator, CAC-to-LTV ratio analyzer, MQL pipeline velocity forecaster, and campaign labor efficiency modeler."
                                 : isRetail ? "Free retail productivity calculator to measure sales per labor hour (SPLH), floor space density (SPSF), store labor cost percentage, GMROI, and shrinkage loss."
+                                : isAgriculture ? "Free agriculture productivity calculator to measure crop yield per acre, ASABE effective field capacity (EFC), tractor fuel rate, and per-acre breakeven margin."
                                 : industry.description}
                         </p>
 
@@ -680,6 +707,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                     ) : isDataEntry ? ( <DataEntryProductivityCalculator />
                     ) : isMarketing ? ( <MarketingProductivityCalculator />
                     ) : isRetail ? ( <RetailProductivityCalculator />
+                    ) : isAgriculture ? ( <AgricultureProductivityCalculator />
                     ) : ( <Calculator industry={industry} /> )}
 
                     {/* SEO Content Section */}
@@ -700,6 +728,7 @@ export default async function IndustryCalculatorPage({ params }: PageProps) {
                     ) : isDataEntry ? ( <DataEntryProductivitySeoContent />
                     ) : isMarketing ? ( <MarketingProductivitySeoContent />
                     ) : isRetail ? ( <RetailProductivitySeoContent />
+                    ) : isAgriculture ? ( <AgricultureProductivitySeoContent />
                     ) : (
                         <section className="mt-24 max-w-3xl mx-auto">
                             <div className="card-neon rounded-2xl p-8 md:p-12">
