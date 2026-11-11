@@ -448,6 +448,19 @@
             "inputLabel": "実働勤務時間",
             "inputUnit": "時間",
             "inputPlaceholder": "例: 8"
+        },
+        "billing-units": {
+            "name": "請求ユニット換算",
+            "title": "医療請求ユニット計算機",
+            "description": "Medicareの8分ルールに基づき直接治療時間を請求可能なユニット数へ換算し、複数CPTコードの配分と時間換算を行います。",
+            "resultLabel": "請求可能ユニット",
+            "resultUnit": "ユニット",
+            "outputLabel": "直接治療時間",
+            "outputUnit": "分",
+            "outputPlaceholder": "例: 55",
+            "inputLabel": "1ユニット基準時間",
+            "inputUnit": "分",
+            "inputPlaceholder": "例: 15"
         }
     }
 }

@@ -127,7 +127,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               <Link
                 href="/calculator/physical-therapy"
                 className="group p-3.5 rounded-xl border border-white/10 hover:border-[var(--neon-cyan)] bg-white/5 hover:bg-[var(--neon-cyan)]/10 transition-all flex items-center justify-between"
@@ -144,6 +144,24 @@ export default function HomePage() {
                   </div>
                 </div>
                 <span className="text-xs text-[var(--neon-cyan)] group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+
+              <Link
+                href="/calculator/billing-units"
+                className="group p-3.5 rounded-xl border border-white/10 hover:border-emerald-400 bg-white/5 hover:bg-emerald-500/10 transition-all flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">🧾</span>
+                  <div>
+                    <div className="text-xs font-bold text-white group-hover:text-emerald-400 transition-colors">
+                      Billing Units Calculator
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)]">
+                      CMS 8-min rule &amp; multi-CPT split
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-emerald-400 group-hover:translate-x-1 transition-transform">→</span>
               </Link>
 
               <Link

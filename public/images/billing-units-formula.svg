@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" fill="none">
+  <defs>
+    <linearGradient id="bu-bg" x1="0" y1="0" x2="800" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+    <linearGradient id="bu-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#151d2f" />
+      <stop offset="100%" stop-color="#0d1322" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" rx="16" fill="url(#bu-bg)" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Subtle Grid Lines -->
+  <g opacity="0.1" stroke="#00fff2" stroke-width="0.5">
+    <line x1="80" y1="0" x2="80" y2="400" />
+    <line x1="160" y1="0" x2="160" y2="400" />
+    <line x1="240" y1="0" x2="240" y2="400" />
+    <line x1="320" y1="0" x2="320" y2="400" />
+    <line x1="400" y1="0" x2="400" y2="400" />
+    <line x1="480" y1="0" x2="480" y2="400" />
+    <line x1="560" y1="0" x2="560" y2="400" />
+    <line x1="640" y1="0" x2="640" y2="400" />
+    <line x1="720" y1="0" x2="720" y2="400" />
+  </g>
+
+  <!-- Header -->
+  <text x="40" y="50" fill="#00fff2" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="2">MEDICARE 8-MINUTE RULE &amp; CPT ALLOCATION ARCHITECTURE</text>
+  <text x="40" y="82" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800">Billing Units Calculator Conversion Workflow</text>
+
+  <!-- Step 1 Card: Cumulative Timed Minutes -->
+  <rect x="40" y="112" width="215" height="154" rx="12" fill="url(#bu-card)" stroke="#334155" stroke-width="1.5" />
+  <text x="56" y="140" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">1. CUMULATIVE TIMED MINS</text>
+  <text x="56" y="176" fill="#ffffff" font-family="monospace" font-size="28" font-weight="800">55 <tspan font-size="14" fill="#94a3b8">MINS</tspan></text>
+  <text x="56" y="200" fill="#cbd5e1" font-family="monospace" font-size="11">97110: 20m | 97140: 18m</text>
+  <text x="56" y="216" fill="#cbd5e1" font-family="monospace" font-size="11">97530: 17m (Pooled Sum)</text>
+  <rect x="56" y="228" width="183" height="24" rx="6" fill="#1e293b" />
+  <text x="66" y="244" fill="#00fff2" font-family="monospace" font-size="11" font-weight="600">Threshold Check: &gt;= 8m</text>
+
+  <!-- Arrow 1 -->
+  <circle cx="278" cy="189" r="14" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+  <text x="272" y="194" fill="#cbd5e1" font-family="sans-serif" font-size="16" font-weight="700">&#8594;</text>
+
+  <!-- Step 2 Card: 8-Minute Bracket Mapping -->
+  <rect x="301" y="112" width="218" height="154" rx="12" fill="url(#bu-card)" stroke="#00fff2" stroke-width="1.5" stroke-opacity="0.45" />
+  <text x="317" y="140" fill="#00fff2" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">2. CMS BRACKET ENGINE</text>
+  <text x="317" y="172" fill="#00fff2" font-family="monospace" font-size="24" font-weight="800">53 – 67 <tspan font-size="13" fill="#94a3b8">RANGE</tspan></text>
+  <text x="317" y="198" fill="#cbd5e1" font-family="monospace" font-size="11">1U: 8-22 | 2U: 23-37</text>
+  <text x="317" y="214" fill="#cbd5e1" font-family="monospace" font-size="11">3U: 38-52 | 4U: 53-67</text>
+  <rect x="317" y="228" width="186" height="24" rx="6" fill="#022c22" stroke="#059669" stroke-width="0.8" />
+  <text x="326" y="244" fill="#34d399" font-family="monospace" font-size="11" font-weight="600">Remainder: 55 - 45 = +10m</text>
+
+  <!-- Arrow 2 -->
+  <circle cx="542" cy="189" r="14" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+  <text x="536" y="194" fill="#cbd5e1" font-family="sans-serif" font-size="16" font-weight="700">&#8594;</text>
+
+  <!-- Step 3 Card: Final Units & Split -->
+  <rect x="565" y="112" width="195" height="154" rx="12" fill="url(#bu-card)" stroke="#ff00e5" stroke-width="1.5" stroke-opacity="0.55" />
+  <text x="581" y="140" fill="#ff00e5" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">3. BILLABLE UNITS</text>
+  <text x="581" y="176" fill="#ffffff" font-family="monospace" font-size="30" font-weight="800">4 <tspan font-size="15" fill="#ff00e5">UNITS</tspan></text>
+  <text x="581" y="200" fill="#cbd5e1" font-family="monospace" font-size="11">1.00 Billing Hour Eq.</text>
+  <text x="581" y="216" fill="#94a3b8" font-family="monospace" font-size="11">97110: 2U | 97140: 1U | 97530: 1U</text>
+  <rect x="581" y="228" width="163" height="24" rx="6" fill="#4c0519" stroke="#be123c" stroke-width="0.8" />
+  <text x="590" y="244" fill="#fda4af" font-family="monospace" font-size="11" font-weight="600">Next Unit At: 68 mins</text>
+
+  <!-- Bottom Formula Strip -->
+  <rect x="40" y="294" width="720" height="78" rx="10" fill="#090e1a" stroke="#1e293b" stroke-width="1.5" />
+  <text x="60" y="322" fill="#64748b" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1">CMS FORMULA &amp; EXCEL EQUATION</text>
+  <text x="60" y="346" fill="#00fff2" font-family="monospace" font-size="15" font-weight="700">Billable Units = FLOOR((Total_Timed_Minutes + 7) / 15)  [for Minutes &gt;= 8]</text>
+  <text x="60" y="364" fill="#94a3b8" font-family="monospace" font-size="12">Excel Formula: =IF(A2&lt;8, 0, INT((A2+7)/15))   |   AMA SPM: 8+ min per individual CPT code</text>
+</svg>

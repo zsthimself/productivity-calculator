@@ -689,5 +689,33 @@
       "good": 0.8,
       "excellent": 1
     }
+  },
+  {
+    "slug": "billing-units",
+    "name": "Billing Units",
+    "title": "Billing Units Calculator",
+    "description": "Convert direct therapy minutes into Medicare 8-minute rule billing units, split mixed CPT claims, and calculate decimal billing hours.",
+    "inputs": [
+      {
+        "label": "Timed Minutes",
+        "unit": "mins",
+        "key": "output",
+        "placeholder": "e.g., 55"
+      },
+      {
+        "label": "Minutes per Unit",
+        "unit": "mins",
+        "key": "input",
+        "placeholder": "e.g., 15"
+      }
+    ],
+    "resultLabel": "Billable Units",
+    "resultUnit": "units",
+    "icon": "🧾",
+    "benchmark": {
+      "average": 3,
+      "good": 4,
+      "excellent": 5
+    }
   }
 ]

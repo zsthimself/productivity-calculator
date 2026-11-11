@@ -448,3 +448,11 @@
 - **决定**:
   1. 在 [src/lib/calculatorRegistry.tsx](file:///d:/projects/sites/productivity-calculator/src/lib/calculatorRegistry.tsx) 中将全部 23 组三词堆砌副标题改写为自然语义描述句；
   2. 在 [src/components/Header.tsx](file:///d:/projects/sites/productivity-calculator/src/components/Header.tsx) 中仅对非英语 `[lang]` 页面保留 `<LanguageSwitcher />`，默认英文主站改挂载高价值直链（`Industries`, `PT Suite`, `Manufacturing`, `About`, `Contact`）。
+
+
+### DEC-031: 新增 `/calculator/billing-units` 承接 8 分钟计费单元与多 CPT 拆分流量 (`TASK-057`)
+- **背景**: 哥飞 SERP 实测 `billing units calculator`（哥飞 KD **2.7–2.8 极易**）前十名 10/10 全为内页占位，同品类站点 `theproductivitycalc.com`（仅 DR 1, 4 个月）凭内页即可杀入 #5，且与 04 号站 `/calculator/physical-therapy` 核心康复人群 100% 重合。
+- **决定**:
+  1. 研发 [BillingUnitsCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/BillingUnitsCalculator.tsx)（674 行 ≤ 800）：三模式引擎（Minutes → Units CMS/AMA 双规、Multi-CPT 混合代码余数分摊拆分器、Units → Minutes & Decimal Hours 逆向换算）；
+  2. 撰写 [BillingUnitsSeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/BillingUnitsSeoContent.tsx)（335 行）并绘制 `public/images/billing-units-formula.svg`（`800x400`），覆盖 `1–10 Units` 查找表、55/60 分钟直答、CMS vs AMA 对照、Excel 公式及 6 项 FAQ；
+  3. 同步扩展 `calculatorRegistry.tsx`、`industries.json`、5 语种 `locales/*.json`（非英维持 `noindex, follow`）、`schemas/meta.ts`、`schemas/faqs/billingUnits.ts`、`sitemap.xml`（31 → 32 英文规范 URL），并在首页、`Footer.tsx` 及 `PhysicalTherapySeoContent.tsx` 建立内链互通。

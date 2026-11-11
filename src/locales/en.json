@@ -448,6 +448,19 @@
             "inputLabel": "Work Hours",
             "inputUnit": "hours",
             "inputPlaceholder": "e.g., 8"
+        },
+        "billing-units": {
+            "name": "Billing Units",
+            "title": "Billing Units Calculator",
+            "description": "Convert direct treatment minutes into Medicare 8-minute rule billing units, split mixed CPT codes, and calculate decimal billing hours.",
+            "resultLabel": "Billable Units",
+            "resultUnit": "units",
+            "outputLabel": "Timed Minutes",
+            "outputUnit": "mins",
+            "outputPlaceholder": "e.g., 55",
+            "inputLabel": "Minutes per Unit",
+            "inputUnit": "mins",
+            "inputPlaceholder": "e.g., 15"
         }
     }
 }

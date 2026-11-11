@@ -1,5 +1,16 @@
 # WORKLOG.md - Site 04 Engineering Activity Log
 
+## 2026-11-11: 上线 `/calculator/billing-units` 承接 8 分钟计费单元流量 (`TASK-057` / `DEC-031`)
+
+- **执行概要**:
+  - 结合 `seo.web.cafe/serp/` 实测 `billing units calculator`（KD 2.7 极易，前十 10/10 内页占位，#1 DR 4 仅 507 词 75 分、#5 DR 1 `theproductivitycalc.com` 1,003 词 96 分），为 04 号站打造第 27 个高规格英文垂直计算器内页。
+- **实施细节**:
+  1. 新建 [BillingUnitsCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/BillingUnitsCalculator.tsx)（674 行）：三模式交互引擎（Minutes → Units CMS 8-Min / AMA 双规则、Multi-CPT 混合代码余数最大分配器、Units → Minutes & Decimal Hours 逆向换算与 EMR 摘要复制）；
+  2. 新建 [BillingUnitsSeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/BillingUnitsSeoContent.tsx)（335 行）与 [billing-units-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/billing-units-formula.svg)（800×400），覆盖 `1–10 Units` 完整查找表、55/60 分钟直答、CMS vs AMA 对比表、Excel 复制公式及 6 项 FAQ；
+  3. 同步注册 `calculatorRegistry.tsx`、`industries.json`、`locales/{en,zh,es,de,ja}.json`、`schemas/meta.ts`、`schemas/faqs/billingUnits.ts`、`sitemap.xml`（32 条规范路由），并在首页、`Footer.tsx` 及 `PhysicalTherapySeoContent.tsx` 部署互链；更新 `src/components/CLAUDE.md` 与 `_META.md`。
+- **验证结果**:
+  - `npm run build`（Next.js 16.1.1 Turbopack）152 静态页面（含 `/calculator/billing-units`）2.4s 导出通过，0 错误；Title 49 字符、Desc 159 字符、精确词频密度位于 1.9% 黄金区间。
+
 ## 2026-11-10: 清零 `ADS-CONTENT-08` 副标题堆砌并隔离英文导航语言切换 (`DEC-030`)
 
 - **执行概要**:

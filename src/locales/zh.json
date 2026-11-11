@@ -448,6 +448,19 @@
             "inputLabel": "出勤作业工时",
             "inputUnit": "小时",
             "inputPlaceholder": "例如：8"
+        },
+        "billing-units": {
+            "name": "医疗计费单元",
+            "title": "医疗8分钟计费单元计算器",
+            "description": "按照 Medicare 8分钟规则将直接治疗分钟数换算为可计费单元，支持多 CPT 代码拆分与小数工时折算。",
+            "resultLabel": "可计费单元",
+            "resultUnit": "单元",
+            "outputLabel": "治疗分钟数",
+            "outputUnit": "分钟",
+            "outputPlaceholder": "例如：55",
+            "inputLabel": "每单元分钟",
+            "inputUnit": "分钟",
+            "inputPlaceholder": "例如：15"
         }
     }
 }

@@ -55,6 +55,8 @@ WritingProductivityCalculator.tsx: 内容创作人效计算器，纯写作WPH流
 WritingProductivitySeoContent.tsx: 内容创作权威深度语义指南，SVG架构图/EFA与ASJA基准表/奥斯汀特约撰稿人案例/FAQ，340行
 GeneralProductivityCalculator.tsx: 全行业通用生产力计算器，单要素工时产出/柯布道格拉斯TFP/复合要素边际模型，520行
 GeneralProductivitySeoContent.tsx: 全行业通用权威深度语义指南，SVG架构图/BLS与OECD宏观基准表/密尔沃基重工业案例/FAQ，340行
+BillingUnitsCalculator.tsx: CMS 8分钟计费单元三模式计算器，分钟转单元/多CPT余数拆分配额/单元转工时折算
+BillingUnitsSeoContent.tsx: 8分钟规则计费单元深度指南，CMS vs AMA对照/1-10U查找表/Excel公式与FAQ
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

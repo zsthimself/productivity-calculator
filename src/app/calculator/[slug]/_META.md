@@ -1,6 +1,6 @@
 # /src/app/calculator/[slug] - pSEO 动态路由
 
-基于 `industries.json` 数据自动生成 20+ 行业专属计算器页面，对 `physical-therapy` 与 `therapy` 实行高阶临床工时与倒推打卡定制。
+基于 `industries.json` 数据自动生成 20+ 行业专属计算器页面，对 `physical-therapy`、`therapy` 与 `billing-units` 实行高阶临床工时与 8 分钟计费定制。
 
 ## 文件清单
 

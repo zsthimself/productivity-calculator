@@ -172,6 +172,12 @@ export function getIndustryMeta(
                 description:
                     "Free business productivity calculator. Measure Total Factor Productivity (TFP), labor efficiency ratios, capital return yields, and operational benchmarks.",
             };
+        case "billing-units":
+            return {
+                name: "Billing Units Calculator",
+                description:
+                    "Free billing units calculator for Medicare 8-minute rule and medical CPT billing. Convert therapy minutes to units, compare CMS vs AMA rules, and audit claims.",
+            };
         default:
             return {
                 name: fallbackTitle,

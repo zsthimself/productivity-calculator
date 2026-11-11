@@ -58,6 +58,8 @@ import WritingProductivityCalculator from "@/components/WritingProductivityCalcu
 import WritingProductivitySeoContent from "@/components/WritingProductivitySeoContent";
 import GeneralProductivityCalculator from "@/components/GeneralProductivityCalculator";
 import GeneralProductivitySeoContent from "@/components/GeneralProductivitySeoContent";
+import BillingUnitsCalculator from "@/components/BillingUnitsCalculator";
+import BillingUnitsSeoContent from "@/components/BillingUnitsSeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -596,6 +598,26 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: GeneralProductivityCalculator,
         SeoContent: GeneralProductivitySeoContent,
+    },
+    "billing-units": {
+        badgeText: "CMS 8-Minute & CPT Billing Suite",
+        titlePrefix: "Billing Units",
+        titleSuffix: "Calculator",
+        subtitle: "Convert direct therapy minutes to Medicare billing units, compare CMS vs. AMA payer rules, and split mixed CPT claims.",
+        metaTitle: "Billing Units Calculator | Medicare 8-Minute Rule",
+        metaDescription: "Free billing units calculator for Medicare 8-minute rule and medical CPT billing. Convert therapy minutes to units, compare CMS vs AMA rules, and audit claims.",
+        keywords: [
+            "billing units calculator",
+            "medical billing units calculator",
+            "8 minute rule billing units calculator",
+            "minutes to units calculator",
+            "therapy minutes to units calculator",
+            "medicare 8 minute rule chart",
+            "billing units calculator excel",
+            "how many units is 60 minutes",
+        ],
+        Calculator: BillingUnitsCalculator,
+        SeoContent: BillingUnitsSeoContent,
     },
 };
 

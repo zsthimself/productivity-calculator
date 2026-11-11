@@ -448,6 +448,19 @@
             "inputLabel": "Horas de Trabajo",
             "inputUnit": "horas",
             "inputPlaceholder": "p. ej., 8"
+        },
+        "billing-units": {
+            "name": "Unidades Facturables",
+            "title": "Calculadora de Unidades de Facturación",
+            "description": "Convierte minutos de terapia directa en unidades facturables según la regla de 8 minutos de Medicare y divide códigos CPT mixtos.",
+            "resultLabel": "Unidades Facturables",
+            "resultUnit": "unidades",
+            "outputLabel": "Minutos Directos",
+            "outputUnit": "min",
+            "outputPlaceholder": "p. ej., 55",
+            "inputLabel": "Minutos por Unidad",
+            "inputUnit": "min",
+            "inputPlaceholder": "p. ej., 15"
         }
     }
 }

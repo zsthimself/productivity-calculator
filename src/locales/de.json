@@ -448,6 +448,19 @@
             "inputLabel": "Arbeitsstunden",
             "inputUnit": "Stunden",
             "inputPlaceholder": "z. B. 8"
+        },
+        "billing-units": {
+            "name": "Abrechnungseinheiten",
+            "title": "Abrechnungseinheiten-Rechner",
+            "description": "Wandeln Sie direkte Therapieminuten gemäß der 8-Minuten-Regel von Medicare in abrechenbare Einheiten um und teilen Sie gemischte CPT-Codes auf.",
+            "resultLabel": "Abrechenbare Einheiten",
+            "resultUnit": "Einheiten",
+            "outputLabel": "Direkte Minuten",
+            "outputUnit": "Min.",
+            "outputPlaceholder": "z. B. 55",
+            "inputLabel": "Minuten pro Einheit",
+            "inputUnit": "Min.",
+            "inputPlaceholder": "z. B. 15"
         }
     }
 }
