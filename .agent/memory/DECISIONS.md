@@ -456,3 +456,11 @@
   1. 研发 [BillingUnitsCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/BillingUnitsCalculator.tsx)（674 行 ≤ 800）：三模式引擎（Minutes → Units CMS/AMA 双规、Multi-CPT 混合代码余数分摊拆分器、Units → Minutes & Decimal Hours 逆向换算）；
   2. 撰写 [BillingUnitsSeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/BillingUnitsSeoContent.tsx)（335 行）并绘制 `public/images/billing-units-formula.svg`（`800x400`），覆盖 `1–10 Units` 查找表、55/60 分钟直答、CMS vs AMA 对照、Excel 公式及 6 项 FAQ；
   3. 同步扩展 `calculatorRegistry.tsx`、`industries.json`、5 语种 `locales/*.json`（非英维持 `noindex, follow`）、`schemas/meta.ts`、`schemas/faqs/billingUnits.ts`、`sitemap.xml`（31 → 32 英文规范 URL），并在首页、`Footer.tsx` 及 `PhysicalTherapySeoContent.tsx` 建立内链互通。
+
+### DEC-032: 新增 `/calculator/time-efficiency` 承接 `time efficiency calculator` (KD 13.6) 与 `efficiency calculator` (KD 20.5) (`TASK-058`)
+- **日期**: 2026-11-13
+- **决策内容**:
+  1. 研发 [TimeEfficiencyCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/TimeEfficiencyCalculator.tsx)：三模式计算器（任务标准/实际工时比 + 分钟/小时切换、班次有效工时利用率与无效损耗成本、团队流程提效年化省时/FTE/薪资收益对比）；
+  2. 撰写 [TimeEfficiencySeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/TimeEfficiencySeoContent.tsx) 并绘制 `public/images/time-efficiency-formula.svg`（`800x400`），覆盖标准vs实际与利用率的边界辨析、5 行业标杆矩阵、4 组 Excel 公式、6 人账单核验团队实战算例及可见 FAQ；
+  3. 同步注册 `calculatorRegistry.tsx`、`industries.json`、5 语种 `locales/*.json`、`schemas/meta.ts`、`schemas/faqs/timeEfficiency.ts`、`sitemap.xml`（32 → 33 英文规范 URL），并更新首页推荐卡、页脚与 `src/components/CLAUDE.md` / `src/lib/CLAUDE.md`。
+- **决策原因**: 哥飞 `/sitekw/` 扒出新站竞品 `theproductivitycalc.com`（仅 4 个月 DR 1）凭内页即可排在 `time efficiency calculator` 第 1（KD **13.6 极易**, 0/10 首页占位）及 `efficiency calculator` 第 7（KD **20.5 容易**, 480/mo）；同批用 `/kd/` 一票否决了 `percent to goal calculator`（KD 46.1 遇 Omni/PercentageCalculator 首页锁死假信号）。

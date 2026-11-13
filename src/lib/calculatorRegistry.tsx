@@ -60,6 +60,8 @@ import GeneralProductivityCalculator from "@/components/GeneralProductivityCalcu
 import GeneralProductivitySeoContent from "@/components/GeneralProductivitySeoContent";
 import BillingUnitsCalculator from "@/components/BillingUnitsCalculator";
 import BillingUnitsSeoContent from "@/components/BillingUnitsSeoContent";
+import TimeEfficiencyCalculator from "@/components/TimeEfficiencyCalculator";
+import TimeEfficiencySeoContent from "@/components/TimeEfficiencySeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -618,6 +620,26 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: BillingUnitsCalculator,
         SeoContent: BillingUnitsSeoContent,
+    },
+    "time-efficiency": {
+        badgeText: "Time Utilization & Cycle Speed Suite",
+        titlePrefix: "Time Efficiency",
+        titleSuffix: "Calculator",
+        subtitle: "Free time efficiency calculator and work efficiency calculator to compare standard vs. actual task duration, shift utilization percentage, and team hours saved.",
+        metaTitle: "Time Efficiency Calculator | Free Work Efficiency Formula & Tool",
+        metaDescription: "Free time efficiency calculator and work efficiency calculator. Compare standard vs. actual task time, shift utilization percentage, and Excel formulas.",
+        keywords: [
+            "time efficiency calculator",
+            "efficiency calculator",
+            "work efficiency calculator",
+            "time utilization calculator",
+            "how to calculate time efficiency",
+            "time efficiency formula excel",
+            "task efficiency percentage calculator",
+            "cycle time efficiency calculator",
+        ],
+        Calculator: TimeEfficiencyCalculator,
+        SeoContent: TimeEfficiencySeoContent,
     },
 };
 

@@ -461,6 +461,19 @@
             "inputLabel": "1ユニット基準時間",
             "inputUnit": "分",
             "inputPlaceholder": "例: 15"
+        },
+        "time-efficiency": {
+            "name": "時間効率",
+            "title": "時間効率・稼働率計算機",
+            "description": "標準作業時間と実測時間を比較して時間効率比率を算出し、シフト稼働率と年間削減工数を評価します。",
+            "resultLabel": "時間効率比率",
+            "resultUnit": "倍 (標準比)",
+            "outputLabel": "標準設定時間",
+            "outputUnit": "分",
+            "outputPlaceholder": "例: 45",
+            "inputLabel": "実績所要時間",
+            "inputUnit": "分",
+            "inputPlaceholder": "例: 36"
         }
     }
 }

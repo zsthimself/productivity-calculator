@@ -717,5 +717,33 @@
       "good": 4,
       "excellent": 5
     }
+  },
+  {
+    "slug": "time-efficiency",
+    "name": "Time Efficiency",
+    "title": "Time Efficiency Calculator",
+    "description": "Free time efficiency calculator and work efficiency calculator to measure standard vs. actual task duration, shift utilization, and team hours saved.",
+    "inputs": [
+      {
+        "label": "Standard Time",
+        "unit": "mins",
+        "key": "output",
+        "placeholder": "e.g., 45"
+      },
+      {
+        "label": "Actual Time",
+        "unit": "mins",
+        "key": "input",
+        "placeholder": "e.g., 36"
+      }
+    ],
+    "resultLabel": "Time Efficiency Ratio",
+    "resultUnit": "x std pace",
+    "icon": "⏱️",
+    "benchmark": {
+      "average": 0.85,
+      "good": 1.0,
+      "excellent": 1.15
+    }
   }
 ]

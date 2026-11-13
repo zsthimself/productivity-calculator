@@ -461,6 +461,19 @@
             "inputLabel": "每单元分钟",
             "inputUnit": "分钟",
             "inputPlaceholder": "例如：15"
+        },
+        "time-efficiency": {
+            "name": "时间效率",
+            "title": "时间效率与工时利用率计算器",
+            "description": "对比标准工时与实际耗时比率，测量班次有效工时利用率及团队流程改进后的年化省时收益。",
+            "resultLabel": "时间效率比",
+            "resultUnit": "倍标准速率",
+            "outputLabel": "标准预算工时",
+            "outputUnit": "分钟",
+            "outputPlaceholder": "例如：45",
+            "inputLabel": "实际耗费工时",
+            "inputUnit": "分钟",
+            "inputPlaceholder": "例如：36"
         }
     }
 }

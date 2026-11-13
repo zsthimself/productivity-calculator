@@ -461,6 +461,19 @@
             "inputLabel": "Minutes per Unit",
             "inputUnit": "mins",
             "inputPlaceholder": "e.g., 15"
+        },
+        "time-efficiency": {
+            "name": "Time Efficiency",
+            "title": "Time Efficiency Calculator",
+            "description": "Measure standard vs. actual task duration, shift utilization percentage, and annual hours saved.",
+            "resultLabel": "Time Efficiency Ratio",
+            "resultUnit": "x std pace",
+            "outputLabel": "Standard Time",
+            "outputUnit": "mins",
+            "outputPlaceholder": "e.g., 45",
+            "inputLabel": "Actual Time",
+            "inputUnit": "mins",
+            "inputPlaceholder": "e.g., 36"
         }
     }
 }

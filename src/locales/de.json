@@ -461,6 +461,19 @@
             "inputLabel": "Minuten pro Einheit",
             "inputUnit": "Min.",
             "inputPlaceholder": "z. B. 15"
+        },
+        "time-efficiency": {
+            "name": "Zeiteffizienz",
+            "title": "Zeiteffizienz-Rechner",
+            "description": "Vergleichen Sie Vorgabezeit mit Ist-Zeit, analysieren Sie die Schichtauslastung und beziffern Sie jährliche Zeiteinsparungen.",
+            "resultLabel": "Zeiteffizienz-Faktor",
+            "resultUnit": "x Vorgabe",
+            "outputLabel": "Vorgabezeit",
+            "outputUnit": "Min.",
+            "outputPlaceholder": "z. B. 45",
+            "inputLabel": "Ist-Zeit",
+            "inputUnit": "Min.",
+            "inputPlaceholder": "z. B. 36"
         }
     }
 }

@@ -1,5 +1,17 @@
 # WORKLOG.md - Site 04 Engineering Activity Log
 
+## 2026-11-13: 上线 `/calculator/time-efficiency` 承接时间效率与班次利用率流量 (`TASK-058` / `DEC-032`)
+
+- **执行概要**:
+  - 结合 `seo.web.cafe` `/sitekw/` (`theproductivitycalc.com`) 与 `/kd/` 精确校验，确认 `time efficiency calculator` (KD 13.6 极易) 与 `efficiency calculator` (KD 20.5 容易, 480/mo) 前十均为内页或弱站占位（同步淘汰 KD 46.1 伪信号词 `percent to goal calculator`），为 04 号站交付第 28 个英文专业套件页。
+- **实施细节**:
+  1. 新建 [TimeEfficiencyCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/TimeEfficiencyCalculator.tsx)：三模式引擎（任务标准vs实际工时比、班次有效利用率与无效工时损耗、团队流程提效年化省时/FTE/成本对比）；
+  2. 新建 [TimeEfficiencySeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/TimeEfficiencySeoContent.tsx) 与 [time-efficiency-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/time-efficiency-formula.svg)（`800×400`），涵盖 5 行业标杆表、4 组 Excel 公式、6 人团队案例及 4 组可见 FAQ；
+  3. 同步扩展 `calculatorRegistry.tsx`、`industries.json`、`locales/{en,zh,es,ja,de}.json`、`schemas/meta.ts`、`schemas/faqs/timeEfficiency.ts`、`sitemap.xml`（33 条英文规范路由）、首页卡片、`Footer.tsx` 与 GEB L2。
+- **验证结果**:
+  - `npx eslint` 对全部新增/改动核心组件检查：0 Error。
+  - `npm run build`（Next.js 16.1.1 Turbopack）：`157/157` 静态页面构建通过（Compile 67s + Static 1.76s），0 编译错误。
+
 ## 2026-11-11: 上线 `/calculator/billing-units` 承接 8 分钟计费单元流量 (`TASK-057` / `DEC-031`)
 
 - **执行概要**:

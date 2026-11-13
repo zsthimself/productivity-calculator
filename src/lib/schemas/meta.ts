@@ -178,6 +178,12 @@ export function getIndustryMeta(
                 description:
                     "Free billing units calculator for Medicare 8-minute rule and medical CPT billing. Convert therapy minutes to units, compare CMS vs AMA rules, and audit claims.",
             };
+        case "time-efficiency":
+            return {
+                name: "Time Efficiency Calculator",
+                description:
+                    "Free time efficiency calculator and work efficiency calculator. Compare standard vs. actual task time, shift utilization percentage, and annual hours saved.",
+            };
         default:
             return {
                 name: fallbackTitle,

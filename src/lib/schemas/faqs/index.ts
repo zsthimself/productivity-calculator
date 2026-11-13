@@ -33,6 +33,7 @@ import { graphicDesignFaqs } from "./graphicDesign";
 import { writingFaqs } from "./writing";
 import { generalFaqs } from "./general";
 import { billingUnitsFaqs } from "./billingUnits";
+import { timeEfficiencyFaqs } from "./timeEfficiency";
 
 export function getIndustryFaqs(slug: string): FAQItem[] {
     switch (slug) {
@@ -90,6 +91,8 @@ export function getIndustryFaqs(slug: string): FAQItem[] {
             return agricultureFaqs;
         case "billing-units":
             return billingUnitsFaqs;
+        case "time-efficiency":
+            return timeEfficiencyFaqs;
         default:
             return [];
     }

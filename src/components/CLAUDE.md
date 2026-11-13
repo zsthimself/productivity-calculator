@@ -57,6 +57,8 @@ GeneralProductivityCalculator.tsx: 全行业通用生产力计算器，单要素
 GeneralProductivitySeoContent.tsx: 全行业通用权威深度语义指南，SVG架构图/BLS与OECD宏观基准表/密尔沃基重工业案例/FAQ，340行
 BillingUnitsCalculator.tsx: CMS 8分钟计费单元三模式计算器，分钟转单元/多CPT余数拆分配额/单元转工时折算
 BillingUnitsSeoContent.tsx: 8分钟规则计费单元深度指南，CMS vs AMA对照/1-10U查找表/Excel公式与FAQ
+TimeEfficiencyCalculator.tsx: 时间效率与工时利用率三模式计算器，标准实际耗时比/班次有效利用率/团队年化省时收益
+TimeEfficiencySeoContent.tsx: 时间效率深度语义指南，SVG架构图/Excel公式表/行业基准表与FAQ
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

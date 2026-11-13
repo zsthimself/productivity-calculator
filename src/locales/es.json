@@ -461,6 +461,19 @@
             "inputLabel": "Minutos por Unidad",
             "inputUnit": "min",
             "inputPlaceholder": "p. ej., 15"
+        },
+        "time-efficiency": {
+            "name": "Eficiencia de Tiempo",
+            "title": "Calculadora de Eficiencia de Tiempo",
+            "description": "Compara el tiempo estándar frente al tiempo real de cada tarea y mide la utilización productiva de la jornada.",
+            "resultLabel": "Ratio de Eficiencia",
+            "resultUnit": "x ritmo estándar",
+            "outputLabel": "Tiempo Estándar",
+            "outputUnit": "min",
+            "outputPlaceholder": "p. ej., 45",
+            "inputLabel": "Tiempo Real",
+            "inputUnit": "min",
+            "inputPlaceholder": "p. ej., 36"
         }
     }
 }
