@@ -11,6 +11,7 @@
 - **验证结果**:
   - `npx eslint` 对全部新增/改动核心组件检查：0 Error。
   - `npm run build`（Next.js 16.1.1 Turbopack）：`157/157` 静态页面构建通过（Compile 67s + Static 1.76s），0 编译错误。
+  - 生产部署 & `seo.web.cafe/audit/` 线上体检复核：**`97 / 100 A 级卓越`（主题聚焦 100%）** — `1,169` 词、408ms、`125KB`，关键词优化 `40/40` 满分（`time efficiency calculator` `100% #1` `2.31%` & `efficiency calculator` `100% #2` `2.22%`），链接 `7/7`、媒体 `8/8`、结构化 `10/10`、技术 `17/17`。
 
 ## 2026-11-11: 上线 `/calculator/billing-units` 承接 8 分钟计费单元流量 (`TASK-057` / `DEC-031`)
 
