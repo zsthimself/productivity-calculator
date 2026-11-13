@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" fill="none">
+  <rect width="800" height="400" rx="20" fill="#090D16"/>
+  <rect x="20" y="20" width="760" height="360" rx="16" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="48" y="60" fill="#2DD4BF" font-family="ui-monospace, monospace" font-size="12" font-weight="700" letter-spacing="1.6">SKILLED NURSING FACILITY (SNF) CMS PDPM WORKFLOW</text>
+  <text x="48" y="90" fill="#F8FAFC" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="800">SNF Productivity Calculator &amp; 25% Group/Concurrent Cap</text>
+
+  <!-- Card 1 -->
+  <rect x="48" y="122" width="220" height="202" rx="14" fill="#111827" stroke="#2DD4BF" stroke-width="1.5"/>
+  <text x="68" y="152" fill="#2DD4BF" font-family="ui-monospace, monospace" font-size="11" font-weight="700">1. PAID FACILITY TIME</text>
+  <text x="68" y="182" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="16" font-weight="800">Shift − Unpaid Lunch</text>
+  <text x="68" y="214" fill="#94A3B8" font-family="ui-sans-serif, sans-serif" font-size="12">• Scheduled: 8.5 hrs (510m)</text>
+  <text x="68" y="236" fill="#94A3B8" font-family="ui-sans-serif, sans-serif" font-size="12">• Lunch Deduction: −30 min</text>
+  <text x="68" y="258" fill="#94A3B8" font-family="ui-sans-serif, sans-serif" font-size="12">• Paid Denominator: 480 min</text>
+  <rect x="68" y="276" width="180" height="30" rx="8" fill="#134E4A"/>
+  <text x="82" y="295" fill="#99F6E4" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Never bill off-the-clock</text>
+
+  <!-- Card 2 -->
+  <rect x="290" y="122" width="220" height="202" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="310" y="152" fill="#38BDF8" font-family="ui-monospace, monospace" font-size="11" font-weight="700">2. WEIGHTED PATIENT TIME</text>
+  <text x="310" y="182" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="15" font-weight="800">Indiv + Conc + Group</text>
+  <text x="310" y="214" fill="#94A3B8" font-family="ui-sans-serif, sans-serif" font-size="12">• Individual: 100% Therapist Min</text>
+  <text x="310" y="236" fill="#94A3B8" font-family="ui-sans-serif, monospace" font-size="12">• Concurrent (2): 2x Patient Min</text>
+  <text x="310" y="258" fill="#94A3B8" font-family="ui-sans-serif, sans-serif" font-size="12">• Group (2–6): ≤25% PDPM Cap</text>
+  <rect x="310" y="276" width="180" height="30" rx="8" fill="#0C4A6E"/>
+  <text x="322" y="295" fill="#7DD3FC" font-family="ui-monospace, monospace" font-size="11" font-weight="700">CMS 25% Cap Protected</text>
+
+  <!-- Card 3 -->
+  <rect x="532" y="122" width="220" height="202" rx="14" fill="#111827" stroke="#F472B6" stroke-width="1.5"/>
+  <text x="552" y="152" fill="#F472B6" font-family="ui-monospace, monospace" font-size="11" font-weight="700">3. SNF TARGET CLOCK-OUT</text>
+  <text x="552" y="182" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="17" font-weight="800">Tx Min ÷ Target %</text>
+  <text x="552" y="214" fill="#94A3B8" font-family="ui-sans-serif, sans-serif" font-size="12">• PT / OT Standard: 85%–88%</text>
+  <text x="552" y="236" fill="#94A3B8" font-family="ui-sans-serif, sans-serif" font-size="12">• PTA / COTA Benchmark: 90–92%</text>
+  <text x="552" y="258" fill="#94A3B8" font-family="ui-sans-serif, sans-serif" font-size="12">• SLP Typical Target: 80%–85%</text>
+  <rect x="552" y="276" width="180" height="30" rx="8" fill="#831843"/>
+  <text x="564" y="295" fill="#FBCFE8" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Exact Return &amp; Exit Time</text>
+
+  <text x="48" y="356" fill="#64748B" font-family="ui-monospace, monospace" font-size="11">ProductivityCalculator.work • Skilled Nursing PT, PTA, OT, COTA &amp; SLP Compliance Calculator</text>
+</svg>

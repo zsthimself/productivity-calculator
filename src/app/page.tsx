@@ -183,6 +183,42 @@ export default function HomePage() {
               </Link>
 
               <Link
+                href="/calculator/total-factor-productivity"
+                className="group p-3.5 rounded-xl border border-white/10 hover:border-purple-400 bg-white/5 hover:bg-purple-500/10 transition-all flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">⚖️</span>
+                  <div>
+                    <div className="text-xs font-bold text-white group-hover:text-purple-300 transition-colors">
+                      Total Factor Productivity (TFP)
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)]">
+                      Cobb-Douglas TFP &amp; KLEMS MFP index
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-purple-300 group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+
+              <Link
+                href="/calculator/snf-productivity"
+                className="group p-3.5 rounded-xl border border-white/10 hover:border-teal-400 bg-white/5 hover:bg-teal-500/10 transition-all flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">🏥</span>
+                  <div>
+                    <div className="text-xs font-bold text-white group-hover:text-teal-300 transition-colors">
+                      SNF Productivity Calculator
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)]">
+                      SNF rehab % &amp; PDPM 25% cap
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-teal-300 group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+
+              <Link
                 href="/calculator/video-production"
                 className="group p-3.5 rounded-xl border border-white/10 hover:border-[var(--neon-pink)] bg-white/5 hover:bg-[var(--neon-pink)]/10 transition-all flex items-center justify-between"
               >

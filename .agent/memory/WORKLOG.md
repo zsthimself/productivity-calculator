@@ -1,5 +1,17 @@
 # WORKLOG.md - Site 04 Engineering Activity Log
 
+## 2026-11-13 (Batch 2): 上线 `/calculator/total-factor-productivity` 与 `/calculator/snf-productivity` (`TASK-059` / `DEC-033`)
+
+- **执行概要**:
+  - 结合 `seo.web.cafe` `/ideas/` + `/kd/` 发现：04 号站首页已在 `total factor productivity calculator` (110/mo, **KD 15.3 极易**) 排名第 5，且 `snf productivity calculator` (70/mo ↑ +35%, **KD 21.7 容易**) 呈现低 DR 新站密集占位特征；同批次同步交付第 29 与第 30 个英文垂直套件页。
+- **实施细节**:
+  1. `/calculator/total-factor-productivity`: 新建 [TotalFactorProductivityCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/TotalFactorProductivityCalculator.tsx)、[TotalFactorProductivitySeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/TotalFactorProductivitySeoContent.tsx)、[total-factor-productivity-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/total-factor-productivity-formula.svg)、[totalFactorProductivity.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/faqs/totalFactorProductivity.ts)，并在 `GeneralProductivitySeoContent.tsx` 添加导流内链。
+  2. `/calculator/snf-productivity`: 新建 [SnfProductivityCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/SnfProductivityCalculator.tsx)、[SnfProductivitySeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/SnfProductivitySeoContent.tsx)、[snf-productivity-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/snf-productivity-formula.svg)、[snfProductivity.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/faqs/snfProductivity.ts)，并在 `PhysicalTherapySeoContent.tsx` 添加互链。
+  3. 同步更新 `calculatorRegistry.tsx`、`industries.json`、5 语种 `locales/*.json`、`schemas/meta.ts`、`schemas/faqs/index.ts`、`src/app/page.tsx`、`Footer.tsx`、`sitemap.xml`（35 条英文规范 URL）与 `src/components/CLAUDE.md`、`src/lib/CLAUDE.md`。
+- **验证结果**:
+  - `npx eslint` 对全部新增文件（`TotalFactorProductivity*`、`SnfProductivity*`、`totalFactorProductivity.ts`、`snfProductivity.ts`、`calculatorRegistry.tsx`、`meta.ts`、`faqs/index.ts`、`Footer.tsx`、`GeneralProductivitySeoContent.tsx`）检查：0 新引入 Error（`PhysicalTherapySeoContent.tsx:223` 存在 2 条既有引号转义报错）。
+  - `npm run build`（Next.js 16.1.1 Turbopack）：`167/167` 静态页面生成通过（Compile 8.3s + Static 2.0s），0 错误。
+
 ## 2026-11-13: 上线 `/calculator/time-efficiency` 承接时间效率与班次利用率流量 (`TASK-058` / `DEC-032`)
 
 - **执行概要**:

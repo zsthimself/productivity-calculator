@@ -59,6 +59,10 @@ BillingUnitsCalculator.tsx: CMS 8分钟计费单元三模式计算器，分钟�
 BillingUnitsSeoContent.tsx: 8分钟规则计费单元深度指南，CMS vs AMA对照/1-10U查找表/Excel公式与FAQ
 TimeEfficiencyCalculator.tsx: 时间效率与工时利用率三模式计算器，标准实际耗时比/班次有效利用率/团队年化省时收益
 TimeEfficiencySeoContent.tsx: 时间效率深度语义指南，SVG架构图/Excel公式表/行业基准表与FAQ
+TotalFactorProductivityCalculator.tsx: 全要素(TFP)与多要素(MFP)三模式计算器，Cobb-Douglas/KLEMS指数/Solow增长核算
+TotalFactorProductivitySeoContent.tsx: 全要素与多要素生产力深度指南，SVG架构图/OECD收入权重表与Excel公式
+SnfProductivityCalculator.tsx: 专业护理机构(SNF)三模式计算器，班次效率/目标下班倒推/CMS PDPM 25%上限核验
+SnfProductivitySeoContent.tsx: SNF康复生产力深度指南，PT/PTA/OT/COTA/SLP行业基准表与PDPM 25%说明
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

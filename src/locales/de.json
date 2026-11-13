@@ -474,6 +474,32 @@
             "inputLabel": "Ist-Zeit",
             "inputUnit": "Min.",
             "inputPlaceholder": "z. B. 36"
+        },
+        "total-factor-productivity": {
+            "name": "Totale Faktorproduktivität",
+            "title": "TFP- & Multifaktorproduktivitäts-Rechner",
+            "description": "Berechnen Sie Cobb-Douglas TFP, KLEMS-Multifaktor-Index und das Solow-Residuum.",
+            "resultLabel": "TFP-Effizienz",
+            "resultUnit": "A-Index",
+            "outputLabel": "Realer Output (Y)",
+            "outputUnit": "$",
+            "outputPlaceholder": "z. B. 1250000",
+            "inputLabel": "Kombinierter Input",
+            "inputUnit": "Index",
+            "inputPlaceholder": "z. B. 52000"
+        },
+        "snf-productivity": {
+            "name": "SNF-Reha-Produktivität",
+            "title": "SNF-Produktivitätsrechner",
+            "description": "Berechnen Sie die SNF-Schichteffizienz nach Pausenabzug, Feierabend-Ziel und CMS-PDPM-25%-Limit.",
+            "resultLabel": "SNF-Effizienz",
+            "resultUnit": "Verhältnis",
+            "outputLabel": "Therapieminuten",
+            "outputUnit": "Min.",
+            "outputPlaceholder": "z. B. 420",
+            "inputLabel": "Bezahlte Minuten",
+            "inputUnit": "Min.",
+            "inputPlaceholder": "z. B. 480"
         }
     }
 }

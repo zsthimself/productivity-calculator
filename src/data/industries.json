@@ -745,5 +745,61 @@
       "good": 1.0,
       "excellent": 1.15
     }
+  },
+  {
+    "slug": "total-factor-productivity",
+    "name": "Total Factor Productivity",
+    "title": "Total Factor Productivity Calculator",
+    "description": "Calculate Cobb-Douglas Total Factor Productivity (TFP), KLEMS Multifactor Productivity (MFP), and Solow Residual growth attribution.",
+    "inputs": [
+      {
+        "label": "Real Output (Y)",
+        "unit": "$",
+        "key": "output",
+        "placeholder": "e.g., 1250000"
+      },
+      {
+        "label": "Combined Input Index",
+        "unit": "index",
+        "key": "input",
+        "placeholder": "e.g., 52000"
+      }
+    ],
+    "resultLabel": "TFP Efficiency",
+    "resultUnit": "A index",
+    "icon": "⚖️",
+    "benchmark": {
+      "average": 18,
+      "good": 24,
+      "excellent": 32
+    }
+  },
+  {
+    "slug": "snf-productivity",
+    "name": "SNF Rehab Therapy",
+    "title": "SNF Productivity Calculator",
+    "description": "Compute Skilled Nursing Facility shift productivity % after lunch deductions, target clock-out times, and CMS PDPM 25% group/concurrent limits.",
+    "inputs": [
+      {
+        "label": "Treatment Minutes",
+        "unit": "mins",
+        "key": "output",
+        "placeholder": "e.g., 420"
+      },
+      {
+        "label": "Paid Facility Mins",
+        "unit": "mins",
+        "key": "input",
+        "placeholder": "e.g., 480"
+      }
+    ],
+    "resultLabel": "SNF Efficiency",
+    "resultUnit": "ratio",
+    "icon": "🏥",
+    "benchmark": {
+      "average": 0.82,
+      "good": 0.87,
+      "excellent": 0.92
+    }
   }
 ]

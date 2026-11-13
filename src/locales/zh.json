@@ -474,6 +474,32 @@
             "inputLabel": "实际耗费工时",
             "inputUnit": "分钟",
             "inputPlaceholder": "例如：36"
+        },
+        "total-factor-productivity": {
+            "name": "全要素生产率",
+            "title": "全要素与多要素生产率计算器 (TFP/MFP)",
+            "description": "测算柯布道格拉斯全要素生产率(TFP)、KLEMS复合要素生产率指数与索洛余值技术进步贡献率。",
+            "resultLabel": "全要素生产率",
+            "resultUnit": "A 指数",
+            "outputLabel": "实际总产出 (Y)",
+            "outputUnit": "$",
+            "outputPlaceholder": "例如：1250000",
+            "inputLabel": "综合要素投入",
+            "inputUnit": "指数",
+            "inputPlaceholder": "例如：52000"
+        },
+        "snf-productivity": {
+            "name": "SNF 护理康复效率",
+            "title": "SNF 专业护理康复效率计算器",
+            "description": "计算专业护理机构康复师扣除午休后的班次效率%、倒推下班时间并核验 CMS PDPM 25% 小组与并发治疗上限。",
+            "resultLabel": "SNF 临床效率比",
+            "resultUnit": "比率",
+            "outputLabel": "直接治疗分钟",
+            "outputUnit": "分钟",
+            "outputPlaceholder": "例如：420",
+            "inputLabel": "带薪在岗分钟",
+            "inputUnit": "分钟",
+            "inputPlaceholder": "例如：480"
         }
     }
 }

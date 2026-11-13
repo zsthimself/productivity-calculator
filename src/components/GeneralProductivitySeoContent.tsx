@@ -6,6 +6,7 @@
  */
 
 import React from "react";
+import Link from "next/link";
 import {
   Gauge,
   TrendingUp,
@@ -337,7 +338,11 @@ export default function GeneralProductivitySeoContent() {
           <span>Authoritative Macroeconomic &amp; Productivity Measurement References</span>
         </h3>
         <p className="text-muted-foreground">
-          For in-depth economic research on labor efficiency, total factor productivity, and enterprise growth models, consult these global institutions:
+          For in-depth economic research on labor efficiency, total factor productivity, and enterprise growth models, try our dedicated{" "}
+          <Link href="/calculator/total-factor-productivity" className="text-blue-400 hover:underline font-medium">
+            Total Factor Productivity (TFP) &amp; Multifactor Calculator
+          </Link>{" "}
+          or consult these global institutions:
         </p>
         <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
           <li>

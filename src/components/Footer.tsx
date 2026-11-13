@@ -65,6 +65,18 @@ export default function Footer({ locale = DEFAULT_LOCALE }: FooterProps) {
                 </Link>
               </li>
               <li>
+                <Link href={`${basePath}/calculator/total-factor-productivity`} className="hover:text-[var(--neon-cyan)] transition-colors inline-flex items-center gap-1">
+                  <span>Total Factor Productivity (TFP)</span>
+                  <span className="text-[10px] text-purple-300 font-mono font-bold">NEW</span>
+                </Link>
+              </li>
+              <li>
+                <Link href={`${basePath}/calculator/snf-productivity`} className="hover:text-[var(--neon-cyan)] transition-colors inline-flex items-center gap-1">
+                  <span>SNF Productivity Calculator</span>
+                  <span className="text-[10px] text-teal-300 font-mono font-bold">NEW</span>
+                </Link>
+              </li>
+              <li>
                 <Link href={`${basePath}/calculator/construction`} className="hover:text-[var(--neon-cyan)] transition-colors">
                   Construction Calculator
                 </Link>

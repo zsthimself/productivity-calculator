@@ -62,6 +62,10 @@ import BillingUnitsCalculator from "@/components/BillingUnitsCalculator";
 import BillingUnitsSeoContent from "@/components/BillingUnitsSeoContent";
 import TimeEfficiencyCalculator from "@/components/TimeEfficiencyCalculator";
 import TimeEfficiencySeoContent from "@/components/TimeEfficiencySeoContent";
+import TotalFactorProductivityCalculator from "@/components/TotalFactorProductivityCalculator";
+import TotalFactorProductivitySeoContent from "@/components/TotalFactorProductivitySeoContent";
+import SnfProductivityCalculator from "@/components/SnfProductivityCalculator";
+import SnfProductivitySeoContent from "@/components/SnfProductivitySeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -640,6 +644,43 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: TimeEfficiencyCalculator,
         SeoContent: TimeEfficiencySeoContent,
+    },
+    "total-factor-productivity": {
+        badgeText: "Cobb-Douglas TFP & KLEMS MFP Suite",
+        titlePrefix: "Total Factor",
+        titleSuffix: "Productivity Calculator",
+        subtitle: "Free total factor productivity calculator and multifactor productivity calculator for Cobb-Douglas TFP, KLEMS index comparison, and Solow Residual growth.",
+        metaTitle: "Total Factor Productivity Calculator | Cobb-Douglas & MFP",
+        metaDescription: "Free total factor productivity calculator and multifactor productivity calculator. Calculate Cobb-Douglas TFP, KLEMS MFP index, and Solow Residual growth.",
+        keywords: [
+            "total factor productivity calculator",
+            "multifactor productivity calculator",
+            "tfp calculator",
+            "cobb douglas productivity calculator",
+            "solow residual calculator",
+            "klems multifactor productivity formula",
+            "productivity calculator",
+        ],
+        Calculator: TotalFactorProductivityCalculator,
+        SeoContent: TotalFactorProductivitySeoContent,
+    },
+    "snf-productivity": {
+        badgeText: "Skilled Nursing Rehab & PDPM Suite",
+        titlePrefix: "SNF",
+        titleSuffix: "Productivity Calculator",
+        subtitle: "Free SNF productivity calculator for skilled nursing PT, PTA, OT, COTA, and SLP clinicians. Track shift % with lunch deduction, clock-out time, and 25% PDPM cap.",
+        metaTitle: "SNF Productivity Calculator | PT, OT & PDPM 25% Cap",
+        metaDescription: "Free SNF productivity calculator for skilled nursing therapy. Calculate daily SNF % with lunch break, target clock-out time, and CMS PDPM 25% group/conc cap.",
+        keywords: [
+            "snf productivity calculator",
+            "skilled nursing productivity calculator",
+            "snf therapy productivity calculator",
+            "pt pta ot cota productivity calculator",
+            "pdpm 25 percent group concurrent calculator",
+            "physical therapy productivity calculator",
+        ],
+        Calculator: SnfProductivityCalculator,
+        SeoContent: SnfProductivitySeoContent,
     },
 };
 

@@ -34,6 +34,8 @@ import { writingFaqs } from "./writing";
 import { generalFaqs } from "./general";
 import { billingUnitsFaqs } from "./billingUnits";
 import { timeEfficiencyFaqs } from "./timeEfficiency";
+import { totalFactorProductivityFaqs } from "./totalFactorProductivity";
+import { snfProductivityFaqs } from "./snfProductivity";
 
 export function getIndustryFaqs(slug: string): FAQItem[] {
     switch (slug) {
@@ -93,6 +95,10 @@ export function getIndustryFaqs(slug: string): FAQItem[] {
             return billingUnitsFaqs;
         case "time-efficiency":
             return timeEfficiencyFaqs;
+        case "total-factor-productivity":
+            return totalFactorProductivityFaqs;
+        case "snf-productivity":
+            return snfProductivityFaqs;
         default:
             return [];
     }

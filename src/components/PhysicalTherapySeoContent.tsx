@@ -312,8 +312,16 @@ export default function PhysicalTherapySeoContent() {
             <h3 className="font-bold text-white mb-2 text-base">
               Can occupational therapists (OT) and speech therapists (SLP) use this productivity calculator?
             </h3>
-            <p className="text-[var(--text-secondary)] leading-relaxed">
-              Yes. Physical Therapy (PT), Occupational Therapy (OT), and Speech-Language Pathology (SLP) operate under identical CMS 8-minute billing thresholds and timecard formulas. OT and SLP practitioners can freely use all features including reverse clock-out planning.
+              <p className="text-[var(--text-secondary)] leading-relaxed">
+              Yes. Physical Therapy (PT), Occupational Therapy (OT), and Speech-Language Pathology (SLP) operate under identical CMS 8-minute billing thresholds and timecard formulas. For skilled nursing rehabilitation and PDPM 25% group limits, use our{" "}
+              <Link href="/calculator/snf-productivity" className="text-[var(--neon-cyan)] hover:underline">
+                SNF Productivity Calculator
+              </Link>
+              {" "}or{" "}
+              <Link href="/calculator/billing-units" className="text-[var(--neon-cyan)] hover:underline">
+                Medicare Billing Units Calculator
+              </Link>
+              .
             </p>
           </div>
         </div>

@@ -474,6 +474,32 @@
             "inputLabel": "実績所要時間",
             "inputUnit": "分",
             "inputPlaceholder": "例: 36"
+        },
+        "total-factor-productivity": {
+            "name": "全要素生産性 (TFP)",
+            "title": "全要素生産性・多要素生産性計算機",
+            "description": "コブ＝ダグラス生産関数TFP、KLEMS多要素生産性指数、ソロー残差による成長寄与度を算出します。",
+            "resultLabel": "TFP 効率指数",
+            "resultUnit": "A 指数",
+            "outputLabel": "実質産出額 (Y)",
+            "outputUnit": "$",
+            "outputPlaceholder": "例: 1250000",
+            "inputLabel": "複合投入指数",
+            "inputUnit": "指数",
+            "inputPlaceholder": "例: 52000"
+        },
+        "snf-productivity": {
+            "name": "SNF 介護リハビリ生産性",
+            "title": "SNF リハビリ生産性計算機",
+            "description": "介護施設(SNF)セラピストの昼休憩控除後生産性、目標退勤時刻、CMS PDPM 25%グループ上限を監査します。",
+            "resultLabel": "SNF 効率比率",
+            "resultUnit": "比率",
+            "outputLabel": "直接治療時間",
+            "outputUnit": "分",
+            "outputPlaceholder": "例: 420",
+            "inputLabel": "有給勤務時間",
+            "inputUnit": "分",
+            "inputPlaceholder": "例: 480"
         }
     }
 }

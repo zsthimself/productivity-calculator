@@ -474,6 +474,32 @@
             "inputLabel": "Actual Time",
             "inputUnit": "mins",
             "inputPlaceholder": "e.g., 36"
+        },
+        "total-factor-productivity": {
+            "name": "Total Factor Productivity",
+            "title": "Total Factor Productivity Calculator",
+            "description": "Measure Cobb-Douglas Total Factor Productivity (TFP), KLEMS multifactor productivity index, and Solow Residual growth.",
+            "resultLabel": "TFP Efficiency",
+            "resultUnit": "A index",
+            "outputLabel": "Real Output (Y)",
+            "outputUnit": "$",
+            "outputPlaceholder": "e.g., 1250000",
+            "inputLabel": "Composite Input",
+            "inputUnit": "index",
+            "inputPlaceholder": "e.g., 52000"
+        },
+        "snf-productivity": {
+            "name": "SNF Rehab Therapy",
+            "title": "SNF Productivity Calculator",
+            "description": "Compute SNF shift productivity % after unpaid lunch, target clock-out time, and CMS PDPM 25% group/concurrent compliance.",
+            "resultLabel": "SNF Efficiency",
+            "resultUnit": "ratio",
+            "outputLabel": "Treatment Minutes",
+            "outputUnit": "mins",
+            "outputPlaceholder": "e.g., 420",
+            "inputLabel": "Paid Facility Mins",
+            "inputUnit": "mins",
+            "inputPlaceholder": "e.g., 480"
         }
     }
 }

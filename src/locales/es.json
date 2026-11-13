@@ -474,6 +474,32 @@
             "inputLabel": "Tiempo Real",
             "inputUnit": "min",
             "inputPlaceholder": "p. ej., 36"
+        },
+        "total-factor-productivity": {
+            "name": "Productividad Total Factores",
+            "title": "Calculadora de Productividad Total de los Factores (TFP)",
+            "description": "Calcula la PTF Cobb-Douglas, el índice multifactorial KLEMS y el residuo de Solow.",
+            "resultLabel": "Índice TFP",
+            "resultUnit": "índice A",
+            "outputLabel": "Producción Real (Y)",
+            "outputUnit": "$",
+            "outputPlaceholder": "p. ej., 1250000",
+            "inputLabel": "Insumo Compuesto",
+            "inputUnit": "índice",
+            "inputPlaceholder": "p. ej., 52000"
+        },
+        "snf-productivity": {
+            "name": "Rehabilitación SNF",
+            "title": "Calculadora de Productividad SNF",
+            "description": "Calcula la productividad clínica SNF tras descontar almuerzo, hora de salida y límite PDPM del 25%.",
+            "resultLabel": "Eficiencia SNF",
+            "resultUnit": "ratio",
+            "outputLabel": "Minutos Directos",
+            "outputUnit": "min",
+            "outputPlaceholder": "p. ej., 420",
+            "inputLabel": "Minutos Pagados",
+            "inputUnit": "min",
+            "inputPlaceholder": "p. ej., 480"
         }
     }
 }

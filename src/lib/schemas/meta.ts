@@ -184,6 +184,18 @@ export function getIndustryMeta(
                 description:
                     "Free time efficiency calculator and work efficiency calculator. Compare standard vs. actual task time, shift utilization percentage, and annual hours saved.",
             };
+        case "total-factor-productivity":
+            return {
+                name: "Total Factor Productivity Calculator",
+                description:
+                    "Free total factor productivity calculator and multifactor productivity calculator. Solve Cobb-Douglas TFP, KLEMS MFP index, and Solow Residual growth.",
+            };
+        case "snf-productivity":
+            return {
+                name: "SNF Productivity Calculator",
+                description:
+                    "Free SNF productivity calculator for skilled nursing PT, PTA, OT, COTA, and SLP teams. Compute shift efficiency, clock-out targets, and PDPM 25% cap.",
+            };
         default:
             return {
                 name: fallbackTitle,
