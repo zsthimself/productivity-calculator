@@ -1,5 +1,17 @@
 # WORKLOG.md - Site 04 Engineering Activity Log
 
+## 2026-11-14: 接入 `st-analytics.win` Stage A 匿名统计探针并清理 `/privacy` ESLint (`TASK-060` / `DEC-034`)
+
+- **执行概要**:
+  - 为 04 号站全量 167 个静态路由接入矩阵统一第一方统计中枢 `st-analytics.win` (`FTQtoiYB`)，完成隐私页声明并顺手修复 `src/app/privacy/page.tsx` 的 ESLint 阻塞项。
+- **实施细节**:
+  1. [src/app/layout.tsx](file:///d:/projects/sites/productivity-calculator/src/app/layout.tsx): 在 `<head>` 的 AdSense 脚本下方挂载 `<script defer src="https://st-analytics.win/f.js" data-site="FTQtoiYB" data-api="https://in.st-analytics.win" />`（纯 Stage A 模式，无 `data-adguard`）。
+  2. [src/app/privacy/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/privacy/page.tsx): 升级第 4 节为 `Cookies, Web Beacons & First-Party Analytics` 披露 `_pv_id` / `_pv_sid` / `_pv_ft` 无 PII 统计，并修复 10 处 `react/no-unescaped-entities` 及移除未使用的 `CheckCircle2`。
+  3. 同步更新 [src/app/_META.md](file:///d:/projects/sites/productivity-calculator/src/app/_META.md)、[src/app/privacy/_META.md](file:///d:/projects/sites/productivity-calculator/src/app/privacy/_META.md) 与 `.agent/memory/` (`CURRENT.md`, `DECISIONS.md`, `WORKLOG.md`)。
+- **验证证据**:
+  - `npx eslint src/app/layout.tsx src/app/privacy/page.tsx`: 0 errors, 0 warnings。
+  - `npm run build` (`next build`): `167/167` 静态页面编译 0 报错（`1342.4ms`）。
+
 ## 2026-11-13 (Batch 2): 上线 `/calculator/total-factor-productivity` 与 `/calculator/snf-productivity` (`TASK-059` / `DEC-033`)
 
 - **执行概要**:

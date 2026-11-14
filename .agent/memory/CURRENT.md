@@ -1,9 +1,9 @@
 # CURRENT.md - Site 04 Local Status & Active Loops
 
 ## 当前状态
-- **站点版本**: v1.33.0 (新增第 29 套件 `/calculator/total-factor-productivity` 与第 30 套件 `/calculator/snf-productivity`)
+- **站点版本**: v1.34.0 (接入 `st-analytics.win` Stage A 纯净遥测探针 `FTQtoiYB` 并修复 `/privacy` ESLint 实机编译隐患)
 - **部署环境**: Cloudflare Pages (`productivitycalculator.work`, Git 自动部署)
-- **最近提交**: 原子同步提交 (`TASK-059` / `DEC-033`)
+- **最近提交**: 原子同步提交 (`TASK-060` / `DEC-034`)
 - **核心架构升级**:
   - **2026-11-13 (第二批) 新增第 29 & 第 30 套件**：`/calculator/total-factor-productivity`（TFP KD 15.3 极易、04 号站首页已占第 5 席 + MFP KD 28.6）与 `/calculator/snf-productivity`（`snf productivity calculator` 70/mo ↑ +35%、KD 21.7 容易），分别交付三模式交互引擎、`*-formula.svg`、`schemas/faqs/*`、双向内链与 35 URL `sitemap.xml`，Next.js `167/167` 静态页面编译 0 错误。
   - **2026-11-13 新增第 28 套件 `/calculator/time-efficiency`**：依据哥飞 `/sitekw/` (`theproductivitycalc.com`) 与 `/kd/` 验证锁定 `time efficiency calculator` (KD **13.6 极易**, #1 仅 DR 1 四月新站) + `efficiency calculator` (KD **20.5 容易**, 480/mo)，交付三模式引擎 (`TimeEfficiencyCalculator.tsx`：任务周期比、班次有效利用率、团队省时年化)、1,350+ 词攻略与行业/Excel 表 (`TimeEfficiencySeoContent.tsx`)、`time-efficiency-formula.svg`、`timeEfficiencyFaqs`、首页/页脚互链及 33 URL `sitemap.xml`，Next.js `157/157` 静态页面编译 0 错误。
@@ -44,3 +44,4 @@
 - [x] **TASK-057**: 基于哥飞 SERP 解密 (`billing units calculator`, KD 2.7, 10/10 内页占位) 新上线第 27 个英文套件页 `/calculator/billing-units`（三模式 CMS/AMA/Excel 计费引擎 + `billing-units-formula.svg` + 1,500+ 词深度指南 + FAQPage Schema + PT 双向内链 + 32 URL `sitemap.xml`），线上 `/audit/` 实测 **`100 / 100 A 级满分`**
 - [x] **TASK-058**: 基于哥飞 `/sitekw/` (`theproductivitycalc.com`) 与 `/kd/` 实测（`time efficiency calculator` KD 13.6 + `efficiency calculator` KD 20.5）新上线第 28 个英文套件页 `/calculator/time-efficiency`（`TimeEfficiencyCalculator.tsx` 三模式引擎 + `TimeEfficiencySeoContent.tsx` 深度指南 + `time-efficiency-formula.svg` + `timeEfficiencyFaqs` + 首页/页脚互链 + 33 URL `sitemap.xml`），`157/157` 静态页面编译 0 错误，线上 `/audit/` 实测 **`97 A · 聚焦 100%`**（1,169 词，`40/40` 关键词满分，双词霸榜 #1/#2）
 - [x] **TASK-059**: 基于哥飞 `/ideas/` + `/kd/` 实测（`total factor productivity calculator` KD 15.3 极易、04 号站首页已占第 5 席 + `multifactor productivity calculator` KD 28.6；`snf productivity calculator` 70/mo ↑ +35%、KD 21.7 容易），新上线第 29 套件 `/calculator/total-factor-productivity` 与第 30 套件 `/calculator/snf-productivity`，打通 `calculatorRegistry.tsx`、`industries.json`、5 语种 `locales/*.json`、`schemas/meta.ts`、`schemas/faqs/*`、首页推荐卡、页脚、`GeneralProductivitySeoContent.tsx`、`PhysicalTherapySeoContent.tsx`、`sitemap.xml`（35 URL）与 GEB L2，`167/167` 静态页面编译 0 错误
+- [x] **TASK-060**: 依据矩阵主控 `SOP-07 Stage A` 规范在 [st-analytics.win](https://st-analytics.win) 创建站点实例 `FTQtoiYB`（`productivitycalculator.work`，AdGuard `关闭`、`Asia/Shanghai`、`15s`），在 [layout.tsx](file:///d:/projects/sites/productivity-calculator/src/app/layout.tsx) 挂载 `<script defer src="https://st-analytics.win/f.js" data-site="FTQtoiYB" data-api="https://in.st-analytics.win" />`、在 [privacy/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/privacy/page.tsx) 第 4 节补充 `_pv_id` / `_pv_sid` / `_pv_ft` 披露并顺手清理 `react/no-unescaped-entities` 与 unused `CheckCircle2` 历史告警（`eslint` 0 errors + `next build` `167/167` 静态页 PASS）

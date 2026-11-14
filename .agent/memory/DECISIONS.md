@@ -471,3 +471,12 @@
   1. 针对哥飞 `/kd/` 实测发现 `productivitycalculator.work/` 首页已在 `total factor productivity calculator`（110/mo · **KD 15.3 极易**）排至第 5，构建专属承接内页 `/calculator/total-factor-productivity`（兼顾 `multifactor productivity calculator` **KD 28.6 容易** `0/10` 首页），交付 [TotalFactorProductivityCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/TotalFactorProductivityCalculator.tsx)（Cobb-Douglas TFP、KLEMS 复合成本指数、Solow 增长核算）+ [TotalFactorProductivitySeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/TotalFactorProductivitySeoContent.tsx) + [total-factor-productivity-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/total-factor-productivity-formula.svg) + `totalFactorProductivityFaqs`，并从 `/calculator/general` 建链导流；
   2. 针对 `snf productivity calculator`（70/mo ↑ +35% · **KD 21.7 容易**，DR 0 新站占双席），新建 `/calculator/snf-productivity`，交付 [SnfProductivityCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/SnfProductivityCalculator.tsx)（SNF 扣除午休班次生产力 %、目标下班倒推、CMS PDPM 25% 并发/小组上限审计）+ [SnfProductivitySeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/SnfProductivitySeoContent.tsx) + [snf-productivity-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/snf-productivity-formula.svg) + `snfProductivityFaqs`，与 `/calculator/physical-therapy` 及 `/calculator/billing-units` 构成康复医疗闭环；
   3. 同步注册 `calculatorRegistry.tsx`、`industries.json`、5 语种 `locales/*.json`、`schemas/meta.ts`、`sitemap.xml`（33 → 35 URL）、首页推荐卡、页脚与 GEB L2。
+
+
+### DEC-034: 接入自建统计中枢 `st-analytics.win` Stage A 纯净遥测并加固 `/privacy` ESLint (`TASK-060`)
+- **日期**: 2026-11-14
+- **决策内容**:
+  1. 在 `st-analytics.win` 创建站点 `FTQtoiYB`（主域 `productivitycalculator.work`，`AdGuard: 关闭`、时区 `Asia/Shanghai`、有效停留阈值 `15s`）；
+  2. 严格遵守 `SOP-07 Stage A` 纯净遥测模式，在 [layout.tsx](file:///d:/projects/sites/productivity-calculator/src/app/layout.tsx) `<head>` 挂载 `defer` 探针 `https://st-analytics.win/f.js`（覆盖全部 167 个静态/多语言路由，禁挂 `data-adguard` 与 `data-adclient`）；
+  3. 同步更新 [privacy/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/privacy/page.tsx) 第 4 节披露 `st-analytics.win`（`_pv_id`, `_pv_sid`, `_pv_ft`）并一并修复该页既有 `react/no-unescaped-entities` 报错与未使用图标导入。
+- **决策原因**: 统一纳管矩阵在网站点流量与有效停留 (`engaged 15s`) 监控，配合后续 30 英文生产力套件的 GSC 与 `st-analytics.win` 交叉归因诊断。

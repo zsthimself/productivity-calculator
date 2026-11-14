@@ -9,7 +9,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ShieldCheck, Lock, Eye, FileText, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Lock, Eye, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Productivity Calculator",
@@ -78,11 +78,11 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p>
               Productivity Calculator follows a standard procedure of using log files. These files log visitors when they
-              visit websites. All hosting services do this as part of hosting services' analytics. The information collected
+              visit websites. All hosting services do this as part of hosting services&apos; analytics. The information collected
               by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date
               and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any
               personally identifiable information. The purpose of the information is for analyzing trends, administering
-              the site, tracking users' movement on the website, and gathering demographic information.
+              the site, tracking users&apos; movement on the website, and gathering demographic information.
             </p>
           </section>
 
@@ -114,13 +114,20 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-display text-xl md:text-2xl font-bold text-white">4. Cookies and Web Beacons</h2>
+            <h2 className="font-display text-xl md:text-2xl font-bold text-white">4. Cookies, Web Beacons & First-Party Analytics</h2>
             <p>
-              Like any other website, Productivity Calculator uses "cookies". These cookies are used to store information
-              including visitors' preferences (such as your chosen calculation target percentages or preferred language
+              Like any other website, Productivity Calculator uses &quot;cookies&quot;. These cookies are used to store information
+              including visitors&apos; preferences (such as your chosen calculation target percentages or preferred language
               settings), and the pages on the website that the visitor accessed or visited. The information is used to
-              optimize the users' experience by customizing our web page content based on visitors' browser type and/or
+              optimize the users&apos; experience by customizing our web page content based on visitors&apos; browser type and/or
               other information.
+            </p>
+            <p>
+              We also use a lightweight first-party anonymous analytics service (<code className="text-[var(--neon-cyan)]">st-analytics.win</code>,
+              setting anonymous session identifiers <code className="text-[var(--neon-cyan)]">_pv_id</code>,{" "}
+              <code className="text-[var(--neon-cyan)]">_pv_sid</code>, and{" "}
+              <code className="text-[var(--neon-cyan)]">_pv_ft</code>) strictly to measure aggregate traffic quality and
+              page dwell time. No personally identifiable information (PII) or calculation inputs are collected.
             </p>
           </section>
 
@@ -132,7 +139,7 @@ export default function PrivacyPolicyPage() {
             <ul className="list-disc pl-6 space-y-1">
               <li>Request that a business disclose the categories and specific pieces of personal data collected.</li>
               <li>Request that a business delete any personal data about the consumer that a business has collected.</li>
-              <li>Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</li>
+              <li>Request that a business that sells a consumer&apos;s personal data, not sell the consumer&apos;s personal data.</li>
             </ul>
             <p>
               We do not sell personal data. If you make a request, we have one month to respond to you. If you would like
@@ -158,7 +165,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-display text-xl md:text-2xl font-bold text-white">7. Children's Information</h2>
+            <h2 className="font-display text-xl md:text-2xl font-bold text-white">7. Children&apos;s Information</h2>
             <p>
               Another part of our priority is adding protection for children while using the internet. We encourage
               parents and guardians to observe, participate in, and/or monitor and guide their online activity.

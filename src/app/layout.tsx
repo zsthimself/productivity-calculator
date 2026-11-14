@@ -108,6 +108,12 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <script
+          defer
+          src="https://st-analytics.win/f.js"
+          data-site="FTQtoiYB"
+          data-api="https://in.st-analytics.win"
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
