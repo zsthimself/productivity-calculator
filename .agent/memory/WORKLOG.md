@@ -8,6 +8,12 @@
   1. 新建 [ProductivityIndexCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityIndexCalculator.tsx)、[ProductivityIndexSeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityIndexSeoContent.tsx)、[productivity-index-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/productivity-index-formula.svg)、[productivityIndex.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/faqs/productivityIndex.ts)。
   2. 新建 [RehabProductivityCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/RehabProductivityCalculator.tsx)、[RehabProductivitySeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/RehabProductivitySeoContent.tsx)、[rehab-productivity-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/rehab-productivity-formula.svg)、[rehabProductivity.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/faqs/rehabProductivity.ts)。
   3. 注册至 `calculatorRegistry.tsx`、`meta.ts`、`faqs/index.ts`、`industries.json`、5 语种 `locales/*.json`、`Footer.tsx` 与 `sitemap.xml`（39 条英文规范 URL）。
+  4. 首轮 `/audit/` 检出 `productivity-index` 正文 546 词封顶 `75 C` 后，在 `ProductivityIndexSeoContent.tsx` 与 `RehabProductivitySeoContent.tsx` 增补单/多要素指数选型、Excel/Sheets 公式、Medicare 8-Minute Rule vs. PDPM 25% 规则与时块排班指南（Commit `7b3a365`）。
+- **验证证据**:
+  - `npm run build`: `187/187` 静态页面编译与静态导出 0 报错（`1332.7ms`）。
+  - `seo.web.cafe/audit/` 实测：
+    - `https://productivitycalculator.work/calculator/productivity-index`: **`98 A · 优秀`**（主题聚焦 `100%`，`1,015` 词，Meta `25/25`，内容 `22.5/24`，关键词 `39/40`，`412ms`）。
+    - `https://productivitycalculator.work/calculator/rehab-productivity`: **`97 A · 优秀`**（主题聚焦 `100%`，`1,008` 词，Meta `25/25`，内容 `22.5/24`，关键词 `37/40`，`397ms`）。
 
 ## 2026-11-15: 上线第 32 套件 `/calculator/productivity-with-lunch-break` (`TASK-062` / `DEC-036`)
 
