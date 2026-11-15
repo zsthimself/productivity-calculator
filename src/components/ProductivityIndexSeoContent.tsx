@@ -91,6 +91,47 @@ export default function ProductivityIndexSeoContent() {
                 </div>
             </section>
 
+            <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-white">Single-Factor vs. Multi-Factor Productivity Index: Which Should You Track?</h2>
+                <p>
+                    Choosing between a single-factor and a multi-factor productivity index depends on whether your team needs fast operational feedback or executive-level capital efficiency reporting. A single-factor labor productivity index isolates output per labor hour or output per full-time equivalent (FTE), making it ideal for weekly shift reviews, warehouse throughput audits, and software sprint velocity tracking. Because it only requires two inputs per period, supervisors can compute it immediately at the end of a week without waiting for month-end accounting closes.
+                </p>
+                <p>
+                    However, relying solely on a single-factor index can mask cost shifting. If a factory buys a new automated packaging line, labor output per hour will surge, pushing the labor productivity index from 100 to 135. Without accounting for machine depreciation, maintenance, and energy consumption, management may overestimate true operational gains. A multi-factor productivity index (also known as a total factor productivity index) solves this by placing combined labor, capital, materials, and energy costs in the denominator. Whenever your capital expenditure or outsourcing mix changes by more than 10% year-over-year, pairing both indices prevents misleading conclusions.
+                </p>
+            </section>
+
+            <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-white">How to Build a Productivity Index in Excel or Google Sheets</h2>
+                <p>
+                    Operations analysts frequently automate monthly index tracking inside spreadsheets so leadership dashboards update automatically. Suppose your base period output sits in cell <code>B2</code>, base period input sits in <code>C2</code>, and your current period output and input sit in <code>B3</code> and <code>C3</code>. You can compute the current productivity index in a single formula:
+                </p>
+                <pre className="p-4 rounded-xl bg-slate-900 border border-slate-800 text-cyan-300 text-sm overflow-x-auto">
+                    <code>=((B3/C3)/(B2/C2))*100</code>
+                </pre>
+                <p>
+                    To lock the base period while dragging the formula down across twelve months or fifty regional branches, anchor the denominator with dollar signs: <code>=((B3/C3)/($B$2/$C$2))*100</code>. If you want to display the percentage change relative to the base period alongside the index, use <code>=(D3-100)/100</code> formatted as a percentage, where <code>D3</code> holds the calculated productivity index.
+                </p>
+            </section>
+
+            <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-white">Common Deflation &amp; Measurement Pitfalls to Avoid</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>
+                        <strong>Mixing nominal revenue with physical units:</strong> If you measure output in dollars during an inflationary period without dividing by a price deflator (such as PPI or CPI), price hikes will artificially inflate your productivity index even when real unit volume is flat.
+                    </li>
+                    <li>
+                        <strong>Choosing an anomalous base period:</strong> Never select a holiday peak, plant shutdown, or supply-chain disruption quarter as your Index = 100 baseline. Always pick a stable, representative operating period or use a 12-month trailing average as your base ratio.
+                    </li>
+                    <li>
+                        <strong>Ignoring quality and rework rates:</strong> Producing 15% more units with a 10% scrap rate does not represent real productivity growth. Always measure net good output (shipped units minus defective returns) in the numerator of your productivity index calculator.
+                    </li>
+                    <li>
+                        <strong>Changing input definitions mid-year:</strong> If contractor hours were excluded in Q1 but included in Q2, your index drop reflects an accounting boundary change rather than an operational slowdown. Re-baseline historical periods whenever scope changes.
+                    </li>
+                </ul>
+            </section>
+
             <section className="pt-4 border-t border-slate-800">
                 <h3 className="text-lg font-bold text-white mb-3">Related Productivity &amp; Efficiency Calculators</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm not-prose">

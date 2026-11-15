@@ -93,6 +93,50 @@ export default function RehabProductivitySeoContent() {
                 </div>
             </section>
 
+            <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-white">Medicare 8-Minute Rule vs. PDPM Concurrent &amp; Group Therapy Rules</h2>
+                <p>
+                    Calculating rehab productivity accurately requires understanding how payers count treatment minutes. Under Medicare Part B outpatient rules, therapists apply the 8-Minute Rule to convert timed CPT codes (such as therapeutic exercise, manual therapy, or gait training) into billable 15-minute units. Because a single 38-minute session yields 3 billable units (45 minutes of unit credit) while a 22-minute session yields 1 unit, your billable treatment minutes in the numerator can differ slightly from raw stopwatch minutes depending on your facility&apos;s EMR configuration.
+                </p>
+                <p>
+                    In Skilled Nursing Facilities (SNFs) operating under the Patient-Driven Payment Model (PDPM), CMS caps combined group and concurrent therapy at 25% of a resident&apos;s total therapy minutes per discipline. When a physical therapist treats two residents concurrently for 30 minutes, each patient receives 30 minutes of therapy credit toward their clinical record, but the clinician only worked 30 clock minutes. Many SNF directors therefore track both raw clock-time productivity and weighted group-adjusted productivity so that clinicians are never incentivized to exceed the 25% PDPM compliance threshold.
+                </p>
+            </section>
+
+            <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-white">Daily Time-Blocking Workflow to Hit 85%–90% Rehab Productivity</h2>
+                <p>
+                    Experienced PT, OT, and SLP clinicians avoid end-of-day burnout by structuring their shift into predictable time blocks rather than leaving documentation until 4:30 PM. On a standard 480-minute (8-hour) paid shift, hitting an 85% productivity target requires 408 billable treatment minutes, leaving 72 minutes for all non-billable tasks.
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li>
+                        <strong>Point-of-Service Documentation (Save 25–30 mins/day):</strong> Complete subjective updates, objective flowsheet measurements, and exercise progressions inside the gym or patient room during the final 3–5 minutes of each session while summarizing home-exercise instructions.
+                    </li>
+                    <li>
+                        <strong>Batch Chart Reviews Early (15 mins at shift start):</strong> Review overnight nursing notes, vitals, and lab holds for all morning patients in one 15-minute block before walking onto the floor, eliminating wasted hallway trips between sessions.
+                    </li>
+                    <li>
+                        <strong>Pre-Stage Cancellations &amp; Refusals:</strong> Keep a prioritized backup list of flexible PRN or inpatient residents so a 10:00 AM medical hold immediately converts into an alternate 30-minute treatment slot instead of unscheduled downtime.
+                    </li>
+                    <li>
+                        <strong>Separate Unpaid Meal Breaks:</strong> Never include an unpaid 30-minute lunch in your denominator. An 8:00 AM to 4:30 PM schedule with a 30-minute unpaid lunch equals 480 paid minutes, not 510 minutes.
+                    </li>
+                </ul>
+            </section>
+
+            <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-white">Excel Formula for Weekly Rehab Productivity Tracking</h2>
+                <p>
+                    Rehab managers and travel therapists can track weekly compliance in Excel or Google Sheets. Place total billable patient minutes in column <code>B</code>, total paid shift hours in column <code>C</code>, and unpaid meal minutes already excluded from paid hours. Use this formula to calculate exact shift productivity:
+                </p>
+                <pre className="p-4 rounded-xl bg-slate-900 border border-slate-800 text-cyan-300 text-sm overflow-x-auto">
+                    <code>=(B2/(C2*60))*100</code>
+                </pre>
+                <p>
+                    To calculate the minimum billable minutes needed to meet an 88% facility target for any shift length in <code>C2</code>, use <code>=C2*60*0.88</code>. Monitoring this daily gap prevents small 15-minute documentation overruns from compounding into a missed weekly productivity review.
+                </p>
+            </section>
+
             <section className="pt-4 border-t border-slate-800">
                 <h3 className="text-lg font-bold text-white mb-3">Related Therapy &amp; Healthcare Calculators</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm not-prose">
