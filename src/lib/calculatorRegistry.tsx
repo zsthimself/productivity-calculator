@@ -66,6 +66,8 @@ import TotalFactorProductivityCalculator from "@/components/TotalFactorProductiv
 import TotalFactorProductivitySeoContent from "@/components/TotalFactorProductivitySeoContent";
 import SnfProductivityCalculator from "@/components/SnfProductivityCalculator";
 import SnfProductivitySeoContent from "@/components/SnfProductivitySeoContent";
+import ProductivityPercentageCalculator from "@/components/ProductivityPercentageCalculator";
+import ProductivityPercentageSeoContent from "@/components/ProductivityPercentageSeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -681,6 +683,24 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: SnfProductivityCalculator,
         SeoContent: SnfProductivitySeoContent,
+    },
+    "productivity-percentage": {
+        badgeText: "Shift & Lunch Break Percentage Suite",
+        titlePrefix: "Productivity Percentage",
+        titleSuffix: "Calculator",
+        subtitle: "Free productivity percentage calculator with unpaid lunch break deduction, target clock-out time solver, and output vs. quota percentage tracking.",
+        metaTitle: "Productivity Percentage Calculator | Shift & Lunch %",
+        metaDescription: "Free productivity percentage calculator with lunch break deduction. Compute shift efficiency %, target clock-out time, and output vs. quota percentage.",
+        keywords: [
+            "productivity percentage calculator",
+            "productivity calculator with lunch break",
+            "how to calculate productivity percentage",
+            "shift productivity percentage calculator",
+            "work productivity percentage formula",
+            "clock out time productivity calculator",
+        ],
+        Calculator: ProductivityPercentageCalculator,
+        SeoContent: ProductivityPercentageSeoContent,
     },
 };
 

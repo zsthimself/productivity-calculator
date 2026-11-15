@@ -801,5 +801,33 @@
       "good": 0.87,
       "excellent": 0.92
     }
+  },
+  {
+    "slug": "productivity-percentage",
+    "name": "Productivity Percentage",
+    "title": "Productivity Percentage Calculator",
+    "description": "Compute daily productivity percentage with unpaid lunch break deduction, target clock-out time, and output vs. quota attainment.",
+    "inputs": [
+      {
+        "label": "Productive / Billable Mins",
+        "unit": "mins",
+        "key": "output",
+        "placeholder": "e.g., 385"
+      },
+      {
+        "label": "Paid Shift Mins (Excl. Lunch)",
+        "unit": "mins",
+        "key": "input",
+        "placeholder": "e.g., 450"
+      }
+    ],
+    "resultLabel": "Productivity %",
+    "resultUnit": "ratio",
+    "icon": "📊",
+    "benchmark": {
+      "average": 0.75,
+      "good": 0.85,
+      "excellent": 0.95
+    }
   }
 ]

@@ -500,6 +500,19 @@
             "inputLabel": "Bezahlte Minuten",
             "inputUnit": "Min.",
             "inputPlaceholder": "z. B. 480"
+        },
+        "productivity-percentage": {
+            "name": "Produktivitätsprozentsatz",
+            "title": "Produktivitätsprozentsatz-Rechner",
+            "description": "Berechnen Sie den täglichen Produktivitätsprozentsatz nach Pausenabzug, Feierabend-Ziel und Quotenerfüllung.",
+            "resultLabel": "Produktivität %",
+            "resultUnit": "Verhältnis",
+            "outputLabel": "Produktive Min.",
+            "outputUnit": "Min.",
+            "outputPlaceholder": "z. B. 385",
+            "inputLabel": "Bezahlte Min.",
+            "inputUnit": "Min.",
+            "inputPlaceholder": "z. B. 450"
         }
     }
 }

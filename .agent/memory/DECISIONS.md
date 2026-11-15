@@ -480,3 +480,10 @@
   2. 严格遵守 `SOP-07 Stage A` 纯净遥测模式，在 [layout.tsx](file:///d:/projects/sites/productivity-calculator/src/app/layout.tsx) `<head>` 挂载 `defer` 探针 `https://st-analytics.win/f.js`（覆盖全部 167 个静态/多语言路由，禁挂 `data-adguard` 与 `data-adclient`）；
   3. 同步更新 [privacy/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/privacy/page.tsx) 第 4 节披露 `st-analytics.win`（`_pv_id`, `_pv_sid`, `_pv_ft`）并一并修复该页既有 `react/no-unescaped-entities` 报错与未使用图标导入。
 - **决策原因**: 统一纳管矩阵在网站点流量与有效停留 (`engaged 15s`) 监控，配合后续 30 英文生产力套件的 GSC 与 `st-analytics.win` 交叉归因诊断。
+
+### DEC-035: 上线第 31 套件 `/calculator/productivity-percentage` 与首页内链权重聚焦 (`TASK-061`)
+- **日期**: 2026-11-15
+- **决策内容**:
+  1. 依据 `seo.web.cafe` `/ideas/` + `/kd/` 实测发现：`productivity percentage calculator`（50/mo · **哥飞 KD 0/100 极易**，Top 10 无专属工具且 3 个 DR 0–25 新站占位）与 `productivity calculator with lunch break`（90/mo ↑ +40% · **哥飞 KD 16.8/100 极易**）构成零竞争蓝海，构建第 31 个英文垂直套件 `/calculator/productivity-percentage`；
+  2. 交付 [ProductivityPercentageCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityPercentageCalculator.tsx)（3 模式：班次午休扣减 %、目标下班时间倒推、实际产出与定额占比）、[ProductivityPercentageSeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityPercentageSeoContent.tsx)（含 6 行业内链基准表、`800x400` SVG 与 Excel 公式）、[productivity-percentage-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/productivity-percentage-formula.svg) 与 `productivityPercentageFaqs`；
+  3. 针对 `/serp/` 诊断出 `agriculture` (#8)、`data-entry` (#3)、`education` (#3)、`customer-support` (#2) 仅因内链权重不足未入 Top 1–3，在 [src/app/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/page.tsx) 首页网格与 [Footer.tsx](file:///d:/projects/sites/productivity-calculator/src/components/Footer.tsx) 补充上述高潜页与新套件的直达内链，并将 `sitemap.xml` 扩至 36 条英文规范 URL。

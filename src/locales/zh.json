@@ -500,6 +500,19 @@
             "inputLabel": "带薪在岗分钟",
             "inputUnit": "分钟",
             "inputPlaceholder": "例如：480"
+        },
+        "productivity-percentage": {
+            "name": "生产力百分比",
+            "title": "生产力百分比计算器",
+            "description": "计算扣除无薪午休后的每日生产力百分比、目标下班时间以及实际产出与定额达标率。",
+            "resultLabel": "生产力百分比",
+            "resultUnit": "比率",
+            "outputLabel": "有效工作分钟",
+            "outputUnit": "分钟",
+            "outputPlaceholder": "例如：385",
+            "inputLabel": "带薪在岗分钟",
+            "inputUnit": "分钟",
+            "inputPlaceholder": "例如：450"
         }
     }
 }

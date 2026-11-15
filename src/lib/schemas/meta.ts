@@ -196,6 +196,12 @@ export function getIndustryMeta(
                 description:
                     "Free SNF productivity calculator for skilled nursing PT, PTA, OT, COTA, and SLP teams. Compute shift efficiency, clock-out targets, and PDPM 25% cap.",
             };
+        case "productivity-percentage":
+            return {
+                name: "Productivity Percentage Calculator",
+                description:
+                    "Free productivity percentage calculator with lunch break deduction, target clock-out time solver, and quota attainment benchmarking.",
+            };
         default:
             return {
                 name: fallbackTitle,

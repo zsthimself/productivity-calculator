@@ -36,6 +36,7 @@ import { billingUnitsFaqs } from "./billingUnits";
 import { timeEfficiencyFaqs } from "./timeEfficiency";
 import { totalFactorProductivityFaqs } from "./totalFactorProductivity";
 import { snfProductivityFaqs } from "./snfProductivity";
+import { productivityPercentageFaqs } from "./productivityPercentage";
 
 export function getIndustryFaqs(slug: string): FAQItem[] {
     switch (slug) {
@@ -99,6 +100,8 @@ export function getIndustryFaqs(slug: string): FAQItem[] {
             return totalFactorProductivityFaqs;
         case "snf-productivity":
             return snfProductivityFaqs;
+        case "productivity-percentage":
+            return productivityPercentageFaqs;
         default:
             return [];
     }

@@ -253,6 +253,97 @@ export default function HomePage() {
                 </div>
                 <span className="text-xs text-[var(--neon-purple)] group-hover:translate-x-1 transition-transform">→</span>
               </Link>
+
+              <Link
+                href="/calculator/productivity-percentage"
+                className="group p-3.5 rounded-xl border border-amber-400/30 hover:border-amber-400 bg-amber-500/5 hover:bg-amber-500/15 transition-all flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">📊</span>
+                  <div>
+                    <div className="text-xs font-bold text-white group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                      <span>Productivity Percentage</span>
+                      <span className="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[9px] font-mono uppercase">NEW</span>
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)]">
+                      Shift % with lunch &amp; clock-out time
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-amber-300 group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+
+              <Link
+                href="/calculator/agriculture"
+                className="group p-3.5 rounded-xl border border-white/10 hover:border-emerald-400 bg-white/5 hover:bg-emerald-500/10 transition-all flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">🌾</span>
+                  <div>
+                    <div className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors">
+                      Agriculture Productivity
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)]">
+                      Crop yield per acre &amp; farm labor ROI
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-emerald-300 group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+
+              <Link
+                href="/calculator/data-entry"
+                className="group p-3.5 rounded-xl border border-white/10 hover:border-[var(--neon-cyan)] bg-white/5 hover:bg-[var(--neon-cyan)]/10 transition-all flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">⌨️</span>
+                  <div>
+                    <div className="text-xs font-bold text-white group-hover:text-[var(--neon-cyan)] transition-colors">
+                      Data Entry Productivity
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)]">
+                      Records/hr, KPH &amp; error accuracy
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-[var(--neon-cyan)] group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+
+              <Link
+                href="/calculator/customer-support"
+                className="group p-3.5 rounded-xl border border-white/10 hover:border-sky-400 bg-white/5 hover:bg-sky-500/10 transition-all flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">💬</span>
+                  <div>
+                    <div className="text-xs font-bold text-white group-hover:text-sky-300 transition-colors">
+                      Customer Support
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)]">
+                      Tickets/hr, AHT &amp; SLA attainment
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-sky-300 group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+
+              <Link
+                href="/calculator/education"
+                className="group p-3.5 rounded-xl border border-white/10 hover:border-indigo-400 bg-white/5 hover:bg-indigo-500/10 transition-all flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">🎓</span>
+                  <div>
+                    <div className="text-xs font-bold text-white group-hover:text-indigo-300 transition-colors">
+                      Education Productivity
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)]">
+                      Instructional hours &amp; grading ratio
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-indigo-300 group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
             </div>
           </div>
 

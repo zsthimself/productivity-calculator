@@ -500,6 +500,19 @@
             "inputLabel": "有給勤務時間",
             "inputUnit": "分",
             "inputPlaceholder": "例: 480"
+        },
+        "productivity-percentage": {
+            "name": "生産性パーセンテージ",
+            "title": "生産性パーセンテージ計算機",
+            "description": "無給の昼休憩控除後の日次生産性％、目標退勤時刻、ノルマ達成率をリアルタイムで算出します。",
+            "resultLabel": "生産性％",
+            "resultUnit": "比率",
+            "outputLabel": "実働時間",
+            "outputUnit": "分",
+            "outputPlaceholder": "例: 385",
+            "inputLabel": "有給勤務時間",
+            "inputUnit": "分",
+            "inputPlaceholder": "例: 450"
         }
     }
 }

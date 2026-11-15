@@ -63,6 +63,8 @@ TotalFactorProductivityCalculator.tsx: 全要素(TFP)与多要素(MFP)三模式�
 TotalFactorProductivitySeoContent.tsx: 全要素与多要素生产力深度指南，SVG架构图/OECD收入权重表与Excel公式
 SnfProductivityCalculator.tsx: 专业护理机构(SNF)三模式计算器，班次效率/目标下班倒推/CMS PDPM 25%上限核验
 SnfProductivitySeoContent.tsx: SNF康复生产力深度指南，PT/PTA/OT/COTA/SLP行业基准表与PDPM 25%说明
+ProductivityPercentageCalculator.tsx: 生产力百分比三模式计算器，班次午休扣减%/目标下班倒推/实际产出与定额占比
+ProductivityPercentageSeoContent.tsx: 生产力百分比深度语义指南，800x400公式SVG/午休扣减示例/6行业基准表/Excel公式与FAQ
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

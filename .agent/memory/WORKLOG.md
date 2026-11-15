@@ -1,5 +1,18 @@
 # WORKLOG.md - Site 04 Engineering Activity Log
 
+## 2026-11-15: 上线第 31 套件 `/calculator/productivity-percentage` 并强化高潜页首页内链 (`TASK-061` / `DEC-035`)
+
+- **执行概要**:
+  - 基于今日 `seo.web.cafe` 免费日额度侦察（`productivity percentage calculator` **KD 0/100**、`productivity calculator with lunch break` **KD 16.8/100**，以及 `agriculture` #8 / `data-entry` #3 / `education` #3 / `customer-support` #2 缺首页内链权重），上线第 31 个英文计算器套件并加固首页权重导流。
+- **实施细节**:
+  1. 新建 [ProductivityPercentageCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityPercentageCalculator.tsx)、[ProductivityPercentageSeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityPercentageSeoContent.tsx)、[productivity-percentage-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/productivity-percentage-formula.svg) 与 [productivityPercentage.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/faqs/productivityPercentage.ts)。
+  2. 注册至 [calculatorRegistry.tsx](file:///d:/projects/sites/productivity-calculator/src/lib/calculatorRegistry.tsx)、[meta.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/meta.ts)、[faqs/index.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/faqs/index.ts)、[industries.json](file:///d:/projects/sites/productivity-calculator/src/data/industries.json)、5 语种 `locales/*.json` 与 [sitemap.xml](file:///d:/projects/sites/productivity-calculator/public/sitemap.xml)（36 条英文规范 URL）。
+  3. 在 [src/app/page.tsx](file:///d:/projects/sites/productivity-calculator/src/app/page.tsx) 与 [Footer.tsx](file:///d:/projects/sites/productivity-calculator/src/components/Footer.tsx) 增配 `/calculator/productivity-percentage`、`/calculator/agriculture`、`/calculator/data-entry`、`/calculator/customer-support`、`/calculator/education` 权重内链。
+  4. 同步更新 `src/components/CLAUDE.md`、`src/lib/CLAUDE.md` 与 `.agent/memory/` (`CURRENT.md`, `DECISIONS.md`, `WORKLOG.md`)。
+- **验证证据**:
+  - `npx eslint` 校验全部新增/改动文件：0 新引入 Error（仅 `page.tsx:562` 既有引号告警）。
+  - `npm run build` (`next build` Next.js 16.1.1 Turbopack)：`172/172` 静态页面编译与静态导出 0 报错（`1352.0ms`）。
+
 ## 2026-11-14: 接入 `st-analytics.win` Stage A 匿名统计探针并清理 `/privacy` ESLint (`TASK-060` / `DEC-034`)
 
 - **执行概要**:

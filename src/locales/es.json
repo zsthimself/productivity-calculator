@@ -500,6 +500,19 @@
             "inputLabel": "Minutos Pagados",
             "inputUnit": "min",
             "inputPlaceholder": "p. ej., 480"
+        },
+        "productivity-percentage": {
+            "name": "Porcentaje de Productividad",
+            "title": "Calculadora de Porcentaje de Productividad",
+            "description": "Calcula el porcentaje de productividad diaria descontando el almuerzo, hora de salida objetivo y cumplimiento de cuota.",
+            "resultLabel": "Productividad %",
+            "resultUnit": "ratio",
+            "outputLabel": "Minutos Productivos",
+            "outputUnit": "min",
+            "outputPlaceholder": "p. ej., 385",
+            "inputLabel": "Minutos Pagados",
+            "inputUnit": "min",
+            "inputPlaceholder": "p. ej., 450"
         }
     }
 }

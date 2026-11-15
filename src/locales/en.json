@@ -500,6 +500,19 @@
             "inputLabel": "Paid Facility Mins",
             "inputUnit": "mins",
             "inputPlaceholder": "e.g., 480"
+        },
+        "productivity-percentage": {
+            "name": "Productivity Percentage",
+            "title": "Productivity Percentage Calculator",
+            "description": "Compute daily productivity percentage with unpaid lunch break deduction, target clock-out time, and output vs. quota attainment.",
+            "resultLabel": "Productivity %",
+            "resultUnit": "ratio",
+            "outputLabel": "Productive Mins",
+            "outputUnit": "mins",
+            "outputPlaceholder": "e.g., 385",
+            "inputLabel": "Paid Shift Mins",
+            "inputUnit": "mins",
+            "inputPlaceholder": "e.g., 450"
         }
     }
 }
