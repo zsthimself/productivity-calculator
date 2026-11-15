@@ -37,6 +37,7 @@ import { timeEfficiencyFaqs } from "./timeEfficiency";
 import { totalFactorProductivityFaqs } from "./totalFactorProductivity";
 import { snfProductivityFaqs } from "./snfProductivity";
 import { productivityPercentageFaqs } from "./productivityPercentage";
+import { productivityLunchBreakFaqs } from "./productivityLunchBreak";
 
 export function getIndustryFaqs(slug: string): FAQItem[] {
     switch (slug) {
@@ -102,6 +103,8 @@ export function getIndustryFaqs(slug: string): FAQItem[] {
             return snfProductivityFaqs;
         case "productivity-percentage":
             return productivityPercentageFaqs;
+        case "productivity-with-lunch-break":
+            return productivityLunchBreakFaqs;
         default:
             return [];
     }

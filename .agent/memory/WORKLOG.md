@@ -1,5 +1,14 @@
 # WORKLOG.md - Site 04 Engineering Activity Log
 
+## 2026-11-15: 上线第 32 套件 `/calculator/productivity-with-lunch-break` (`TASK-062` / `DEC-036`)
+
+- **执行概要**:
+  - 针对哥飞 `/kd/` 实测上升蓝海词 **`productivity calculator with lunch break`**（`90/mo ↑ +40%`, **KD `16.8/100` 极易**），上线第 32 个英文计算器套件。
+- **实施细节**:
+  1. 新建 [ProductivityLunchBreakCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityLunchBreakCalculator.tsx)、[ProductivityLunchBreakSeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityLunchBreakSeoContent.tsx)、[productivity-lunch-break-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/productivity-lunch-break-formula.svg) 与 [productivityLunchBreak.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/faqs/productivityLunchBreak.ts)。
+  2. 注册至 [calculatorRegistry.tsx](file:///d:/projects/sites/productivity-calculator/src/lib/calculatorRegistry.tsx)、[meta.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/meta.ts)、[faqs/index.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/faqs/index.ts)、[industries.json](file:///d:/projects/sites/productivity-calculator/src/data/industries.json)、5 语种 `locales/*.json`、[Footer.tsx](file:///d:/projects/sites/productivity-calculator/src/components/Footer.tsx) 与 [sitemap.xml](file:///d:/projects/sites/productivity-calculator/public/sitemap.xml)（37 条英文规范 URL）。
+  3. 同步更新 `src/components/CLAUDE.md` 与 `.agent/memory/` (`CURRENT.md`, `DECISIONS.md`, `WORKLOG.md`)。
+
 ## 2026-11-15: 上线第 31 套件 `/calculator/productivity-percentage` 并强化高潜页首页内链 (`TASK-061` / `DEC-035`)
 
 - **执行概要**:

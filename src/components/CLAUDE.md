@@ -65,6 +65,8 @@ SnfProductivityCalculator.tsx: 专业护理机构(SNF)三模式计算器，班�
 SnfProductivitySeoContent.tsx: SNF康复生产力深度指南，PT/PTA/OT/COTA/SLP行业基准表与PDPM 25%说明
 ProductivityPercentageCalculator.tsx: 生产力百分比三模式计算器，班次午休扣减%/目标下班倒推/实际产出与定额占比
 ProductivityPercentageSeoContent.tsx: 生产力百分比深度语义指南，800x400公式SVG/午休扣减示例/6行业基准表/Excel公式与FAQ
+ProductivityLunchBreakCalculator.tsx: 含午休扣减生产力三模式计算器，打卡起止与30/45/60m午休扣减%/目标下班倒推/五日周汇总
+ProductivityLunchBreakSeoContent.tsx: 含午休扣减生产力深度语义指南，800x400公式SVG/午休矩阵表/DOL 29 CFR § 785.19参照与Excel公式
 Footer.tsx: 全局合规页脚，包含多语言切换与法律链接
 Header.tsx: 顶部导航栏，品牌标识与快速跳转
 HistoryPanel.tsx: 本地存储计算历史记录浮窗

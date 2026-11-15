@@ -83,6 +83,12 @@ export default function Footer({ locale = DEFAULT_LOCALE }: FooterProps) {
                 </Link>
               </li>
               <li>
+                <Link href={`${basePath}/calculator/productivity-with-lunch-break`} className="hover:text-[var(--neon-cyan)] transition-colors inline-flex items-center gap-1">
+                  <span>Lunch Break Productivity</span>
+                  <span className="text-[10px] text-cyan-300 font-mono font-bold">NEW</span>
+                </Link>
+              </li>
+              <li>
                 <Link href={`${basePath}/calculator/agriculture`} className="hover:text-[var(--neon-cyan)] transition-colors">
                   Agriculture Productivity
                 </Link>

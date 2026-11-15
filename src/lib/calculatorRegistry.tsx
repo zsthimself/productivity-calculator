@@ -6,6 +6,8 @@
  */
 
 import React from "react";
+import ProductivityLunchBreakCalculator from "@/components/ProductivityLunchBreakCalculator";
+import ProductivityLunchBreakSeoContent from "@/components/ProductivityLunchBreakSeoContent";
 import PhysicalTherapyCalculator from "@/components/PhysicalTherapyCalculator";
 import PhysicalTherapySeoContent from "@/components/PhysicalTherapySeoContent";
 import ManufacturingCalculator from "@/components/ManufacturingCalculator";
@@ -701,6 +703,23 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: ProductivityPercentageCalculator,
         SeoContent: ProductivityPercentageSeoContent,
+    },
+    "productivity-with-lunch-break": {
+        badgeText: "Unpaid Meal Deduction & Shift Suite",
+        titlePrefix: "Productivity Calculator",
+        titleSuffix: "With Lunch Break",
+        subtitle: "Free productivity calculator with lunch break deduction. Subtract 30, 45, or 60-minute unpaid meal breaks, compute net shift efficiency %, and solve clock-out times.",
+        metaTitle: "Productivity Calculator With Lunch Break | Net Shift %",
+        metaDescription: "Free productivity calculator with lunch break deduction. Subtract unpaid 30, 45, or 60-min meal breaks, calculate net efficiency %, and solve clock-out time.",
+        keywords: [
+            "productivity calculator with lunch break",
+            "lunch break productivity calculator",
+            "work productivity calculator with lunch",
+            "therapy productivity calculator with lunch",
+            "clock out time with lunch break",
+        ],
+        Calculator: ProductivityLunchBreakCalculator,
+        SeoContent: ProductivityLunchBreakSeoContent,
     },
 };
 

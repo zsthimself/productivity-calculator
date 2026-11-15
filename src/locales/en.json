@@ -513,6 +513,19 @@
             "inputLabel": "Paid Shift Mins",
             "inputUnit": "mins",
             "inputPlaceholder": "e.g., 450"
+        },
+        "productivity-with-lunch-break": {
+            "name": "Lunch Break Productivity",
+            "title": "Productivity Calculator With Lunch Break",
+            "description": "Subtract unpaid 30, 45, or 60-minute lunch breaks to compute net shift productivity % and target clock-out times.",
+            "resultLabel": "Net Productivity %",
+            "resultUnit": "ratio",
+            "outputLabel": "Billable Mins",
+            "outputUnit": "mins",
+            "outputPlaceholder": "e.g., 408",
+            "inputLabel": "Net Paid Mins",
+            "inputUnit": "mins",
+            "inputPlaceholder": "e.g., 480"
         }
     }
 }

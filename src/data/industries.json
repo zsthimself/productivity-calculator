@@ -829,5 +829,33 @@
       "good": 0.85,
       "excellent": 0.95
     }
+  },
+  {
+    "slug": "productivity-with-lunch-break",
+    "name": "Lunch Break Productivity",
+    "title": "Productivity Calculator With Lunch Break",
+    "description": "Free productivity calculator with lunch break deduction. Subtract unpaid 30, 45, or 60-minute meal periods, compute net efficiency %, and solve clock-out times.",
+    "inputs": [
+      {
+        "label": "Billable Mins",
+        "unit": "mins",
+        "key": "output",
+        "placeholder": "e.g., 408"
+      },
+      {
+        "label": "Net Paid Shift Mins",
+        "unit": "mins",
+        "key": "input",
+        "placeholder": "e.g., 480"
+      }
+    ],
+    "resultLabel": "Net Productivity %",
+    "resultUnit": "ratio",
+    "icon": "🍱",
+    "benchmark": {
+      "average": 0.75,
+      "good": 0.85,
+      "excellent": 0.92
+    }
   }
 ]

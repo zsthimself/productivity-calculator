@@ -513,6 +513,19 @@
             "inputLabel": "带薪在岗分钟",
             "inputUnit": "分钟",
             "inputPlaceholder": "例如：450"
+        },
+        "productivity-with-lunch-break": {
+            "name": "午休扣减生产力",
+            "title": "含午休扣减生产力计算器",
+            "description": "自动扣除 30/45/60 分钟无薪午休，精准核算净带薪工时效率百分比与目标下班时刻。",
+            "resultLabel": "净生产力 %",
+            "resultUnit": "比率",
+            "outputLabel": "计费工时分钟",
+            "outputUnit": "分钟",
+            "outputPlaceholder": "例如：408",
+            "inputLabel": "净带薪分钟",
+            "inputUnit": "分钟",
+            "inputPlaceholder": "例如：480"
         }
     }
 }

@@ -513,6 +513,19 @@
             "inputLabel": "有給勤務時間",
             "inputUnit": "分",
             "inputPlaceholder": "例: 450"
+        },
+        "productivity-with-lunch-break": {
+            "name": "昼休憩控除生産性",
+            "title": "昼休憩控除対応 生産性計算機",
+            "description": "30・45・60分の無給昼休憩を差し引いた実勤務効率％と目標退勤時刻を自動計算します。",
+            "resultLabel": "実質生産性％",
+            "resultUnit": "比率",
+            "outputLabel": "請求可能時間",
+            "outputUnit": "分",
+            "outputPlaceholder": "例: 408",
+            "inputLabel": "実質有給時間",
+            "inputUnit": "分",
+            "inputPlaceholder": "例: 480"
         }
     }
 }

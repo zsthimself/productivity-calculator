@@ -202,6 +202,12 @@ export function getIndustryMeta(
                 description:
                     "Free productivity percentage calculator with lunch break deduction, target clock-out time solver, and quota attainment benchmarking.",
             };
+        case "productivity-with-lunch-break":
+            return {
+                name: "Productivity Calculator With Lunch Break",
+                description:
+                    "Free productivity calculator with lunch break deduction. Subtract unpaid 30, 45, or 60-minute meal periods, compute net efficiency %, and solve clock-out times.",
+            };
         default:
             return {
                 name: fallbackTitle,

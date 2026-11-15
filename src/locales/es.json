@@ -513,6 +513,19 @@
             "inputLabel": "Minutos Pagados",
             "inputUnit": "min",
             "inputPlaceholder": "p. ej., 450"
+        },
+        "productivity-with-lunch-break": {
+            "name": "Productividad con Almuerzo",
+            "title": "Calculadora de Productividad con Almuerzo",
+            "description": "Descuenta pausas de almuerzo no pagadas de 30, 45 o 60 minutos para calcular tu eficiencia neta y hora de salida.",
+            "resultLabel": "Productividad Neta %",
+            "resultUnit": "ratio",
+            "outputLabel": "Minutos Facturables",
+            "outputUnit": "min",
+            "outputPlaceholder": "p. ej., 408",
+            "inputLabel": "Minutos Netos Pagados",
+            "inputUnit": "min",
+            "inputPlaceholder": "p. ej., 480"
         }
     }
 }

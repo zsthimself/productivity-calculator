@@ -513,6 +513,19 @@
             "inputLabel": "Bezahlte Min.",
             "inputUnit": "Min.",
             "inputPlaceholder": "z. B. 450"
+        },
+        "productivity-with-lunch-break": {
+            "name": "Produktivität mit Mittagspause",
+            "title": "Produktivitätsrechner mit Mittagspause",
+            "description": "Ziehen Sie unbezahlte 30-, 45- oder 60-Minuten-Mittagspausen ab und berechnen Sie Netto-Effizienz und Feierabend.",
+            "resultLabel": "Netto-Produktivität %",
+            "resultUnit": "Verhältnis",
+            "outputLabel": "Abrechenbare Min.",
+            "outputUnit": "Min.",
+            "outputPlaceholder": "z. B. 408",
+            "inputLabel": "Bezahlte Netto-Min.",
+            "inputUnit": "Min.",
+            "inputPlaceholder": "z. B. 480"
         }
     }
 }
