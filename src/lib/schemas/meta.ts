@@ -208,6 +208,18 @@ export function getIndustryMeta(
                 description:
                     "Free productivity calculator with lunch break deduction. Subtract unpaid 30, 45, or 60-minute meal periods, compute net efficiency %, and solve clock-out times.",
             };
+        case "productivity-index":
+            return {
+                name: "Productivity Index Calculator",
+                description:
+                    "Free productivity index calculator (Base = 100.0). Compare current vs. base period output-to-input ratios and multi-factor labor + capital efficiency.",
+            };
+        case "rehab-productivity":
+            return {
+                name: "Rehab Productivity Calculator",
+                description:
+                    "Free rehab productivity calculator for PT, OT, and SLP therapists. Deduct unpaid lunch, check Medicare PDPM 25% group/concurrent caps, and solve clock-out time.",
+            };
         default:
             return {
                 name: fallbackTitle,

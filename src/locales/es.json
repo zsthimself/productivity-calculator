@@ -526,6 +526,32 @@
             "inputLabel": "Minutos Netos Pagados",
             "inputUnit": "min",
             "inputPlaceholder": "p. ej., 480"
+        },
+        "productivity-index": {
+            "name": "Índice de Productividad",
+            "title": "Calculadora de Índice de Productividad",
+            "description": "Compara la eficiencia actual frente al período base (Base = 100.0) y la ganancia porcentual.",
+            "resultLabel": "Índice (Base 100)",
+            "resultUnit": "index",
+            "outputLabel": "Ratio Actual",
+            "outputUnit": "ratio",
+            "outputPlaceholder": "ej. 11.25",
+            "inputLabel": "Ratio Base",
+            "inputUnit": "ratio",
+            "inputPlaceholder": "ej. 10.00"
+        },
+        "rehab-productivity": {
+            "name": "Productividad Rehab",
+            "title": "Calculadora de Productividad en Rehabilitación",
+            "description": "Calcula el % de productividad para PT, OT y SLP descontando el almuerzo y verificando el límite del 25%.",
+            "resultLabel": "Productividad Rehab %",
+            "resultUnit": "ratio",
+            "outputLabel": "Minutos Facturables",
+            "outputUnit": "mins",
+            "outputPlaceholder": "ej. 408",
+            "inputLabel": "Minutos Pagados",
+            "inputUnit": "mins",
+            "inputPlaceholder": "ej. 480"
         }
     }
 }

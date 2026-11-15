@@ -1,5 +1,14 @@
 # WORKLOG.md - Site 04 Engineering Activity Log
 
+## 2026-11-15: 上线第 33 套件 `/calculator/productivity-index` 与第 34 套件 `/calculator/rehab-productivity` (`TASK-063` / `DEC-037`)
+
+- **执行概要**:
+  - 针对哥飞 `/ideas/` + `/kd/` 实测蓝海词 **`productivity index calculator`**（`20/mo`, **KD `6.2/100` 极易**）与 **`rehab productivity calculator`**（`20/mo ↑ +133%`, **KD `16.1/100` 极易**），上线第 33、34 个英文计算器套件。
+- **实施细节**:
+  1. 新建 [ProductivityIndexCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityIndexCalculator.tsx)、[ProductivityIndexSeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityIndexSeoContent.tsx)、[productivity-index-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/productivity-index-formula.svg)、[productivityIndex.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/faqs/productivityIndex.ts)。
+  2. 新建 [RehabProductivityCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/RehabProductivityCalculator.tsx)、[RehabProductivitySeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/RehabProductivitySeoContent.tsx)、[rehab-productivity-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/rehab-productivity-formula.svg)、[rehabProductivity.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/faqs/rehabProductivity.ts)。
+  3. 注册至 `calculatorRegistry.tsx`、`meta.ts`、`faqs/index.ts`、`industries.json`、5 语种 `locales/*.json`、`Footer.tsx` 与 `sitemap.xml`（39 条英文规范 URL）。
+
 ## 2026-11-15: 上线第 32 套件 `/calculator/productivity-with-lunch-break` (`TASK-062` / `DEC-036`)
 
 - **执行概要**:

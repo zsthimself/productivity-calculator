@@ -857,5 +857,61 @@
       "good": 0.85,
       "excellent": 0.92
     }
+  },
+  {
+    "slug": "productivity-index",
+    "name": "Productivity Index",
+    "title": "Productivity Index Calculator",
+    "description": "Free productivity index calculator (Base = 100.0). Compare current vs. base period efficiency ratios, multi-factor labor + capital index, and percentage gains.",
+    "inputs": [
+      {
+        "label": "Current Ratio",
+        "unit": "ratio",
+        "key": "output",
+        "placeholder": "e.g., 11.25"
+      },
+      {
+        "label": "Base Ratio",
+        "unit": "ratio",
+        "key": "input",
+        "placeholder": "e.g., 10.00"
+      }
+    ],
+    "resultLabel": "Index (Base 100)",
+    "resultUnit": "index",
+    "icon": "📈",
+    "benchmark": {
+      "average": 1.0,
+      "good": 1.05,
+      "excellent": 1.12
+    }
+  },
+  {
+    "slug": "rehab-productivity",
+    "name": "Rehab Productivity",
+    "title": "Rehab Productivity Calculator",
+    "description": "Free rehab productivity calculator for PT, OT, and SLP therapists. Deduct unpaid lunch, verify Medicare PDPM 25% group/concurrent caps, and solve clock-out time.",
+    "inputs": [
+      {
+        "label": "Billable Mins",
+        "unit": "mins",
+        "key": "output",
+        "placeholder": "e.g., 408"
+      },
+      {
+        "label": "Net Paid Mins",
+        "unit": "mins",
+        "key": "input",
+        "placeholder": "e.g., 480"
+      }
+    ],
+    "resultLabel": "Rehab Productivity %",
+    "resultUnit": "ratio",
+    "icon": "🩺",
+    "benchmark": {
+      "average": 0.78,
+      "good": 0.85,
+      "excellent": 0.9
+    }
   }
 ]

@@ -526,6 +526,32 @@
             "inputLabel": "実質有給時間",
             "inputUnit": "分",
             "inputPlaceholder": "例: 480"
+        },
+        "productivity-index": {
+            "name": "生産性指数",
+            "title": "生産性指数計算機",
+            "description": "基準期間（100.0）と今期の産出投入比率および変化率を比較します。",
+            "resultLabel": "生産性指数",
+            "resultUnit": "index",
+            "outputLabel": "今期比率",
+            "outputUnit": "ratio",
+            "outputPlaceholder": "例: 11.25",
+            "inputLabel": "基準比率",
+            "inputUnit": "ratio",
+            "inputPlaceholder": "例: 10.00"
+        },
+        "rehab-productivity": {
+            "name": "リハビリ生産性",
+            "title": "リハビリ生産性計算機",
+            "description": "PT・OT・SLP向けの請求可能時間率（昼休み控除・25%上限チェック対応）を計算します。",
+            "resultLabel": "リハビリ生産性 %",
+            "resultUnit": "ratio",
+            "outputLabel": "請求可能分",
+            "outputUnit": "mins",
+            "outputPlaceholder": "例: 408",
+            "inputLabel": "有給勤務分",
+            "inputUnit": "mins",
+            "inputPlaceholder": "例: 480"
         }
     }
 }

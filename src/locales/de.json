@@ -526,6 +526,32 @@
             "inputLabel": "Bezahlte Netto-Min.",
             "inputUnit": "Min.",
             "inputPlaceholder": "z. B. 480"
+        },
+        "productivity-index": {
+            "name": "Produktivitätsindex",
+            "title": "Produktivitätsindex-Rechner",
+            "description": "Vergleicht die aktuelle Effizienz mit der Basisperiode (Basis = 100,0) inklusive Multifaktor-Index.",
+            "resultLabel": "Index (Basis 100)",
+            "resultUnit": "index",
+            "outputLabel": "Aktuelle Quote",
+            "outputUnit": "ratio",
+            "outputPlaceholder": "z. B. 11.25",
+            "inputLabel": "Basisquote",
+            "inputUnit": "ratio",
+            "inputPlaceholder": "z. B. 10.00"
+        },
+        "rehab-productivity": {
+            "name": "Reha-Produktivität",
+            "title": "Reha-Produktivitätsrechner",
+            "description": "Berechnet die Produktivität für PT, OT und SLP nach Abzug der unbezahlten Pause.",
+            "resultLabel": "Reha-Produktivität %",
+            "resultUnit": "ratio",
+            "outputLabel": "Abrechenbare Min.",
+            "outputUnit": "mins",
+            "outputPlaceholder": "z. B. 408",
+            "inputLabel": "Bezahlte Min.",
+            "inputUnit": "mins",
+            "inputPlaceholder": "z. B. 480"
         }
     }
 }

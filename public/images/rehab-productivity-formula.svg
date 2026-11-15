@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-label="Rehab productivity calculator formula diagram for PT, OT, and SLP therapists showing billable minutes divided by net paid minutes">
+  <rect width="800" height="400" rx="16" fill="#0f172a"/>
+  <text x="40" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">Rehab Productivity Formula (PT / OT / SLP)</text>
+  <text x="40" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#94a3b8">Rehab Productivity % = (Billable Treatment Mins ÷ (Total Shift Mins − Unpaid Lunch Mins)) × 100</text>
+
+  <rect x="40" y="108" width="215" height="210" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="147" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#94a3b8">BILLABLE TREATMENT</text>
+  <text x="147" y="192" text-anchor="middle" font-family="ui-monospace, monospace" font-size="36" font-weight="800" fill="#38bdf8">408 min</text>
+  <text x="147" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">1-on-1 + Weighted Group</text>
+  <text x="147" y="256" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Direct Skilled Care</text>
+  <text x="147" y="286" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#60a5fa">6.80 billable hrs</text>
+
+  <rect x="292" y="108" width="215" height="210" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="399" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#94a3b8">NET PAID SHIFT</text>
+  <text x="399" y="192" text-anchor="middle" font-family="ui-monospace, monospace" font-size="36" font-weight="800" fill="#fbbf24">480 min</text>
+  <text x="399" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">8:00 AM–4:30 PM (510m)</text>
+  <text x="399" y="256" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Minus 30m Unpaid Lunch</text>
+  <text x="399" y="286" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#fcd34d">72m non-billable doc</text>
+
+  <rect x="545" y="108" width="215" height="210" rx="14" fill="#064e3b" stroke="#10b981"/>
+  <text x="652" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6ee7b7">REHAB PRODUCTIVITY</text>
+  <text x="652" y="196" text-anchor="middle" font-family="ui-monospace, monospace" font-size="42" font-weight="800" fill="#ffffff">85.0%</text>
+  <text x="652" y="232" text-anchor="middle" font-family="ui-monospace, monospace" font-size="16" font-weight="700" fill="#a7f3d0">408 ÷ 480 × 100</text>
+  <text x="652" y="268" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#d1fae5">Outpatient: 80–85%</text>
+  <text x="652" y="292" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6ee7b7">SNF Target: 85–90%</text>
+
+  <text x="40" y="362" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">Note: Medicare Part A PDPM caps combined Group + Concurrent therapy at 25% of total minutes per discipline.</text>
+</svg>

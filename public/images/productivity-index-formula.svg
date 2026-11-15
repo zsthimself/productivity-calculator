@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-label="Productivity index calculator formula diagram comparing Base Period 100.0 against Current Period 112.5">
+  <rect width="800" height="400" rx="16" fill="#0f172a"/>
+  <text x="40" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">Productivity Index Formula (Base Period = 100.0)</text>
+  <text x="40" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#94a3b8">Productivity Index = (Current Period Ratio ÷ Base Period Ratio) × 100</text>
+
+  <rect x="40" y="108" width="215" height="210" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="147" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#94a3b8">BASE PERIOD (INDEX = 100)</text>
+  <text x="147" y="188" text-anchor="middle" font-family="ui-monospace, monospace" font-size="28" font-weight="800" fill="#38bdf8">1,000 ÷ 100</text>
+  <text x="147" y="224" text-anchor="middle" font-family="ui-monospace, monospace" font-size="22" font-weight="700" fill="#f8fafc">= 10.00 units/hr</text>
+  <text x="147" y="264" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">Baseline Output ÷ Input</text>
+  <text x="147" y="288" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Reference Benchmark</text>
+
+  <rect x="292" y="108" width="215" height="210" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="399" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#94a3b8">CURRENT PERIOD</text>
+  <text x="399" y="188" text-anchor="middle" font-family="ui-monospace, monospace" font-size="28" font-weight="800" fill="#34d399">1,350 ÷ 120</text>
+  <text x="399" y="224" text-anchor="middle" font-family="ui-monospace, monospace" font-size="22" font-weight="700" fill="#f8fafc">= 11.25 units/hr</text>
+  <text x="399" y="264" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">Current Output ÷ Input</text>
+  <text x="399" y="288" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Measured Quarter / Shift</text>
+
+  <rect x="545" y="108" width="215" height="210" rx="14" fill="#064e3b" stroke="#10b981"/>
+  <text x="652" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6ee7b7">PRODUCTIVITY INDEX</text>
+  <text x="652" y="196" text-anchor="middle" font-family="ui-monospace, monospace" font-size="42" font-weight="800" fill="#ffffff">112.5</text>
+  <text x="652" y="232" text-anchor="middle" font-family="ui-monospace, monospace" font-size="18" font-weight="700" fill="#a7f3d0">+12.5% Gain</text>
+  <text x="652" y="268" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#d1fae5">(11.25 ÷ 10.00) × 100</text>
+  <text x="652" y="292" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6ee7b7">Above Base Period</text>
+
+  <text x="40" y="362" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">Index &gt; 100 indicates productivity growth vs. base period; Index &lt; 100 indicates efficiency decline.</text>
+</svg>

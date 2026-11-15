@@ -70,6 +70,10 @@ import SnfProductivityCalculator from "@/components/SnfProductivityCalculator";
 import SnfProductivitySeoContent from "@/components/SnfProductivitySeoContent";
 import ProductivityPercentageCalculator from "@/components/ProductivityPercentageCalculator";
 import ProductivityPercentageSeoContent from "@/components/ProductivityPercentageSeoContent";
+import ProductivityIndexCalculator from "@/components/ProductivityIndexCalculator";
+import ProductivityIndexSeoContent from "@/components/ProductivityIndexSeoContent";
+import RehabProductivityCalculator from "@/components/RehabProductivityCalculator";
+import RehabProductivitySeoContent from "@/components/RehabProductivitySeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -720,6 +724,40 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: ProductivityLunchBreakCalculator,
         SeoContent: ProductivityLunchBreakSeoContent,
+    },
+    "productivity-index": {
+        badgeText: "Base-100 & Multi-Factor Index Suite",
+        titlePrefix: "Productivity Index",
+        titleSuffix: "Calculator",
+        subtitle: "Free productivity index calculator (Base = 100.0). Measure output-to-input gains across quarters, shifts, or labor + capital investments.",
+        metaTitle: "Productivity Index Calculator | Base-100 Efficiency",
+        metaDescription: "Free productivity index calculator (Base = 100.0). Compare current vs. base period output-to-input ratios, multi-factor efficiency, and percentage gains.",
+        keywords: [
+            "productivity index calculator",
+            "labor productivity index calculator",
+            "multifactor productivity index",
+            "productivity index formula",
+            "base 100 productivity index",
+        ],
+        Calculator: ProductivityIndexCalculator,
+        SeoContent: ProductivityIndexSeoContent,
+    },
+    "rehab-productivity": {
+        badgeText: "PT / OT / SLP Rehab Clinical Suite",
+        titlePrefix: "Rehab Productivity",
+        titleSuffix: "Calculator",
+        subtitle: "Free rehab productivity calculator for PT, OT, and SLP therapists. Deduct unpaid lunch, verify Medicare PDPM 25% group/concurrent caps, and solve clock-out time.",
+        metaTitle: "Rehab Productivity Calculator | PT, OT & SLP %",
+        metaDescription: "Free rehab productivity calculator for PT, OT, and SLP therapists. Deduct unpaid lunch, check Medicare PDPM 25% group/concurrent caps, and solve clock-out time.",
+        keywords: [
+            "rehab productivity calculator",
+            "therapy productivity calculator",
+            "pt ot slp productivity calculator",
+            "snf rehab productivity calculator",
+            "rehab productivity percentage",
+        ],
+        Calculator: RehabProductivityCalculator,
+        SeoContent: RehabProductivitySeoContent,
     },
 };
 

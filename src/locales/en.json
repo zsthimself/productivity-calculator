@@ -526,6 +526,32 @@
             "inputLabel": "Net Paid Mins",
             "inputUnit": "mins",
             "inputPlaceholder": "e.g., 480"
+        },
+        "productivity-index": {
+            "name": "Productivity Index",
+            "title": "Productivity Index Calculator",
+            "description": "Compare current vs. base period efficiency ratios (Base = 100.0) and multi-factor labor + capital gains.",
+            "resultLabel": "Index (Base 100)",
+            "resultUnit": "index",
+            "outputLabel": "Current Ratio",
+            "outputUnit": "ratio",
+            "outputPlaceholder": "e.g., 11.25",
+            "inputLabel": "Base Ratio",
+            "inputUnit": "ratio",
+            "inputPlaceholder": "e.g., 10.00"
+        },
+        "rehab-productivity": {
+            "name": "Rehab Productivity",
+            "title": "Rehab Productivity Calculator",
+            "description": "Calculate PT, OT, and SLP rehab productivity %, deduct unpaid lunch, and verify Medicare PDPM 25% group/concurrent caps.",
+            "resultLabel": "Rehab Productivity %",
+            "resultUnit": "ratio",
+            "outputLabel": "Billable Mins",
+            "outputUnit": "mins",
+            "outputPlaceholder": "e.g., 408",
+            "inputLabel": "Net Paid Mins",
+            "inputUnit": "mins",
+            "inputPlaceholder": "e.g., 480"
         }
     }
 }

@@ -494,3 +494,9 @@
 - **决策内容**:
   1. 针对哥飞 `/kd/` 实测 **`productivity calculator with lunch break`**（`90/mo ↑ +40%`，**KD `16.8/100` 极易**），研发三模式交互引擎 [ProductivityLunchBreakCalculator.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityLunchBreakCalculator.tsx)（班次打卡与 0/30/45/60m 午休扣减 %、目标下班时间倒推、五日周汇总）与深度指南 [ProductivityLunchBreakSeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/ProductivityLunchBreakSeoContent.tsx) + `800×400` [productivity-lunch-break-formula.svg](file:///d:/projects/sites/productivity-calculator/public/images/productivity-lunch-break-formula.svg) + [productivityLunchBreak.ts](file:///d:/projects/sites/productivity-calculator/src/lib/schemas/faqs/productivityLunchBreak.ts)；
   2. 注册至 `calculatorRegistry.tsx`、`meta.ts`、`faqs/index.ts`、`industries.json`、5 语种 `locales/*.json`、`Footer.tsx` 与 `sitemap.xml`（37 条英文规范 URL）。
+
+
+### DEC-037: 上线第 33 套件 `/calculator/productivity-index` (KD 6.2) 与第 34 套件 `/calculator/rehab-productivity` (KD 16.1) (`TASK-063`)
+- **日期**: 2026-11-15
+- **背景**: 哥飞 `/ideas/` + `/kd/` 实测锁定 **`productivity index calculator`**（`20/mo`, **KD `6.2/100` 极易**, `#2` DR 2 新站）与 **`rehab productivity calculator`**（`20/mo ↑ +133%`, **KD `16.1/100` 极易**, `#3` DR 0 新站）。
+- **决定**: 新增 `ProductivityIndexCalculator.tsx`、`ProductivityIndexSeoContent.tsx`、`productivityIndex.ts`、`RehabProductivityCalculator.tsx`、`RehabProductivitySeoContent.tsx`、`rehabProductivity.ts` 与两张 `800×400` 0-CLS SVG，并全量注册至 `industries.json`、`calculatorRegistry.tsx`、`meta.ts`、`Footer.tsx`、`sitemap.xml`（39 条英文规范 URL）与 5 语种 `locales/*.json`（`v1.37.0`）。

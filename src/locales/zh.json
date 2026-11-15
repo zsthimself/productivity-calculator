@@ -526,6 +526,32 @@
             "inputLabel": "净带薪分钟",
             "inputUnit": "分钟",
             "inputPlaceholder": "例如：480"
+        },
+        "productivity-index": {
+            "name": "生产力指数",
+            "title": "生产力指数计算器",
+            "description": "对比当期与基期（基准=100.0）产出投入比及多要素效率变化幅度。",
+            "resultLabel": "生产力指数",
+            "resultUnit": "index",
+            "outputLabel": "当期产出率",
+            "outputUnit": "ratio",
+            "outputPlaceholder": "例如 11.25",
+            "inputLabel": "基期产出率",
+            "inputUnit": "ratio",
+            "inputPlaceholder": "例如 10.00"
+        },
+        "rehab-productivity": {
+            "name": "康复治疗生产力",
+            "title": "康复治疗生产力计算器",
+            "description": "计算 PT/OT/SLP 康复治疗有效工时占比，扣除无薪午休并核验 PDPM 25% 团体/并发上限。",
+            "resultLabel": "康复生产力 %",
+            "resultUnit": "ratio",
+            "outputLabel": "可计费分钟",
+            "outputUnit": "mins",
+            "outputPlaceholder": "例如 408",
+            "inputLabel": "净付薪分钟",
+            "inputUnit": "mins",
+            "inputPlaceholder": "例如 480"
         }
     }
 }
