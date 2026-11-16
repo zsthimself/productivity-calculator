@@ -17,6 +17,7 @@
 - [Productivity Percentage Calculator](https://productivitycalculator.work/calculator/productivity-percentage): Target vs. actual output percentage and period-over-period delta.
 - [Productivity with Lunch Break](https://productivitycalculator.work/calculator/productivity-with-lunch-break): Net productive hours after unpaid meal and rest break deductions.
 - [Productivity Index Calculator](https://productivitycalculator.work/calculator/productivity-index): Base-period indexed productivity tracking across teams and quarters.
+- [Net Primary Productivity Calculator](https://productivitycalculator.work/calculator/net-primary-productivity): Ecology NPP = GPP - R and Light/Dark Bottle dissolved oxygen calculator.
 - [Construction Productivity Calculator](https://productivitycalculator.work/calculator/construction): Crew labor hours per unit installed and earned-value productivity.
 - [Sales Productivity Calculator](https://productivitycalculator.work/calculator/sales): Quota attainment, pipeline velocity, and revenue per rep.
 - [Customer Support & Call Center](https://productivitycalculator.work/calculator/customer-support): Tickets per hour (TPH), FCR, AHT, and occupancy rate calculators.

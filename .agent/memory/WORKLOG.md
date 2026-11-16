@@ -608,3 +608,7 @@
 - **全站构建审计**:
   - `npm run build` 147 页面 SSG 编译 100% 通过，0 编译错误，0 警告。
   - 所有新增 `.tsx`、`.ts`、`.svg` 均满足 ASD-STE100 L3 契约规范与严格 $\le 800$ 行安全红线约束。
+
+## [2026-11-16] TASK-065: 上线第 35 套件 /calculator/net-primary-productivity
+- **事件说明**：依据母舰 `LOOP-239` 哥飞 `/kd/` 实测（`net primary productivity calculator` `50/mo ↑ +200%`, KD `28.0` 容易），上线生态/APES 净初级生产力双模计算器。
+- **验证证据**：`npm run build` 静态编译 0 错误通过。

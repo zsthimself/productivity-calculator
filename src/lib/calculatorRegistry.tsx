@@ -74,6 +74,8 @@ import ProductivityIndexCalculator from "@/components/ProductivityIndexCalculato
 import ProductivityIndexSeoContent from "@/components/ProductivityIndexSeoContent";
 import RehabProductivityCalculator from "@/components/RehabProductivityCalculator";
 import RehabProductivitySeoContent from "@/components/RehabProductivitySeoContent";
+import NetPrimaryProductivityCalculator from "@/components/NetPrimaryProductivityCalculator";
+import NetPrimaryProductivitySeoContent from "@/components/NetPrimaryProductivitySeoContent";
 
 export interface IndustrySuiteDefinition {
     badgeText: string;
@@ -758,6 +760,23 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: RehabProductivityCalculator,
         SeoContent: RehabProductivitySeoContent,
+    },
+    "net-primary-productivity": {
+        badgeText: "Ecology & APES Biomass Suite",
+        titlePrefix: "Net Primary Productivity",
+        titleSuffix: "Calculator",
+        subtitle: "Free net primary productivity calculator (NPP = GPP - R) with Light/Dark Bottle dissolved oxygen lab mode and biome benchmarks.",
+        metaTitle: "Net Primary Productivity Calculator | NPP = GPP - R",
+        metaDescription: "Free net primary productivity calculator. Solve NPP = GPP - R, Carbon Use Efficiency %, and AP Biology Light/Dark Bottle dissolved oxygen formulas instantly.",
+        keywords: [
+            "net primary productivity calculator",
+            "npp calculator",
+            "npp gpp r calculator",
+            "light dark bottle productivity calculator",
+            "net primary productivity formula",
+        ],
+        Calculator: NetPrimaryProductivityCalculator,
+        SeoContent: NetPrimaryProductivitySeoContent,
     },
 };
 

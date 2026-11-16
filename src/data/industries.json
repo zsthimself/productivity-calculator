@@ -913,5 +913,33 @@
       "good": 0.85,
       "excellent": 0.9
     }
+  },
+  {
+    "slug": "net-primary-productivity",
+    "name": "Net Primary Productivity",
+    "title": "Net Primary Productivity Calculator",
+    "description": "Free net primary productivity calculator. Solve NPP = GPP - R, Carbon Use Efficiency %, and AP Biology Light/Dark Bottle dissolved oxygen formulas instantly.",
+    "inputs": [
+      {
+        "label": "GPP",
+        "unit": "g C/m²/yr",
+        "key": "output",
+        "placeholder": "e.g., 2400"
+      },
+      {
+        "label": "Respiration (R)",
+        "unit": "g C/m²/yr",
+        "key": "input",
+        "placeholder": "e.g., 1100"
+      }
+    ],
+    "resultLabel": "NPP",
+    "resultUnit": "g C/m²/yr",
+    "icon": "🌿",
+    "benchmark": {
+      "average": 600,
+      "good": 1200,
+      "excellent": 2200
+    }
   }
 ]

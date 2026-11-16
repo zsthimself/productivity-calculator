@@ -220,6 +220,12 @@ export function getIndustryMeta(
                 description:
                     "Free rehab productivity calculator for PT, OT, and SLP therapists. Deduct unpaid lunch, check Medicare PDPM 25% group/concurrent caps, and solve clock-out time.",
             };
+        case "net-primary-productivity":
+            return {
+                name: "Net Primary Productivity Calculator",
+                description:
+                    "Free net primary productivity calculator. Solve NPP = GPP - R, Carbon Use Efficiency %, and AP Biology Light/Dark Bottle dissolved oxygen formulas instantly.",
+            };
         default:
             return {
                 name: fallbackTitle,

@@ -40,6 +40,7 @@ import { productivityPercentageFaqs } from "./productivityPercentage";
 import { productivityLunchBreakFaqs } from "./productivityLunchBreak";
 import { productivityIndexFaqs } from "./productivityIndex";
 import { rehabProductivityFaqs } from "./rehabProductivity";
+import { netPrimaryProductivityFaqs } from "./netPrimaryProductivity";
 
 export function getIndustryFaqs(slug: string): FAQItem[] {
     switch (slug) {
@@ -111,6 +112,8 @@ export function getIndustryFaqs(slug: string): FAQItem[] {
             return productivityIndexFaqs;
         case "rehab-productivity":
             return rehabProductivityFaqs;
+        case "net-primary-productivity":
+            return netPrimaryProductivityFaqs;
         default:
             return [];
     }
