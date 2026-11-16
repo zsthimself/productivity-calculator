@@ -1,9 +1,9 @@
 # CURRENT.md - Site 04 Local Status & Active Loops
 
 ## 当前状态
-- **站点版本**: v1.37.0 (上线第 33 套件 `/calculator/productivity-index` KD 6.2 极易 **`98 A`** 与第 34 套件 `/calculator/rehab-productivity` KD 16.1 极易 **`97 A`**)
+- **站点版本**: v1.37.1 (补齐 `robots.txt` AI 爬虫显式放行与 `/llms.txt` 全站计算器语义目录)
 - **部署环境**: Cloudflare Pages (`productivitycalculator.work`, Git 自动部署)
-- **最近提交**: `7b3a365` (`TASK-063` / `DEC-037` 内容扩写至 1,000+ 词并获 `/audit/` 双 `A` 卓越验收)
+- **最近提交**: 原子同步提交 (`TASK-064` / `DEC-037`)
 - **核心架构升级**:
   - **2026-11-15 新增第 31 套件 `/calculator/productivity-percentage` 与首页权重聚焦**：依据哥飞 `/ideas/` + `/kd/` 实测锁定 `productivity percentage calculator` (50/mo, **KD 0/100 极易**) 与 `productivity calculator with lunch break` (90/mo ↑ +40%, **KD 16.8/100 极易**)，交付三模式交互引擎 (`ProductivityPercentageCalculator.tsx`：班次午休扣减 %、目标下班倒推、实际产出与定额占比)、`800x400` 公式 SVG、6 行业内链基准表与 6 组 FAQ；并在首页网格与 `Footer.tsx` 增配 `productivity-percentage`、`agriculture` (#8)、`data-entry` (#3)、`customer-support` (#2)、`education` (#3) 权重直链，`sitemap.xml` 扩至 36 条英文规范 URL，`172/172` 静态页面编译 0 错误。
   - **2026-11-13 (第二批) 新增第 29 & 第 30 套件**：`/calculator/total-factor-productivity`（TFP KD 15.3 极易、04 号站首页已占第 5 席 + MFP KD 28.6）与 `/calculator/snf-productivity`（`snf productivity calculator` 70/mo ↑ +35%、KD 21.7 容易），分别交付三模式交互引擎、`*-formula.svg`、`schemas/faqs/*`、双向内链与 35 URL `sitemap.xml`，Next.js `167/167` 静态页面编译 0 错误。
@@ -28,6 +28,7 @@
 - [x] **TASK-040**: `/calculator/restaurant` 线上体检复核，得分飙升至 **97 / 100 A 级卓越**
 - [x] **TASK-041**: `/calculator/software-development` 产研人效全案升级（DORA 交付流速、Sprint 估算、人均 ARR 模型，commit `d37c0c1`）
 - [x] **TASK-042**: `/calculator/software-development` 线上体检复核，得分飙升至 **96 / 100 A 级卓越**
+- [x] **TASK-064**: 落地全矩阵 GEO 公共基建——更新 [robots.txt](file:///d:/projects/sites/productivity-calculator/public/robots.txt) 显式放行 `OAI-SearchBot`/`ChatGPT-User`/`GPTBot`/`ClaudeBot`/`PerplexityBot`，新增 [llms.txt](file:///d:/projects/sites/productivity-calculator/public/llms.txt) 暴露核心行业效率计算器矩阵（`npm run build` 187 页 PASS）
 - [x] **TASK-043**: `/calculator/real-estate` 房地产经纪人效全案升级（GCI 佣金分账、带看成交率、时薪回报模型，commit `3de69fc`）
 - [x] **TASK-044**: `/calculator/real-estate` 线上体检复核，得分飙升至 **98 / 100 A 级卓越**
 - [x] **TASK-045**: `/calculator/education` 教育教学工效全案升级（NCES 生师比 STR、生均支出、学费学时收益模型，commit `b73d800`）

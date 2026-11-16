@@ -1,0 +1,23 @@
+# Productivity Calculator
+
+> Free industry-specific labor, manufacturing, healthcare, and business productivity calculators with formula breakdowns and benchmark tables.
+
+## Core Calculators
+
+- [Productivity Calculator Home](https://productivitycalculator.work/): Unified directory of 30+ vertical productivity and efficiency calculators.
+- [Labor Productivity Calculator](https://productivitycalculator.work/calculator/labor): Output per labor hour, unit labor cost, and shift efficiency calculator.
+- [Employee Productivity Calculator](https://productivitycalculator.work/calculator/employee): Revenue per employee, billable utilization, and output benchmarks.
+- [Manufacturing Productivity Calculator](https://productivitycalculator.work/calculator/manufacturing): OEE, throughput per machine hour, and scrap-adjusted productivity.
+- [Physical Therapy Productivity Calculator](https://productivitycalculator.work/calculator/physical-therapy): Clinical treatment hours, billable units, and caseload utilization.
+- [Billing Units Calculator](https://productivitycalculator.work/calculator/billing-units): CMS 8-minute rule and AMA timed vs. untimed CPT billing units calculator.
+- [Rehab Productivity Calculator](https://productivitycalculator.work/calculator/rehab-productivity): PT/OT/SLP rehabilitation therapy productivity and RUG/PDPM tracking.
+- [SNF Productivity Calculator](https://productivitycalculator.work/calculator/snf-productivity): Skilled Nursing Facility therapy productivity and concurrent treatment calculator.
+- [Total Factor Productivity Calculator](https://productivitycalculator.work/calculator/total-factor-productivity): Cobb-Douglas TFP, multifactor productivity (MFP), and residual growth.
+- [Time Efficiency Calculator](https://productivitycalculator.work/calculator/time-efficiency): Standard vs. actual hours efficiency ratio and variance analysis.
+- [Productivity Percentage Calculator](https://productivitycalculator.work/calculator/productivity-percentage): Target vs. actual output percentage and period-over-period delta.
+- [Productivity with Lunch Break](https://productivitycalculator.work/calculator/productivity-with-lunch-break): Net productive hours after unpaid meal and rest break deductions.
+- [Productivity Index Calculator](https://productivitycalculator.work/calculator/productivity-index): Base-period indexed productivity tracking across teams and quarters.
+- [Construction Productivity Calculator](https://productivitycalculator.work/calculator/construction): Crew labor hours per unit installed and earned-value productivity.
+- [Sales Productivity Calculator](https://productivitycalculator.work/calculator/sales): Quota attainment, pipeline velocity, and revenue per rep.
+- [Customer Support & Call Center](https://productivitycalculator.work/calculator/customer-support): Tickets per hour (TPH), FCR, AHT, and occupancy rate calculators.
+- [Retail, Logistics & Healthcare](https://productivitycalculator.work/calculator/logistics): Picks per hour, sales per square foot, and clinical throughput tools.
