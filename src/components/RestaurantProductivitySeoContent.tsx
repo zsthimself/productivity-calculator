@@ -331,7 +331,7 @@ export default function RestaurantProductivitySeoContent() {
               <span className="transition group-open:rotate-180">▾</span>
             </summary>
             <p className="mt-3 text-xs text-muted-foreground leading-normal">
-              According to National Restaurant Association (NRA) industry surveys, standard restaurant labor cost benchmarks range between 28% and 34% of total sales. Typically, Back-of-House (BOH kitchen staff, dishwashers, and prep cooks) accounts for 14% to 18%, Front-of-House (FOH servers, hosts, and bartenders) represents 10% to 13% (varying by tip-credit state legislation), and salaried restaurant management consumes 4% to 6%. Operating above 35% labor cost indicates staffing overcapacity, prep scheduling inefficiencies, or low sales volume.
+              According to National Restaurant Association (NRA) industry surveys, standard restaurant labor cost benchmarks range between 28% and 34% of total sales. Typically, Back-of-House (BOH kitchen staff, dishwashers, and prep cooks) accounts for 14% to 18%, Front-of-House (FOH servers, hosts, and bartenders) represents 10% to 13% (varying by tip-credit state legislation), and salaried restaurant management consumes 4% to 6%. Use the restaurant staffing calculator inputs above to balance FOH/BOH shifts—operating above 35% labor cost indicates staffing overcapacity, prep scheduling inefficiencies, or low sales volume.
             </p>
           </details>
 

@@ -285,7 +285,7 @@ export default function HealthcareProductivitySeoContent() {
               What is HPPD in hospital nursing staffing?
             </h3>
             <p className="text-xs text-muted-foreground">
-              Hours Per Patient Day (HPPD) measures the direct nursing hours provided to a patient in an inpatient hospital unit over a 24-hour period. It is calculated by dividing total worked nursing hours (by Registered Nurses, LPNs, and nurse aides) by the midnight inpatient census. Standard benchmarks range from 8.0 to 9.5 HPPD on medical-surgical floors to over 18.0 to 24.0 HPPD in intensive care units (ICU).
+              Hours Per Patient Day (HPPD) measures the direct nursing hours provided to a patient in an inpatient hospital unit over a 24-hour period. It is calculated by dividing total worked nursing hours (by Registered Nurses, LPNs, and nurse aides) by the midnight inpatient census. Standard hospital productivity benchmarks range from 8.0 to 9.5 HPPD on medical-surgical floors to over 18.0 to 24.0 HPPD in intensive care units (ICU).
             </p>
           </div>
 

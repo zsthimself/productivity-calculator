@@ -500,3 +500,9 @@
 - **日期**: 2026-11-15
 - **背景**: 哥飞 `/ideas/` + `/kd/` 实测锁定 **`productivity index calculator`**（`20/mo`, **KD `6.2/100` 极易**, `#2` DR 2 新站）与 **`rehab productivity calculator`**（`20/mo ↑ +133%`, **KD `16.1/100` 极易**, `#3` DR 0 新站）。
 - **决定**: 新增 `ProductivityIndexCalculator.tsx`、`ProductivityIndexSeoContent.tsx`、`productivityIndex.ts`、`RehabProductivityCalculator.tsx`、`RehabProductivitySeoContent.tsx`、`rehabProductivity.ts` 与两张 `800×400` 0-CLS SVG，并全量注册至 `industries.json`、`calculatorRegistry.tsx`、`meta.ts`、`Footer.tsx`、`sitemap.xml`（39 条英文规范 URL）与 5 语种 `locales/*.json`（`v1.37.0`）。
+
+
+### DEC-038: 依据 GSC 象限 2 精准补全 Healthcare 与 Restaurant 长尾语义 (2026-11-17)
+- **决策内容**: 在 [HealthcareProductivitySeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/HealthcareProductivitySeoContent.tsx) 补充 `hospital productivity benchmarks`，在 [RestaurantProductivitySeoContent.tsx](file:///d:/projects/sites/productivity-calculator/src/components/RestaurantProductivitySeoContent.tsx) 补充 `restaurant staffing calculator` 引导。
+- **决策原因**: GSC 近 28 天新涌现上述两词，微创增补可承接精准长尾而不扰动既有 `97-98 A` 页面 Title 与核心密度。
+- **验证凭证**: `npm run build` 192 个静态页面编译通过（`1492.1ms`），TypeScript 0 错误。

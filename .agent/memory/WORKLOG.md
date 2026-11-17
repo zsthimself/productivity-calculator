@@ -612,3 +612,8 @@
 ## [2026-11-16] TASK-065: 上线第 35 套件 /calculator/net-primary-productivity
 - **事件说明**：依据母舰 `LOOP-239` 哥飞 `/kd/` 实测（`net primary productivity calculator` `50/mo ↑ +200%`, KD `28.0` 容易），上线生态/APES 净初级生产力双模计算器。
 - **验证证据**：`npm run build` 静态编译 0 错误通过。
+
+
+### 2026-11-17: GSC 象限 2 医疗/餐饮长尾语义精准补全 (TASK-066 / DEC-038)
+- **执行动作**: 微调 `HealthcareProductivitySeoContent.tsx` 与 `RestaurantProductivitySeoContent.tsx` 承接 `hospital productivity benchmarks` 与 `restaurant staffing calculator`。
+- **验证凭证**: `npm run build` 192 页 `1492.1ms` PASS。
