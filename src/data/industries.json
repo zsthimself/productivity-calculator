@@ -941,5 +941,33 @@
       "good": 1200,
       "excellent": 2200
     }
+  },
+  {
+    "slug": "8-minute-rule",
+    "name": "8 Minute Rule",
+    "title": "8 Minute Rule Calculator",
+    "description": "Free 8 minute rule calculator for physical therapy, OT, and speech billing. Convert treatment minutes into Medicare CPT units with 8, 15, and 23-min tables.",
+    "inputs": [
+      {
+        "label": "Timed Minutes",
+        "unit": "min",
+        "key": "output",
+        "placeholder": "e.g., 38"
+      },
+      {
+        "label": "Minutes per Unit",
+        "unit": "min",
+        "key": "input",
+        "placeholder": "15"
+      }
+    ],
+    "resultLabel": "Billable Units",
+    "resultUnit": "units",
+    "icon": "⏱️",
+    "benchmark": {
+      "average": 2,
+      "good": 3,
+      "excellent": 4
+    }
   }
 ]

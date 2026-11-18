@@ -136,7 +136,7 @@ export default function PhysicalTherapySeoContent() {
         </div>
 
         <p className="text-xs text-[var(--text-muted)] font-body">
-          *Note: Untimed codes (such as PT Evaluation 97161-97163 and Hot/Cold packs 97010) are billed as single untimed service events regardless of exact treatment length, but their actual clinical delivery time still counts towards paid working hours. Need multi-CPT remainder splitting or Excel formulas? Use our dedicated <Link href="/calculator/billing-units" className="text-[var(--neon-cyan)] underline hover:text-white">Billing Units Calculator</Link>.
+          *Note: Untimed codes (such as PT Evaluation 97161-97163 and Hot/Cold packs 97010) are billed as single untimed service events regardless of exact treatment length, but their actual clinical delivery time still counts towards paid working hours. Need multi-CPT remainder splitting or Excel formulas? Use our dedicated <Link href="/calculator/billing-units" className="text-[var(--neon-cyan)] underline hover:text-white">Billing Units Calculator</Link> or our <Link href="/calculator/8-minute-rule" className="text-[var(--neon-cyan)] underline hover:text-white">8 Minute Rule Calculator</Link>.
         </p>
 
         {/* Timed vs Untimed and Mixed Remainder Rules */}

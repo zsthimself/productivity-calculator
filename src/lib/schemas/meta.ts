@@ -226,6 +226,12 @@ export function getIndustryMeta(
                 description:
                     "Free net primary productivity calculator. Solve NPP = GPP - R, Carbon Use Efficiency %, and AP Biology Light/Dark Bottle dissolved oxygen formulas instantly.",
             };
+        case "8-minute-rule":
+            return {
+                name: "8 Minute Rule Calculator",
+                description:
+                    "Free 8 minute rule calculator for physical therapy, OT, and speech billing. Convert treatment minutes into Medicare CPT units with 8, 15, and 23-min tables.",
+            };
         default:
             return {
                 name: fallbackTitle,

@@ -41,6 +41,7 @@ import { productivityLunchBreakFaqs } from "./productivityLunchBreak";
 import { productivityIndexFaqs } from "./productivityIndex";
 import { rehabProductivityFaqs } from "./rehabProductivity";
 import { netPrimaryProductivityFaqs } from "./netPrimaryProductivity";
+import { eightMinuteRuleFaqs } from "./eightMinuteRule";
 
 export function getIndustryFaqs(slug: string): FAQItem[] {
     switch (slug) {
@@ -114,6 +115,8 @@ export function getIndustryFaqs(slug: string): FAQItem[] {
             return rehabProductivityFaqs;
         case "net-primary-productivity":
             return netPrimaryProductivityFaqs;
+        case "8-minute-rule":
+            return eightMinuteRuleFaqs;
         default:
             return [];
     }

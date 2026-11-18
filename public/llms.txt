@@ -10,6 +10,7 @@
 - [Manufacturing Productivity Calculator](https://productivitycalculator.work/calculator/manufacturing): OEE, throughput per machine hour, and scrap-adjusted productivity.
 - [Physical Therapy Productivity Calculator](https://productivitycalculator.work/calculator/physical-therapy): Clinical treatment hours, billable units, and caseload utilization.
 - [Billing Units Calculator](https://productivitycalculator.work/calculator/billing-units): CMS 8-minute rule and AMA timed vs. untimed CPT billing units calculator.
+- [8 Minute Rule Calculator](https://productivitycalculator.work/calculator/8-minute-rule): Dedicated Medicare Part B 8-minute rule CPT unit brackets (8/23/38/53 min) and multi-CPT remainder allocator.
 - [Rehab Productivity Calculator](https://productivitycalculator.work/calculator/rehab-productivity): PT/OT/SLP rehabilitation therapy productivity and RUG/PDPM tracking.
 - [SNF Productivity Calculator](https://productivitycalculator.work/calculator/snf-productivity): Skilled Nursing Facility therapy productivity and concurrent treatment calculator.
 - [Total Factor Productivity Calculator](https://productivitycalculator.work/calculator/total-factor-productivity): Cobb-Douglas TFP, multifactor productivity (MFP), and residual growth.

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" rx="16" fill="url(#bg8)"/>
+  <text x="400" y="48" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="22" font-weight="800">MEDICARE 8-MINUTE RULE BILLING THRESHOLDS</text>
+  <text x="400" y="74" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="13">CMS Formula: Units = floor((Total Timed Minutes - 8) / 15) + 1  (for min &gt;= 8)</text>
+
+  <!-- Timeline Bar -->
+  <rect x="60" y="130" width="680" height="14" rx="7" fill="#1E293B"/>
+  <rect x="130" y="130" width="610" height="14" rx="7" fill="url(#cyanGrad)"/>
+
+  <!-- Nodes -->
+  <g font-family="monospace" text-anchor="middle">
+    <circle cx="95" cy="137" r="10" fill="#475569" stroke="#94A3B8" stroke-width="2"/>
+    <text x="95" y="112" fill="#94A3B8" font-size="12" font-weight="700">0-7m</text>
+    <text x="95" y="172" fill="#94A3B8" font-size="13" font-weight="700">0 Units</text>
+
+    <circle cx="215" cy="137" r="11" fill="#06B6D4" stroke="#F8FAFC" stroke-width="2"/>
+    <text x="215" y="112" fill="#06B6D4" font-size="13" font-weight="800">8-22m</text>
+    <text x="215" y="172" fill="#F8FAFC" font-size="14" font-weight="800">1 Unit</text>
+
+    <circle cx="355" cy="137" r="11" fill="#06B6D4" stroke="#F8FAFC" stroke-width="2"/>
+    <text x="355" y="112" fill="#06B6D4" font-size="13" font-weight="800">23-37m</text>
+    <text x="355" y="172" fill="#F8FAFC" font-size="14" font-weight="800">2 Units</text>
+
+    <circle cx="495" cy="137" r="11" fill="#10B981" stroke="#F8FAFC" stroke-width="2"/>
+    <text x="495" y="112" fill="#10B981" font-size="13" font-weight="800">38-52m</text>
+    <text x="495" y="172" fill="#F8FAFC" font-size="14" font-weight="800">3 Units</text>
+
+    <circle cx="645" cy="137" r="11" fill="#10B981" stroke="#F8FAFC" stroke-width="2"/>
+    <text x="645" y="112" fill="#10B981" font-size="13" font-weight="800">53-67m</text>
+    <text x="645" y="172" fill="#F8FAFC" font-size="14" font-weight="800">4 Units</text>
+  </g>
+
+  <!-- Example Cards -->
+  <rect x="60" y="215" width="320" height="135" rx="12" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="80" y="245" fill="#06B6D4" font-family="monospace" font-size="13" font-weight="700">SINGLE-SERVICE RULE</text>
+  <text x="80" y="275" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">8 min = 1 Unit  |  23 min = 2 Units</text>
+  <text x="80" y="302" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">Each extra 15-min bracket unlocks</text>
+  <text x="80" y="324" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">at +8 min (8, 23, 38, 53, 68...)</text>
+
+  <rect x="420" y="215" width="320" height="135" rx="12" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="440" y="245" fill="#10B981" font-family="monospace" font-size="13" font-weight="700">MULTI-CPT REMAINDER RULE</text>
+  <text x="440" y="275" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14">22m (97110) + 15m (97140) + 10m (97530)</text>
+  <text x="440" y="302" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">Total = 47 min -> 3 Allowable Units</text>
+  <text x="440" y="324" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">97530 (10m rem) wins the 3rd unit</text>
+</svg>

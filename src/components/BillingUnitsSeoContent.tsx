@@ -280,7 +280,7 @@ export default function BillingUnitsSeoContent() {
               How is a billing units calculator used under the Medicare 8-Minute Rule?
             </h3>
             <p className="text-[var(--text-secondary)] leading-relaxed">
-              This billing units calculator sums all direct one-on-one timed treatment minutes from your visit and checks Medicare’s 8-minute substantial portion rule. You need at least 8 total timed minutes to bill 1 unit, and every 15-minute midpoint adds 1 additional unit via <code className="text-white">FLOOR((Minutes + 7) ÷ 15)</code>.
+              This billing units calculator sums all direct one-on-one timed treatment minutes from your visit and checks Medicare’s 8-minute substantial portion rule (also available on our dedicated <Link href="/calculator/8-minute-rule" className="text-[var(--neon-cyan)] underline hover:text-white">8 Minute Rule Calculator</Link>). You need at least 8 total timed minutes to bill 1 unit, and every 15-minute midpoint adds 1 additional unit via <code className="text-white">FLOOR((Minutes + 7) ÷ 15)</code>.
             </p>
           </div>
 

@@ -623,3 +623,9 @@
   1. 在 `PhysicalTherapySeoContent.tsx` 与 `RehabProductivitySeoContent.tsx` 自然补全 `productivity calculator for therapists` 语义与双向互链；
   2. 在 `TimeEfficiencySeoContent.tsx` 补全 `calculating work efficiency` 与 `calculate parts per hour` 语义覆盖。
 - **验证凭证**: `next build` 192/192 静态页编译 0 错误通过（`2.9s`）。
+
+### 2026-11-18: 拆出第 36 套件 /calculator/8-minute-rule (TASK-068)
+- **执行动作**:
+  1. 依据哥飞 SEO Agent 研判（`8 minute rule calculator` KD 13.9, 9月 210/mo ↑3x），交付双模交互组件 `EightMinuteRuleCalculator.tsx`、深度指南 `EightMinuteRuleSeoContent.tsx`、800×400 SVG `eight-minute-rule-formula.svg` 与 6 项 FAQ `eightMinuteRule.ts`。
+  2. 完成 `calculatorRegistry.tsx`、`meta.ts`、`faqs/index.ts`、`industries.json`、`Footer.tsx`、`sitemap.xml`、`llms.txt` 接线，并在 `PhysicalTherapySeoContent.tsx` 与 `BillingUnitsSeoContent.tsx` 补齐指向 `/calculator/8-minute-rule` 的双向内链。
+- **验证凭证**: `next build` 197/197 静态页编译 0 错误通过（`1610.0ms`）。

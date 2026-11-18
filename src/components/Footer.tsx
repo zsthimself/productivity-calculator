@@ -95,6 +95,12 @@ export default function Footer({ locale = DEFAULT_LOCALE }: FooterProps) {
                 </Link>
               </li>
               <li>
+                <Link href={`${basePath}/calculator/8-minute-rule`} className="hover:text-[var(--neon-cyan)] transition-colors inline-flex items-center gap-1">
+                  <span>8 Minute Rule Calculator</span>
+                  <span className="text-[10px] text-cyan-300 font-mono font-bold">NEW</span>
+                </Link>
+              </li>
+              <li>
                 <Link href={`${basePath}/calculator/productivity-index`} className="hover:text-[var(--neon-cyan)] transition-colors inline-flex items-center gap-1">
                   <span>Productivity Index</span>
                   <span className="text-[10px] text-emerald-300 font-mono font-bold">NEW</span>

@@ -6,6 +6,8 @@
  */
 
 import React from "react";
+import EightMinuteRuleCalculator from "@/components/EightMinuteRuleCalculator";
+import EightMinuteRuleSeoContent from "@/components/EightMinuteRuleSeoContent";
 import ProductivityLunchBreakCalculator from "@/components/ProductivityLunchBreakCalculator";
 import ProductivityLunchBreakSeoContent from "@/components/ProductivityLunchBreakSeoContent";
 import PhysicalTherapyCalculator from "@/components/PhysicalTherapyCalculator";
@@ -777,6 +779,23 @@ const REGISTRY: Record<string, IndustrySuiteDefinition> = {
         ],
         Calculator: NetPrimaryProductivityCalculator,
         SeoContent: NetPrimaryProductivitySeoContent,
+    },
+    "8-minute-rule": {
+        badgeText: "CMS Medicare Part B Billing",
+        titlePrefix: "8 Minute Rule",
+        titleSuffix: "Calculator",
+        subtitle: "Free Medicare 8 minute rule calculator for PT, OT, and SLP timed CPT billing with 8/15/23-minute threshold chart and multi-code remainder allocator.",
+        metaTitle: "8 Minute Rule Calculator | Medicare PT Billing Units",
+        metaDescription: "Free 8 minute rule calculator for physical therapy, OT, and speech billing. Convert treatment minutes into Medicare CPT units with 8, 15, and 23-min tables.",
+        keywords: [
+            "8 minute rule calculator",
+            "medicare 8 minute rule calculator",
+            "pt 8 minute rule chart",
+            "8 minute rule billing units",
+            "cpt timed code calculator",
+        ],
+        Calculator: EightMinuteRuleCalculator,
+        SeoContent: EightMinuteRuleSeoContent,
     },
 };
 
