@@ -44,7 +44,7 @@ export default function PhysicalTherapySeoContent() {
 
         <div className="space-y-4 text-[var(--text-secondary)] font-body text-sm md:text-base leading-relaxed">
           <p>
-            In modern rehabilitation therapy (including Outpatient Orthopedic, Skilled Nursing Facilities, and Inpatient Rehab), clinical productivity measures the exact proportion of paid working hours dedicated to direct, billable patient care.
+            In modern rehabilitation therapy (including Outpatient Orthopedic, Skilled Nursing Facilities, and Inpatient Rehab), a specialized <strong className="text-white">productivity calculator for therapists</strong> measures the exact proportion of paid working hours dedicated to direct, billable patient care. For multi-discipline OT and SLP teams, see our companion <Link href="/calculator/rehab-productivity" className="text-[var(--neon-cyan)] hover:underline">rehab productivity calculator</Link>.
           </p>
 
           <div className="neon-border rounded-xl p-6 text-center my-6 bg-[var(--bg-elevated)]/70">

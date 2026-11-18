@@ -16,7 +16,7 @@ export default function RehabProductivitySeoContent() {
                     How Rehab Productivity Works for PT, OT, and SLP Clinicians
                 </h2>
                 <p>
-                    A dedicated <strong>rehab productivity calculator</strong> helps physical therapists (PT/PTA), occupational therapists (OT/COTA), and speech-language pathologists (SLP) measure billable patient treatment time against net paid shift hours. Unlike generic office timesheets, rehabilitation departments must account for unpaid lunch breaks, point-of-service documentation, care conferences, and Medicare PDPM group/concurrent caps.
+                    A dedicated <strong>rehab productivity calculator</strong>—and specialized <strong>productivity calculator for therapists</strong> across PT/PTA, occupational therapy (OT/COTA), and speech-language pathology (SLP)—measures billable patient treatment time against net paid shift hours. Unlike generic office timesheets, rehabilitation departments must account for unpaid lunch breaks, point-of-service documentation, care conferences, and Medicare PDPM group/concurrent caps (also see our <Link href="/calculator/physical-therapy" className="text-cyan-300 hover:underline">physical therapy productivity calculator</Link>).
                 </p>
                 <p>
                     For instance, a therapist working 8:00 AM to 4:30 PM with a 30-minute unpaid lunch has 480 net paid minutes. Logging 408 billable minutes yields <strong>85.0% rehab productivity</strong> (<code className="font-mono text-cyan-300">408 ÷ 480</code>), leaving 72 paid minutes for evaluations, notes, and interdisciplinary huddles.

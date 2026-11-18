@@ -617,3 +617,9 @@
 ### 2026-11-17: GSC 象限 2 医疗/餐饮长尾语义精准补全 (TASK-066 / DEC-038)
 - **执行动作**: 微调 `HealthcareProductivitySeoContent.tsx` 与 `RestaurantProductivitySeoContent.tsx` 承接 `hospital productivity benchmarks` 与 `restaurant staffing calculator`。
 - **验证凭证**: `npm run build` 192 页 `1492.1ms` PASS。
+
+### 2026-11-18: 治疗师长尾词互链与时间效率 GSC 象限 2 语义补全 (TASK-067)
+- **执行动作**:
+  1. 在 `PhysicalTherapySeoContent.tsx` 与 `RehabProductivitySeoContent.tsx` 自然补全 `productivity calculator for therapists` 语义与双向互链；
+  2. 在 `TimeEfficiencySeoContent.tsx` 补全 `calculating work efficiency` 与 `calculate parts per hour` 语义覆盖。
+- **验证凭证**: `next build` 192/192 静态页编译 0 错误通过（`2.9s`）。

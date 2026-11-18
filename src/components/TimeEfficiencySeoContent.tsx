@@ -109,9 +109,9 @@ export default function TimeEfficiencySeoContent() {
 
         <div className="space-y-4 text-[var(--text-secondary)] font-body text-sm md:text-base leading-relaxed">
           <p>
-            In industrial engineering, agile software planning, and corporate operations, the classic{" "}
-            <strong className="text-white">time efficiency calculator</strong> compares an expected time budget
-            (standard time) against real execution duration (actual time). Because finishing faster represents
+            In industrial engineering, agile software planning, and corporate operations, teams <strong className="text-white">calculating work efficiency</strong> use our{" "}
+            <strong className="text-white">time efficiency calculator</strong> to compare an expected time budget
+            (standard time) against real execution duration (actual time), or to <strong className="text-white">calculate parts per hour</strong> against cycle targets. Because finishing faster represents
             stronger performance, standard time sits in the numerator while actual time sits in the denominator.
           </p>
 
