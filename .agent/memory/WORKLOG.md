@@ -629,3 +629,9 @@
   1. 依据哥飞 SEO Agent 研判（`8 minute rule calculator` KD 13.9, 9月 210/mo ↑3x），交付双模交互组件 `EightMinuteRuleCalculator.tsx`、深度指南 `EightMinuteRuleSeoContent.tsx`、800×400 SVG `eight-minute-rule-formula.svg` 与 6 项 FAQ `eightMinuteRule.ts`。
   2. 完成 `calculatorRegistry.tsx`、`meta.ts`、`faqs/index.ts`、`industries.json`、`Footer.tsx`、`sitemap.xml`、`llms.txt` 接线，并在 `PhysicalTherapySeoContent.tsx` 与 `BillingUnitsSeoContent.tsx` 补齐指向 `/calculator/8-minute-rule` 的双向内链。
 - **验证凭证**: `next build` 197/197 静态页编译 0 错误通过（`1610.0ms`）。
+
+### 2026-11-18: 上线支柱指南 /guides/how-to-calculate-productivity 与 PT 标准 H2 收敛 (TASK-069)
+- **执行动作**:
+  1. 依据哥飞 SEO Agent 第二轮 5 词实测（`how to calculate productivity` 720/mo · KD 22.2，`productivity formula` 720/mo · CPC $43.58），新建 `src/app/guides/how-to-calculate-productivity/page.tsx` 与 `public/images/how-to-calculate-productivity-formula.svg`，通过 Article + FAQPage Schema 与首屏跳转条将信息流量漏斗导入核心计算器。
+  2. 将 0 搜量词 `physical therapy productivity standards` 收敛为 `PhysicalTherapySeoContent.tsx` 底部 H2；更新 `Header.tsx`、`Footer.tsx`、`sitemap.xml` 与 `llms.txt`。
+- **验证凭证**: `next build` 198/198 静态页编译 0 错误通过（`1375.8ms`）。

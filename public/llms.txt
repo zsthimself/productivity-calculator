@@ -5,6 +5,7 @@
 ## Core Calculators
 
 - [Productivity Calculator Home](https://productivitycalculator.work/): Unified directory of 30+ vertical productivity and efficiency calculators.
+- [How to Calculate Productivity & Formula Guide](https://productivitycalculator.work/guides/how-to-calculate-productivity): Complete guide to the universal productivity formula, worked labor and multifactor TFP examples, and Excel equations.
 - [Labor Productivity Calculator](https://productivitycalculator.work/calculator/labor): Output per labor hour, unit labor cost, and shift efficiency calculator.
 - [Employee Productivity Calculator](https://productivitycalculator.work/calculator/employee): Revenue per employee, billable utilization, and output benchmarks.
 - [Manufacturing Productivity Calculator](https://productivitycalculator.work/calculator/manufacturing): OEE, throughput per machine hour, and scrap-adjusted productivity.

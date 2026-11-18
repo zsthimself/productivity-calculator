@@ -28,6 +28,7 @@ export default function Header({ locale = DEFAULT_LOCALE }: HeaderProps) {
                 {locale === DEFAULT_LOCALE ? (
                     <nav aria-label="Main navigation" className="hidden sm:flex items-center gap-4 text-xs font-medium text-[var(--text-secondary)]">
                         <Link href="/#industries" className="hover:text-white transition-colors">Industries</Link>
+                        <Link href="/guides/how-to-calculate-productivity" className="hover:text-white transition-colors">Formula Guide</Link>
                         <Link href="/calculator/physical-therapy" className="hover:text-white transition-colors">PT Suite</Link>
                         <Link href="/calculator/manufacturing" className="hover:text-white transition-colors">Manufacturing</Link>
                         <Link href="/about" className="hover:text-white transition-colors">About</Link>

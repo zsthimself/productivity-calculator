@@ -326,6 +326,20 @@ export default function PhysicalTherapySeoContent() {
           </div>
         </div>
       </div>
+
+      {/* Clinical Standards Summary H2 */}
+      <div className="card-neon rounded-2xl p-8 md:p-10 space-y-4">
+        <h2 className="font-display text-2xl font-bold text-white">
+          Physical Therapy Productivity Standards by Setting (75%–90%)
+        </h2>
+        <p className="text-[var(--text-secondary)] font-body text-sm md:text-base leading-relaxed">
+          Industry <strong>physical therapy productivity standards</strong> vary by care setting: acute hospital inpatient units typically expect <strong>70%–78%</strong> due to chart reviews and floor transitions, outpatient orthopedic clinics target <strong>80%–85%</strong>, and skilled nursing facilities (SNF) often set benchmarks between <strong>85%–90%</strong>. For general cross-industry equations, see our{" "}
+          <Link href="/guides/how-to-calculate-productivity" className="text-[var(--neon-cyan)] hover:underline font-semibold">
+            How to Calculate Productivity Guide
+          </Link>
+          .
+        </p>
+      </div>
     </section>
   );
 }

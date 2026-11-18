@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bgGuide" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="cyanBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" rx="16" fill="url(#bgGuide)"/>
+  <text x="400" y="48" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="22" font-weight="800">HOW TO CALCULATE PRODUCTIVITY: 3 CORE FORMULAS</text>
+  <text x="400" y="74" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="13">Universal Productivity Formula: Productivity = Total Output / Total Input</text>
+
+  <!-- Card 1 -->
+  <rect x="45" y="105" width="220" height="245" rx="12" fill="#0F172A" stroke="#06B6D4" stroke-width="1.5"/>
+  <text x="155" y="138" text-anchor="middle" fill="#06B6D4" font-family="monospace" font-size="13" font-weight="700">1. LABOR PRODUCTIVITY</text>
+  <rect x="65" y="158" width="180" height="44" rx="8" fill="#1E293B"/>
+  <text x="155" y="185" text-anchor="middle" fill="#F8FAFC" font-family="monospace" font-size="13" font-weight="700">Units / Labor Hours</text>
+  <text x="155" y="232" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="13">Example: 480 units</text>
+  <text x="155" y="254" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="13">in 40 paid hours</text>
+  <text x="155" y="294" text-anchor="middle" fill="#10B981" font-family="monospace" font-size="18" font-weight="800">12.0 units/hr</text>
+  <text x="155" y="324" text-anchor="middle" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Manufacturing &amp; Ops</text>
+
+  <!-- Card 2 -->
+  <rect x="290" y="105" width="220" height="245" rx="12" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="400" y="138" text-anchor="middle" fill="#60A5FA" font-family="monospace" font-size="13" font-weight="700">2. UTILIZATION %</text>
+  <rect x="310" y="158" width="180" height="44" rx="8" fill="#1E293B"/>
+  <text x="400" y="185" text-anchor="middle" fill="#F8FAFC" font-family="monospace" font-size="12" font-weight="700">(Billable / Paid) x 100</text>
+  <text x="400" y="232" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="13">Example: 390 billable</text>
+  <text x="400" y="254" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="13">of 480 net shift min</text>
+  <text x="400" y="294" text-anchor="middle" fill="#60A5FA" font-family="monospace" font-size="18" font-weight="800">81.25%</text>
+  <text x="400" y="324" text-anchor="middle" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">PT, OT &amp; Consulting</text>
+
+  <!-- Card 3 -->
+  <rect x="535" y="105" width="220" height="245" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+  <text x="645" y="138" text-anchor="middle" fill="#10B981" font-family="monospace" font-size="13" font-weight="700">3. MULTIFACTOR (MFP)</text>
+  <rect x="555" y="158" width="180" height="44" rx="8" fill="#1E293B"/>
+  <text x="645" y="185" text-anchor="middle" fill="#F8FAFC" font-family="monospace" font-size="12" font-weight="700">Output / (L + C + M)</text>
+  <text x="645" y="232" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="13">Example: $120k value</text>
+  <text x="645" y="254" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="13">vs $80k combined cost</text>
+  <text x="645" y="294" text-anchor="middle" fill="#10B981" font-family="monospace" font-size="18" font-weight="800">1.50x Ratio</text>
+  <text x="645" y="324" text-anchor="middle" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Executive &amp; TFP Analysis</text>
+</svg>
